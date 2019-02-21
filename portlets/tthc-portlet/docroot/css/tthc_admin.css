@@ -1,0 +1,317 @@
+/* Form CSS */
+	
+	.tthc_admin-portlet{
+		font-size: 12px;
+		color: #434343 !important;
+	}
+	
+	.tthc_admin-portlet .aui-field-content{
+		padding-bottom: 10px;
+	}
+	
+	.tthc_admin-portlet select,
+	.tthc_admin-portlet textarea,
+	.tthc_admin-portlet input[type="text"]{
+	  display: inline-block;
+	  padding: 5px !important;
+	  color: #555555;
+	  vertical-align: middle;
+	  -webkit-border-radius: 3px !important;
+	     -moz-border-radius: 3px !important;
+	          border-radius: 3px !important;
+	  background-color: #ffffff !important;
+	  border: 1px solid #cccccc ;
+	  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+	     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+	          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+	  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+	     -moz-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+	       -o-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+	          transition: border linear 0.2s, box-shadow linear 0.2s !important;
+	}
+	
+			
+	.tthc_admin-portlet select:focus,
+	.tthc_admin-portlet textarea:focus,
+	.tthc_admin-portlet input[type="text"]:focus{
+	  border-color: rgba(82, 168, 236, 0.8) !important;
+	  outline: 0;
+	  outline: thin dotted \9;
+	  /* IE6-9 */
+	
+	  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+	     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+	          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+	}
+					
+	.tthc_admin-portlet span.cke_skin_kama{
+		border: 1px solid #E4E4E4;
+    	border-radius: 3px;
+    	padding: 0px;
+	}
+		
+	.tthc_admin-portlet .cke_skin_kama .cke_wrapper{
+		background-color: #E9E9E9;
+	}
+		
+	.tthc_admin-portlet .cke_skin_kama .cke_focus{
+		outline-color:rgba(82, 168, 236, 0.8) !important;
+	}
+	
+	.tthc_admin-portlet .lfr-search-container  tr:hover td{
+		background: #D3E8F1;
+		border: 1px solid #D3E8F1;
+	}
+
+
+/* TTHC Upload Settings */
+
+	.tthc-upload-settings {
+		padding: 0px;
+		margin: 0px;
+	}
+		
+	.tthc-upload-settings input[type="text"]{
+		width: 300px;
+	}
+		
+	.tthc-upload-settings select{
+		width: 312px;
+	}
+	
+	.tthc-upload-settings .lfr-form-row{
+		border: none;
+		padding: 0px;
+		margin-bottom: 10px;
+		margin-top: 0px;
+	}
+	
+	.tthc-upload-settings .lfr-form-row:hover{
+		background: none;
+	}
+	
+	.tthc-upload-settings .lfr-form-row input[type="button"]{
+		margin-top: 18px;
+	}
+
+	.tthc-upload-settings .creat-folder-panel{
+		padding-bottom: 10px;
+	}
+	
+/* TTHC-Entry-Management */
+			
+	.tthc-admin{
+		margin: 0px;
+		padding-bottom: 30px;
+		font-size: 12px;
+		font-family: Tahoma;
+		color: #434343;
+	}
+		
+	.tthc-admin .lfr-header-row{
+		margin-bottom: 10px;
+		border-radius: 4px;
+		background: url("/tthc-portlet/images/subheader_bg.png") repeat-x scroll 0 0 #D9D9D9;
+    	border: 1px solid #C9C9C9;
+    	
+	}
+	
+	.tthc-admin .lfr-header-row-content{
+		padding: 2px 4px 0 !important;
+	}
+	
+	.tthc-admin .add_new_tthc_button{
+		display: inline-block;
+    	float: left;
+    	margin-top: 4px;
+	}
+	
+	.tthc-admin .tthc_simple_search_form{
+		display: inline-block;
+    	float: right;
+    	margin-top: 4px;
+	}
+		
+	.tthc-admin .tthc_simple_search_form .aui-field-content{
+		display: inline-block;
+	}
+		
+	.tthc-admin .tthc_simple_search_form input[type="text"]{
+		width: 260px;
+		padding: 5px 5px !important;
+	}
+
+	.tthc_advance_search_form{
+		font-weight: bold;
+		border: 1px solid #E4E4E4;
+		border-radius: 4px;
+		padding-top: 10px;
+		margin-bottom: 10px;
+	}
+			
+	.tthc_advance_search_form table tr{
+		height:40px;
+	}	
+	.tthc_advance_search_form table tr td{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+				
+	.tthc_advance_search_form input[type="text"]{
+		width: 300px;
+	}
+					
+	.tthc_advance_search_form select{
+		width: 312px;
+	}
+	
+	.tthc_search_results .taglib-search-iterator-page-iterator-bottom select{
+		border-radius: 2px!important;
+		padding: 0!important;
+		margin: 0!important;
+	}
+
+/* TTHC Update Form */
+
+	.tthc-update-form{
+		padding: 0px;
+		margin: 0px;
+	}
+		
+	.tthc-update-form .taglib-form-navigator .form-section h3{
+		border-color: #d0d0d0 !important;
+		color: #00528b !important;
+	}
+		
+	.tthc-update-form .aui-field-content{
+		padding-bottom: 10px;
+	}
+		
+	.tthc-update-form .tthc-update-form-row{
+		clear: both;
+		display: block;
+		margin-bottom: 10px;
+		min-height: 45px;
+		font-weight: bold;
+	}
+		
+	.tthc-update-form input[type="text"]{
+		width: 390px;
+		border-radius: 2px;
+	}
+				
+	.tthc-update-form textarea{
+		width: 390px;
+		height: 70px;
+		border-radius: 2px;
+	}
+		
+	.tthc-update-form select{
+		border-radius: 2px;
+		width: 394px;
+	}
+			
+	.tthc-update-form .date-picker select{
+		width: auto !important;
+		padding-right: 12px;
+	}
+	
+	.tthc-update-form .tthc-file-attachment-container{
+		max-width: 394px !important;
+	}
+		
+	.tthc-update-form .tthc-file-attachment-container .tthc-file-attachment-list{
+		padding: 10px 0px;
+	}
+				
+	.tthc-file-attachment-list .lfr-search-container .taglib-search-iterator-page-iterator-top,
+	.tthc-file-attachment-list .lfr-search-container .taglib-search-iterator-page-iterator-bottom{
+		display: none;
+	}
+			
+	.tthc-file-attachment-uploader .lfr-upload-container .upload-target,
+	.tthc-file-attachment-uploader .lfr-upload-container .pending-files-info{
+		margin-right: 0px !important
+	}
+		
+	.tthc-file-attachment-uploader .lfr-upload-container .upload-list-info,
+	.tthc-file-attachment-uploader .lfr-upload-container .manage-upload-target{
+		display: none;
+	}
+	
+				
+	.tthc-file-attachment-uploader .lfr-upload-container .upload-list ul li{
+		margin-right: 0px !important
+	}
+			
+	.tthc-update-form span.cke_skin_kama{
+		border: 1px solid #E4E4E4;
+    	border-radius: 3px;
+    	padding: 0px;
+	}
+	
+	.tthc-update-form .cke_skin_kama .cke_wrapper{
+		background-color: #E9E9E9;
+	}
+	
+	.tthc-update-form .cke_skin_kama .cke_wrapper table tr{
+		height: 20px;
+	}	
+	
+	.tthc-update-form .cke_skin_kama .cke_wrapper table tr td{
+		padding: 0px;
+	}
+	
+	.tthc_required_document_tab input[type="text"]{
+		width: 700px !important;
+	}
+
+/* TTHC Preview*/
+	.tthc-preview{
+		margin: 0px;
+		padding: 0px;
+		font-size: 12px;
+		color: #434343;
+	}
+		
+	.tthc-preview .tthc-name{
+		font-size: 16px !important;
+		color: #bc0000 !important;
+		font-weight: bold;
+		padding: 10px 0px;
+		text-align: center;
+	}
+			
+	.tthc-preview .tthc-content-tab{
+		color: #434343;
+	}
+				
+	.tthc-preview .tthc-content-tab .aui-tab-active .aui-tab-content{
+		background: #1B59A3 !important;
+	}
+				
+	.tthc-preview .tthc-content-tab .aui-tab-active .aui-tab-label a{
+		color: #ffffff !important;
+		font-weight: bold !important;
+		text-shadow: none;
+	}
+	
+	.tthc-preview .aui-tabview-content-item{
+		color: #434343;
+		min-height: 400px;
+	}
+	
+	.tthc-preview .aui-tabview-content-item table{
+		width: 100%;
+		border-collapse: collapse;
+	}
+	
+	.tthc-preview .aui-tabview-content-item table tr{
+		border-bottom: 1px dotted #E4E4E4;
+		height: 35px;
+	}
+			
+	.tthc-preview .aui-tabview-content-item table tr td:first-child{
+		color: #00528B;
+		min-width: 120px;
+	}

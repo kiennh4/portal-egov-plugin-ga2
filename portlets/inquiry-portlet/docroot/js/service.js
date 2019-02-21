@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.inquiry", "com.portal_egov.portlet.inquiry.service", "inquiry-portlet");

@@ -1,0 +1,72 @@
+<div class="navigation" id="navigation">
+	<div class="container">
+		<div class="header-logo">
+			<a href="$home_url">
+				<img src="$themeDisplay.getPathThemeImages()/IMG_2026.jpg">
+			</a>
+		</div>
+		<div class="main-menu">
+			<div class="menu-row1">
+				<ul>
+					<li>
+						<span class="hotline">Hotline: 0966960790 | <a href="/contact" target="_blank" class="contact">Contact</a>| <a href="/sitemap" class="site-map">Site Map</a></span>
+					</li>
+					<li>
+						<a href="javascript:;" id="vi" title="Viet Nam">
+							<img src="$themeDisplay.getPathThemeImages()/custom_icon/vi.jpg">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" id="en" title="English">
+							<img src="$themeDisplay.getPathThemeImages()/custom_icon/en.jpg">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="menu-row2">
+				<ul id="navigation-menu" class="sf-menu sf-navbar">
+					#set ($counter=0)
+					#foreach ($nav_item in $nav_items)
+						#set ($counter = $counter + 1)
+						#if($counter==1)
+							#if ($nav_item.isSelected())
+								<li class="first-nav-item selected">
+							#else
+								<li class="first-nav-item">
+							#end
+						#else
+							#if ($nav_item.isSelected())
+								<li class="selected">
+							#else
+								<li>
+							#end
+						#end
+									#if ($nav_item.hasChildren())
+										<a href="javascript::void(0)"><span>$nav_item.icon() $nav_item.getName()</span></a>
+									#else
+										<a href="$nav_item.getURL()" $nav_item.getTarget()><span>$nav_item.icon() $nav_item.getName()</span></a>
+									#end
+						#if ($nav_item.hasChildren())
+							<ul class="sub-menu">
+								#foreach ($nav_child in $nav_item.getChildren())
+									#if ($nav_child.isSelected())
+										<li class="selected">
+									#else
+										<li>
+									#end
+											<a href="$nav_child.getURL()" $nav_child.getTarget()>$nav_child.getName()</a>
+										</li>
+									#end
+							</ul>
+							#end
+						</li>
+						#end
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;">
+	</div>
+</div>
+
+

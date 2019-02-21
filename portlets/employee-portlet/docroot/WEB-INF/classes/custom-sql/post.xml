@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.bkav.portal.portlet.employee.service.persistence.PostFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	Post.companyId,
+    			Post.groupId,
+    			Post.userId,
+    			Post.userName,
+    			Post.postId,
+    			Post.postName,
+    			Post.createDate,
+    			Post.modifiedDate
+    	
+    	FROM 	Post
+    	           
+        WHERE   
+                (Post.postName LIKE ?)
+                AND (Post.groupId = ?) 
+                
+        ORDER BY Post.postName ASC
+	]]>
+</sql>
+
+</custom-sql>

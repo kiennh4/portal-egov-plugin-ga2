@@ -1,0 +1,17 @@
+.content-sharing-admin-portlet .content-sharing-config {
+  margin: 10px;
+  padding: 10px; }
+  .content-sharing-admin-portlet .content-sharing-config .contentCheckbox {
+    padding: 5px; }
+.content-sharing-admin-portlet .content-sharing-list table {
+  width: 100%; }
+.content-sharing-admin-portlet .content-sharing-list thead tr th {
+  border: 1px solid #ccc;
+  text-align: center;
+  background: #ECECEC;
+  height: 30px; }
+.content-sharing-admin-portlet .content-sharing-list tbody tr td {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 2px; }
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.conversation.service.persistence.CO_ConversationFinder.findByKeywordAndStatus">	
+	<![CDATA[
+    	SELECT * FROM co_conversation
+    	           
+        WHERE               
+                (co_conversation.title LIKE ? 
+                	OR co_conversation.askUserName LIKE ?
+                	OR co_conversation.askUserInfo LIKE ? 
+                	OR co_conversation.answerUserName LIKE ?
+                	OR co_conversation.answerUserInfo LIKE ?  
+                )
+                
+                AND (co_conversation.companyId = ?)
+                
+                AND (co_conversation.status = ?)
+                
+        ORDER BY co_conversation.askDate DESC
+	]]>
+</sql>
+
+<sql id="com.portal_egov.portlet.conversation.service.persistence.CO_ConversationFinder.findUnpublishEntry">	
+	<![CDATA[
+    	SELECT * FROM co_conversation
+    	           
+        WHERE               
+                co_conversation.groupId = ?
+                
+                AND (co_conversation.status != 2)
+                
+                AND (co_conversation.title LIKE ?)
+                
+        ORDER BY co_conversation.askDate DESC
+	]]>
+</sql>
+
+</custom-sql>

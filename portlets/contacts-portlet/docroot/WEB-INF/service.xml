@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.portal_egov.portlet.contacts" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>contacts</namespace>
+			
+	<!-- Entity luu thong tin lien he cua ca nhan -->
+	<entity name="Contacts" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="contactId" type="long" primary="true" />
+		
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+		
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="departmentId" type="long" />
+		<column name="imageId" type="long" />
+		<column name="contactName" type="String" />
+		<column name="jobTitle" type="String" />
+		<column name="phoneNumbers" type="String" />
+		<column name="homePhone" type="String" />
+		<column name="mobile" type="String" />
+		<column name="email" type="String" />
+		
+		<!-- Thu tu uu tien hien thi -->
+		<column name="displayPriority" type="int" />
+		<!-- Trang thai  -->
+		<column name="contactStatus" type="int" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="departmentId" />
+			<order-column name="displayPriority" />
+		</order>
+
+		<!-- Finder methods -->
+		
+		<!-- Finder -->
+		<finder return-type="Collection" name="Company">
+			<finder-column name="companyId" />			
+		</finder>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="Group">
+			<finder-column name="groupId" />			
+		</finder>
+					
+		<!-- Finder -->
+		<finder return-type="Collection" name="CompanyAndStatus">
+			<finder-column name="companyId" />
+			<finder-column name="contactStatus" />		
+		</finder>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="GroupAndStatus">
+			<finder-column name="groupId" />
+			<finder-column name="contactStatus" />			
+		</finder>
+									
+		<!-- Finder -->
+		<finder return-type="Collection" name="DepartmentAndCompany">
+			<finder-column name="companyId" />		
+			<finder-column name="departmentId" />
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="DepartmentAndGroup">
+			<finder-column name="groupId" />
+			<finder-column name="departmentId" />
+		</finder>
+						
+		<!-- Finder -->
+		<finder return-type="Collection" name="CompanyAndDepartmentAndStatus">
+			<finder-column name="companyId" />
+			<finder-column name="departmentId" />
+			<finder-column name="contactStatus" />
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="GroupAndDepartmentAndStatus">
+			<finder-column name="groupId" />	
+			<finder-column name="departmentId" />
+			<finder-column name="contactStatus" />
+		</finder>
+		
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+		
+		
+	<!-- Entity luu thuoc tinh mo rong cua Contacts-->
+	<entity name="ContactsProperty" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="propertyId" type="long" primary="true" />
+		
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<!-- Id cua Contacts -->
+		<column name="contactId" type="long" />
+		<!-- Ten thuoc tinh -->
+		<column name="propertyKey" type="String" />
+		<!-- Gia tri cua thuoc tinh -->
+		<column name="propertyValue" type="String" />
+		<!-- Kieu nhap du lieu cua thuoc tinh -->
+		<column name="propertyType" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="contactId" />
+			<order-column name="propertyKey" case-sensitive="false"/>
+		</order>
+
+		<!-- Finder methods -->
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="Company">
+			<finder-column name="companyId" />			
+		</finder>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="Group">
+			<finder-column name="groupId" />			
+		</finder>
+							
+		<!-- Finder -->
+		<finder return-type="Collection" name="Contact">
+			<finder-column name="contactId" />
+		</finder>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="ContactAndPropertyKey">
+			<finder-column name="contactId" />
+			<finder-column name="propertyKey" />			
+		</finder>
+		
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+		
+	<!-- Entity luu thong tin phong/ban/don vi truc thuoc co quan chu quan Portal hoac thong tin linh vuc,chu de lien he -->
+	<entity name="ContactsDepartment" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="departmentId" type="long" primary="true" />
+		
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="parentId" type="long" />
+		<column name="departmentName" type="String" />
+		<column name="departmentAddress" type="String" />
+		<column name="departmentPhone" type="String" />
+		<column name="departmentWebsite" type="String" />
+		<column name="departmentEmail" type="String" />
+		
+		<!-- Thu tu uu tien hien thi -->
+		<column name="displayPriority" type="int" />
+		<!-- Trang thai  -->
+		<column name="departmentStatus" type="int" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="parentId" />
+			<order-column name="displayPriority"/>
+		</order>
+
+		<!-- Finder methods -->
+		
+		<!-- Finder -->
+		<finder return-type="Collection" name="Company">
+			<finder-column name="companyId" />			
+		</finder>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="Group">
+			<finder-column name="groupId" />			
+		</finder>
+										
+		<!-- Finder -->
+		<finder return-type="Collection" name="ParentAndCompany">
+			<finder-column name="companyId" />	
+			<finder-column name="parentId" />
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="ParentAndGroup">
+			<finder-column name="groupId" />	
+			<finder-column name="parentId" />
+		</finder>
+						
+		<!-- Finder -->
+		<finder return-type="Collection" name="StatusAndCompany">
+			<finder-column name="companyId" />
+			<finder-column name="departmentStatus" />
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="StatusAndGroup">
+			<finder-column name="groupId" />	
+			<finder-column name="departmentStatus" />
+		</finder>
+		
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+			
+	<!-- Entity luu thuoc tinh mo rong cua ContactsDepartment-->
+	<entity name="ContactsDepartmentProperty" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="propertyId" type="long" primary="true" />
+		
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<!-- Id cua ContactsDepartment -->
+		<column name="departmentId" type="long" />
+		<!-- Ten thuoc tinh -->
+		<column name="propertyKey" type="String" />
+		<!-- Gia tri cua thuoc tinh -->
+		<column name="propertyValue" type="String" />
+		<!-- Kieu nhap du lieu cua thuoc tinh -->
+		<column name="propertyType" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="departmentId" />
+			<order-column name="propertyKey" case-sensitive="false"/>
+		</order>
+
+		<!-- Finder methods -->
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="Company">
+			<finder-column name="companyId" />			
+		</finder>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="Group">
+			<finder-column name="groupId" />			
+		</finder>
+							
+		<!-- Finder -->
+		<finder return-type="Collection" name="ContactsDepartment">
+			<finder-column name="departmentId" />
+		</finder>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="ContactsDepartmentAndKey">
+			<finder-column name="departmentId" />
+			<finder-column name="propertyKey" />			
+		</finder>
+		
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+</service-builder>

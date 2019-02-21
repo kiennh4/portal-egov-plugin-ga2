@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.citizen_inquiry.service.CitizenInquiryLocalService" class="com.portal_egov.portlet.citizen_inquiry.service.impl.CitizenInquiryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.citizen_inquiry.service.CitizenInquiryService" class="com.portal_egov.portlet.citizen_inquiry.service.impl.CitizenInquiryServiceImpl" />
+	<bean id="com.portal_egov.portlet.citizen_inquiry.service.persistence.CitizenInquiryPersistence" class="com.portal_egov.portlet.citizen_inquiry.service.persistence.CitizenInquiryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.citizen_inquiry.service.persistence.CitizenInquiryFinder" class="com.portal_egov.portlet.citizen_inquiry.service.persistence.CitizenInquiryFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.citizen_inquiry.service.CitizenInquiryCategoryLocalService" class="com.portal_egov.portlet.citizen_inquiry.service.impl.CitizenInquiryCategoryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.citizen_inquiry.service.CitizenInquiryCategoryService" class="com.portal_egov.portlet.citizen_inquiry.service.impl.CitizenInquiryCategoryServiceImpl" />
+	<bean id="com.portal_egov.portlet.citizen_inquiry.service.persistence.CitizenInquiryCategoryPersistence" class="com.portal_egov.portlet.citizen_inquiry.service.persistence.CitizenInquiryCategoryPersistenceImpl" parent="basePersistence" />
+</beans>

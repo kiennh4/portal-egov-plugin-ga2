@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.inquiry.service.OnlineInquiryLocalService" class="com.portal_egov.portlet.inquiry.service.impl.OnlineInquiryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.inquiry.service.OnlineInquiryService" class="com.portal_egov.portlet.inquiry.service.impl.OnlineInquiryServiceImpl" />
+	<bean id="com.portal_egov.portlet.inquiry.service.persistence.OnlineInquiryPersistence" class="com.portal_egov.portlet.inquiry.service.persistence.OnlineInquiryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.inquiry.service.persistence.OnlineInquiryFinder" class="com.portal_egov.portlet.inquiry.service.persistence.OnlineInquiryFinderImpl" parent="basePersistence" />
+</beans>

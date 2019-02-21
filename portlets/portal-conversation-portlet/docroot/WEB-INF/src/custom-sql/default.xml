@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql file="custom-sql/co_thread.xml" />
+	<sql file="custom-sql/co_conversation.xml" />
+</custom-sql>

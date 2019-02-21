@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<service name="Plugin_citymaps_CityMapTypeService" provider="java:RPC" style="rpc" use="encoded">
+		<operation xmlns:operNS="urn:http.service.citymaps.portlet.portal_egov.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getJSONMapType" qname="operNS:getJSONMapType" returnQName="getJSONMapTypeReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+		</operation>
+		<parameter name="allowedMethods" value="getJSONMapType" />
+		<parameter name="className" value="com.portal_egov.portlet.citymaps.service.http.CityMapTypeServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="CityMapTypeServiceSoap" />
+		<parameter name="wsdlServiceElement" value="CityMapTypeServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_citymaps_CityMapTypeService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.citymaps.portlet.portal_egov.com" />
+	</service>
+</deployment>

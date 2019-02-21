@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.bkav.portal.portlet.audioplayer.model.AlbumAudioMap" />
+	<import class="com.bkav.portal.portlet.audioplayer.model.AudioAlbum" />
+	<import class="com.bkav.portal.portlet.audioplayer.model.AudioFile" />
+	<class name="com.bkav.portal.portlet.audioplayer.model.impl.AlbumAudioMapImpl" table="AudioPlayer_AlbumAudioMap">
+		<cache usage="read-write" />
+		<id name="mapId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="albumId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="audioId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.bkav.portal.portlet.audioplayer.model.impl.AudioAlbumImpl" table="AudioPlayer_AudioAlbum">
+		<cache usage="read-write" />
+		<id name="albumId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="albumName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="albumInfo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="albumCoverId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifyDate" type="org.hibernate.type.TimestampType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="viewCounter" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.bkav.portal.portlet.audioplayer.model.impl.AudioFileImpl" table="AudioPlayer_AudioFile">
+		<cache usage="read-write" />
+		<id name="audioId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="audioName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="audioInfo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="audioType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="audioFileId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifyDate" type="org.hibernate.type.TimestampType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="viewCounter" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

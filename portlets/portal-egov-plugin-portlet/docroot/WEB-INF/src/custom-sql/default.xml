@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql id="com.bkav.portal.portlet.portalplugins.service.persistence.portalplugins.finder">	
+		<![CDATA[
+	    	SELECT 	*
+	    			
+	    	FROM 	portalplugins 
+	    	           
+	        WHERE       
+	        		(portalplugins.groupId = ?)
+	        		        
+	                AND (portalplugins.pluginName LIKE ?) 
+	                
+	                AND (portalplugins.pluginCode = ?)
+	                
+	                AND (portalplugins.pluginType = ?)
+	                
+	                AND (portalplugins.ePortalId = ?)
+	                
+	        ORDER BY portalplugins.pluginName DESC
+		]]>
+	</sql>
+	
+	<sql id="com.bkav.portal.portlet.portalplugins.service.persistence.eportals.finder">	
+		<![CDATA[
+	    	SELECT 	*
+	    			
+	    	FROM 	eportals 
+	    	           
+	        WHERE       
+	        		(eportals.groupId = ?)
+	        		        
+	                AND (eportals.eportalName LIKE ?) 
+	                
+	                AND (eportals.eportalCode = ?)
+	                
+	        ORDER BY eportals.modifyDate DESC
+		]]>
+	</sql>
+</custom-sql>

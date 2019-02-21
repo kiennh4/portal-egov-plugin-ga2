@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.portal_egov.portlet.conversation.model.impl.CO_CategoryModelImpl">
+		<attributes>
+			<id name="categoryId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="parentCategoryId" />
+			<basic name="categoryName" />
+			<basic name="categoryDesc" />
+			<basic name="threadCount" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.conversation.model.impl.CO_ConversationModelImpl">
+		<attributes>
+			<id name="conversationId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="threadId" />
+			<basic name="title" />
+			<basic name="askUserName" />
+			<basic name="askUserInfo" />
+			<basic name="askContent" />
+			<basic name="answerUserName" />
+			<basic name="answerUserInfo" />
+			<basic name="answerContent" />
+			<basic name="askDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="answerDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="status" />
+			<basic name="statusByUserId" />
+			<basic name="statusDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="statusByUserUuid" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.conversation.model.impl.CO_ThreadModelImpl">
+		<attributes>
+			<id name="threadId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="parentThreadId" />
+			<basic name="categoryId" />
+			<basic name="threadName" />
+			<basic name="departmentName" />
+			<basic name="participants" />
+			<basic name="threadDesc" />
+			<basic name="startDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="endDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="viewCount" />
+			<basic name="conversationCount" />
+			<basic name="status" />
+			<basic name="statusByUserId" />
+			<basic name="statusDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="statusByUserUuid" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.portal_egov.portlet.conversation.model.impl.CO_CategoryImpl" name="CO_Category">
+		<table name="CO_Category" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.conversation.model.impl.CO_ConversationImpl" name="CO_Conversation">
+		<table name="CO_Conversation" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.conversation.model.impl.CO_ThreadImpl" name="CO_Thread">
+		<table name="CO_Thread" />
+		<attributes />
+	</entity>
+</entity-mappings>

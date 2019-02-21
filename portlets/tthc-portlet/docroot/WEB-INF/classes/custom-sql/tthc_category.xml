@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+<sql id="com.portal_egov.portlet.tthc.service.persistence.TTHC_CategoryFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT  * FROM tthc_category
+    	           
+        WHERE               
+                (tthc_category.categoryName LIKE ? OR tthc_category.categoryDesc LIKE ?) AND           			
+            	
+            	(tthc_category.categoryTypeId = ?) AND
+            	
+            	(tthc_category.groupId = ?)
+            	           	
+        ORDER BY tthc_category.categoryName ASC
+        
+        LIMIT ?,?
+	]]>
+</sql>
+</custom-sql>

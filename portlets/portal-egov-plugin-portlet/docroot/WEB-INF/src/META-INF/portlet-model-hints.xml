@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.bkav.portal.portlet.portalplugins.model.ePortals">
+		<field name="eportalId" type="long" />
+		<field name="eportalName" type="String" />
+		<field name="eportalCode" type="String" />
+		<field name="eportalDomain" type="String" />
+		<field name="eportalVersion" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifyDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+	</model>
+	<model name="com.bkav.portal.portlet.portalplugins.model.PortalPlugins">
+		<field name="pluginId" type="long" />
+		<field name="pluginName" type="String" />
+		<field name="pluginCode" type="String" />
+		<field name="pluginVersion" type="double" />
+		<field name="pluginType" type="int" />
+		<field name="ePortalId" type="long" />
+		<field name="isImportant" type="int" />
+		<field name="pluginDescription" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="pluginUpdateInfo" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="pluginSize" type="double" />
+		<field name="warFileId" type="long" />
+		<field name="signFileId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userName" type="String" />
+	</model>
+</model-hints>

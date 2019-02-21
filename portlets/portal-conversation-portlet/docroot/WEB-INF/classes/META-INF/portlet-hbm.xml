@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.portal_egov.portlet.conversation.model.CO_Category" />
+	<import class="com.portal_egov.portlet.conversation.model.CO_Conversation" />
+	<import class="com.portal_egov.portlet.conversation.model.CO_Thread" />
+	<class name="com.portal_egov.portlet.conversation.model.impl.CO_CategoryImpl" table="CO_Category">
+		<cache usage="read-write" />
+		<id name="categoryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="parentCategoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categoryDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="threadCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.portal_egov.portlet.conversation.model.impl.CO_ConversationImpl" table="CO_Conversation">
+		<cache usage="read-write" />
+		<id name="conversationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="threadId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="askUserName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="askUserInfo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="askContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answerUserName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answerUserInfo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answerContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="askDate" type="org.hibernate.type.TimestampType" />
+		<property name="answerDate" type="org.hibernate.type.TimestampType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.portal_egov.portlet.conversation.model.impl.CO_ThreadImpl" table="CO_Thread">
+		<cache usage="read-write" />
+		<id name="threadId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="parentThreadId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="threadName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="departmentName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="participants" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="threadDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startDate" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" type="org.hibernate.type.TimestampType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="viewCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="conversationCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

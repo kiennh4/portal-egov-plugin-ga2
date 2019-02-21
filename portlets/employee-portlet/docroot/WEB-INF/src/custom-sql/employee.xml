@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.bkav.portal.portlet.employee.service.persistence.EmployeeFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	Employee.*
+    	
+    	FROM 	Employee
+    	           
+        WHERE   
+                (Employee.Name LIKE ?)
+                AND (Employee.groupId = ?)
+                AND (Employee.depId = ?)
+                AND (Employee.postId = ?)
+                AND (Employee.createDate BETWEEN ? AND ?)
+                AND (Employee.endDate BETWEEN ? AND ?)
+        ORDER BY Employee.name ASC
+	]]>
+</sql>
+
+</custom-sql>

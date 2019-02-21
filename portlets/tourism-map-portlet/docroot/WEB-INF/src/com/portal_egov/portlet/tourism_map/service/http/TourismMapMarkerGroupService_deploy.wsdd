@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<service name="Plugin_tourismmap_TourismMapMarkerGroupService" provider="java:RPC" style="rpc" use="encoded">
+		<operation xmlns:operNS="urn:http.service.tourism_map.portlet.portal_egov.com" name="deleteMarkerGroup" qname="operNS:deleteMarkerGroup" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="markerGroupId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.tourism_map.portlet.portal_egov.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getJSONmarkerGroups" qname="operNS:getJSONmarkerGroups" returnQName="getJSONmarkerGroupsReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+		</operation>
+		<parameter name="allowedMethods" value="deleteMarkerGroup getJSONmarkerGroups" />
+		<parameter name="className" value="com.portal_egov.portlet.tourism_map.service.http.TourismMapMarkerGroupServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="TourismMapMarkerGroupServiceSoap" />
+		<parameter name="wsdlServiceElement" value="TourismMapMarkerGroupServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_tourismmap_TourismMapMarkerGroupService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.tourism_map.portlet.portal_egov.com" />
+	</service>
+</deployment>

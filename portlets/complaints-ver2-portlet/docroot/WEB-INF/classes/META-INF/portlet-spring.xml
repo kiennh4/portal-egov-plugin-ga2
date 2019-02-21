@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.bkav.portal.portlet.complaints.service.ComplaintsLocalService" class="com.bkav.portal.portlet.complaints.service.impl.ComplaintsLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.complaints.service.ComplaintsService" class="com.bkav.portal.portlet.complaints.service.impl.ComplaintsServiceImpl" />
+	<bean id="com.bkav.portal.portlet.complaints.service.persistence.ComplaintsPersistence" class="com.bkav.portal.portlet.complaints.service.persistence.ComplaintsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.complaints.service.persistence.ComplaintsFinder" class="com.bkav.portal.portlet.complaints.service.persistence.ComplaintsFinderImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.complaints.service.Complaints_DLFileEntriesLocalService" class="com.bkav.portal.portlet.complaints.service.impl.Complaints_DLFileEntriesLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.complaints.service.Complaints_DLFileEntriesService" class="com.bkav.portal.portlet.complaints.service.impl.Complaints_DLFileEntriesServiceImpl" />
+	<bean id="com.bkav.portal.portlet.complaints.service.persistence.Complaints_DLFileEntriesPersistence" class="com.bkav.portal.portlet.complaints.service.persistence.Complaints_DLFileEntriesPersistenceImpl" parent="basePersistence" />
+</beans>

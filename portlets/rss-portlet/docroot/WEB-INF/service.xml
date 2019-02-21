@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.bkav.portal.portlet.rss" auto-namespace-tables="false">
+	<author>hungdx</author>
+	<namespace>rss</namespace>
+
+	<entity name="RssFeed" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="id_" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+		<column name="url" type="String" />
+		<column name="description" type="String" />
+		<column name="status" type="int" />
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+	</entity>
+</service-builder>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+
+<service-builder package-path="com.portal_egov.portlet.compaints" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>complaints</namespace>
+
+	<!-- Entity luu thong tin don thu khieu nai to cao cua cong dan -->
+	<entity name="Complaint" local-service="true" remote-service="true">
+		
+		<!-- PK fields -->
+		<column name="complaintId" type="long" primary="true"></column>
+		
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- Other fields -->
+		<column name="complaintTitle" type="String"></column>
+		<column name="complaintDescription" type="String"></column>
+		<column name="complaintContent" type="String"></column>
+		<!-- Duong dan file dinh kem (Truong hop luu duong dan tren server khac 
+		hoac luu duong dan tuong doi den thu muc chua file tren server Portal) -->
+		<column name="fileAttachmentURL" type="String" />
+		
+		<!-- Truong phan loai entity la Don thu khieu nai hoac van ban tra loi,giai quyet don thu khieu nai -->
+		<column name="complaintStatus" type="int"></column>
+		
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate"></order-column>
+		</order>
+		
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		
+		<!-- Reference -->
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portal" entity="Resource"></reference>
+	</entity>
+	    	
+	<!-- 
+		Entity mapping id cua don thu khieu nai voi van ban/tai lieu dinh kem
+	-->
+    <entity name="Complaint_DlFileEntries" local-service="true" remote-service="true">
+	    
+	    <!-- PK -->
+	     <column name="id" type="long" primary="true"/>
+	    
+	    <!-- Id cua VBPQ -->
+	    <column name="complaintId" type="long"/>
+		
+		<!-- Id cua tai lieu dinh kem -->
+		<column name="fileEntryId" type="long"/>
+
+		<!-- Finder -->
+		<finder return-type="Collection" name="Complaint">
+			<finder-column name="complaintId" />			
+		</finder>
+		
+		<!-- Finder -->
+		<finder return-type="Collection" name="DLFile">
+			<finder-column name="fileEntryId" />			
+		</finder>
+    </entity>
+</service-builder>

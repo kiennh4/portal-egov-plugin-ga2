@@ -1,0 +1,23 @@
+<div class = "sub-navigation">
+	<div class="date_time">
+		<span id="portal_egov_date"></span>
+		<span id="portal_egov_clock"></span>
+	</div>
+	
+	<div class="top_notify">
+		#if ($sloganContent == "")
+			<marquee direction="left" scrollamount="1" scrolldelay="40">
+				<span>Cổng thông tin điện tử Tỉnh Quảng Ngãi</span>
+			</marquee>
+		#else 
+			<marquee direction="left" scrollamount="1" scrolldelay="40">
+				<span>$sloganContent</span>
+			</marquee>
+		#end
+	</div>
+	
+	<div class="global-search-wrapper">
+		$theme.search()
+	</div>
+	<div style="clear:both;"></div>
+</div>

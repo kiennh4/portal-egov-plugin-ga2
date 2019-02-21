@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.tthc.service.TTHC_AttributeLocalService" class="com.portal_egov.portlet.tthc.service.impl.TTHC_AttributeLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.tthc.service.TTHC_AttributeService" class="com.portal_egov.portlet.tthc.service.impl.TTHC_AttributeServiceImpl" />
+	<bean id="com.portal_egov.portlet.tthc.service.persistence.TTHC_AttributePersistence" class="com.portal_egov.portlet.tthc.service.persistence.TTHC_AttributePersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.tthc.service.TTHC_CategoryLocalService" class="com.portal_egov.portlet.tthc.service.impl.TTHC_CategoryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.tthc.service.TTHC_CategoryService" class="com.portal_egov.portlet.tthc.service.impl.TTHC_CategoryServiceImpl" />
+	<bean id="com.portal_egov.portlet.tthc.service.persistence.TTHC_CategoryPersistence" class="com.portal_egov.portlet.tthc.service.persistence.TTHC_CategoryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.tthc.service.persistence.TTHC_CategoryFinder" class="com.portal_egov.portlet.tthc.service.persistence.TTHC_CategoryFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.tthc.service.TTHC_EntryLocalService" class="com.portal_egov.portlet.tthc.service.impl.TTHC_EntryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.tthc.service.TTHC_EntryService" class="com.portal_egov.portlet.tthc.service.impl.TTHC_EntryServiceImpl" />
+	<bean id="com.portal_egov.portlet.tthc.service.persistence.TTHC_EntryPersistence" class="com.portal_egov.portlet.tthc.service.persistence.TTHC_EntryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.tthc.service.persistence.TTHC_EntryFinder" class="com.portal_egov.portlet.tthc.service.persistence.TTHC_EntryFinderImpl" parent="basePersistence" />
+</beans>

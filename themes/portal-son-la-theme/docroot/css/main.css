@@ -1,0 +1,27 @@
+@import url(base.css);
+
+@import url(application.css);
+
+@import url(layout.css);
+
+@import url(dockbar.css);
+
+@import url(navigation.css);
+
+@import url(portlet.css);
+
+@import url(forms.css);
+
+@import url(extras.css);
+
+@import url(custom.css);
+
+@import url(/custom-portlet-css/focus-asset-portlet.css);
+@import url(/custom-portlet-css/article-publisher-portlet.css);
+@import url(/custom-portlet-css/asset-publisher.css);
+
+
+.sf-navbar a span{
+	border-right: 1px solid rgb(92, 170, 245);
+	padding: 0px 12px;
+}

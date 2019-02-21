@@ -1,0 +1,371 @@
+.citymap-config-panel {
+  color: #434343 !important;
+  padding: 10px;
+  border: 1px solid #d2d2d2;
+  font-weight: bold;
+  border-radius: 2px; }
+
+.citymap-config-panel .aui-field-content {
+  padding-bottom: 10px; }
+
+.citymap-config-panel textarea,
+.citymap-config-panel select,
+.citymap-config-panel input[type="file"],
+.citymap-config-panel input[type="text"] {
+  display: inline-block;
+  padding: 5px !important;
+  color: #555555;
+  vertical-align: middle;
+  background-image: none;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  border-radius: 3px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  transition: border linear 0.2s, box-shadow linear 0.2s !important; }
+
+.citymap-config-panel textarea:focus,
+.citymap-config-panel select:focus,
+.citymap-config-panel input[type="text"]:focus,
+.citymap-config-panel input[type="file"]:focus {
+  border-color: rgba(82, 168, 236, 0.8) !important;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important; }
+
+.citymap-config-panel textarea {
+  width: 300px;
+  height: 60px; }
+
+.citymap_admin {
+  font-size: 12px;
+  font-weight: normal;
+  color: #434343; }
+
+.citymap_admin .lfr-header-row {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background: url("/contacts-portlet/images/contact_admin_tool_bar_bg.png") repeat-x scroll 0 0 #d9d9d9;
+  border: 1px solid #C9C9C9; }
+
+.citymap_admin .lfr-header-row-content {
+  padding: 2px 4px 0 !important; }
+
+.citymap_admin .admin_button {
+  display: inline-block;
+  float: left; }
+
+.citymap_admin .citymap_search_form {
+  display: inline-block;
+  float: right; }
+
+.citymap_admin .citymap_search_form .aui-field-content {
+  display: inline-block; }
+
+.citymap_admin .citymap_search_form input[type="text"] {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #A1A2A4;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
+  padding: 4px 1px;
+  text-shadow: none;
+  width: 220px;
+  color: #454545; }
+
+.citymap_admin .citymap_admin_content_wrapper {
+  border: 1px solid #C9C9C9;
+  border-radius: 3px;
+  background-color: white; }
+
+.citymap_admin .citymap_admin_content_wrapper .results-header {
+  background: url("/contacts-portlet/images/contact_admin_tool_bar_bg.png") repeat-x scroll 0 0 #d9d9d9;
+  border-bottom: 1px solid #C9C9C9;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #00528B;
+  padding: 5px 10px;
+  position: relative; }
+
+.citymap_admin .citymap_admin_content_wrapper .results-content {
+  padding: 5px 10px; }
+
+.citymap_admin .map_type_list_container {
+  float: left; }
+
+.citymap_admin .city_map_admin_form .aui-field-label {
+  padding-bottom: 2px; }
+
+.citymap_admin .city_map_admin_form .aui-field-content {
+  padding-bottom: 10px; }
+
+.citymap_admin .city_map_admin_form .aui-form-validator-message {
+  border-radius: 2px;
+  width: 302px; }
+
+.citymap_admin .city_map_admin_form select,
+.citymap_admin .city_map_admin_form textarea,
+.citymap_admin .city_map_admin_form input[type="text"],
+.citymap_admin .city_map_admin_form input[type="file"],
+.citymap_admin .citymap_search_form input[type="text"] {
+  display: inline-block;
+  padding: 5px !important;
+  color: #555555;
+  vertical-align: middle;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  border-radius: 3px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  transition: border linear 0.2s, box-shadow linear 0.2s !important; }
+
+.citymap_admin .city_map_admin_form select:focus,
+.citymap_admin .city_map_admin_form textarea:focus,
+.citymap_admin .city_map_admin_form input[type="text"]:focus,
+.citymap_admin .citymap_search_form input[type="text"]:focus {
+  border-color: rgba(82, 168, 236, 0.8) !important;
+  outline: 0;
+  background-color: #ffffff !important;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important; }
+
+.citymap_admin .city_map_admin_form input[type="text"] {
+  width: 300px; }
+
+.citymap_admin .city_map_admin_form input[type="file"] {
+  width: 300px;
+  background-image: none; }
+
+.citymap_admin .city_map_admin_form textarea {
+  width: 300px;
+  height: 40px; }
+
+.citymap_admin .city_map_admin_form select {
+  width: 312px; }
+
+.citymap_admin .map_list_container .map_list_container-content {
+  border-left: 1px solid #C9C9C9; }
+
+.citymap_admin .add-new-map-type-link, .citymap_admin .add-new-map-link {
+  padding-bottom: 10px; }
+
+.citymap_admin .add-new-map-type-link a, .citymap_admin .add-new-map-link a {
+  background: url("/html/themes/control_panel/images/common/add.png") no-repeat scroll 0 0px transparent;
+  color: #00528B;
+  padding-left: 20px; }
+
+.citymap_admin .add-new-map-type-link a:hover, .citymap_admin .add-new-map-link a:hover {
+  color: #FF5800; }
+
+.maptype-list, .citymap-list {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.maptype-list ul, .citymap-list ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+
+.maptype-list ul li, .citymap-list ul li {
+  padding: 0px;
+  margin: 0px; }
+
+.maptype-list ul li:hover .edit-maptype-actions-trigger,
+.maptype-list ul li:focus .edit-maptype-actions-trigger,
+.maptype-list ul li .edit-maptype-actions-trigger:focus,
+.maptype-list ul li:hover .delete-maptype-actions-trigger,
+.maptype-list ul li:focus .delete-maptype-actions-trigger,
+.maptype-list ul li .delete-maptype-actions-trigger:focus,
+.citymap-list ul li:hover .edit-city-map-actions-trigger,
+.citymap-list ul li:focus .edit-city-map-actions-trigger,
+.citymap-list ul li .edit-city-map-actions-trigger:focus,
+.citymap-list ul li:hover .delete-city-map-actions-trigger,
+.citymap-list ul li:focus .delete-city-map-actions-trigger,
+.citymap-list ul li .delete-city-map-actions-trigger:focus {
+  clip: rect(auto, auto, auto, auto); }
+
+.maptype-list .maptype-item-content-wrapper,
+.citymap-list .city-map-content-wrapper {
+  position: relative;
+  padding-left: 5px; }
+
+.maptype-list .maptype-item-content-wrapper:hover,
+.citymap-list .city-map-content-wrapper:hover {
+  background: none repeat scroll 0 0 #D3DADD; }
+
+.maptype-list .maptype-item-content-wrapper .edit-maptype-actions-trigger,
+.citymap-list .city-map-content-wrapper .edit-city-map-actions-trigger {
+  background-image: url("/html/themes/control_panel/images/common/edit.png");
+  background-repeat: no-repeat;
+  clip: rect(0pt, 0pt, 0pt, 0pt);
+  display: block;
+  height: 16px;
+  margin-top: -8px;
+  padding: 0;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  width: 16px; }
+
+.maptype-list .maptype-item-content-wrapper .delete-maptype-actions-trigger,
+.citymap-list .city-map-content-wrapper .delete-city-map-actions-trigger {
+  background-image: url("/html/themes/control_panel/images/common/delete.png");
+  background-repeat: no-repeat;
+  clip: rect(0pt, 0pt, 0pt, 0pt);
+  display: block;
+  height: 16px;
+  margin-top: -8px;
+  padding: 0;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 16px; }
+
+.maptype-list .maptype-item-content-wrapper .maptype-name.selected,
+.citymap-list .city-map-content-wrapper .city-map-name.selected {
+  background: none repeat scroll 0 0 #AEB9BE; }
+
+.maptype-list .maptype-item-content-wrapper .maptype-name a {
+  background: url("/city_maps-portlet/images/map_type_icon.png") no-repeat scroll 0 5px transparent;
+  color: #00528B;
+  display: block;
+  padding: 5px 8px 5px 20px;
+  text-decoration: none;
+  font-weight: bold; }
+
+.citymap-list .city-map-content-wrapper .city-map-name a {
+  background: url("/city_maps-portlet/images/city_maps_icon.png") no-repeat scroll 0 5px transparent;
+  color: #00528B;
+  display: block;
+  padding: 5px 8px 5px 20px;
+  text-decoration: none;
+  font-weight: bold; }
+
+.maptype-list .maptype-item-content-wrapper .maptype-name a:HOVER,
+.citymap-list .city-map-content-wrapper .city-map-name a:HOVER {
+  color: #FFFFFF; }
+
+.maptype-list .selected a,
+.citymap-list .selected a {
+  color: #000000;
+  text-decoration: none; }
+
+.maptype-list .selected a:hover,
+.citymap-list .selected a:hover {
+  color: #FFB683; }
+
+.maptype-list .selected a, .maptype-list .selected .maptype-item-content-wrapper, .maptype-list .selected .maptype-item-content-wrapper:hover,
+.citymap-list .selected a, .citymap-list .selected .city-map-content-wrapper, .citymap-list .selected .city-map-content-wrapper:hover {
+  background-color: #427EAD;
+  color: #FFFFFF !important; }
+
+/* CITY MAP VIEW */
+.citi-map-preview {
+  padding: 0px;
+  margin: 0px; }
+
+.citi-map-preview .city-map-name {
+  color: #00528b;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase; }
+
+.citi-map-preview .city-map-image {
+  margin: 0px;
+  padding: 0px; }
+
+.citi-map-preview .city-map-image img {
+  padding: 2px;
+  border: 1px solid #E4E4E4;
+  max-width: 600px; }
+
+.citi-map-preview .view-map-image-url {
+  margin-bottom: 10px; }
+
+.citi-map-preview .view-map-image-url a {
+  text-decoration: underline; }
+
+.citi-map-preview .view-map-image-url a:HOVER {
+  color: #FF5800; }
+
+/* CITY MAP TYPES LIST VIEW */
+.city-map-types-list {
+  padding: 0px;
+  margin: 0px; }
+
+.city-map-types-list ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+
+.city-map-types-list ul li {
+  background: url("/city_maps-portlet/images/li_red_icon.jpg") no-repeat scroll 0 12px transparent;
+  padding-left: 10px;
+  padding-top: 6px; }
+
+.city-map-list ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+
+.city-map-list ul li {
+  background: url("/city_maps-portlet/images/li_red_arrow.png") no-repeat scroll 0 12px transparent;
+  padding-left: 10px;
+  padding-top: 6px; }
+
+.city-map-types-list .map-type-name a {
+  font-weight: bold;
+  color: #00528B;
+  display: block; }
+
+.city-map-types-list .map-type-name a:hover {
+  color: #FF5800; }
+
+.city-map-list .city-map-content-wrapper {
+  position: relative;
+  padding-left: 5px; }
+
+.city-map-list .city-map-content-wrapper:hover {
+  background: none repeat scroll 0 0 #D3DADD; }
+
+.city-map-list .city-map-content-wrapper .city-map-name.selected-map {
+  background: none repeat scroll 0 0 #AEB9BE; }
+
+.city-map-list .city-map-content-wrapper .city-map-name a {
+  color: #00528B;
+  text-decoration: none;
+  display: block; }
+
+.city-map-list .city-map-content-wrapper .city-map-name a:HOVER {
+  color: #FFFFFF; }
+
+.city-map-list .selected-map a:hover {
+  color: #FFB683; }
+
+.city-map-list .selected-map a, .city-map-list .selected-map .city-map-content-wrapper, .city-map-list .selected-map .city-map-content-wrapper:hover {
+  background-color: #427EAD;
+  color: #FFFFFF !important; }
+
+/* CITY MAP BANNER */
+.citymap_banner-portlet .city-map-banner-image img {
+  border: 1px solid #E4E4E4;
+  padding: 1px; }
+

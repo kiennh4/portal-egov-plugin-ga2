@@ -1,0 +1,41 @@
+.license-manager-portlet{
+	
+	.license-manager{
+		
+		h1,h2,h3{
+			margin: 5px 0px;
+		}
+			
+		.license-info{
+			padding-bottom: 20px;
+				
+			.product-name{
+				color: #bc0000;
+			}
+				
+			.product-versions{
+				margin: 0px;
+				font-size: 12px;
+				font-weight: normal;
+			}
+			
+			.provider-name{
+				font-size: 12px;
+				color: #ff5800;
+			}
+			
+			.license-table{
+				width: 100%;
+			}
+				
+			.license-table th.header-title{
+				padding-left: 0px;
+			}
+			
+			.license-table td, .license-table th {
+				padding: 0 5px;
+				vertical-align: top;
+			}
+		}
+	}
+}

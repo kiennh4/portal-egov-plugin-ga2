@@ -1,0 +1,13 @@
+.portal-plugins-portlet {
+	hr {
+		border-style: inset;
+	}
+	
+	.plugin-detail {
+		table tr {
+			border-bottom: 1px solid #ccc;
+			height:40px;
+			padding: 2px;
+		}
+	}	
+}

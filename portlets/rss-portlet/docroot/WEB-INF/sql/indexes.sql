@@ -1,0 +1,1 @@
+create index IX_C0CBE6B4 on RssFeed (groupId);

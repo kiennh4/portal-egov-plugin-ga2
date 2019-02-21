@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql id="com.bkav.portal.portlet.topic.service.persistence.TopicFinder.findByKeyword">	
+		<![CDATA[
+	    	SELECT 	Topic.companyId,
+	    			Topic.groupId,
+	    			Topic.userId,
+	    			Topic.userName,
+	    			Topic.createDate,
+	    			Topic.modifiedDate,
+	    			
+	    			Topic.topicId,
+	    			Topic.topicName,
+	    			Topic.categoryIds
+	    	
+	    	FROM 	Asset_Topic Topic
+	    	           
+	        WHERE               
+	                (Topic.topicName LIKE ?) AND (Topic.groupId = ?)
+	                
+	        ORDER BY Topic.createDate DESC
+		]]>
+	</sql>
+</custom-sql>

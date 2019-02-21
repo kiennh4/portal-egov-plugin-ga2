@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.portal_egov.portlet.visit_counter.model.VisitCounter">
+		<field name="counterId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="totalHitCounter" type="int" />
+	</model>
+	<model name="com.portal_egov.portlet.visit_counter.model.VisitCounterDayLog">
+		<field name="daylogId" type="String" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="hitCounter" type="int" />
+	</model>
+	<model name="com.portal_egov.portlet.visit_counter.model.VisitCounterLog">
+		<field name="visitorIp" type="String" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="hitCounter" type="int" />
+		<field name="lastAccessPageId" type="long" />
+		<field name="lastAccessDate" type="Date" />
+	</model>
+</model-hints>

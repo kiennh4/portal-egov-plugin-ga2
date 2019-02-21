@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.bkav.portal.portlet.complaints.model.Complaints">
+		<field name="complaintId" type="long" />
+		<field name="complaintNumber" type="String" />
+		<field name="signingDate" type="Date" />
+		<field name="complaintName" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="complaintDesc" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="complaintContent" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="replyDocument" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.bkav.portal.portlet.complaints.model.Complaints_DLFileEntries">
+		<field name="id" type="long" />
+		<field name="complaintId" type="long" />
+		<field name="fileEntryId" type="long" />
+	</model>
+</model-hints>

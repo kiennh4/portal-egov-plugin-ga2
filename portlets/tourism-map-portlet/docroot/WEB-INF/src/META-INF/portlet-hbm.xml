@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.portal_egov.portlet.tourism_map.model.TourismMapMarker" />
+	<import class="com.portal_egov.portlet.tourism_map.model.TourismMapMarkerGroup" />
+	<class name="com.portal_egov.portlet.tourism_map.model.impl.TourismMapMarkerImpl" table="TourismMapMarker">
+		<cache usage="read-write" />
+		<id name="markerId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="markerGroupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="markerTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="markerInfo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="markerAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="markerImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="markerLongitude" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="markerLatitude" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.portal_egov.portlet.tourism_map.model.impl.TourismMapMarkerGroupImpl" table="TourismMapMarkerGroup">
+		<cache usage="read-write" />
+		<id name="markerGroupId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="markerGroupName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="markerGroupInfo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

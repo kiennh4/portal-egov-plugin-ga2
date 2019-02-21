@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.1.0//EN" "http://www.liferay.com/dtd/liferay-display_6_1_0.dtd">
+
+<display>
+	<category name="category.egov">
+		<portlet id="vbpq"></portlet>
+		<portlet id="vbpq_category"></portlet>
+		<portlet id="vbpq_lastest_entry"></portlet>
+		<portlet id="vbpq_dynamic_menu"></portlet>
+	</category>
+	
+	<category name="category.hidden">
+		<portlet id="vbpq_management"></portlet>
+		<portlet id="vbpq_category_admin"></portlet>
+	</category>
+</display>

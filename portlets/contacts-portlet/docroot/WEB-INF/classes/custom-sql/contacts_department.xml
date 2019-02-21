@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.contacts.service.persistence.ContactsDepartmentFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	contactsdepartment.companyId,
+    			contactsdepartment.groupId,
+    			contactsdepartment.userId,
+    			contactsdepartment.userName,
+    			
+    			contactsdepartment.departmentId,
+    			contactsdepartment.parentId,
+    			contactsdepartment.departmentName,
+    			contactsdepartment.departmentAddress,
+    			contactsdepartment.departmentPhone,
+    			contactsdepartment.departmentWebsite,
+    			contactsdepartment.departmentEmail,
+    			contactsdepartment.createDate,
+    			contactsdepartment.modifiedDate,
+    			contactsdepartment.displayPriority,
+    			contactsdepartment.departmentStatus
+    	
+    	FROM 	contactsdepartment
+    	           
+        WHERE               
+                (contactsdepartment.departmentName LIKE ?)
+                
+                AND (contactsdepartment.groupId = ?)
+                
+                AND (contactsdepartment.parentId = ?)
+                
+                AND (contactsdepartment.departmentStatus = ?)
+                
+        ORDER BY contactsdepartment.departmentName ASC
+	]]>
+</sql>
+</custom-sql>

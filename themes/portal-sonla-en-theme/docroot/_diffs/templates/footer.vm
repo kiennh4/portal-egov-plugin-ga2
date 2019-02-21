@@ -1,0 +1,27 @@
+<div class="footer-menu">
+	
+</div>
+
+<div class="copyright">
+		
+	#if ($theme_display.isShowPageSettingsIcon())
+		<span class="lfr-meta-actions" >
+				<a class="taglib-icon quickEditLayoutSet" href="$editFooterURL" data-width="700" id="quickEditFooter">
+					<img class="icon" src="$themeDisplay.getPathThemeImages()/common/edit.png" alt="#language("edit-footer")" title="#language("edit-footer")">
+				</a>
+		</span>
+	#end
+
+	#if ($footerContent == "")
+		<div class="copy-right-content">
+			<b>SON LA INFORMATION PORTAL</b><br/>
+				Publication Permit No. 241\GP - BC, granted by Authority of Press on 11 June 2007 <br/>
+				Address: No 131 Nguyen Luong Bang Street, Son La city<br/>
+				FAX: 0223. 858728. Email: banbientap@sonla.gov.vn<br/>
+				All rights reserved, please indicate the source when citing information
+			 <br/>
+		</div>
+	#else	
+		$footerContent
+	#end
+</div>

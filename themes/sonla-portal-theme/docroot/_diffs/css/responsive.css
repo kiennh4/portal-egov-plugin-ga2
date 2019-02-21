@@ -1,0 +1,177 @@
+@media only screen and (max-width: 768px) {
+	#column-4 {
+		display: none !important;
+	}
+	#column-3 {
+		display: table-header-group !important;
+	}
+	.footer-menu {
+		display: none !important;
+	}
+	#column-2 {
+		display: none !important;
+	}
+	.portlet-boundary_banner_WAR_bannerportlet_ img {
+		width: 100% !important;
+	}
+	.flash-banner img {
+		object-fit: unset;
+	}
+	 
+    .navigation ul {
+        position: static;
+    }
+    
+    .navigation li {
+        margin-bottom: 1px;
+        background-color: #2f3036;
+    }
+    
+    .sf-navbar a span{
+   		border-right: none !important;  
+    }
+    
+    .navigation ul li, li a {
+        width: 100%;
+        color: #fff !important;
+    }
+    
+    .show-menu {
+        display:block;
+    }
+    .responsive{
+    	display: block !important; 
+    }
+    .navigation{
+    	display: none;
+    }
+}
+
+@media all and (max-width: 480px) {
+	#column-4 {
+		display: none !important;
+	}
+	#column-3 {
+		display: list-item !important;
+	}
+	#column-2 {
+		display: none !important;
+	}
+	.sub-navigation {
+		display: none !important;
+	}
+	.article-publisher-display-style-6 .aui-w70 {
+		width: 100% !important;
+		max-height: 95px !important;
+	}
+	.article-publisher-display-style-6 .aui-w30 {
+		display: none !important;
+	}
+	.aui-w70 {
+		width: 100%;
+	}
+	.portlet-boundary_banner_WAR_bannerportlet_ {
+		display: none !important;
+	}
+	.bottom-links {
+		margin-top: 50px !important;
+	}
+	.flash-banner img {
+		height: 70% !important;
+		object-fit: fill;
+	}
+	.focus-asset-display-style-2 .tab-content-container {
+		display: none !important;
+	}
+	.focus-asset-display-style-2 .asset-title {
+		width: 100% !important;
+	}
+	.focus-asset-display-style-2 .asset-summary-container {
+		width: 100% !important;
+	}
+	.focus-asset-display-style-2 .asset-summary-container img {
+		width: 100% !important;
+	}
+}
+
+@media all and (max-width: 801px) {
+	.focus-asset-display-style-2 .tab-content-container {
+		display: none !important;
+	}
+	.focus-asset-display-style-2 .asset-title {
+		width: 100% !important;
+	}
+	.focus-asset-display-style-2 .asset-summary-container {
+		width: 100% !important;
+	}
+	.focus-asset-display-style-2 .asset-summary-container img {
+		width: 100% !important;
+	}
+	.portlet-boundary_banner_WAR_bannerportlet_ img {
+		width: 100% !important;
+	}
+	#column-4 {
+		display: none !important;
+	}
+	.flash-banner img {
+		object-fit: unset;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.flash-banner img {
+		height: 100% !important;
+		object-fit: fill;
+	}
+	.top_notify {
+		display: none !important;
+	}
+	.sub-navigation {
+		padding: 10px !important;
+	}
+	.article-publisher-display-style-6 .aui-w70 {
+		width: 100% !important;
+		max-height: 95px !important;
+	}
+	.article-publisher-display-style-6 .aui-w30 {
+		width: 100% !important;
+		margin-top: 10px !important;
+	}
+	.navigation {
+		height: auto;
+	}
+	.navigation ul {
+		height: auto;
+		width: 100%;
+		display: block;
+	}
+	.flash-banner {
+		width: 100% !important;
+	}
+	.navigation li {
+		width: 50%;
+		float: left;
+		position: relative;
+	}
+	.navigation ul a span {
+		border-right: none;
+	}
+	.navigation ul li.selected a {
+		color: #ffd900 !important;
+	}
+	.navigation ul li ul {
+		display: none;
+	}
+	.focus-asset-display-style-2 .tab-content-container {
+		display: none !important;
+	}
+	.focus-asset-display-style-2 .asset-title {
+		width: 100% !important;
+	}
+	.focus-asset-display-style-2 .asset-summary-container {
+		width: 100% !important;
+	}
+	.focus-asset-display-style-2 .asset-summary-container img {
+		width: 100% !important;
+	}
+}

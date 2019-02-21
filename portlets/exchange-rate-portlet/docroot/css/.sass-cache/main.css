@@ -1,0 +1,112 @@
+.exchange_rate_portlet_config_page {
+  font-size: 12px;
+  color: #434343;
+  border: 1px solid #D2D2D2;
+  padding: 10px;
+  border-radius: 2px; }
+
+.exchange_rate_portlet_config_page .aui-field-content {
+  padding-bottom: 10px; }
+
+.exchange_rate_portlet_config_page select {
+  width: auto;
+  background-image: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
+  padding: 3px;
+  border: 1px solid #A1A2A4;
+  color: #454545;
+  text-shadow: none; }
+
+.gold_price {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 2px;
+  margin-bottom: 10px; }
+
+.gold_price .gold_price_title {
+  padding: 3px;
+  background-color: #F7F7F7;
+  font-size: 12px;
+  font-weight: bold;
+  color: #BC0000;
+  text-transform: uppercase;
+  text-shadow: 1px 1px white;
+  border: 1px solid #D2D2D2;
+  border-bottom: none; }
+
+.gold_price .gold_price_title img {
+  margin-right: 2px;
+  margin-top: 2px; }
+
+.gold_price table {
+  width: 100%; }
+
+.gold_price table tr {
+  height: 30px; }
+
+.gold_price table tr td {
+  border: 1px solid #E5E5E5;
+  text-align: center; }
+
+.gold_price table tr td.gold-type-label {
+  color: #00528B; }
+
+.gold_price .gold-price-source-info {
+  text-align: center;
+  font-size: 10px;
+  color: #999999; }
+
+.currency_exchange_rate {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 2px;
+  margin-bottom: 5px; }
+
+.currency_exchange_rate .currency_rate_title {
+  padding: 3px;
+  background-color: #F7F7F7;
+  font-size: 12px;
+  font-weight: bold;
+  color: #BC0000;
+  text-transform: uppercase;
+  text-shadow: 1px 1px white;
+  border: 1px solid #D2D2D2;
+  border-bottom: none; }
+
+.currency_exchange_rate .currency_rate_title img {
+  margin-right: 2px;
+  margin-top: 2px; }
+
+.currency_exchange_rate table {
+  width: 100%; }
+
+.currency_exchange_rate table tr {
+  height: 30px; }
+
+.currency_exchange_rate table tr td {
+  border: 1px solid #E5E5E5;
+  text-align: center; }
+
+.currency_exchange_rate table tr td.foreign-currency-name {
+  color: #00528B; }
+
+.currency_exchange_rate .currency-source-info {
+  text-align: center;
+  font-size: 10px;
+  color: #999999; }
+
+.exrate_table, .goldprice_table {
+  width: 100%; }
+
+.exrate_table thead tr td, .goldprice_table thead tr td {
+  text-align: center;
+  border: 1px solid #E5E5E5;
+  background: #0788d9;
+  color: white;
+  width: 25%; }
+
+.exrate_table tbody tr td, .goldprice_table tbody tr td {
+  border: 1px solid #E5E5E5;
+  text-align: center; }
+

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.ykct.service.YKCT_CategoryLocalService" class="com.portal_egov.portlet.ykct.service.impl.YKCT_CategoryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.ykct.service.YKCT_CategoryService" class="com.portal_egov.portlet.ykct.service.impl.YKCT_CategoryServiceImpl" />
+	<bean id="com.portal_egov.portlet.ykct.service.persistence.YKCT_CategoryPersistence" class="com.portal_egov.portlet.ykct.service.persistence.YKCT_CategoryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.ykct.service.persistence.YKCT_CategoryFinder" class="com.portal_egov.portlet.ykct.service.persistence.YKCT_CategoryFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.ykct.service.YKCT_DlFileEntriesLocalService" class="com.portal_egov.portlet.ykct.service.impl.YKCT_DlFileEntriesLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.ykct.service.YKCT_DlFileEntriesService" class="com.portal_egov.portlet.ykct.service.impl.YKCT_DlFileEntriesServiceImpl" />
+	<bean id="com.portal_egov.portlet.ykct.service.persistence.YKCT_DlFileEntriesPersistence" class="com.portal_egov.portlet.ykct.service.persistence.YKCT_DlFileEntriesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.ykct.service.YKCT_EntryLocalService" class="com.portal_egov.portlet.ykct.service.impl.YKCT_EntryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.ykct.service.YKCT_EntryService" class="com.portal_egov.portlet.ykct.service.impl.YKCT_EntryServiceImpl" />
+	<bean id="com.portal_egov.portlet.ykct.service.persistence.YKCT_EntryPersistence" class="com.portal_egov.portlet.ykct.service.persistence.YKCT_EntryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.ykct.service.persistence.YKCT_EntryFinder" class="com.portal_egov.portlet.ykct.service.persistence.YKCT_EntryFinderImpl" parent="basePersistence" />
+</beans>

@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.assetstatistic", "com.bkav.portal_egov.portlet.asset_statistics.service", "asset-statistics-portlet");

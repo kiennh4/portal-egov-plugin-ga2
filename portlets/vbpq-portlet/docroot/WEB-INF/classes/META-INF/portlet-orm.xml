@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.portal_egov.portlet.vbpq.model.impl.VBPQ_CategoryModelImpl">
+		<attributes>
+			<id name="categoryId" />
+			<basic name="parentId" />
+			<basic name="typeId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="categoryName" />
+			<basic name="categoryDesc" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<basic name="displayPriority" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.vbpq.model.impl.VBPQ_DlFileEntriesModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="vbpqEntryId" />
+			<basic name="fileEntryId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.vbpq.model.impl.VBPQ_EntryModelImpl">
+		<attributes>
+			<id name="entryId" />
+			<basic name="departmentId" />
+			<basic name="categoryId" />
+			<basic name="docTypeId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="entryName" />
+			<basic name="entryCode" />
+			<basic name="entryDesc" />
+			<basic name="fileAttachmentURL" />
+			<basic name="publicatorName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="publishDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="executeDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="expirationDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="neverExpired" />
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.portal_egov.portlet.vbpq.model.impl.VBPQ_CategoryImpl" name="VBPQ_Category">
+		<table name="vbpq_category" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.vbpq.model.impl.VBPQ_DlFileEntriesImpl" name="VBPQ_DlFileEntries">
+		<table name="vbpq_dlfileentries" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.vbpq.model.impl.VBPQ_EntryImpl" name="VBPQ_Entry">
+		<table name="vbpq_entry" />
+		<attributes />
+	</entity>
+</entity-mappings>

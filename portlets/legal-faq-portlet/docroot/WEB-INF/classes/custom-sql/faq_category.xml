@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.legal_faq.service.persistence.LegalFAQCategoryFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	legalfaqcategory.categoryId,
+    			legalfaqcategory.companyId,
+    			legalfaqcategory.groupId,
+    			legalfaqcategory.userId,
+    			legalfaqcategory.parentId,
+    			legalfaqcategory.categoryName,
+    			legalfaqcategory.categoryDesc,
+    			legalfaqcategory.createDate,
+    			legalfaqcategory.modifiedDate
+    	
+    	FROM 	legalfaqcategory
+    	           
+        WHERE               
+                (legalfaqcategory.categoryName LIKE ?)
+                
+                 AND (legalfaqcategory.groupId = ?)
+            	           	
+        ORDER BY legalfaqcategory.categoryName ASC
+	]]>
+</sql>
+
+</custom-sql>

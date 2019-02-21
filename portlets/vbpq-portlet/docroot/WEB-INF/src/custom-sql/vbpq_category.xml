@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+<sql id="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_CategoryFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	vbpq_category.categoryId,
+    			vbpq_category.parentId,
+    			vbpq_category.typeId,
+    			vbpq_category.companyId,
+    			vbpq_category.groupId,
+    			vbpq_category.userId,
+    			vbpq_category.categoryName,
+    			vbpq_category.categoryDesc,
+    			vbpq_category.createDate,
+    			vbpq_category.modifiedDate,
+    			vbpq_category.active_
+    			
+    	
+    	FROM 	vbpq_category
+    	           
+        WHERE               
+                (vbpq_category.categoryName LIKE ? OR vbpq_category.categoryDesc LIKE ?)           			
+            	
+            	 AND (vbpq_category.groupId = ?)
+            	
+            	 AND (vbpq_category.typeId = ?)
+            	           	
+        ORDER BY vbpq_category.categoryName ASC
+        
+	]]>
+</sql>
+
+</custom-sql>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.bkav.portal.portlet.autoupdate">
+	<author>anhbdb</author>
+	<namespace>AutoUpdate</namespace>
+    <entity name="UpdatePlugins" local-service="true">
+        <column name="pluginId" type="long" primary="true"></column>
+        <column name="pluginName" type="String"></column>
+        <column name="pluginCode" type="String"></column>
+        <column name="pluginType" type="int"></column>
+        <column name="currentVersion" type="double"></column>
+        <column name="previousVersions" type="String"></column>
+        <column name="currentSize" type="double"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifyDate" type="Date"></column>
+        <column name="serverCompanyId" type="long"></column>
+        <finder name="PluginCode" return-type="UpdatePlugins">
+            <finder-column name="pluginCode"></finder-column>
+        </finder>
+        <finder name="PluginCodeAndVersion" return-type="UpdatePlugins">
+            <finder-column name="pluginCode"></finder-column>
+            <finder-column name="currentVersion"></finder-column>
+        </finder>
+    </entity>
+</service-builder>

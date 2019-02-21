@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.bkav.portal.portlet.portalplugins.model.ePortals" />
+	<import class="com.bkav.portal.portlet.portalplugins.model.PortalPlugins" />
+	<class name="com.bkav.portal.portlet.portalplugins.model.impl.ePortalsImpl" table="ePortals">
+		<cache usage="read-write" />
+		<id name="eportalId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="eportalName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="eportalCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="eportalDomain" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="eportalVersion" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifyDate" type="org.hibernate.type.TimestampType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.bkav.portal.portlet.portalplugins.model.impl.PortalPluginsImpl" table="PortalPlugins">
+		<cache usage="read-write" />
+		<id name="pluginId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="pluginName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pluginCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pluginVersion" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="pluginType" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ePortalId" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="isImportant" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pluginDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pluginUpdateInfo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pluginSize" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="warFileId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="signFileId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifyDate" type="org.hibernate.type.TimestampType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+<sql id="com.portal_egov.portlet.ykct.service.persistence.YKCT_CategoryFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	YKCT_Category.*
+    	
+    	FROM 	YKCT_Category
+    	           
+        WHERE   
+        		YKCT_Category.groupId = ?
+        		
+                AND (YKCT_Category.categoryName LIKE ?) 
+                
+        ORDER BY modifiedDate DESC
+	]]>
+</sql>
+
+</custom-sql>

@@ -1,0 +1,37 @@
+<table style="width: 100%; border: none; font-family: tahoma; font-size: 13px;">
+	<tr>
+		<td style="padding: 5px 0px; font-size: 16px; font-weight: bold;">
+			<span  style="border-bottom: 1px solid #333; padding-bottom: 3px; width: 100%; display: block;">
+				$notifyTitle
+			</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td style="padding: 5px 0px;"><b>$askDateKeyword:</b> $askDate</td>
+	</tr>
+	
+	<tr>
+		<td style="padding: 5px 0px;"><b>$senderNameKeyword:</b> $citizenName</td>
+	</tr>
+
+	<tr>
+		<td style="padding: 5px 0px;"><b>$senderEmailKeyword:</b> $citizenEmail</td>
+	</tr>
+	
+	<tr>
+		<td style="padding: 5px 0px;"><b>$askTitleKeyword:</b> $askTitle</td>
+	</tr>
+		
+	<tr>
+		<td style="padding: 5px 0px;"><b>$askContentKeyword:</b> $askContent</td>
+	</tr>
+	
+	<tr>
+		<td style="padding: 5px 0px; font-size: 12px; font-style: italic;">
+			<span  style="border-top: 1px solid #333; padding-bottom: 3px; width: 100%; display: block;">
+				$notifyBottomKeyword
+			</span>
+		</td>
+	</tr>
+</table>

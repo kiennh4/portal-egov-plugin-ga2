@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder
+	package-path="com.portal_egov.portlet.proposition_feedback" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>propositionfeedback</namespace>
+
+	<!-- Entity luu thong tin ve Linh vuc thuc thi,Co quan soan thao,
+		Co quan trinh du thao,Uy ban tham tra du thao luat .
+		Phan biet loai du lieu thong qua categoryTypeId (int)
+			categoryTypeId = 1 tuong ung voi Linh vuc thuc thi cua du thao luat
+			categoryTypeId = 2 tuong ung voi Co quan soan thao du thao luat
+			categoryTypeId = 3 tuong ung voi Uy ban tham tra du thao luat
+	-->
+	<entity name="PropositionCategory" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<column name="categoryId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+
+		<!-- Id phan biet kieu du lieu la Co quan hay Linh vuc -->
+		<column name="categoryTypeId" type="int" />
+		
+		<!-- Id cua co quan/linh vuc cap tren -->
+		<column name="parentId" type="long" />
+		
+		<!-- Ten Co quan/Linh vuc -->
+		<column name="categoryName" type="String" />
+		
+		<!-- Thong tin Co quan/Linh vuc -->
+		<column name="categoryDesc" type="String" />
+				
+		<!-- So luong du thao luat trong chuyen muc -->
+		<column name="propositionCount" type="int" />
+		
+		<!-- Thong tin thoi gian khoi tao va thoi gian cap nhat du lieu -->
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="categoryName" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+						
+		<finder name="TypeAndCompany" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="categoryTypeId" />
+		</finder>
+						
+		<finder name="TypeAndGroup" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="categoryTypeId" />
+		</finder>
+				
+		<finder name="ParentAndCompany" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="parentId" />
+		</finder>
+						
+		<finder name="ParentAndGroup" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="parentId" />
+		</finder>
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+	
+	<!-- Entity luu thong tin du thao luat -->
+	<entity name="Proposition" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<column name="propositionId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+
+		<!-- Id cua Linh vuc thuc thi du thao luat -->
+		<column name="categoryId" type="long" />
+		
+		<!-- Id cua Co quan soan thao du thao luat -->
+		<column name="compilationDepartmentId" type="long" />
+				
+		<!-- Id cua Uy ban tham tra du thao luat -->
+		<column name="verificationDepartmentId" type="long" />
+		
+		<!-- Ten du thao -->
+		<column name="propositionName" type="String" />
+		
+		<!-- Thong tin tom tat noi dung du thao -->
+		<column name="propositionDesc" type="String" />
+		
+		<!-- Noi dung toan van du thao -->
+		<column name="propositionContent" type="String" />
+		
+		<!-- Id cua file van ban goc luu tru tren server -->
+		<column name="documentFileId" type="long" />
+		
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<column name="viewCount" type="int" />
+		<column name="feedbackCount" type="int" />
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusDate" type="Date" />
+		
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+						
+		<finder name="CategoryAndCompany" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="categoryId" />
+		</finder>
+						
+		<finder name="CategoryAndGroup" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="categoryId" />
+		</finder>
+						
+		<finder name="StatusAndCompany" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="status" />
+		</finder>
+						
+		<finder name="StatusAndGroup" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="status" />
+		</finder>
+								
+		<finder name="CategoryAndStatusAndCompany" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="categoryId" />
+			<finder-column name="status" />
+		</finder>
+						
+		<finder name="CategoryAndStatusAndGroup" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="categoryId" />
+			<finder-column name="status" />
+		</finder>
+
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+	
+	<!-- ENtity luu thong tin gop y du thao luat cua cong dan -->
+	<entity name="PropositionFeedback" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<column name="feedbackId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+
+		<!-- Id cua Du thao luat -->
+		<column name="propositionId" type="long" />
+				
+		<!-- Id cua file dinh kem upload len server -->
+		<column name="feedbackFileAttId" type="long" />
+		
+		<!-- Tieu de gop y -->
+		<column name="feedbackTitle" type="String" />
+		
+		<!-- Noi dung gop y -->
+		<column name="feedbackContent" type="String" />
+				
+		<!-- Ten nguoi gop y -->
+		<column name="citizenName" type="String" />
+						
+		<!-- Email nguoi gop y -->
+		<column name="citizenEmail" type="String" />
+						
+		<!-- SDT nguoi gop y -->
+		<column name="citizenPhone" type="String" />
+						
+		<!-- Dia chi nguoi gop y -->
+		<column name="citizenAddress" type="String" />
+		
+		<!-- Thong tin thoi gian khoi tao va thoi gian cap nhat du lieu -->
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusDate" type="Date" />
+		
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+										
+		<finder name="StatusAndCompany" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="status" />
+		</finder>
+						
+		<finder name="StatusAndGroup" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="status" />
+		</finder>
+						
+		<finder name="PropositionAndCompany" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="propositionId" />
+		</finder>
+						
+		<finder name="PropositionAndGroup" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="propositionId" />
+		</finder>
+						
+		<finder name="PropositionAndStatusAndCompany" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="propositionId" />
+			<finder-column name="status" />
+		</finder>
+						
+		<finder name="PropositionAndStatusAndGroup" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="propositionId" />
+			<finder-column name="status" />
+		</finder>
+		
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+</service-builder>

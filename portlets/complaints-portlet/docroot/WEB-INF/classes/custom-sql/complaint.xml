@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.compaints.service.persistence.ComplaintFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	*
+    	
+    	FROM 	Complaint
+    	           
+        WHERE   
+        		Complaint.groupId = ?
+        		
+        		AND Complaint.complaintStatus = ?
+        		
+                AND (UPPER(Complaint.complaintTitle) LIKE ? 
+                		OR UPPER(Complaint.complaintDescription) LIKE ? 
+                	)
+                
+        ORDER BY Complaint.createDate DESC
+	]]>
+</sql>
+
+</custom-sql>

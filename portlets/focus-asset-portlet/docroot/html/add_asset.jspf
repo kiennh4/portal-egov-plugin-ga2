@@ -1,0 +1,163 @@
+<%--
+/**
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+<%@page import="com.liferay.portal.util.PortalUtil"%>
+<%@page import="javax.portlet.PortletURL"%>
+<%@page import="com.liferay.portal.kernel.util.StringPool"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="javax.portlet.PortletMode"%>
+<%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
+<%@page import="com.liferay.portal.kernel.util.WebKeys"%>
+<%@page import="com.liferay.portlet.asset.service.AssetCategoryLocalServiceUtil"%>
+<%@page import="com.liferay.portlet.asset.model.AssetCategory"%>
+<%@page import="com.liferay.portal.kernel.util.Constants"%>
+<%@page import="com.liferay.portlet.journal.service.JournalStructureLocalServiceUtil"%>
+<%@page import="com.liferay.portlet.journal.model.JournalStructure"%>
+<%@page import="com.liferay.portlet.documentlibrary.model.DLFolderConstants"%>
+<%@page import="java.util.TreeMap"%>
+<%@page import="com.liferay.portal.security.permission.comparator.ModelResourceComparator"%>
+<%@page import="com.liferay.portal.kernel.portlet.LiferayPortletResponse"%>
+<%@page import="com.liferay.portal.kernel.portlet.LiferayPortletRequest"%>
+<%@page import="com.liferay.portal.kernel.util.ArrayUtil"%>
+<%@page import="com.liferay.portlet.asset.AssetRendererFactoryRegistryUtil"%>
+<%@page import="com.liferay.portal.service.GroupLocalServiceUtil"%>
+<%@page import="com.liferay.portal.kernel.util.HtmlUtil"%>
+<%@page import="com.liferay.portal.kernel.util.HttpUtil"%>
+<%@page import="com.liferay.portlet.asset.model.AssetRendererFactory"%>
+<%@page import="com.liferay.portal.security.permission.ResourceActionsUtil"%>
+<%@page import="com.liferay.portlet.journal.model.JournalArticle"%>
+<%@page import="com.liferay.portlet.documentlibrary.model.DLFileEntry"%>
+
+<%
+	PortletURL addNewArticleURL = getAddArticleURL(liferayPortletRequest, liferayPortletResponse, new long[0], new String[0]);
+%>
+
+<c:if test="<%= addNewArticleURL != null %>">
+	<%
+
+	addNewArticleURL.setParameter("groupId", String.valueOf(groupId));
+	
+		String addNewArticleURLStr = addNewArticleURL.toString();
+	
+		addNewArticleURLStr = HttpUtil.addParameter(addNewArticleURLStr, "doAsGroupId", groupId);
+		addNewArticleURLStr = HttpUtil.addParameter(addNewArticleURLStr, "refererPlid", plid);
+	
+		String journalArticleClassName = JournalArticle.class.getName();
+	
+		String taglibEditURL = "javascript:Liferay.Util.openWindow({dialog: {width: 960}, id: '" 
+							 + liferayPortletResponse.getNamespace() + "', title: '" 
+							 + ResourceActionsUtil.getModelResource(locale, journalArticleClassName) 
+							 + "', uri:'" + HtmlUtil.escapeURL(addNewArticleURLStr) + "'});";
+	%>
+	<div class="article-action-icon-wrapper" style="margin: 5px 0px !important;">
+		<liferay-ui:icon-menu >
+			<liferay-ui:icon
+				label="add-new-article-to-this-portlet"
+				message="add-new-article-to-this-portlet"
+				image="add"
+				url="<%= taglibEditURL %>"
+			/>
+		</liferay-ui:icon-menu>
+	</div>
+</c:if>
+
+<div style="clear: both;"></div>
+<%!
+	
+	public PortletURL getAddArticleURL(LiferayPortletRequest liferayPortletRequest,
+		LiferayPortletResponse liferayPortletResponse, long[] allAssetCategoryIds, String[] allAssetTagNames){
+		
+		try{
+			
+			String className = JournalArticle.class.getName();
+			
+			ThemeDisplay themeDisplay = (ThemeDisplay)liferayPortletRequest.getAttribute(WebKeys.THEME_DISPLAY);
+	
+			AssetRendererFactory assetRendererFactory = AssetRendererFactoryRegistryUtil.getAssetRendererFactoryByClassName(className);
+	
+			if (assetRendererFactory == null) {
+				return null;
+			}
+	
+			PortletURL redirectURL = liferayPortletResponse.createRenderURL();
+	
+			redirectURL.setWindowState(LiferayWindowState.POP_UP);
+	
+			redirectURL.setParameter("jspPage", "/html/add_asset_redirect.jsp");
+			
+			PortletURL addPortletURL = assetRendererFactory.getURLAdd(liferayPortletRequest, liferayPortletResponse);
+	
+			if (addPortletURL == null) {
+				return null;
+			}
+	
+			addPortletURL.setWindowState(LiferayWindowState.POP_UP);
+	
+			addPortletURL.setPortletMode(PortletMode.VIEW);
+			
+			addPortletURL.setParameter("redirect", redirectURL.toString());
+	
+			String referringPortletResource = ParamUtil.getString(liferayPortletRequest, "portletResource");
+	
+			if (Validator.isNotNull(referringPortletResource)) {
+				
+				addPortletURL.setParameter("referringPortletResource", referringPortletResource);
+			
+			}else {
+				
+				PortletDisplay portletDisplay = themeDisplay.getPortletDisplay();
+	
+				addPortletURL.setParameter("referringPortletResource", portletDisplay.getId());
+	
+				Map<Long, String> assetVocabularyAssetCategoryIds = new HashMap<Long, String>();
+	
+				for (long assetCategoryId : allAssetCategoryIds) {
+					
+					AssetCategory assetCategory = AssetCategoryLocalServiceUtil.getAssetCategory(assetCategoryId);
+	
+					long assetVocabularyId = assetCategory.getVocabularyId();
+	
+					if (assetVocabularyAssetCategoryIds.containsKey(assetVocabularyId)) {
+						
+						String assetCategoryIds = assetVocabularyAssetCategoryIds.get(assetVocabularyId);
+	
+						assetVocabularyAssetCategoryIds.put(assetVocabularyId, assetCategoryIds + StringPool.COMMA + assetCategoryId);
+					}
+					else {
+						assetVocabularyAssetCategoryIds.put(assetVocabularyId, String.valueOf(assetCategoryId));
+					}
+				}
+	
+				for (Map.Entry<Long, String> entry : assetVocabularyAssetCategoryIds.entrySet()) {
+					long assetVocabularyId = entry.getKey();
+					String assetCategoryIds = entry.getValue();
+	
+					addPortletURL.setParameter("assetCategoryIds" + StringPool.UNDERLINE + assetVocabularyId, assetCategoryIds);
+				}
+	
+				addPortletURL.setParameter("assetTagNames", StringUtil.merge(allAssetTagNames));
+			}
+	
+			return addPortletURL;
+			
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}
+	
+	}
+%>

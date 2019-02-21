@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.portal_egov.portlet.contacts.model.impl.ContactsModelImpl">
+		<attributes>
+			<id name="contactId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="departmentId" />
+			<basic name="imageId" />
+			<basic name="contactName" />
+			<basic name="jobTitle" />
+			<basic name="phoneNumbers" />
+			<basic name="homePhone" />
+			<basic name="mobile" />
+			<basic name="email" />
+			<basic name="displayPriority" />
+			<basic name="contactStatus" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.contacts.model.impl.ContactsDepartmentModelImpl">
+		<attributes>
+			<id name="departmentId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="parentId" />
+			<basic name="departmentName" />
+			<basic name="departmentAddress" />
+			<basic name="departmentPhone" />
+			<basic name="departmentWebsite" />
+			<basic name="departmentEmail" />
+			<basic name="displayPriority" />
+			<basic name="departmentStatus" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.contacts.model.impl.ContactsDepartmentPropertyModelImpl">
+		<attributes>
+			<id name="propertyId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="departmentId" />
+			<basic name="propertyKey" />
+			<basic name="propertyValue" />
+			<basic name="propertyType" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.contacts.model.impl.ContactsPropertyModelImpl">
+		<attributes>
+			<id name="propertyId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="contactId" />
+			<basic name="propertyKey" />
+			<basic name="propertyValue" />
+			<basic name="propertyType" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.portal_egov.portlet.contacts.model.impl.ContactsImpl" name="Contacts">
+		<table name="Contacts" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.contacts.model.impl.ContactsDepartmentImpl" name="ContactsDepartment">
+		<table name="ContactsDepartment" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.contacts.model.impl.ContactsDepartmentPropertyImpl" name="ContactsDepartmentProperty">
+		<table name="ContactsDepartmentProperty" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.contacts.model.impl.ContactsPropertyImpl" name="ContactsProperty">
+		<table name="ContactsProperty" />
+		<attributes />
+	</entity>
+</entity-mappings>

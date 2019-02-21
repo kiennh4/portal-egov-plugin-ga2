@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.portal_egov.portlet.visit_counter" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>visitcounter</namespace>
+
+	<entity name="VisitCounter" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<column name="counterId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		
+		<!-- Tổng số lượt truy cập -->
+		<column name="totalHitCounter" type="int" />
+		
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="totalHitCounter" />
+		</order>
+				
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		
+		<!-- Reference -->
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portal" entity="Resource"></reference>
+	</entity>
+	
+	<entity name="VisitCounterLog" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<!-- IP của người truy cập -->
+		<column name="visitorIp" type="String" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		
+		<!-- Số lượt truy cập -->
+		<column name="hitCounter" type="int" />
+		
+		<!-- Plid của trang truy cập gần nhất -->
+		<column name="lastAccessPageId" type="long" />
+		
+		<!-- Thời điểm truy cập gần nhất -->
+		<column name="lastAccessDate" type="Date" />
+
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="hitCounter" />
+		</order>
+		
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		
+		<!-- Reference -->
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portal" entity="Resource"></reference>
+	</entity>
+	
+	<entity name="VisitCounterDayLog" local-service="true" remote-service="true" table="VisitCounterDayLog">
+
+		<!-- PK fields -->
+		<!-- IP của người truy cập -->
+		<column name="daylogId" type="String" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+
+		<!-- Other fields -->
+		
+		<!-- Số lượt truy cập -->
+		<column name="hitCounter" type="int" />
+		
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		
+		<!-- Reference -->
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portal" entity="Resource"></reference>
+	</entity>
+</service-builder>

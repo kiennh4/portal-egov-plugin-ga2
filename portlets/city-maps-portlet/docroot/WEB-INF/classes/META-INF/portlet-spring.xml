@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.citymaps.service.CityMapLocalService" class="com.portal_egov.portlet.citymaps.service.impl.CityMapLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.citymaps.service.CityMapService" class="com.portal_egov.portlet.citymaps.service.impl.CityMapServiceImpl" />
+	<bean id="com.portal_egov.portlet.citymaps.service.persistence.CityMapPersistence" class="com.portal_egov.portlet.citymaps.service.persistence.CityMapPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.citymaps.service.persistence.CityMapFinder" class="com.portal_egov.portlet.citymaps.service.persistence.CityMapFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.citymaps.service.CityMapTypeLocalService" class="com.portal_egov.portlet.citymaps.service.impl.CityMapTypeLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.citymaps.service.CityMapTypeService" class="com.portal_egov.portlet.citymaps.service.impl.CityMapTypeServiceImpl" />
+	<bean id="com.portal_egov.portlet.citymaps.service.persistence.CityMapTypePersistence" class="com.portal_egov.portlet.citymaps.service.persistence.CityMapTypePersistenceImpl" parent="basePersistence" />
+</beans>

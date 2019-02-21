@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.liferay.portlet.asset.service.persistence.AssetEntryFinder.findRelatedAssetByPublishDate">	
+	<![CDATA[
+    	SELECT * FROM assetentry
+    	           
+        WHERE               
+				(assetentry.publishDate ? ?) AND 
+				
+				(assetentry.groupId = ?) AND
+				
+				(assetentry.classNameId = ?)
+                
+        ORDER BY assetentry.publishDate  DESC
+        
+        LIMIT 0,?
+	]]>
+</sql>
+
+</custom-sql>

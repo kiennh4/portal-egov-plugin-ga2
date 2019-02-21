@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	
+	<portlet>
+		<portlet-name>banner</portlet-name>
+		<display-name>Banner Portlet</display-name>
+		<portlet-class>com.portal_egov.portlet.banner.BannerPortlet</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-jsp</name>
+			<value>/html/view/configuration.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/BannerLanguage</resource-bundle>
+		<portlet-info>
+			<title>Banner Portlet</title>
+			<short-title>Banner Portlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>banner_admin</portlet-name>
+		<display-name>Banner Admin</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.banner.BannerAdmin
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/admin/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/BannerAdminLanguage</resource-bundle>
+		<portlet-info>
+			<title>Banner Admin</title>
+			<short-title>Banner Admin</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>

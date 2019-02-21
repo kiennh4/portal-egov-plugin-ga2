@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	
+	<portlet>
+		<portlet-name>citizen_inquiry</portlet-name>
+		<display-name>Citizen Inquiry Portlet</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.citizen_inquiry.CitizenInquiryPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/Language</resource-bundle>
+		<portlet-info>
+			<title>Citizen Inquiry Portlet</title>
+			<short-title>Citizen Inquiry Portlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>citizen_inquiry_admin</portlet-name>
+		<display-name>Citizen Inquiry Admin</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.citizen_inquiry.CitizenInquiryAdmin
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/admin/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/Language</resource-bundle>
+		<portlet-info>
+			<title>Citizen Inquiry Admin</title>
+			<short-title>Citizen Inquiry Admin</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>

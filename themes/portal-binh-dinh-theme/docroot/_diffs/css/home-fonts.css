@@ -1,0 +1,14 @@
+/* open-sans-regular - vietnamese_latin-ext_latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/phuyen-portal-theme/css/fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+
+@font-face{
+	font-family: 'Noto-Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/phuyen-portal-theme/css/fonts/Noto_Sans/NotoSans-Regular.ttf'); 
+}

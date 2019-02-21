@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionFinder.findByMultiCondition">	
+	<![CDATA[
+    	SELECT * FROM proposition
+    	           
+        WHERE               
+                (proposition.propositionName LIKE ? OR proposition.propositionDesc LIKE ?) 
+                
+                AND (proposition.categoryId = ?)
+                
+                AND (proposition.compilationDepartmentId = ?)
+                
+                AND (proposition.verificationDepartmentId = ?)
+                
+                AND (proposition.status = ?)
+                
+                AND (proposition.groupId = ?)
+                
+        ORDER BY proposition.createDate DESC
+	]]>
+</sql>
+
+<sql id="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionFinder.findByPropositionStatus">	
+	<![CDATA[
+    	SELECT * FROM proposition 
+    	           
+        WHERE               
+                (proposition.groupId = ?)
+                
+                AND (proposition.status = ?)
+                
+        ORDER BY $ORDER_BY_COLUMN $ORDER_BY_TYPE
+	]]>
+</sql>
+
+</custom-sql>

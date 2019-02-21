@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder
+	package-path="com.portal_egov.portlet.citizen_inquiry" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>citizeninquiry</namespace>
+	
+	<!-- Entity luu thong tin phan loai ykien cong dan -->
+	<entity name="CitizenInquiryCategory" local-service="true" remote-service="true">
+		
+		<!-- PK fields -->
+		<column name="categoryId" type="long" primary="true"></column>
+		
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- Other fields -->
+		<column name="categoryName" type="String"></column>
+		<column name="categoryDesc" type="String"></column>
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="createDate"></order-column>
+		</order>
+		
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		
+		<!-- Reference -->
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portal" entity="Resource"></reference>
+	</entity>
+	
+	<!-- Entity luu thong tin lien ket website-->
+	<entity name="CitizenInquiry" local-service="true" remote-service="true">
+		
+		<!-- PK fields -->
+		<column name="inquiryId" type="long" primary="true"></column>
+		
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- Other fields -->
+		<column name="categoryId" type="long"></column>
+		
+		<column name="citizenName" type="String"></column>
+		<column name="citizenPhone" type="String"></column>
+		<column name="citizenEmail" type="String"></column>
+		<column name="citizenAddress" type="String"></column>
+		
+		<column name="inquiryTitle" type="String"></column>
+		<column name="inquiryContent" type="String"></column>
+		
+		<column name="inquiryFeedback" type="String"></column>
+		<column name="inquiryFeedbackUser" type="String"></column>
+		<column name="inquiryFeedbackDate" type="Date"></column>
+		
+		<column name="inquiryStatus" type="int"></column>
+		<column name="approved" type="boolean"></column>
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="createDate"></order-column>
+		</order>
+		
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		<finder name="Category" return-type="Collection">
+			<finder-column name="categoryId"></finder-column>
+		</finder>
+		
+		<!-- Reference -->
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portal" entity="Resource"></reference>
+	</entity>
+	<exceptions>
+		<exception>InquiryCategoryName</exception>
+	</exceptions>
+</service-builder>

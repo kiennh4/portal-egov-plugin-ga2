@@ -1,0 +1,64 @@
+.lfr-image-gallery-actions {
+	font-size: 11px;
+	text-align: right;
+}
+
+.portlet-image-gallery-display {
+	
+	.lfr-asset-metadata{
+		margin-bottom: 0;
+	}
+	
+	.lfr-asset-attributes {
+		clear: both;
+	}
+
+	.folder-search {
+		float: right;
+		margin: 0 0 0.5em 0.5em;
+	}
+
+	.image-score {
+		display: block;
+		margin: 0 0 5px 35px;
+		padding-top: 3px;
+	}
+
+	.image-thumbnail {
+		border: 1px solid #eee;
+		float: left;
+		width: 150px;
+		height: 160px;
+		padding: 5px;
+		text-align: center;
+		text-decoration: none;
+		margin-right: 20px;
+
+		&:hover {
+			border-color: #ccc;
+		}
+
+        &.error:hover {
+            background-color: #FDD;
+        }
+	}
+
+	.taglib-webdav {
+		margin-top: 3em;
+	}
+
+	.image-title {
+		display: block;
+		position:absolute;
+		right: 0px;
+		left: 0px;
+		bottom: 10px;
+	}
+	
+	.taglib-page-iterator{
+		
+		select{
+			padding: 2px !important;
+		}
+	}
+}

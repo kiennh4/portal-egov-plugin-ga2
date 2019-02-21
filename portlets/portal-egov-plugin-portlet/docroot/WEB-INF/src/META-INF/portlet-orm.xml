@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.bkav.portal.portlet.portalplugins.model.impl.ePortalsModelImpl">
+		<attributes>
+			<id name="eportalId" />
+			<basic name="eportalName" />
+			<basic name="eportalCode" />
+			<basic name="eportalDomain" />
+			<basic name="eportalVersion" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifyDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.bkav.portal.portlet.portalplugins.model.impl.PortalPluginsModelImpl">
+		<attributes>
+			<id name="pluginId" />
+			<basic name="pluginName" />
+			<basic name="pluginCode" />
+			<basic name="pluginVersion" />
+			<basic name="pluginType" />
+			<basic name="ePortalId" />
+			<basic name="isImportant" />
+			<basic name="pluginDescription" />
+			<basic name="pluginUpdateInfo" />
+			<basic name="pluginSize" />
+			<basic name="warFileId" />
+			<basic name="signFileId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifyDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="companyId" />
+			<basic name="userName" />
+			<transient name="EPortalId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.bkav.portal.portlet.portalplugins.model.impl.ePortalsImpl" name="ePortals">
+		<table name="ePortals" />
+		<attributes />
+	</entity>
+	<entity class="com.bkav.portal.portlet.portalplugins.model.impl.PortalPluginsImpl" name="PortalPlugins">
+		<table name="PortalPlugins" />
+		<attributes />
+	</entity>
+</entity-mappings>

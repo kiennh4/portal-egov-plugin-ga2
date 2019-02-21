@@ -1,0 +1,43 @@
+<div class="navigation">
+	<ul id="navigation-menu" class="sf-menu sf-navbar">
+		<li class="home-icon">
+			<a href="$home_url"><img src="$themeDisplay.getPathThemeImages()/custom_icon/home.png"/></a>
+		</li>
+		#set ($counter=0)
+		#foreach ($nav_item in $nav_items)
+			#set ($counter = $counter + 1)
+			#if($counter==1)
+				#if ($nav_item.isSelected())
+					<li class="first-nav-item selected">
+				#else
+					<li class="first-nav-item">
+				#end
+			#else
+				#if ($nav_item.isSelected())
+					<li class="selected">
+				#else
+					<li>
+				#end
+			#end
+
+				<a href="$nav_item.getURL()" $nav_item.getTarget()><span>$nav_item.icon() $nav_item.getName()</span></a>
+
+				#if ($nav_item.hasChildren())
+					<ul class="sub-menu">
+						#foreach ($nav_child in $nav_item.getChildren())
+							#if ($nav_child.isSelected())
+								<li class="selected">
+							#else
+								<li>
+							#end
+								<a href="$nav_child.getURL()" $nav_child.getTarget()>$nav_child.getName()</a>
+							</li>
+						#end
+					</ul>
+				#end
+			</li>
+		#end
+	</ul>
+</div>
+
+<div style="clear:both;"></div>

@@ -1,0 +1,90 @@
+<%@page import="com.liferay.portal.kernel.language.LanguageUtil"%>
+<%@page import="com.liferay.portal.util.PortalUtil"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.util.PropositionUtil"%>
+<%@page import="com.liferay.portal.kernel.util.StringPool"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.service.PropositionCategoryLocalServiceUtil"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.util.PropositionConstants"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.service.PropositionLocalServiceUtil"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.model.Proposition"%>
+<%@page import="java.util.List"%>
+
+<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+
+
+<%
+	List<Proposition> propositionLastestList = PropositionLocalServiceUtil.findByPropositionStatus(scopeGroupId,PropositionConstants.ALL_PUBLISH_PROPOSITION_STATUS,
+									PropositionConstants.ORDER_BY_CREATE_DATE, PropositionConstants.ORDER_BY_TYPE_DESC, 0, numbersOfLastestProposition);
+%>
+
+<ul >
+	<%
+	for(Proposition proposition : propositionLastestList){
+		
+		String categoryName = "";
+		String compilationDepartmentName = "";
+		String verificationDepartmentName = "";
+		
+		if(proposition.getCategoryId() > 0){
+			categoryName = PropositionCategoryLocalServiceUtil.getPropositionCategory(proposition.getCategoryId()).getCategoryName();
+		}
+		
+		if(proposition.getCompilationDepartmentId() > 0){
+			compilationDepartmentName = PropositionCategoryLocalServiceUtil.getPropositionCategory(proposition.getCompilationDepartmentId()).getCategoryName();
+		}
+		
+		if(proposition.getVerificationDepartmentId() > 0){
+			verificationDepartmentName = PropositionCategoryLocalServiceUtil.getPropositionCategory(proposition.getVerificationDepartmentId()).getCategoryName();
+		}
+		
+	%>
+	
+	<liferay-portlet:renderURL var="viewLastestPropositionDetailURL">
+		<liferay-portlet:param name="jspPage" value="/html/proposition_feedback/proposition_content/view_proposition_details.jsp" />
+		<liferay-portlet:param name="propositionId" value="<%=String.valueOf(proposition.getPropositionId()) %>" />
+	</liferay-portlet:renderURL>
+	
+	<li>
+		<div class="proposition_summary">
+			<div class="proposition_info">
+				<div class="proposition_name">
+					<a href="<%=viewLastestPropositionDetailURL%>"><%=proposition.getPropositionName() %></a>
+				</div>
+				
+				<div>
+					<span class="proposition_attribute_name"><liferay-ui:message key="proposition-category"/><%=StringPool.COLON %></span>
+					<%=categoryName%>
+				</div>
+
+				<div>
+					<span class="proposition_attribute_name"><liferay-ui:message key="proposition-compilation-department"/><%=StringPool.COLON %></span>
+					<%=compilationDepartmentName%>
+				</div>
+				
+				<div>
+					<span class="proposition_attribute_name"><liferay-ui:message key="proposition-verification-department"/><%=StringPool.COLON %></span>
+					<%=verificationDepartmentName%>
+				</div>
+								
+				<div>
+					<span class="proposition_attribute_name"><liferay-ui:message key="proposition-status"/><%=StringPool.COLON %></span>
+					<liferay-ui:message key="<%=PropositionUtil.getPropositionStatusTitle(proposition.getPropositionId()) %>"/>
+				</div>
+				
+				<div class="proposition_metadata_list">
+					<span class="proposition_metadata"><%=dateFormat.format(proposition.getCreateDate()) %></span>
+					
+					<span class="proposition_metadata"><%=proposition.getViewCount() %> <liferay-ui:message key="view-counter"/></span>
+					
+					<span class="proposition_metadata"><%=proposition.getFeedbackCount() %> <liferay-ui:message key="feedback-count"/></span>
+				</div>				
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+	</li>
+	<%
+	}
+	%>
+</ul>

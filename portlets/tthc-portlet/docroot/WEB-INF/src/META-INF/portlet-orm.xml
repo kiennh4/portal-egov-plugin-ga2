@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.portal_egov.portlet.tthc.model.impl.TTHC_AttributeModelImpl">
+		<attributes>
+			<id name="attributeId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="tthcEntryId" />
+			<basic name="attributeTypeId" />
+			<basic name="attributeIndex" />
+			<basic name="attributeName" />
+			<basic name="attributeValue" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.tthc.model.impl.TTHC_CategoryModelImpl">
+		<attributes>
+			<id name="categoryId" />
+			<basic name="parentId" />
+			<basic name="categoryTypeId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="categoryName" />
+			<basic name="categoryDesc" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="displayPriority" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.tthc.model.impl.TTHC_EntryModelImpl">
+		<attributes>
+			<id name="entryId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="levelId" />
+			<basic name="departmentId" />
+			<basic name="categoryId" />
+			<basic name="audienceId" />
+			<basic name="resultTypeId" />
+			<basic name="entryCode" />
+			<basic name="entryName" />
+			<basic name="entryDesc" />
+			<basic name="processGuide" />
+			<basic name="processType" />
+			<basic name="processTime" />
+			<basic name="processFee" />
+			<basic name="processRequirement" />
+			<basic name="processFoundationDocument" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.portal_egov.portlet.tthc.model.impl.TTHC_AttributeImpl" name="TTHC_Attribute">
+		<table name="tthc_attribute" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.tthc.model.impl.TTHC_CategoryImpl" name="TTHC_Category">
+		<table name="tthc_category" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.tthc.model.impl.TTHC_EntryImpl" name="TTHC_Entry">
+		<table name="tthc_entry" />
+		<attributes />
+	</entity>
+</entity-mappings>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.bkav.portal.portlet.contentsharing" auto-namespace-tables="false">
+	<author>anhbdb</author>
+    <namespace>ContentSharing</namespace>
+    <entity name="ContentSharing" local-service="true">
+        <column name="contentId" primary="true" type="long"></column>
+        <column name="companyId" type="long" primary="false"></column>
+        <column name="groupId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="contentSharing" type="String"></column>
+        <finder name="companyId" return-type="ContentSharing">
+            <finder-column name="companyId"></finder-column>
+        </finder>
+        <finder name="groupId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
+        <finder name="companyIdAndGroupId" return-type="ContentSharing">
+            <finder-column name="companyId"></finder-column>
+            <finder-column name="groupId"></finder-column>
+        </finder>
+    </entity>
+
+	
+</service-builder>

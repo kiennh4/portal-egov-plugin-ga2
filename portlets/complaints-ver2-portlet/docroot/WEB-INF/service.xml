@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.bkav.portal.portlet.complaints" auto-namespace-tables="false">
+	<author>AnhBDb</author>
+    
+    	
+	<!-- 
+		Entity Phan loai Van Ban Phap Quy 
+		Luu thong tin ve Co quan ban hanh VBPQ,Linh vuc thong ke VBPQ va Loai VBPQ
+	-->
+    
+        
+    	
+	<!-- 
+		Entity mapping id cua van ban voi id cua tai lieu dinh kem
+	-->
+    <namespace>complaint</namespace>
+    <entity name="Complaints" local-service="true">
+        <column name="complaintId" type="long" primary="true"></column>
+        <column name="complaintNumber" type="String"></column>
+        <column name="signingDate" type="Date"></column>
+        <column name="complaintName" type="String"></column>
+        <column name="complaintDesc" type="String"></column>
+        <column name="complaintContent" type="String"></column>
+        <column name="replyDocument" type="String"></column>
+        <column name="groupId" type="long"></column>
+        <column name="companyId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifiedDate" type="Date"></column>
+        <order by="desc">
+            <order-column name="createDate" order-by="desc"></order-column>
+        </order>
+        <finder name="GroupId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
+        <finder name="CompanyId" return-type="Collection">
+            <finder-column name="companyId"></finder-column>
+        </finder>
+    </entity>
+    <entity name="Complaints_DLFileEntries" local-service="true">
+        <column name="id" type="long" primary="true"></column>
+        <column name="complaintId" type="long"></column>
+        <column name="fileEntryId" type="long"></column>
+        <finder name="ComplaintId" return-type="Collection">
+            <finder-column name="complaintId"></finder-column>
+        </finder>
+        <finder name="DLFileEntry" return-type="Collection">
+            <finder-column name="fileEntryId"></finder-column>
+        </finder>
+    </entity>
+</service-builder>

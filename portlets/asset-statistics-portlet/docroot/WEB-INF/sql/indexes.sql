@@ -1,0 +1,1 @@
+create index IX_F0715C91 on StatisticEntity (groupId);

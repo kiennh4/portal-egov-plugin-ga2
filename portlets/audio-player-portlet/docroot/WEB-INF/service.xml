@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.bkav.portal.portlet.audioplayer">
+	<author>anhbdb</author>
+	<namespace>AudioPlayer</namespace>
+    <entity name="AudioAlbum" local-service="true" remote-service="true">
+        <column name="albumId" type="long" primary="true"></column>
+        <column name="albumName" type="String"></column>
+        <column name="albumInfo" type="String"></column>
+        <column name="albumCoverId" type="long"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifyDate" type="Date"></column>
+        <column name="groupId" type="long"></column>
+        <column name="companyId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="userName" type="String"></column>
+        <column name="viewCounter" type="long"></column>
+        <finder name="GroupId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
+        <finder name="CompanyId" return-type="Collection">
+            <finder-column name="companyId"></finder-column>
+        </finder>
+    </entity>
+    <entity name="AudioFile" local-service="true">
+        <column name="audioId" type="long" primary="true"></column>
+        <column name="audioName" type="String" primary="false"></column>
+        <column name="audioInfo" type="String"></column>
+        <column name="audioType" type="String"></column>
+        <column name="audioFileId" type="long"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifyDate" type="Date"></column>
+        <column name="groupId" type="long"></column>
+        <column name="companyId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="userName" type="String"></column>
+        <column name="viewCounter" type="long"></column>
+        <finder name="GroupId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
+        <finder name="CompanyId" return-type="Collection">
+            <finder-column name="companyId"></finder-column>
+        </finder>
+    </entity>
+    <entity name="AlbumAudioMap" local-service="true">
+        <column name="mapId" type="long" primary="true"></column>
+        <column name="albumId" type="long"></column>
+        <column name="audioId" type="long"></column>
+        <finder name="Album" return-type="Collection">
+            <finder-column name="albumId"></finder-column>
+        </finder>
+        <finder name="Audio" return-type="Collection">
+            <finder-column name="audioId"></finder-column>
+        </finder>
+        <finder name="AudioAlbum" return-type="Collection">
+            <finder-column name="audioId"></finder-column>
+            <finder-column name="albumId"></finder-column>
+        </finder>
+    </entity>
+</service-builder>

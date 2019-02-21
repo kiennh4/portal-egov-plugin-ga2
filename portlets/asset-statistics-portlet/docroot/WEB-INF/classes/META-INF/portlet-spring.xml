@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.bkav.portal_egov.portlet.asset_statistics.service.StatisticEntityLocalService" class="com.bkav.portal_egov.portlet.asset_statistics.service.impl.StatisticEntityLocalServiceImpl" />
+	<bean id="com.bkav.portal_egov.portlet.asset_statistics.service.StatisticEntityService" class="com.bkav.portal_egov.portlet.asset_statistics.service.impl.StatisticEntityServiceImpl" />
+	<bean id="com.bkav.portal_egov.portlet.asset_statistics.service.persistence.StatisticEntityPersistence" class="com.bkav.portal_egov.portlet.asset_statistics.service.persistence.StatisticEntityPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal_egov.portlet.asset_statistics.service.persistence.StatisticEntityFinder" class="com.bkav.portal_egov.portlet.asset_statistics.service.persistence.StatisticEntityFinderImpl" parent="basePersistence" />
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.bkav.portal.portlet.autoupdate.model.UpdatePlugins" />
+	<class name="com.bkav.portal.portlet.autoupdate.model.impl.UpdatePluginsImpl" table="AutoUpdate_UpdatePlugins">
+		<cache usage="read-write" />
+		<id name="pluginId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="pluginName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pluginCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pluginType" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="currentVersion" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="previousVersions" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="currentSize" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifyDate" type="org.hibernate.type.TimestampType" />
+		<property name="serverCompanyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

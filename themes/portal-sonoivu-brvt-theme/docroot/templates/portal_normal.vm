@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+	$theme.include($top_head_include)
+</head>
+
+<body class="$css_class" >
+
+	$theme.include($body_top_include)
+	
+	#if ($is_signed_in)
+		#dockbar()
+	#end
+	
+	<div class="body-wrapper">
+						
+		#if ($theme_display.isShowPageSettingsIcon())
+			<span class="lfr-meta-actions">
+				<a class="taglib-icon quickEditLayoutSet" href="$editBannerURL" data-width="700" id="quickEditBanner">
+					<img class="icon" src="$themeDisplay.getPathThemeImages()/common/edit.png" alt="#language("edit-banner")" title="#language("edit-banner")">
+				</a>
+			</span>
+		#end
+		
+		<div class="flash-banner-wrapper">
+			#if ($isFlashBanner==true)
+											
+				#if ($bannerImageUrl == "")
+					#set($bannerImageUrl = "$themeDisplay.getPathThemeImages()/banner/flash_banner.swf")
+				#end
+				
+				<div class="flash-banner">
+					<object>
+
+						<param name="wmode" value="transparent">
+						<EMBED  SRC="$bannerImageUrl" 
+								WIDTH="1010" 
+								HEIGHT="180"
+								PLAY="true" 
+								LOOP="true" 
+								QUALITY="high" 
+								scale="noborder" 
+								wmode="transparent" 
+								PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
+						> 
+						</EMBED>
+					</object>
+				</div>
+			#else
+				#if ($bannerImageUrl == "")
+					#set($bannerImageUrl = "$themeDisplay.getPathThemeImages()/banner/banner.jpg")
+				#end
+				<div class="flash-banner" style = "background:url('$bannerImageUrl') no-repeat center top transparent;background-size: 100% 100%;"></div>
+			#end
+		</div>
+		
+		#if ($has_navigation || $is_signed_in)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
+		
+		<div class="content-wrapper">
+			#parse ("$full_templates_path/sub_navigation.vm")
+			<div id="content">
+				#if ($selectable)
+					$theme.include($content_include)
+				#else
+					$portletDisplay.recycle()
+		
+					$portletDisplay.setTitle($the_title)
+		
+					$theme.wrapPortlet("portlet.vm", $content_include)
+				#end
+			</div>
+		</div>
+		
+		<footer id="footer" role="contentinfo">
+			#parse ("$full_templates_path/footer.vm")
+		</footer>
+		
+		$theme.include($body_bottom_include)
+				
+		<a href="#" class="scroll-up-btn">
+			<span class="btn-arrow"></span>
+			<span class="btn-text">#language("back-to-top")</span>
+		</a>
+	</div>
+	
+	<script type="text/javascript">
+	  $(document).ready(function () {
+	
+	      $(window).scroll(function () {
+	          if ($(this).scrollTop() > 100) {
+	              $('.scroll-up-btn').fadeIn();
+	          } else {
+	              $('.scroll-up-btn').fadeOut();
+	          }
+	      });
+	
+	      $('.scroll-up-btn').click(function () {
+	          $("html, body").animate({
+	              scrollTop: 0
+	          }, 600);
+	          return false;
+	      });
+	
+	  });
+	</script>
+	
+	<script type="text/javascript">
+		AUI().ready('aui-dialog', function(A) {
+			A.all('a.quickEditLayoutSet').each(
+				function(node){
+					node.on('click', function(event) {
+						event.preventDefault();
+						var item = event.currentTarget;
+						var width = item.attr('data-width');
+						if(!width){
+							width = 500;
+						}
+						window.myDialog = new A.Dialog(
+							{
+								id: item.attr('id'),
+								align: Liferay.Util.Window.ALIGN_CENTER,
+								title: item.attr('title'),
+								width: width,
+								modal:true,
+								close: false,
+								buttons: [{
+									label: Liferay.Language.get('close'),
+									handler: function() {
+										this.close();
+									}
+								}]
+							}
+						).plug(
+							A.Plugin.IO,
+							{
+								uri: item.attr('href')
+							}
+						).render();
+					});
+				}
+			);
+		});
+</script>
+</body>
+
+$theme.include($bottom_include)
+
+</html>

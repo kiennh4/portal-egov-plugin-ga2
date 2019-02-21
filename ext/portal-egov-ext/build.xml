@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="portal-egov-ext" basedir="." default="direct-deploy">
+	<import file="../build-common-ext.xml" />
+</project>

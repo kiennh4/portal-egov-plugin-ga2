@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.portal_egov.portlet.legal_faq.model.LegalFAQCategory" />
+	<import class="com.portal_egov.portlet.legal_faq.model.LegalFAQEntry" />
+	<class name="com.portal_egov.portlet.legal_faq.model.impl.LegalFAQCategoryImpl" table="LegalFAQCategory">
+		<cache usage="read-write" />
+		<id name="categoryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="parentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categoryDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.portal_egov.portlet.legal_faq.model.impl.LegalFAQEntryImpl" table="LegalFAQEntry">
+		<cache usage="read-write" />
+		<id name="entryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="citizenName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="citizenPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="citizenEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="citizenAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="askDate" type="org.hibernate.type.TimestampType" />
+		<property name="askTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="askContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answerDate" type="org.hibernate.type.TimestampType" />
+		<property name="answerContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="publishDate" type="org.hibernate.type.TimestampType" />
+		<property name="viewCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="publishStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>

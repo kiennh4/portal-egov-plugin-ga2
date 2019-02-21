@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql id="com.bkav.portal.portlet.video.service.persistence.VideoEntryFinder.findByKeyword">	
+		<![CDATA[
+	    	SELECT 	VideoEntry.companyId,
+	    			VideoEntry.groupId,
+	    			VideoEntry.userId,
+	    			VideoEntry.userName,
+	    			VideoEntry.createDate,
+	    			VideoEntry.modifiedDate,
+	    			
+	    			VideoEntry.entryId,
+	    			VideoEntry.name,
+	    			VideoEntry.description,
+	    			VideoEntry.videoType,
+	    			VideoEntry.videoUrl,
+	    			VideoEntry.videoFileId,
+	    			VideoEntry.thumbnailImage,
+	    			VideoEntry.thumbnailImageId
+	    	
+	    	FROM 	VideoEntry
+	    	           
+	        WHERE               
+	                ((VideoEntry.name LIKE ?) OR (VideoEntry.videoUrl LIKE ?))
+	                
+	                AND (VideoEntry.groupId = ?)
+	                
+	        ORDER BY VideoEntry.createDate DESC
+		]]>
+	</sql>
+	<sql id="com.bkav.portal.portlet.video.service.persistence.VideoEntryFinder.findByCategoryId">	
+		<![CDATA[
+	    	SELECT 	VideoEntry.companyId,
+	    			VideoEntry.groupId,
+	    			VideoEntry.userId,
+	    			VideoEntry.userName,
+	    			VideoEntry.createDate,
+	    			VideoEntry.modifiedDate,
+	    			
+	    			VideoEntry.entryId,
+	    			VideoEntry.name,
+	    			VideoEntry.description,
+	    			VideoEntry.videoType,
+	    			VideoEntry.videoUrl,
+	    			VideoEntry.videoFileId,
+	    			VideoEntry.thumbnailImage,
+	    			VideoEntry.thumbnailImageId
+	    	
+	    	FROM 	VideoEntry, VideoCategoryMap
+	    	           
+	        WHERE               
+	                (VideoCategoryMap.categoryId = ?)
+	                
+	                AND (VideoEntry.groupId = ?)
+	                
+	                AND (VideoCategoryMap.entryId = VideoEntry.entryId)
+	                
+	        ORDER BY VideoEntry.createDate DESC
+		]]>
+	</sql>
+</custom-sql>

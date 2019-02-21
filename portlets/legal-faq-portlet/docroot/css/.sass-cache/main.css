@@ -1,0 +1,291 @@
+/* FORM STYLE */
+.legal-faq-portlet-config-panel {
+  color: #434343 !important;
+  padding: 10px;
+  border: 1px solid #d2d2d2; }
+
+.legal-faq-portlet-config-panel .aui-field-content,
+.legal_faq_management-portlet .aui-field-content {
+  padding-bottom: 10px; }
+
+.legal-faq-portlet-config-panel select,
+.legal_faq_management-portlet select,
+.legal_faq_management-portlet textarea,
+.legal_faq_management-portlet input[type="text"] {
+  display: inline-block;
+  padding: 6px 5px !important;
+  color: #555555;
+  vertical-align: middle;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  border-radius: 3px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  transition: border linear 0.2s, box-shadow linear 0.2s !important; }
+
+.legal-faq-portlet-config-panel select:focus,
+.legal_faq_management-portlet select:focus,
+.legal_faq_management-portlet textarea:focus,
+.legal_faq_management-portlet input[type="text"]:focus {
+  border-color: rgba(82, 168, 236, 0.8) !important;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important; }
+
+.legal_faq_management-portlet span.cke_skin_kama,
+.legal_faq_give_ask_form_wrap span.cke_skin_kama {
+  border: 1px solid #E4E4E4;
+  border-radius: 3px;
+  padding: 0px; }
+
+.legal_faq_management-portlet .cke_skin_kama .cke_wrapper,
+.legal_faq_give_ask_form_wrap .cke_skin_kama .cke_wrapper {
+  background-color: #E9E9E9; }
+
+.legal_faq_management-portlet .cke_skin_kama .cke_focus,
+.legal_faq_give_ask_form_wrap .cke_skin_kama .cke_focus {
+  outline-color: rgba(82, 168, 236, 0.8) !important; }
+
+/* FAQ Category Management */
+.legal-faq-admin-toolbar {
+  padding: 0px;
+  margin: 0px; }
+
+.legal-faq-admin-toolbar .lfr-header-row {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background: url("/vbpq-portlet/html/images/subheader_bg.png") repeat-x scroll 0 0 #d9d9d9;
+  border: 1px solid #C9C9C9; }
+
+.legal-faq-admin-toolbar .lfr-header-row-content {
+  padding: 2px 4px 0 !important; }
+
+.legal-faq-admin-toolbar .add-category-btn-container {
+  display: inline-block;
+  float: left;
+  margin: 0; }
+
+.legal-faq-admin-toolbar .faq-category-search-form {
+  display: inline-block;
+  float: right;
+  margin: 0; }
+
+.legal-faq-admin-toolbar .faq-category-search-form input[type="text"] {
+  width: 240px;
+  padding: 5px 5px !important; }
+
+.faq_category_update_form {
+  border: 1px solid #E4E4E4;
+  font-size: 12px;
+  font-weight: bold; }
+
+.faq_category_update_form table tr {
+  height: 40px; }
+
+.faq_category_update_form table tr td {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.faq_category_update_form input[type="text"] {
+  width: 300px; }
+
+.faq_category_update_form textarea {
+  width: 300px;
+  height: 70px; }
+
+.faq_category_update_form .aui-form-validator-message {
+  border-radius: 2px;
+  width: 302px; }
+
+.legal_faq_management-portlet .lfr-search-container tr:hover td {
+  background: #D3E8F1;
+  border: 1px solid #D3E8F1; }
+
+/* FAQ Entry Management */
+.legal-faq-admin-toolbar .faq-entry-search-form {
+  padding: 0px;
+  margin: 0; }
+
+.legal-faq-admin-toolbar .faq-entry-search-form input[type="text"] {
+  width: 240px !important;
+  padding: 5px 5px !important; }
+
+.faq_entry_list .delta-selector,
+.faq_entry_list .page-selector {
+  padding-right: 5px; }
+
+.faq_entry_list .delta-selector select,
+.faq_entry_list .page-selector select {
+  border-radius: 2px !important;
+  padding: 0px !important;
+  margin: 0px !important; }
+
+/* FAQ UPDATE FORM */
+.legal-faq-update-form {
+  padding: 0px;
+  margin: 0px;
+  display: block; }
+
+.legal-faq-update-form .taglib-form-navigator .form-section h3 {
+  border-color: #d0d0d0 !important;
+  color: #00528b !important; }
+
+.legal-faq-update-form .aui-field-content {
+  padding-bottom: 10px; }
+
+.legal-faq-update-form input[type="text"],
+.legal-faq-update-form select {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #A1A2A4;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
+  padding: 5px 1px;
+  text-shadow: none; }
+
+.legal-faq-update-form input[type="text"] {
+  width: 300px; }
+
+.legal-faq-update-form input[type="text"]#_legal_faq_management_WAR_legal_fagportlet_askTitle {
+  width: 590px; }
+
+.legal-faq-update-form select {
+  width: 312px; }
+
+.legal-faq-update-form .lfr-form-row {
+  border: none;
+  font-weight: bold;
+  padding: 0px; }
+
+.legal-faq-update-form .lfr-form-row .date-picker select {
+  width: auto;
+  padding: 4px !important; }
+
+.legal-faq-update-form .cke_skin_kama {
+  width: 600px; }
+
+.legal-faq-update-form span.cke_skin_kama {
+  border: 1px solid #E4E4E4;
+  border-radius: 3px;
+  padding: 0px; }
+
+.legal-faq-update-form .cke_skin_kama .cke_wrapper {
+  background-color: #E9E9E9; }
+
+.legal-faq-update-form .cke_skin_kama .cke_wrapper table tr {
+  height: 20px; }
+
+.legal-faq-update-form .cke_skin_kama .cke_wrapper table tr td {
+  padding: 0px; }
+
+.legal-faq-update-form .aui-form-validator-message {
+  border-radius: 2px;
+  width: 302px; }
+
+/* Legal FAQ Categories */
+.faq-categories-navigation {
+  font-size: 12px;
+  padding: 0px;
+  margin: 0px; }
+
+.faq-categories-navigation ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none outside none; }
+
+.faq-categories-navigation ul li {
+  padding: 6px 0px;
+  border-bottom: 1px solid #f1f2f3; }
+
+.faq-categories-navigation ul li:hover {
+  background: #D3E8F1; }
+
+.faq-categories-navigation ul li:last-child {
+  border: none; }
+
+.faq-categories-navigation ul li a {
+  background: url("/legal-faq-portlet/images/icon/category_bullet.png") no-repeat scroll 5px 5px transparent;
+  padding-left: 20px;
+  font-weight: bold; }
+
+.faq-counter-value {
+  color: #999;
+  font-size: 10px;
+  padding-left: 2px; }
+
+/* Legal FAQ Lastest Entries */
+.legal_faq_lastest_entries_default_style {
+  background-color: white;
+  border: 1px solid #d2d2d2;
+  font-size: 12px;
+  margin-bottom: 15px;
+  width: 250px; }
+
+.legal_faq_lastest_entries_default_style .legal_faq_tabs_name {
+  border-bottom: 1px solid #E4E4E4;
+  font-weight: bold; }
+
+.legal_faq_lastest_entries_default_style .legal_faq_tabs_name .aui-column {
+  cursor: pointer;
+  text-align: center;
+  background-color: #F0F0F0;
+  text-shadow: 1px 1px white;
+  padding: 8px 0px; }
+
+.legal_faq_lastest_entries_default_style .legal_faq_tabs_name .aui-column a {
+  color: #7C7C7C; }
+
+.legal_faq_lastest_entries_default_style .legal_faq_tabs_name .aui-column a:hover {
+  color: #7C7C7C; }
+
+.legal_faq_lastest_entries_default_style .legal_faq_tabs_name .active_tab {
+  color: #FFFFFF;
+  background-color: #00528B;
+  text-shadow: none; }
+
+.legal_faq_lastest_entries_default_style .legal_faq_tabs_name .active_tab a {
+  color: #FFFFFF; }
+
+.legal_faq_lastest_entries_default_style .legal_faq_tabs_name .active_tab a:hover {
+  color: #FFFFFF; }
+
+.legal_faq_lastest_entries_default_style .tab_content {
+  padding: 5px; }
+
+.legal_faq_lastest_entries_default_style .lastest_entries {
+  display: none; }
+
+.legal_faq_lastest_entries_default_style .tab_content_active_div {
+  display: block; }
+
+.legal_faq_lastest_entries_default_style .tab_content_deactive_div {
+  display: none; }
+
+.legal_faq_lastest_entries_default_style .tab_content ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0; }
+
+.legal_faq_lastest_entries_default_style .tab_content ul li {
+  background: url("/legal_faq-portlet/images/brown_bullet.gif") no-repeat scroll 0 15px transparent;
+  padding-left: 10px;
+  padding-top: 10px; }
+
+.legal_faq_lastest_entries_default_style .tab_content ul li a {
+  clear: both;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: #00528B; }
+
+.legal_faq_lastest_entries_default_style .tab_content ul li a:hover {
+  color: #ff5800; }
+

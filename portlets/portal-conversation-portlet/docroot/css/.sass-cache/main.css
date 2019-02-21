@@ -1,0 +1,409 @@
+/* CO Category Management */
+.conversation_form_title {
+  color: #00528B;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px; }
+
+.co_category_update_form {
+  border: 1px solid #E4E4E4;
+  border-radius: 4px;
+  color: #00528B;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 10px; }
+
+.aui-button-row {
+  margin-bottom: 10px; }
+
+.co_category_update_form table tr {
+  height: 40px; }
+
+.co_category_update_form table tr td {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.co_category_update_form input[type="text"] {
+  width: 300px;
+  border-radius: 2px; }
+
+.co_category_update_form textarea {
+  width: 300px;
+  height: 80px;
+  border-radius: 2px; }
+
+.co_category_update_form select {
+  width: 304px;
+  background-image: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
+  padding: 4px;
+  border: 1px solid #A1A2A4; }
+
+.co_category_update_form input.focus, textarea.focus {
+  background: none repeat scroll 0 0 #F2F8F8 !important;
+  border: 1px solid #8DD4AE !important; }
+
+/* Thread Management */
+.co_thread_management .lfr-header-row {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background: url("/portal-conversation-portlet/images/admin_tool_bar_bg.png") repeat-x scroll 0 0 #d9d9d9;
+  border: 1px solid #C9C9C9; }
+
+.co_thread_management .lfr-header-row-content {
+  padding: 2px 4px 0 !important; }
+
+.co_thread_management .add-thead-button {
+  display: inline-block;
+  float: left;
+  margin-top: 2px; }
+
+.co_thread_management .co_thead_search_form {
+  display: inline-block;
+  float: right;
+  margin: 0; }
+
+.co_thread_management .co_thead_search_form input[type="text"] {
+  width: 260px; }
+
+.co_thread_management input[type="submit"], input[type="button"], input[type="reset"], button {
+  border-color: #C8C9CA #9E9E9E #9E9E9E #C8C9CA !important; }
+
+.co_thread_management .co_thead_search_form select {
+  width: auto;
+  background-image: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
+  padding: 4px;
+  border: 1px solid #A1A2A4;
+  border-radius: 3px; }
+
+/* THREAD UPDATE FORM */
+.co-thread-update-form {
+  display: block; }
+
+.co-thread-update-form .taglib-form-navigator .form-section h3 {
+  border-color: #d0d0d0!important;
+  color: #00528b!important; }
+
+.co-thread-update-form .aui-field-content {
+  padding-bottom: 10px; }
+
+.co-thread-update-form .co-thread-update-form-row {
+  clear: both;
+  display: block;
+  margin-bottom: 10px;
+  min-height: 45px;
+  font-weight: bold; }
+
+.co-thread-update-form input[type="text"] {
+  width: 604px;
+  border-radius: 2px; }
+
+.co-thread-update-form textarea {
+  width: 604px;
+  height: 70px;
+  border-radius: 2px; }
+
+.co-thread-update-form select {
+  border-radius: 2px; }
+
+.co-thread-update-form select#_conversation_admin_WAR_conversationportlet_threadStatus,
+.co-thread-update-form select#_conversation_admin_WAR_conversationportlet_threadCategoryId {
+  min-width: 276px; }
+
+.co-thread-update-form .button_row {
+  padding-bottom: 20px; }
+
+.co-thread-update-form .cke_skin_kama {
+  border: 1px solid #E4E4E4;
+  border-radius: 3px;
+  padding: 0px; }
+
+.co-thread-update-form .cke_skin_kama .cke_wrapper {
+  background-color: #E9E9E9; }
+
+.co-thread-update-form .cke_skin_kama .cke_wrapper table tr {
+  height: 20px; }
+
+.co-thread-update-form .cke_skin_kama .cke_wrapper table tr td {
+  padding: 0px; }
+
+/* CONVERSATION UPDATE FORM */
+.co-conversation-update-form {
+  display: block; }
+
+.co-conversation-update-form .taglib-form-navigator .form-section h3 {
+  border-color: #d0d0d0!important;
+  color: #00528b!important; }
+
+.co-conversation-update-form .aui-field-content {
+  padding-bottom: 10px; }
+
+.co-conversation-update-form .co-conversation-update-form-row {
+  clear: both;
+  display: block;
+  margin-bottom: 10px;
+  min-height: 45px;
+  font-weight: bold; }
+
+.co-conversation-update-form input[type="text"] {
+  width: 390px;
+  border-radius: 2px; }
+
+.co-conversation-update-form textarea {
+  width: 390px;
+  height: 70px;
+  border-radius: 2px; }
+
+.co-conversation-update-form select {
+  border-radius: 2px;
+  max-width: 394px; }
+
+.co-conversation-update-form select#_conversation_admin_WAR_conversationportlet_threadId,
+.co-conversation-update-form select#_conversation_admin_WAR_conversationportlet_conversationStatus {
+  width: 394px; }
+
+.co-conversation-update-form .button_row {
+  padding-bottom: 20px; }
+
+.co-conversation-update-form .cke_skin_kama {
+  border: 1px solid #E4E4E4;
+  border-radius: 3px;
+  padding: 0px; }
+
+.co-conversation-update-form .cke_skin_kama .cke_wrapper {
+  background-color: #E9E9E9; }
+
+.co-conversation-update-form .cke_skin_kama .cke_wrapper table tr {
+  height: 20px; }
+
+.co-conversation-update-form .cke_skin_kama .cke_wrapper table tr td {
+  padding: 0px; }
+
+/* Conversation Portlet View */
+.conversation-portlet-view-page {
+  font-size: 12px;
+  margin: 0px;
+  padding: 0px; }
+
+.conversation-portlet-view-page .conversation-header {
+  text-align: center;
+  text-shadow: 1px 1px #E8E8E8;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #bc0000;
+  margin: 20px 0px; }
+
+.conversation-portlet-view-page .thread-separator {
+  display: block;
+  border-bottom: 1px solid #E8e8e8;
+  margin: 20px 0px; }
+
+.conversation-thread-list .thread-type-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #bc0000;
+  text-shadow: 1px 1px #E8E8E8; }
+
+.conversation-thread-list .taglib-search-iterator-page-iterator-top {
+  display: none; }
+
+.conversation-thread-list .taglib-search-iterator-page-iterator-bottom {
+  display: none; }
+
+.conversation-thread-list .results-header th {
+  color: #00528B;
+  padding: 8px 0px;
+  text-align: center; }
+
+.conversation-thread-list .results-row td {
+  text-align: center; }
+
+.conversation-thread-content {
+  font-size: 12px;
+  padding: 0px;
+  margin: 0px; }
+
+.conversation-thread-content .taglib-header h1.header-title {
+  font-size: 16px;
+  color: #bc0000; }
+
+.conversation-thread-content .taglib-header .header-back-to a {
+  padding: 0px; }
+
+.conversation-thread-content .thread-metadata {
+  margin: 0px;
+  padding-bottom: 15px;
+  font-weight: bold; }
+
+.conversation-thread-content .thread-metadata table {
+  padding: 0px;
+  margin: 0px; }
+
+.conversation-thread-content .thread-metadata table tr {
+  height: 30px; }
+
+.conversation-thread-content .thread-metadata table tr td:first-child {
+  color: #00528b;
+  padding-right: 10px; }
+
+.conversation-thread-content .thread-content {
+  padding: 0px;
+  margin: 0px; }
+
+.conversation-control-row {
+  padding: 10px 0px;
+  float: right; }
+
+.conversation-control-row a {
+  color: #00528B; }
+
+.conversation-control-row a:hover {
+  color: #bc0000; }
+
+.conversation-control-row .back-to-top a {
+  background: url("/portal-conversation-portlet/images/icon/top_icon.png") no-repeat scroll 0 0 transparent;
+  padding-left: 20px; }
+
+.conversation-control-row .give-ask a {
+  background: url("/portal-conversation-portlet/images/icon/co_icon.png") no-repeat scroll 0 0 transparent;
+  padding-left: 20px; }
+
+/* Give ask form */
+.conversation-give-ask-form {
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold; }
+
+.conversation-give-ask-form .give-ask-form-header {
+  padding: 10px 0px;
+  text-align: center; }
+
+.conversation-give-ask-form .give-ask-form-header .form-title {
+  padding: 5px 0px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #bc0000;
+  text-shadow: 1px 1px #e8e8e8;
+  display: block; }
+
+.conversation-give-ask-form .give-ask-form-header .notice-message {
+  font-size: 12px;
+  font-weight: normal;
+  color: #bc0000;
+  text-shadow: 1px 1px #e8e8e8;
+  display: block; }
+
+.conversation-give-ask-form .aui-field-content {
+  padding-bottom: 10px; }
+
+.conversation-give-ask-form input[type="text"] {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #A1A2A4;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
+  padding: 5px 1px;
+  text-shadow: none; }
+
+.conversation-give-ask-form input[type="text"] {
+  width: 400px; }
+
+.conversation-give-ask-form input[type="text"].ask_user_name {
+  width: 324px; }
+
+.conversation-give-ask-form input[type="text"].ask_user_age {
+  width: 32px; }
+
+.conversation-give-ask-form input.focus {
+  background: none repeat scroll 0 0 #F2F8F8 !important;
+  border: 1px solid #8DD4AE !important; }
+
+.conversation-give-ask-form .give-ask-form-row {
+  clear: both;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold; }
+
+.conversation-give-ask-form span.cke_skin_kama {
+  border: 1px solid #E4E4E4;
+  border-radius: 3px;
+  padding: 0px;
+  max-width: 500px; }
+
+.conversation-give-ask-form .cke_skin_kama .cke_wrapper {
+  background-color: #E9E9E9;
+  max-width: 500px; }
+
+.conversation-give-ask-form .cke_skin_kama .cke_contents iframe {
+  min-height: 180px; }
+
+.conversation-give-ask-form .cke_skin_kama .cke_wrapper table tr {
+  height: 20px; }
+
+.conversation-give-ask-form .cke_skin_kama .cke_wrapper table tr td {
+  padding: 0px; }
+
+.conversation-give-ask-form .taglib-captcha input[type="text"] {
+  width: 145px; }
+
+.conversation-give-ask-form .captcha_reload {
+  cursor: pointer; }
+
+.conversation-give-ask-form .captcha_reload img {
+  height: 50px;
+  margin-top: 12px; }
+
+.conversation-give-ask-form #_conversation_WAR_conversationportlet_captchaText {
+  width: 145px; }
+
+.conversation-give-ask-form .aui-column-content {
+  padding: 0px !important; }
+
+.thread-conversation-container {
+  max-height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.thread-conversation-container .conversation-entry {
+  padding: 5px 0px;
+  border-top: 1px solid #e8e8e8; }
+
+.thread-conversation-container .conversation-entry .conversation-title {
+  padding: 2px 0px; }
+
+.thread-conversation-container .conversation-entry .conversation-title a {
+  font-weight: bold;
+  background: url("/portal-conversation-portlet/images/icon/co_icon.png") no-repeat scroll 0 0 transparent;
+  padding-left: 20px; }
+
+.thread-conversation-container .conversation-entry .conversation-title a:hover {
+  color: #bc0000; }
+
+.thread-conversation-container .conversation-entry .conversation-ask-content {
+  color: #00528b;
+  margin: 0px;
+  padding: 0px; }
+
+.thread-conversation-container .conversation-entry .conversation-ask-user-info {
+  color: #9C9C9C;
+  text-align: left;
+  padding-bottom: 5px;
+  font-size: 11px; }
+
+.thread-conversation-container .conversation-entry .conversation-ask-user-info span {
+  display: block; }
+
+.thread-conversation-container .conversation-entry .conversation-answer-content {
+  font-weight: normal; }
+
+.conversation-thread-content .loading-message {
+  text-align: center;
+  color: #ff5800;
+  padding: 20px 0px;
+  font-weight: bold; }
+

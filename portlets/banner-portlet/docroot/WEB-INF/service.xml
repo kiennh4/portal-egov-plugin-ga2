@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.portal_egov.portlet.banner" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>banner</namespace>
+
+	<entity name="BannerGroup" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="bannerGroupId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="groupName" type="String" />
+		<column name="groupDesc" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="groupName" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+	</entity>
+	
+	<entity name="Banner" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="bannerId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="bannerGroupId" type="long" />
+		<column name="bannerTitle" type="String" />
+		<column name="bannerLink" type="String" />
+		<column name="bannerImageId" type="long" />
+		<column name="viewCounter" type="int" />
+		<column name="bannerStatus" type="int" />
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="modifiedDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+				
+		<finder name="BannerGroup" return-type="Collection">
+			<finder-column name="bannerGroupId" />
+		</finder>
+	</entity>
+</service-builder>

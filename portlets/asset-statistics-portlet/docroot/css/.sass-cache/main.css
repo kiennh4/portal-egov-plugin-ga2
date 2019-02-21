@@ -1,0 +1,33 @@
+.statistics-wrapper {
+  padding: 0px;
+  margin: 0px; }
+
+.statistics-wrapper .statistic-form {
+  font-weight: bold;
+  padding: 10px 0px; }
+
+.statistics-wrapper .statistic-form .form-row {
+  clear: both;
+  display: block;
+  margin-bottom: 10px;
+  min-height: 45px;
+  font-weight: bold; }
+
+.statistics-wrapper .statistic-form .aui-field-content {
+  padding-bottom: 10px; }
+
+.statistics-wrapper table tr td.first {
+  width: 20px;
+  text-align: center;
+  border-left-width: 1px !important; }
+
+.statistics-wrapper table tr.vocabulary-name td {
+  line-height: 30px;
+  font-weight: bold;
+  color: #5C85AD; }
+
+.statistics-wrapper .statistic-info {
+  padding: 10px 0px;
+  font-weight: bold;
+  color: #5C85AD; }
+

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.conversation.service.CO_CategoryLocalService" class="com.portal_egov.portlet.conversation.service.impl.CO_CategoryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.conversation.service.CO_CategoryService" class="com.portal_egov.portlet.conversation.service.impl.CO_CategoryServiceImpl" />
+	<bean id="com.portal_egov.portlet.conversation.service.persistence.CO_CategoryPersistence" class="com.portal_egov.portlet.conversation.service.persistence.CO_CategoryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.conversation.service.CO_ConversationLocalService" class="com.portal_egov.portlet.conversation.service.impl.CO_ConversationLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.conversation.service.CO_ConversationService" class="com.portal_egov.portlet.conversation.service.impl.CO_ConversationServiceImpl" />
+	<bean id="com.portal_egov.portlet.conversation.service.persistence.CO_ConversationPersistence" class="com.portal_egov.portlet.conversation.service.persistence.CO_ConversationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.conversation.service.persistence.CO_ConversationFinder" class="com.portal_egov.portlet.conversation.service.persistence.CO_ConversationFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.conversation.service.CO_ThreadLocalService" class="com.portal_egov.portlet.conversation.service.impl.CO_ThreadLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.conversation.service.CO_ThreadService" class="com.portal_egov.portlet.conversation.service.impl.CO_ThreadServiceImpl" />
+	<bean id="com.portal_egov.portlet.conversation.service.persistence.CO_ThreadPersistence" class="com.portal_egov.portlet.conversation.service.persistence.CO_ThreadPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.conversation.service.persistence.CO_ThreadFinder" class="com.portal_egov.portlet.conversation.service.persistence.CO_ThreadFinderImpl" parent="basePersistence" />
+</beans>

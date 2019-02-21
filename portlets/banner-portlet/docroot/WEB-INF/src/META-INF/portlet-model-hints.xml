@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.portal_egov.portlet.banner.model.Banner">
+		<field name="bannerId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="bannerGroupId" type="long" />
+		<field name="bannerTitle" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="bannerLink" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="bannerImageId" type="long" />
+		<field name="viewCounter" type="int" />
+		<field name="bannerStatus" type="int" />
+	</model>
+	<model name="com.portal_egov.portlet.banner.model.BannerGroup">
+		<field name="bannerGroupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="groupName" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="groupDesc" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+	</model>
+</model-hints>

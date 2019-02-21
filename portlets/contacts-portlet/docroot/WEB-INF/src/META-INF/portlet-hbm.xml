@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.portal_egov.portlet.contacts.model.Contacts" />
+	<import class="com.portal_egov.portlet.contacts.model.ContactsDepartment" />
+	<import class="com.portal_egov.portlet.contacts.model.ContactsDepartmentProperty" />
+	<import class="com.portal_egov.portlet.contacts.model.ContactsProperty" />
+	<class name="com.portal_egov.portlet.contacts.model.impl.ContactsImpl" table="Contacts">
+		<cache usage="read-write" />
+		<id name="contactId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="departmentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="imageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="contactName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="jobTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phoneNumbers" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="homePhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mobile" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="displayPriority" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="contactStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.portal_egov.portlet.contacts.model.impl.ContactsDepartmentImpl" table="ContactsDepartment">
+		<cache usage="read-write" />
+		<id name="departmentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="parentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="departmentName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="departmentAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="departmentPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="departmentWebsite" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="departmentEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="displayPriority" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="departmentStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.portal_egov.portlet.contacts.model.impl.ContactsDepartmentPropertyImpl" table="ContactsDepartmentProperty">
+		<cache usage="read-write" />
+		<id name="propertyId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="departmentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="propertyKey" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="propertyValue" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="propertyType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.portal_egov.portlet.contacts.model.impl.ContactsPropertyImpl" table="ContactsProperty">
+		<cache usage="read-write" />
+		<id name="propertyId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="contactId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="propertyKey" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="propertyValue" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="propertyType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

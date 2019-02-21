@@ -1,0 +1,460 @@
+.focus-asset-portlet{
+	
+	.portlet-config-form{
+		
+		.config-title{
+			border-bottom: 1px solid #bfbfbf;
+			padding: 10px 0px;
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+		
+		.lfr-form-row{
+			padding: 0px;
+			margin: 10px 0px;
+		}
+				
+		.lfr-form-row:hover{
+			border: solid #ccc;
+			
+			border-width: 0px 0px 1px 0px;
+			background: #fff;
+		}
+		
+		.style-thumbnail{
+			
+			img{
+				max-width: 750px;
+				max-height: 400px;
+			}
+		}
+				
+		.aui-field-content{
+			margin-bottom: 10px;
+		}
+		
+		.aui-field-label,
+		.aui-choice-label{
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+	}
+	
+	.focus-asset-display-style-1{
+		width: 100%;
+		clear:both;
+		
+		.asset-summary-panel{
+			width: 58%;
+			float:left;
+			position: relative;
+			
+			.asset-image{
+				img{
+					width: 400px;
+					height: 300px;
+					max-width: 400px;
+					max-height: 300px;
+					background: #fff;
+					box-shadow: 0 1px 3px 2px #d2d2d2;
+					padding: 4px;
+				}
+			}
+			
+			.asset-title{
+				width: 400px;
+				opacity: 0.7;
+				position: absolute;
+				background: #333333;
+				bottom: 4px;
+				padding: 12px 0px;
+				margin: 4px;
+				
+				a{
+					color: white;
+					font-weight: bold;
+					padding-left: 10px;
+					display: block;
+					font-size: 14px;
+				}
+			}
+		}
+				
+		.asset-list-panel{
+			width: 40%;
+			float:right;
+			box-shadow: 0 1px 3px 2px #d2d2d2;
+			
+			.panel-header{
+				background: url("/focus-asset-portlet/images/focus-asset-panel-header-bg.jpg") repeat-x transparent;
+				height: 30px;
+				line-height: 30px;
+				margin: 2px;
+				border: 1px solid #e8e8e8;
+				border-bottom: none;
+				
+				.header-title{
+					background: url("/focus-asset-portlet/images/focus-icon.png") no-repeat 2px 2px transparent;
+					color: #ff0700;
+					font-size: 14px;
+					font-weight: bold;
+					text-transform: uppercase;
+					text-shadow: 1px 1px #ccc;
+					padding-left: 20px;
+				}
+			}
+			
+			.panel-content{
+				margin: 0px;
+				padding: 2px;
+				text-align: justify;
+				
+				ul{
+					margin: 0px;
+					padding: 0px;
+					list-style: none;
+					
+					li{
+						border-top: 1px dotted #E4E4E4;
+						padding: 5px;
+						padding-left: 5px;
+						height: 34px;
+					}
+										
+					li:first-child{
+						border-top: none;
+					}
+					
+					li:hover,
+					li.selected{
+						background: #f0f0f0;
+					}
+											
+					li:hover a,
+					li.selected a{
+						color: #ff0700;
+						text-shadow: 1px 1px #e8e8e8;
+					}
+								
+					a{
+						background: url("../images/custom_icon/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
+						color: #00528B;
+						text-decoration: none;
+						padding-left: 12px;
+						display: block;
+						margin-right: 5px;
+					}
+							
+					a:hover{
+						color: #ff0700;
+					}
+				}
+			}
+		}
+	}
+	
+	.focus-asset-display-style-2{
+		width: 100%;
+		clear:both;
+		margin-bottom: 8px;
+				
+		.asset-summary-container{
+			margin: 0;
+			float: left;
+			width: 58%;
+			
+			.asset-summary-content{
+				padding: 0;
+				margin: 0;
+				
+				.asset-image{
+					img{
+						width: 430px;
+						height: 303px;
+						padding: 1px;
+						background: #fff;
+						border: 1px solid #d2d2d2;
+					}
+				}
+				
+				.asset-title{
+					opacity: .7;
+					position: absolute;
+					width: 430px;
+					background: black;
+					bottom: 6px;
+					padding: 15px 0;
+					left: 2px;
+					
+					a{
+						font-weight: bold;
+						display: block;
+						color: #fff;
+						padding-left: 15px;
+					}
+				}
+								
+				.asset-summary{
+					width: 300px;
+				}
+			}
+		}
+		
+		.tab-content-container{
+			margin: 0;
+			float: right;
+			width: 40%;
+			border: 1px solid #d2d2d2;
+			
+			.tab-names-container{
+				width: 100%;
+				
+				ul{
+					margin: 0px;
+					padding: 0px;
+					list-style-type: none;
+					height: 32px;
+					line-height: 32px;
+					border-bottom: 1px solid #d2d2d2;
+					width: 100%;
+					display: table;
+				}
+				
+				ul li{
+					height: 32px;
+					line-height: 32px;
+					border-right: 1px solid #d2d2d2;
+					position: relative;
+					display: table-cell;
+					max-width: 100px;
+					white-space: nowrap;
+				}
+									
+				ul li:last-child{
+					border-right: none;
+				}
+					
+				ul li.active-tab{
+					border-bottom: 1px solid #fff;
+					margin-bottom: -2px;
+				}
+				
+				ul li a{
+					text-decoration: none;
+					font-weight: bold;
+					display: block;
+					padding: 0px 12px;
+					outline: none;
+					text-shadow: 1px 1px #d2d2d2;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					-ms-text-overflow: ellipsis;
+				}
+							
+				ul li a:hover,
+				ul li.active-tab a{
+					color: #ff0700;
+				}
+			}
+									
+			.tab-assets-container{
+				float:right;
+				margin: 0px;
+				padding: 2px;
+				text-align: justify;
+				
+				ul{
+					margin: 0px;
+					padding: 0px;
+					list-style: none;
+					
+					li{
+						border-top: 1px dotted #E4E4E4;
+						padding: 5px;
+						padding-left: 5px;
+						height: 34px;
+					}
+										
+					li:first-child{
+						border-top: none;
+					}
+															
+					li.selected{
+						background: #f6f7f8;
+					}
+											
+					li:hover a,
+					li.selected a{
+						color: #ff0700;
+						text-shadow: 1px 1px #d2d2d2;
+					}
+								
+					a{
+						background: url("../images/custom_icon/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
+						color: #00528B;
+						text-decoration: none;
+						padding-left: 12px;
+						display: block;
+					}
+							
+					a:hover{
+						color: #ff0700;
+					}
+				}
+			}
+		}
+	}
+	
+	.focus-asset-display-style-3{
+		width: 100%;
+		clear:both;
+		margin-bottom: 8px;
+		
+		.tab-names-container{
+			width: 100%;
+			
+			ul{
+				background: url("../images/background/portlet-title-bg.png") top right no-repeat scroll #0788d9;
+				margin: 0px;
+				padding: 0px;
+				list-style-type: none;
+				height: 27px;
+				line-height: 27px;
+				border-bottom: 1px solid #d2d2d2;
+				width: 100%;
+				display: table;
+			}
+			
+			ul li{
+				height: 27px;
+				line-height: 27px;
+				position: relative;
+				float:left;
+				white-space: nowrap;
+				border-radius: 5px 5px 0px 0px;
+			}
+			
+			ul li:last-child{
+				
+			}
+				
+			ul li.active-tab{
+				margin-bottom: -1px;
+				background:#467CDD;
+			}
+			
+			ul li a{
+				text-decoration: none;
+				font-weight: bold;
+				display: block;
+				padding: 0px 12px;
+				outline: none;
+				color: white;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				-ms-text-overflow: ellipsis;
+			}
+						
+			ul li a:hover,
+			ul li.active-tab a{
+				color: #ffd900;
+			}
+		}
+		
+		.asset-summary-container{
+			margin: 0;
+			float: left;
+			width: 58%;
+			
+			.asset-summary-content{
+				padding: 0;
+				margin: 0;
+				
+				.asset-image{
+					padding: 5px;
+					position:relative;
+					img{
+						width: 272px;
+						height:220px;
+						padding: 2px;
+						background: #fff;
+						border: 1px solid #d2d2d2;
+					}
+				}
+				
+				.asset-title{
+					opacity: .6;
+					position: absolute;
+					width: 272px;
+					background: black;
+					bottom: 9px;
+					padding: 15px 0;
+					left: 8px;
+					
+					a{
+						font-weight: bold;
+						display: block;
+						color: #fff;
+						padding-left: 15px;
+					}
+				}
+								
+				.asset-summary{
+					width: 100%;
+				}
+			}
+		}
+		
+		.tab-content-container{
+			margin: 0;
+			float: left;
+			width: 40%;
+			
+			.tab-assets-container{
+				float:right;
+				margin: 0px;
+				padding: 2px;
+				text-align: justify;
+				
+				ul{
+					margin: 0px;
+					padding: 2px;
+					list-style: none;
+					
+					li{
+						border-top: 1px dotted #E4E4E4;
+						padding: 3px;
+						padding-left: 5px;
+						height: 34px;
+					}
+										
+					li:first-child{
+						border-top: none;
+					}
+															
+					li.selected{
+						background: #f6f7f8;
+					}
+											
+					li:hover a,
+					li.selected a{
+						color: #ff0700;
+						text-shadow: 1px 1px #d2d2d2;
+					}
+								
+					a{
+						background: url("../images/custom_icon/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
+						color: #00528B;
+						text-decoration: none;
+						padding-left: 12px;
+						display: block;
+					}
+							
+					a:hover{
+						color: #ff0700;
+					}
+				}
+			}
+		}
+	}
+}

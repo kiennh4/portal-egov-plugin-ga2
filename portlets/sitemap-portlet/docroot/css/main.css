@@ -1,0 +1,42 @@
+
+.site-map-config-panel{
+	padding: 10px;
+	margin: 0px;
+	border: 1px solid #D2D2D2;
+	border-radius: 2px;
+	font-size: 12px;
+	color: #434343;
+}
+
+.site-map-config-panel .aui-field-content{
+	
+	padding-bottom: 10px;
+}
+
+.site-map-config-panel select{
+	width: auto;
+	background-image: none;
+	border-radius: 2px;
+	box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
+	padding: 3px;
+	border: 1px solid #A1A2A4;
+	color: #454545;
+	text-shadow: none;
+}
+
+.layout-treeview-container{
+	margin: 0px;
+	text-shadow: 1px 1px #f1f2f3;
+}
+
+.layout-treeview-container .aui-tree-node-content{
+	padding: 5px 0px;
+}
+
+.layout-treeview-container a:hover{
+	color: #bc0000;
+}
+
+.layout-treeview-container .aui-tree-node-selected a{
+	color: #bc0000;
+}

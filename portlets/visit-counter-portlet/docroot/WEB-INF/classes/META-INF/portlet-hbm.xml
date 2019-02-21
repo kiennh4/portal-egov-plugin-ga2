@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.portal_egov.portlet.visit_counter.model.VisitCounter" />
+	<import class="com.portal_egov.portlet.visit_counter.model.VisitCounterDayLog" />
+	<import class="com.portal_egov.portlet.visit_counter.model.VisitCounterLog" />
+	<class name="com.portal_egov.portlet.visit_counter.model.impl.VisitCounterImpl" table="VisitCounter">
+		<cache usage="read-write" />
+		<id name="counterId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="totalHitCounter" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.portal_egov.portlet.visit_counter.model.impl.VisitCounterDayLogImpl" table="VisitCounterDayLog">
+		<cache usage="read-write" />
+		<id name="daylogId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="hitCounter" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.portal_egov.portlet.visit_counter.model.impl.VisitCounterLogImpl" table="VisitCounterLog">
+		<cache usage="read-write" />
+		<id name="visitorIp" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="hitCounter" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="lastAccessPageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="lastAccessDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,169 @@
+
+/* ---------- Main navigation ---------- */
+.navigation{
+	width: 100%;
+	height: 36px;
+	line-height: 35px;
+	box-shadow: 0px 1px 1px 2px #ddd;
+	/* background-image: url("../images/background/menu_bg.jpg"); */
+	background-color : #c40001;
+	border-radius: 0px;
+}
+
+.sf-navbar {
+	float:none;
+	position:relative;
+	width: 1000px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sf-navbar ul {
+	background: #b90e01;
+	list-style: none;
+	padding: 0;
+	opacity: 0.9;
+	margin: 0;
+	position: absolute;
+	display: none;
+	left: 0;
+	z-index: 99;
+	width: 1050px;
+	min-width: 1050px;
+}
+
+.sf-navbar li {
+	position: static;
+	float: left;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.sf-navbar li.first-nav-item a span{
+	padding-left: 8px;
+}
+
+.sf-navbar li.home-icon a{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.sf-navbar .home-icon img{
+	margin-top: 8px;
+}
+
+.sf-navbar li:hover,
+.sf-navbarli.sfHover {
+	background: #b90e01;
+	/* only transition out, not in */
+	-webkit-transition: none;
+	transition: none;
+}
+
+.sf-navbar li:hover > ul,
+.sf-navbar li.sfHover > ul {
+	display: block;
+}
+
+.sf-navbar a{
+	color: #fff;
+	font-weight: bold;
+	padding: 10px 0px;
+	text-decoration: none;
+	text-align: justify;
+	zoom: 1; /* IE7 */
+}
+
+.sf-navbar ul a{
+	padding: 10px 15px;
+}
+
+.sf-navbar li:last-child a span,
+.sf-navbar ul a span{
+	border-right: None;
+}
+
+.sf-navbar a:hover{
+	color: #fff;
+}
+
+.sf-navbar li.selected a{
+	color: #ffd900;
+}
+.sf-navbar a span{
+	padding: 0px 5px;
+    border-right: 1px solid #e27d49;
+}
+.sf-navbar li.selected ul li a{
+	color: #fff;
+}
+
+.sf-navbar > li > ul > li > a {
+	border: none;
+}
+
+.sf-navbar ul li {
+	background: #b90e01;
+	position: relative;
+}
+.sf-navbar ul ul {
+	left: 0;
+	top: 100%;
+	width: 100%;
+}
+.sf-navbar ul ul li {
+	width: 100%;
+}
+.sf-navbar > li > ul > li {
+	float: left;
+}
+.sf-navbar ul li a:hover{
+	color: #ffd900 !important;
+}
+
+/* ---------- Sub Navigations ---------- */
+.sub-navigation {
+	background-color: #F0F0F0;
+    border: 1px solid #C0C2C5;
+	clear: both;
+	padding: 5px;
+	z-index: 1;
+	font-size: 12px;
+	color: #00528B;
+	text-align: right;
+	text-shadow: 1px 1px white;
+	margin-bottom: 5px;
+}
+
+.sub-navigation .date_time{
+	background: url("../images/custom_icon/clock.png") no-repeat scroll left center transparent;
+	color: #bc0000;
+	float: left;
+	padding: 2px 0px 2px 20px;
+	height: 16px;
+	white-space: nowrap;
+}
+
+.sub-navigation .top_notify{
+	color: #bc0000;
+	float: left;
+	margin-left: 40px;
+}
+
+.sub-navigation .global-search-wrapper{
+	float: right;
+	height: 22px;
+}
+
+.sub-navigation .global-search-wrapper select{
+	display: none;
+}
+
+.sub-navigation a{
+	text-decoration: none;
+}
+
+.sub-navigation .top_notify p{
+	margin: 0 !important;
+}

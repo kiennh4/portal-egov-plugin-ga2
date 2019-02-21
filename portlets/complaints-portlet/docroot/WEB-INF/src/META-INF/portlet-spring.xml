@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.compaints.service.ComplaintLocalService" class="com.portal_egov.portlet.compaints.service.impl.ComplaintLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.compaints.service.ComplaintService" class="com.portal_egov.portlet.compaints.service.impl.ComplaintServiceImpl" />
+	<bean id="com.portal_egov.portlet.compaints.service.persistence.ComplaintPersistence" class="com.portal_egov.portlet.compaints.service.persistence.ComplaintPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.compaints.service.persistence.ComplaintFinder" class="com.portal_egov.portlet.compaints.service.persistence.ComplaintFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.compaints.service.Complaint_DlFileEntriesLocalService" class="com.portal_egov.portlet.compaints.service.impl.Complaint_DlFileEntriesLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.compaints.service.Complaint_DlFileEntriesService" class="com.portal_egov.portlet.compaints.service.impl.Complaint_DlFileEntriesServiceImpl" />
+	<bean id="com.portal_egov.portlet.compaints.service.persistence.Complaint_DlFileEntriesPersistence" class="com.portal_egov.portlet.compaints.service.persistence.Complaint_DlFileEntriesPersistenceImpl" parent="basePersistence" />
+</beans>

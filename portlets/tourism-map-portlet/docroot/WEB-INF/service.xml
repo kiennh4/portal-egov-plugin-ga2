@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.portal_egov.portlet.tourism_map" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>tourismmap</namespace>
+	
+	<!-- 
+	Entity lưu thông tin của các địa điểm được đánh dấu trên bản đồ du lịch.VD: Các khu du lịch,nhà hàng,khách sạn,...
+	 -->
+	<entity name="TourismMapMarker" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<column name="markerId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Id phân nhóm địa điểm -->
+		<column name="markerGroupId" type="long" />
+		<!-- Tên địa điểm -->
+		<column name="markerTitle" type="String" />
+		<!-- Thông tin địa điểm -->
+		<column name="markerInfo" type="String" />
+		<!-- Địa chỉ -->
+		<column name="markerAddress" type="String" />
+		<!-- Ảnh chụp địa điểm -->
+		<column name="markerImageId" type="long" />
+		<!-- Kinh độ trung tâm của bản đồ -->
+		<column name="markerLongitude" type="String" />
+		<!-- Vĩ độ trung tâm của bản đồ -->
+		<column name="markerLatitude" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="markerGroupId" />
+			<order-column name="markerTitle" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="LocationGroup" return-type="Collection">
+			<finder-column name="markerGroupId" />
+		</finder>
+				
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+	</entity>
+		
+	<!-- 
+	Entity lưu thông tin nhóm các địa điểm du lịch.VD: Nhà hàng,Khách sạn,Khu du lịch,...
+	Mỗi nhóm bao gồm nhiều địa điểm du lịch được đánh dấu trên bản đồ.
+	 -->
+	<entity name="TourismMapMarkerGroup" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<column name="markerGroupId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Tên nhóm -->
+		<column name="markerGroupName" type="String" />
+		<!-- Thông tin nhóm -->
+		<column name="markerGroupInfo" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="markerGroupName" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+				
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+	</entity>
+	
+</service-builder>

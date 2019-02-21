@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.portal_egov.portlet.citizen_inquiry.model.impl.CitizenInquiryModelImpl">
+		<attributes>
+			<id name="inquiryId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="categoryId" />
+			<basic name="citizenName" />
+			<basic name="citizenPhone" />
+			<basic name="citizenEmail" />
+			<basic name="citizenAddress" />
+			<basic name="inquiryTitle" />
+			<basic name="inquiryContent" />
+			<basic name="inquiryFeedback" />
+			<basic name="inquiryFeedbackUser" />
+			<basic name="inquiryFeedbackDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="inquiryStatus" />
+			<basic name="approved" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.citizen_inquiry.model.impl.CitizenInquiryCategoryModelImpl">
+		<attributes>
+			<id name="categoryId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="categoryName" />
+			<basic name="categoryDesc" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.portal_egov.portlet.citizen_inquiry.model.impl.CitizenInquiryImpl" name="CitizenInquiry">
+		<table name="CitizenInquiry" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.citizen_inquiry.model.impl.CitizenInquiryCategoryImpl" name="CitizenInquiryCategory">
+		<table name="CitizenInquiryCategory" />
+		<attributes />
+	</entity>
+</entity-mappings>

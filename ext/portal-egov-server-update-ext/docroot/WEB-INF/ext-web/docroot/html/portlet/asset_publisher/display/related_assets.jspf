@@ -1,0 +1,172 @@
+<%--
+/**
+ * Hook by HungDX 09/08/2012
+ * Noi dung : Bo sung file related_assets.jspf de hien thi cac tin bai lien quan khi hien thi chi tiet 1 ban tin
+ */
+--%>
+<%@page import="com.liferay.portlet.journalcontent.util.JournalContentUtil"%>
+<%@page import="com.liferay.portlet.journal.model.JournalArticleDisplay"%>
+<%@page import="com.liferay.portlet.journal.service.JournalArticleResourceLocalServiceUtil"%>
+<%@page import="com.liferay.portlet.journal.model.JournalArticleResource"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="com.liferay.portal.kernel.language.LanguageUtil"%>
+<%@page import="com.liferay.portal.kernel.util.StringPool"%>
+<%@page import="com.liferay.portlet.assetpublisher.util.RelatedAssetUtil"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.liferay.portlet.asset.model.AssetEntry"%>
+<%@page import="java.util.List"%>
+<%@page import="com.liferay.portal.kernel.util.Validator"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+<%@ taglib uri="http://liferay.com/tld/util" prefix="liferay-util" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+
+
+<%
+	String languageId = LanguageUtil.getLanguageId(request);
+
+	SimpleDateFormat relatedAssetPublishDateFormat = new SimpleDateFormat("dd/MM");
+	
+	//Id cua tin bai hien tai dang hien thi chi tiet noi dung
+	long currentAssetEntryId = assetEntry.getEntryId();
+%>
+<div class="related_asset">
+	<c:choose>
+		<%--
+		/**
+		 * Truong hop hien thi danh sach tin bai lien quan theo publishDate cua tin bai dang hien thi chi tiet
+		 * Danh sach tin bai lien quan duoc chia thanh 2 List : newerRelatedAssetList chua tin bai moi hon va olderRelatedAssetList chua tin bai cu hon
+		 * So luong tin bai lien quan hien thi numbersOfRelatedAssetsDisplay se duoc chia deu sang 2 List
+		 */
+		--%>
+		<c:when test='<%=Validator.equals(relatedAssetsFilter, "publishDate") %>'>
+		<%
+			//So luong tin bai moi hon
+			int numbersOfNewerRelatedAsset = 0;
+			
+			//So luong tin bai cu hon
+			int numbersOfOlderRelatedAsset = 0;
+			
+			//Kiem tra numbersOfRelatedAssetsDisplay truyen vao la so chan hay so le va gan gia tri tuong ung cho 
+			if(numbersOfRelatedAssetsDisplay > 0){
+				
+				if(numbersOfRelatedAssetsDisplay % 2 == 0){//numbersOfRelatedAssetsDisplay la so chan
+					
+					numbersOfNewerRelatedAsset = numbersOfRelatedAssetsDisplay/2;
+				
+				}else{//numbersOfRelatedAssetsDisplay la so le
+					
+					numbersOfNewerRelatedAsset = (numbersOfRelatedAssetsDisplay + 1)/2;
+				}
+			}
+			
+			//Dau so sanh ">" hoac "<" de so sanh publishDate cua tin bai hien tai voi publishDate cua cac tin bai khac
+			String newerOperator = StringPool.GREATER_THAN;
+			String olderOperator = StringPool.LESS_THAN;
+			
+			//Danh sach tin bai moi hon
+			List<AssetEntry> newerRelatedAssetList = RelatedAssetUtil.getRelatedAssetByPublishDate(currentAssetEntryId, 
+																			newerOperator, numbersOfNewerRelatedAsset);
+			
+			//So luong tin bai cu hon
+			numbersOfOlderRelatedAsset = numbersOfRelatedAssetsDisplay - newerRelatedAssetList.size();
+			
+			//Danh sach tin bai cu hon
+			List<AssetEntry> olderRelatedAssetList = RelatedAssetUtil.getRelatedAssetByPublishDate(currentAssetEntryId, 
+																			olderOperator, numbersOfOlderRelatedAsset);
+		%>
+			<c:if test="<%=!newerRelatedAssetList.isEmpty() %>">
+				<div class="newer_related_asset">
+					<span class="related_asset_title"><liferay-ui:message key="newer-related-asset"/></span>
+					<div class="related_asset_list">
+						<ul>
+							<%
+							for(AssetEntry newerRelatedAsset : newerRelatedAssetList){
+								
+								JournalArticleResource newerArticleResource = JournalArticleResourceLocalServiceUtil.getArticleResource(newerRelatedAsset.getClassPK());
+	
+								JournalArticleDisplay newerArticleDisplay = JournalContentUtil.getDisplay(newerArticleResource.getGroupId(),
+									newerArticleResource.getArticleId(), null, null,languageId, themeDisplay);
+								
+								String viewNewerRelatedAssetContentURL = RelatedAssetUtil.getViewContentURL(request, newerRelatedAsset);
+							%>
+								<li>
+									<a href="<%=viewNewerRelatedAssetContentURL%>"><%= newerArticleDisplay.getTitle()%></a>
+									
+									<c:if test="<%=displayRelatedAssetPublishDate %>">
+										<span class="publish_date">(<%=relatedAssetPublishDateFormat.format(newerRelatedAsset.getPublishDate())%>)</span>
+									</c:if>
+								</li>
+							<%
+							}
+							%>
+						</ul>
+					</div>
+				</div>
+			</c:if>
+			
+			<c:if test="<%=!olderRelatedAssetList.isEmpty() %>">				
+				<div class="older_related_asset">
+					<span class="related_asset_title"><liferay-ui:message key="older-related-asset"/></span>
+					<div class="related_asset_list">
+						<ul>
+							<%
+							for(AssetEntry olderRelatedAsset : olderRelatedAssetList){
+								
+								JournalArticleResource olderArticleResource = JournalArticleResourceLocalServiceUtil.getArticleResource(olderRelatedAsset.getClassPK());
+	
+								JournalArticleDisplay olderArticleDisplay = JournalContentUtil.getDisplay(olderArticleResource.getGroupId(),
+									olderArticleResource.getArticleId(), null, null,languageId, themeDisplay);
+								
+								String viewOlderRelatedAssetContentURL = RelatedAssetUtil.getViewContentURL(request, olderRelatedAsset);
+							%>
+								<li>
+									<a href="<%=viewOlderRelatedAssetContentURL%>"><%= olderArticleDisplay.getTitle() %></a>
+									
+									<c:if test="<%=displayRelatedAssetPublishDate %>">
+										<span class="publish_date">(<%=relatedAssetPublishDateFormat.format(olderRelatedAsset.getPublishDate()) %>)</span>
+									</c:if>
+								</li>
+							<%
+							}
+							%>
+						</ul>
+					</div>
+				</div>
+			</c:if>	
+		</c:when>
+		<c:otherwise>
+			<span class="related_asset_title"><liferay-ui:message key="related-assets"/></span>
+			<div class="related_asset_list">
+				<ul>
+					<%
+					List<AssetEntry> relatedAssetList = RelatedAssetUtil.getRelatedAssetList(currentAssetEntryId, relatedAssetsFilter, 
+																										numbersOfRelatedAssetsDisplay);
+					
+					for(AssetEntry relatedAsset : relatedAssetList){
+						
+						JournalArticleResource articleResource = JournalArticleResourceLocalServiceUtil.getArticleResource(relatedAsset.getClassPK());
+	
+						JournalArticleDisplay articleDisplay = JournalContentUtil.getDisplay(articleResource.getGroupId(),articleResource.getArticleId(), 
+																							 null, null,languageId, themeDisplay);
+						
+						String viewRelatedAssetContentURL = RelatedAssetUtil.getViewContentURL(request, relatedAsset);
+					%>
+						<li>
+							<a href="<%=viewRelatedAssetContentURL%>"><%= articleDisplay.getTitle() %></a>
+							
+							<c:if test="<%=displayRelatedAssetPublishDate %>">
+								<span class="publish_date">(<%=relatedAssetPublishDateFormat.format(relatedAsset.getPublishDate()) %>)</span>
+							</c:if>
+						</li>
+					<%
+					}
+					%>
+				</ul>
+			</div>
+		</c:otherwise>
+	</c:choose>
+</div>

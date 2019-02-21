@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.video", "com.bkav.portal.portlet.video.service", "video-player-portlet");

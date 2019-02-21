@@ -1,0 +1,17 @@
+<div class = "sub-navigation">
+	<div class="date_time">
+		<span id="portal_egov_date"></span>
+		<span id="portal_egov_clock"></span>
+	</div>
+	
+	<div class="top_notify">
+		<marquee direction="left" scrollamount="1" scrolldelay="40" width="480px">
+			<span>Cổng thông tin điện tử huyện Đắk Tô - Tỉnh Kon Tum</span>
+		</marquee>
+	</div>
+	
+	<div class="global-search-wrapper">
+		$theme.search()
+	</div>
+	<div style="clear:both;"></div>
+</div>

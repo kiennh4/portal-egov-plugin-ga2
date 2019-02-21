@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.portal_egov.portlet.vbpq.model.VBPQ_Category">
+		<field name="categoryId" type="long" />
+		<field name="parentId" type="long" />
+		<field name="typeId" type="int" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="categoryName" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="categoryDesc" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="active" type="boolean" />
+		<field name="displayPriority" type="int" />
+	</model>
+	<model name="com.portal_egov.portlet.vbpq.model.VBPQ_DlFileEntries">
+		<field name="id" type="long" />
+		<field name="vbpqEntryId" type="long" />
+		<field name="fileEntryId" type="long" />
+	</model>
+	<model name="com.portal_egov.portlet.vbpq.model.VBPQ_Entry">
+		<field name="entryId" type="long" />
+		<field name="departmentId" type="long" />
+		<field name="categoryId" type="long" />
+		<field name="docTypeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="entryName" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="entryCode" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="entryDesc" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="fileAttachmentURL" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="publicatorName" type="String">
+			<hint name="max-length">150</hint>
+		</field>
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="publishDate" type="Date" />
+		<field name="executeDate" type="Date" />
+		<field name="expirationDate" type="Date" />
+		<field name="neverExpired" type="boolean" />
+		<field name="active" type="boolean" />
+	</model>
+</model-hints>

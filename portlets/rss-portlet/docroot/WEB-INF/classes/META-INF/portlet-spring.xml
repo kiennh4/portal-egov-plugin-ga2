@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.bkav.portal.portlet.rss.service.RssFeedLocalService" class="com.bkav.portal.portlet.rss.service.impl.RssFeedLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.rss.service.RssFeedService" class="com.bkav.portal.portlet.rss.service.impl.RssFeedServiceImpl" />
+	<bean id="com.bkav.portal.portlet.rss.service.persistence.RssFeedPersistence" class="com.bkav.portal.portlet.rss.service.persistence.RssFeedPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.rss.service.persistence.RssFeedFinder" class="com.bkav.portal.portlet.rss.service.persistence.RssFeedFinderImpl" parent="basePersistence" />
+</beans>

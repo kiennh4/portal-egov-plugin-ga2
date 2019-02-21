@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model-hints>
+    <model name="com.bkav.portal.portlet.portalplugins.model.PortalPlugins">
+        <field name="pluginDescription" type="String" >
+        	<hint name="max-length">10000</hint>
+        </field>
+        <field name="pluginUpdateInfo" type="String" >
+        	<hint name="max-length">10000</hint>
+        </field>
+    </model>
+</model-hints>

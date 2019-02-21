@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.portal_egov.portlet.citizen_inquiry.model.CitizenInquiry" />
+	<import class="com.portal_egov.portlet.citizen_inquiry.model.CitizenInquiryCategory" />
+	<class name="com.portal_egov.portlet.citizen_inquiry.model.impl.CitizenInquiryImpl" table="CitizenInquiry">
+		<cache usage="read-write" />
+		<id name="inquiryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="citizenName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="citizenPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="citizenEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="citizenAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inquiryTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inquiryContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inquiryFeedback" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inquiryFeedbackUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inquiryFeedbackDate" type="org.hibernate.type.TimestampType" />
+		<property name="inquiryStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.portal_egov.portlet.citizen_inquiry.model.impl.CitizenInquiryCategoryImpl" table="CitizenInquiryCategory">
+		<cache usage="read-write" />
+		<id name="categoryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="categoryName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categoryDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

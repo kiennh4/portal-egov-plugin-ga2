@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.ykct", "com.portal_egov.portlet.ykct.service", "ykct-portlet");

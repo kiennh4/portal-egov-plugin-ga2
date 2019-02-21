@@ -1,0 +1,533 @@
+/* YKCT-Entry-admin */
+			
+	.ykct_entry_admin{
+		margin: 0px;
+		padding-bottom: 30px;
+		font-size: 12px;
+		font-family: Tahoma;
+		color: #454545;
+	}
+		
+	.ykct_entry_admin .lfr-header-row{
+		margin-bottom: 10px;
+		border-radius: 4px;
+		background: url("/ykct-portlet/html/images/subheader_bg.png") repeat-x scroll 0 0 #D9D9D9;
+    	border: 1px solid #C9C9C9;
+    	
+	}
+	
+	.ykct_entry_admin .lfr-header-row-content{
+		padding: 2px 4px 0 !important;
+	}
+	
+	.ykct_entry_admin .add_new_ykct_button{
+		display: inline-block;
+    	float: left;
+    	margin: 0;
+	}
+	
+	.ykct_entry_admin .ykct_search_form{
+		display: inline-block;
+    	float: right;
+    	margin: 0;
+	}
+		
+	.ykct_entry_admin .ykct_search_form input[type="text"]{
+		width: 260px;
+		padding: 5px 5px !important;
+	}
+			
+	.ykct_advance_search_form{
+		font-size: 12px;
+		font-family: Tahoma;
+		font-weight: bold;
+		border: 1px solid #E4E4E4;
+		border-radius: 4px;
+		padding-top: 10px;
+		margin-bottom: 10px;
+	}
+			
+	.ykct_advance_search_form table tr{
+		height:40px;
+	}	
+	.ykct_advance_search_form table tr td{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+				
+	.ykct_advance_search_form input[type="text"]{
+		width: 300px;
+	}
+					
+	.ykct_advance_search_form select{
+		width: 312px;
+	}
+		
+	.ykct_search_results .taglib-search-iterator-page-iterator-top{
+		display: none;
+	}
+		
+	.ykct_search_results tr:hover td{
+		background: #D3E8F1;
+		border: 1px solid #D3E8F1;
+	}
+	
+	/* ykct-Entry-Update Form */
+
+	.ykct-update-form{
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	.ykct-update-form .taglib-form-navigator .form-section h3{
+		border-color: #d0d0d0 !important;
+		color: #00528b !important;
+	}
+		
+	.ykct-update-form .aui-field-content{
+		padding-bottom: 10px;
+	}
+		
+	.ykct-update-form .ykct-update-form-row{
+		clear: both;
+		display: block;
+		margin-bottom: 10px;
+		min-height: 45px;
+		font-weight: bold;
+	}
+		
+	.ykct-update-form input[type="text"]{
+		width: 382px;
+		border-radius: 2px;
+	}
+				
+	.ykct-update-form textarea{
+		width: 382px;
+		height: 70px;
+		border-radius: 2px;
+	}
+		
+	.ykct-update-form select{
+		border-radius: 2px;
+		width: 394px;
+		max-width: 394px !important;
+	}
+			
+	.ykct-update-form .date-picker select{
+		width: auto !important;
+		padding-right: 12px;
+	}
+	
+	.ykct-update-form .ykct-file-attachment-container{
+		max-width: 394px !important;
+	}
+		
+	.ykct-update-form .ykct-file-attachment-container .ykct-file-attachment-list{
+		padding: 10px 0px;
+	}
+				
+	.ykct-file-attachment-list .lfr-search-container .taglib-search-iterator-page-iterator-top,
+	.ykct-file-attachment-list .lfr-search-container .taglib-search-iterator-page-iterator-bottom{
+		display: none;
+	}
+			
+	.ykct-file-attachment-uploader .lfr-upload-container .upload-target,
+	.ykct-file-attachment-uploader .lfr-upload-container .pending-files-info{
+		margin-right: 0px !important
+	}
+		
+	.ykct-file-attachment-uploader .lfr-upload-container .upload-list-info,
+	.ykct-file-attachment-uploader .lfr-upload-container .manage-upload-target{
+		display: none;
+	}
+	
+				
+	.ykct-file-attachment-uploader .lfr-upload-container .upload-list ul li{
+		margin-right: 0px !important
+	}
+			
+	.ykct-update-form .aui-form-validator-message{
+		border-radius: 2px;
+		width: 385px;
+	}
+	
+	/* YKCT Upload Settings */
+
+	.ykct-settings-form {
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	.ykct-settings-form .aui-field-content{
+		padding-bottom: 10px;
+	}
+	
+	.ykct-settings-form input[type="text"],
+	.ykct-settings-form select{
+		border-radius: 2px;
+	}
+		
+	.ykct-settings-form input[type="text"]{
+		width: 300px;
+	}
+		
+	.ykct-settings-form select{
+		width: 312px;
+	}
+	
+	.ykct-settings-form .lfr-form-row{
+		border: none;
+		padding: 0px;
+		margin-bottom: 10px;
+		margin-top: 0px;
+	}
+	
+	.ykct-settings-form .lfr-form-row:hover{
+		background: none;
+	}
+	
+	.ykct-settings-form .lfr-form-row input[type="button"]{
+		margin-top: 18px;
+	}
+
+	.ykct-settings-form .creat-folder-panel{
+		padding-bottom: 10px;
+	}
+	
+	/* YKCT Preview */
+
+	
+	.ykct-preview-content{
+		font-size: 12px;
+		padding: 10px;
+		background: url("/ykct-portlet/html/images/qhvn_bg.png") no-repeat center transparent;
+	}
+	
+	.ykct-preview-content .ykct-title{
+		font-size: 16px !important;
+		color: #bc0000 !important;
+		font-weight: bold;
+		padding: 10px 0px;
+		text-align: center;
+		border-top: 1px dotted;
+		border-bottom: 1px dotted;
+		border-color: #F8EDED;
+	}
+		
+	.ykct-preview-content .ykct-detail-content{
+		font-size: 14px;
+	}
+	
+	.ykct-detail-content table{
+		width: 100%;
+		border-collapse: collapse;
+	}
+	
+	.ykct-detail-content table tr{
+		border-bottom: 1px dotted #E4E4E4;
+		height: 35px;
+	}
+			
+	.ykct-detail-content table tr td:first-child{
+		color: #00528B;
+		min-width: 120px;
+	}
+			
+	.ykct-preview-content a{
+		text-decoration: underline;
+	}
+	
+	.ykct-related-entries{
+		font-size: 12px;
+		padding: 10px;
+	}
+		
+	.ykct-related-entries .related-title{
+		color: #00528B;
+		font-weight: bold;
+		text-decoration: underline;
+		text-shadow: 1px 1px white;
+	}
+		
+	.ykct-related-entries .related-entry-list ul{
+		padding: 0px;
+		margin: 0px;
+	}
+			
+	.ykct-related-entries .related-entry-list ul li{
+    	background: url("/ykct-portlet/html/images/bullet/li_red_bullet.jpg") no-repeat scroll 0 12px transparent;   	
+    	padding-left: 10px;
+    	padding-top: 6px;
+    	list-style: none;
+	}
+
+	.ykct-related-entries .related-entry-list ul a{
+	 	clear: both;
+	    text-align: justify;
+	    text-decoration: none;
+		color: #00528B;	    
+	}
+		
+	.ykct-related-entries .related-entry-list ul a:hover{
+	 	color: #0066CC;
+	}
+					
+	.ykct-related-entries .related-entry-list ul li span.related-entry-publish-date{
+    	color: #999999;
+    	font-size: 11px;    	
+	}
+	
+	/* YKCT-Category-admin */
+			
+	.ykct_category_admin{
+		margin: 0px;
+		padding-bottom: 30px;
+		font-size: 12px;
+		font-family: Tahoma;
+		color: #454545;
+	}
+		
+	.ykct_category_admin .lfr-header-row{
+		margin-bottom: 10px;
+		border-radius: 4px;
+		background: url("/ykct-portlet/html/images/subheader_bg.png") repeat-x scroll 0 0 #D9D9D9;
+    	border: 1px solid #C9C9C9;
+    	
+	}
+	
+	.ykct_category_admin .lfr-header-row-content{
+		padding: 2px 4px 0 !important;
+	}
+	
+	.ykct_category_admin .add_new_ykct_category_button{
+		display: inline-block;
+    	float: left;
+    	margin: 0;
+	}
+	
+	.ykct_category_admin .ykct_category_search_form{
+		display: inline-block;
+    	float: right;
+    	margin: 0;
+	}
+		
+	.ykct_category_admin .ykct_category_search_form input[type="text"]{
+		width: 260px;
+		padding: 5px 5px !important;
+	}
+	
+	.ykct-category-update-form{
+		border: 1px solid #E4E4E4;
+		font-size: 12px;
+		font-weight: bold;
+	}
+				
+	.ykct-category-update-form .aui-field-content{
+		padding-bottom: 10px;
+	}
+		
+	.ykct-category-update-form table tr{
+		height:40px;
+	}	
+	
+	.ykct-category-update-form table tr td{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+		
+	.ykct-category-update-form input[type="text"]{
+		width: 300px;
+	}
+				
+	.ykct-category-update-form textarea{
+		width: 300px;
+		height: 70px;
+	}
+					
+	.ykct-category-update-form select{
+		width: 312px;
+	}
+		
+	.ykct-category-update-form .aui-form-validator-message{
+		border-radius: 2px;
+		width: 302px;
+	}
+	
+	/* YKCT-View */
+	
+	.ykct_search_form_wrapper{
+		background: url("/ykct-portlet/html/images/ykct_search_form_bg.jpg") repeat-x scroll 0 0 transparent;
+		margin: 0px;
+		padding: 0px;
+		text-align: left;
+		height: 150px;
+		width: 100%;
+		position: relative;
+		font-size: 12px;
+	}
+	
+	.ykct_search_form_left_content{
+		background: url("/ykct-portlet/html/images/ykct_search_form_left_content_bg.jpg") scroll 0 0 transparent;
+		float: left;
+	    width: 123px;
+	    height: 141px;
+	}
+		
+	.ykct_search_form_left_content .title{
+		font-size: 20px;
+		text-transform: uppercase;
+		font-weight: normal;
+		color: #FFFFFF;
+		padding-left: 30px;
+		margin-top: 50px;
+	}
+		
+	.ykct_search_form_center_content{
+		float: left;
+	    position: relative;
+	    width: 60%;
+	    height: 141px;
+	}
+			
+	.ykct_search_form_center_content .ykct_search_form{
+	    display: block;
+	    margin-bottom: 5px;
+	    margin-top: 5px;
+	    padding-left: 20px;
+	}
+					
+	.ykct_search_form .lfr-form-row{
+		border:none;
+		padding: 0px;
+		margin: 0px;
+	}
+					
+	.ykct_search_form .lfr-form-row:hover{
+		background: none;
+		border:none;
+	}
+	
+	.ykct_search_form .ykct_search_form_help_content{
+		font-weight: normal;
+		color: #454545;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		display: block;
+	}	
+		
+	.ykct_search_form .ykct_search_form_help_content span.search_form_title{
+		font-weight: bold;
+		color: #00528B;
+		font-size: 14px;
+		text-shadow: 1px 1px white;
+	}
+			
+	.ykct_search_form .ykct_search_form_help_content span.help_content{
+		font-weight: normal;
+	}
+			
+	.ykct_search_form_center_content .ykct_search_form .ykct_search_form_advance_option{
+		color: #00528B;
+	}
+		
+	.ykct_search_form_right_content{
+		float: left;
+	    height: 141px;
+	}
+	
+	.ykct_search_form_right_content .ykct_search_form_help{
+		padding: 0 10px 0 0;
+	    position: absolute;
+	    right: 0;
+	    margin-top: 10px;
+	}
+		
+	.ykct_search_form_right_content .show_advanced_search_form{
+		background: url("/ykct-portlet/html/images/ykct_search_form_right_bg.png") no-repeat scroll left top transparent;
+	    bottom: 10px;
+	    padding: 0 0 0 32px;
+	    position: absolute;
+	    right: 0;
+	}
+			
+	.ykct_search_form_right_content .show_advanced_search_form .show_advanced{
+ 		background: url("/ykct-portlet/html/images/ykct_show_advance_search_bg.png") repeat-x scroll left top transparent;
+	}
+			
+	.ykct_search_form_right_content .ykct_search_form_help a{
+	    background: url("/ykct-portlet/html/images/ykct_show_advance_search_icon.gif") no-repeat scroll right center transparent;
+	    display: inline;
+	    float: left;
+	    line-height: 16px;
+	    padding: 0 10px 0 0;
+	    color: #00528B;
+	    text-decoration: none;
+	    text-shadow: 1px 1px white;
+	}
+		
+	.ykct_search_form_right_content .show_advanced_search_form a{
+	    background: url("/ykct-portlet/html/images/ykct_show_advance_search_icon.gif") no-repeat scroll right center transparent;
+	    line-height: 26px;
+	    margin: 0 10px 0 0;
+	    padding: 0 12px 0 0;
+	    color: #00528B;
+	    text-decoration: none;
+	    text-shadow: 1px 1px white;
+	}
+	
+	.ykct_search_form_wrapper input[type="text"]{
+		width: 300px;
+		margin-right: 5px;
+	}
+						
+	.ykct_search_form_wrapper select{
+		width: 312px;
+	}
+	
+	.separator{
+		border-top: 1px solid #E2E1E1;
+	    clear: both;
+	    margin: 30px 0px;
+	    width: 100%;
+	}
+					
+	.ykct-search-result-title{
+		font-size: 12px;
+		font-weight: bold;
+		color: #00528B;
+		text-shadow: 1px 1px #E4E4E4;
+		margin-top: 5px;
+		float: left;
+	}
+	
+	.ykct_search_results{
+		font-size: 12px;
+		font-weight: normal;
+		color: #434343;
+	}
+		
+	.ykct_search_results .search_results_title{
+		font-size: 12px;
+		font-weight: bold;
+		color: #00528B;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+	}
+	
+	.ykct_search_results .taglib-search-iterator-page-iterator-bottom{
+		padding-top: 10px;
+		font-size: 11px;
+	}
+			
+	.ykct_search_results .delta-selector,
+	.ykct_search_results .page-selector{
+		padding-right: 5px;
+	}
+				
+	.ykct_search_results .delta-selector select,
+	.ykct_search_results .page-selector select{
+		border-radius: 2px !important;
+		padding: 0px !important;
+		margin: 0px !important;
+	}

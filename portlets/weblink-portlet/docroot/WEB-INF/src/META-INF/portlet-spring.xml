@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.weblinks.service.WeblinkLocalService" class="com.portal_egov.portlet.weblinks.service.impl.WeblinkLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.weblinks.service.WeblinkService" class="com.portal_egov.portlet.weblinks.service.impl.WeblinkServiceImpl" />
+	<bean id="com.portal_egov.portlet.weblinks.service.persistence.WeblinkPersistence" class="com.portal_egov.portlet.weblinks.service.persistence.WeblinkPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.weblinks.service.persistence.WeblinkFinder" class="com.portal_egov.portlet.weblinks.service.persistence.WeblinkFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.weblinks.service.WeblinkCategoryLocalService" class="com.portal_egov.portlet.weblinks.service.impl.WeblinkCategoryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.weblinks.service.WeblinkCategoryService" class="com.portal_egov.portlet.weblinks.service.impl.WeblinkCategoryServiceImpl" />
+	<bean id="com.portal_egov.portlet.weblinks.service.persistence.WeblinkCategoryPersistence" class="com.portal_egov.portlet.weblinks.service.persistence.WeblinkCategoryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.weblinks.service.persistence.WeblinkCategoryFinder" class="com.portal_egov.portlet.weblinks.service.persistence.WeblinkCategoryFinderImpl" parent="basePersistence" />
+</beans>

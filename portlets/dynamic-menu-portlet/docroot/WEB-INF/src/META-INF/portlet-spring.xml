@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.bkav.portal.portlet.dynamic_menu.service.DynamicMenuLocalService" class="com.bkav.portal.portlet.dynamic_menu.service.impl.DynamicMenuLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.dynamic_menu.service.persistence.DynamicMenuPersistence" class="com.bkav.portal.portlet.dynamic_menu.service.persistence.DynamicMenuPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.dynamic_menu.service.persistence.DynamicMenuFinder" class="com.bkav.portal.portlet.dynamic_menu.service.persistence.DynamicMenuFinderImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.dynamic_menu.service.DynamicMenuItemLocalService" class="com.bkav.portal.portlet.dynamic_menu.service.impl.DynamicMenuItemLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.dynamic_menu.service.persistence.DynamicMenuItemPersistence" class="com.bkav.portal.portlet.dynamic_menu.service.persistence.DynamicMenuItemPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.dynamic_menu.service.persistence.DynamicMenuItemFinder" class="com.bkav.portal.portlet.dynamic_menu.service.persistence.DynamicMenuItemFinderImpl" parent="basePersistence" />
+</beans>

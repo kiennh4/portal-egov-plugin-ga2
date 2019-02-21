@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.contacts.service.persistence.ContactsPropertyFinder.findByPropertyKey">	
+	<![CDATA[
+    	SELECT 	contactsproperty.companyId,
+    			contactsproperty.groupId,
+    			contactsproperty.userId,
+    			contactsproperty.userName,
+    			
+    			contactsproperty.propertyId,
+    			contactsproperty.contactId,
+    			contactsproperty.propertyKey,
+    			contactsproperty.propertyValue,
+    			contactsproperty.propertyType,
+    			contactsproperty.createDate,
+    			contactsproperty.modifiedDate
+    	
+    	FROM 	contactsproperty
+    	           
+        WHERE               
+                (contactsproperty.propertyKey = ?)
+                
+                AND (contactsproperty.groupId = ?)
+                
+                AND (contactsproperty.contactId = ?)
+                
+        ORDER BY contactsproperty.propertyKey ASC
+	]]>
+</sql>
+
+</custom-sql>

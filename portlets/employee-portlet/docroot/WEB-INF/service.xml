@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.bkav.portal.portlet.employee" auto-namespace-tables="false">
+	<author>ducdvd</author>
+	<namespace>employee</namespace>
+
+	<entity name="Employee" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="emplId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+		<column name="birthday" type="Date" />
+		<column name="male" type="String" />
+		<column name="phone" type="long" />
+		<column name="addres" type="String" />
+		<column name="email" type="String" />
+		<column name="postId" type="long" />
+		<column name="depId" type="long" />
+		<column name="sal" type="long" />
+        <column name="breakDay" type="int" />
+        <column name="addDay" type="int" />
+        
+        <column name="endDate" type="String" />
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Post" return-type="Collection">
+			<finder-column name="postId" />
+		</finder>
+		
+		<finder name="Dep" return-type="Collection">
+			<finder-column name="depId" />
+		</finder>
+		
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+	</entity>
+	
+	<entity name="Post" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="postId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="postName" type="String" />
+        
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+	</entity>
+	
+	<entity name="Department" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="depId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="depName" type="String" />
+		<column name="depAddres" type="String" />
+		<column name="depPhone" type="String" />
+        
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+	</entity>
+	
+	
+	
+</service-builder>

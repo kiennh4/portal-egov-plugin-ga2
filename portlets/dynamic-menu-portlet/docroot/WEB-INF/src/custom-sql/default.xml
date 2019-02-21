@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql id="com.bkav.portal.portlet.dynamic_menu.service.persistence.DynamicMenuFinder.findByKeyword">	
+		<![CDATA[
+	    	SELECT 	DynamicMenu.companyId,
+	    			DynamicMenu.groupId,
+	    			DynamicMenu.userId,
+	    			DynamicMenu.userName,
+	    			DynamicMenu.createDate,
+	    			DynamicMenu.modifiedDate,
+	    			
+	    			DynamicMenu.menuId,
+	    			DynamicMenu.name,
+	    			DynamicMenu.description,
+	    			DynamicMenu.itemCount
+	    	
+	    	FROM 	DynamicMenu
+	    	           
+	        WHERE               
+	                DynamicMenu.name LIKE ?
+	                
+	                AND DynamicMenu.groupId = ?
+	                
+	        ORDER BY DynamicMenu.createDate DESC
+		]]>
+	</sql>
+	
+	<sql id="com.bkav.portal.portlet.dynamic_menu.service.persistence.DynamicMenuFinder.filterMenuItemList">	
+		<![CDATA[
+	    	SELECT 	DynamicMenuItem.companyId,
+	    			DynamicMenuItem.groupId,
+	    			DynamicMenuItem.userId,
+	    			DynamicMenuItem.userName,
+	    			DynamicMenuItem.createDate,
+	    			DynamicMenuItem.modifiedDate,
+	    			
+	    			DynamicMenuItem.itemId,
+	    			DynamicMenuItem.menuId,
+	    			DynamicMenuItem.parentId,
+	    			DynamicMenuItem.name,
+	    			DynamicMenuItem.url,
+	    			DynamicMenuItem.urlType,
+	    			DynamicMenuItem.position
+	    	
+	    	FROM 	DynamicMenuItem
+	    	           
+	        WHERE               
+	                DynamicMenuItem.groupId = ?
+	                
+	                AND DynamicMenuItem.itemId <> ?
+	                
+	        ORDER BY DynamicMenuItem.position ASC
+		]]>
+	</sql>
+</custom-sql>

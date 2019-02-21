@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+<sql id="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_EntryFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	vbpq_entry.entryId,
+    			vbpq_entry.departmentId,
+    			vbpq_entry.categoryId,
+    			vbpq_entry.docTypeId,
+    			vbpq_entry.companyId,
+    			vbpq_entry.groupId,
+    			vbpq_entry.userId,
+    			vbpq_entry.userName,
+    			vbpq_entry.entryName,
+    			vbpq_entry.entryCode,
+    			vbpq_entry.entryDesc,
+    			vbpq_entry.fileAttachmentURL,
+    			vbpq_entry.publicatorName,
+    			vbpq_entry.createDate,
+    			vbpq_entry.modifiedDate,
+    			vbpq_entry.publishDate,
+    			vbpq_entry.executeDate,
+    			vbpq_entry.expirationDate,
+    			vbpq_entry.neverExpired,
+    			vbpq_entry.active_
+    			
+    			
+    	FROM 	vbpq_entry
+    	           
+        WHERE           
+                (UPPER(vbpq_entry.entryCode) LIKE ? OR UPPER(vbpq_entry.entryName) LIKE ?)          			
+            	
+            	 AND (vbpq_entry.groupId = ?)
+            	           	
+        ORDER BY publishDate DESC
+        
+        LIMIT ?,?
+	]]>
+</sql>
+
+<sql id="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_EntryFinder.findByMultiCondition">
+	<![CDATA[
+    	SELECT 	vbpq_entry.entryId,
+    			vbpq_entry.departmentId,
+    			vbpq_entry.categoryId,
+    			vbpq_entry.docTypeId,
+    			vbpq_entry.companyId,
+    			vbpq_entry.groupId,
+    			vbpq_entry.userId,
+    			vbpq_entry.userName,
+    			vbpq_entry.entryName,
+    			vbpq_entry.entryCode,
+    			vbpq_entry.entryDesc,
+    			vbpq_entry.fileAttachmentURL,
+    			vbpq_entry.publicatorName,
+    			vbpq_entry.createDate,
+    			vbpq_entry.modifiedDate,
+    			vbpq_entry.publishDate,
+    			vbpq_entry.executeDate,
+    			vbpq_entry.expirationDate,
+    			vbpq_entry.neverExpired,
+    			vbpq_entry.active_
+    	
+    	FROM 	vbpq_entry
+    	          
+        WHERE               
+                (UPPER(vbpq_entry.entryCode) LIKE ? OR UPPER(vbpq_entry.entryName) LIKE ?)          			
+            	
+            	AND (vbpq_entry.departmentId = ?)
+            	
+            	AND (vbpq_entry.categoryId = ?)
+            	
+            	AND (vbpq_entry.docTypeId = ?)
+            	            	
+            	AND (vbpq_entry.expirationDate <= ?)
+            	            	
+            	AND ((vbpq_entry.expirationDate >= ?) OR (vbpq_entry.expirationDate = 1))
+            	
+            	AND vbpq_entry.publishDate >= ? 
+            	
+            	AND vbpq_entry.publishDate <= ?
+            	           	
+            	AND (vbpq_entry.groupId = ?)
+            	           	
+        ORDER BY publishDate DESC
+        LIMIT ?,?
+	]]>
+</sql>
+</custom-sql>

@@ -1,0 +1,334 @@
+.default-style {
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 5px;
+}
+/* Admin Page */
+.weblink-config-container .aui-field-content, .weblinks_admin-portlet .aui-field-content
+	{
+	padding-bottom: 10px;
+}
+
+.weblinks-portlet select {
+	width: auto;
+	max-width: 275px;
+}
+
+.weblinks-portlet select, .weblink-config-container  select,
+	.weblinks_admin-portlet  select, .weblinks_admin-portlet  textarea,
+	.weblinks_admin-portlet  input[type="text"] {
+	display: inline-block;
+	padding: 5px !important;
+	color: #555555;
+	vertical-align: middle;
+	-webkit-border-radius: 2px !important;
+	-moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+	background-color: #ffffff !important;
+	border: 1px solid #cccccc;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s
+		!important;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+	transition: border linear 0.2s, box-shadow linear 0.2s !important;
+}
+
+.weblinks-portlet select:focus, .weblink-config-container  select:focus,
+	.weblinks_admin-portlet  textarea:focus, .weblinks_admin-portlet  input[type="text"]:focus
+	{
+	border-color: rgba(82, 168, 236, 0.8) !important;
+	outline: 0;
+	background-color: #ffffff !important;
+	outline: thin dotted \9;
+	/* IE6-9 */
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(82, 168, 236, 0.6) !important;
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(82, 168, 236, 0.6) !important;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(82, 168, 236, 0.6) !important;
+}
+
+.weblink_admin {
+	font-size: 12px;
+	font-weight: normal;
+	color: #434343;
+}
+
+.weblink_admin .lfr-header-row {
+	margin-bottom: 10px;
+	border-radius: 4px;
+	background:
+		url("/contacts-portlet/images/contact_admin_tool_bar_bg.png") repeat-x
+		scroll 0 0 #D9D9D9;
+	border: 1px solid #C9C9C9;
+}
+
+.weblink_admin .add_new_category_button, .weblink_admin .add_new_weblink_button
+	{
+	display: inline-block;
+	float: left;
+}
+
+.weblink_admin .weblink_category_search_form, .weblink_admin .weblink_search_form
+	{
+	display: inline-block;
+	float: right;
+}
+
+.weblink_admin .lfr-header-row-content {
+	padding: 2px 4px 0 !important;
+}
+
+.weblink-update-form {
+	border: 1px solid #E4E4E4;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.weblink-update-form .aui-field-content {
+	padding-bottom: 10px;
+}
+
+.weblink-update-form table tr {
+	height: 40px;
+}
+
+.weblink-update-form table tr td {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.weblink-update-form input[type="text"] {
+	width: 300px;
+}
+
+.weblink-update-form textarea {
+	width: 300px;
+	height: 70px;
+}
+
+.weblink-update-form select {
+	width: 312px;
+}
+
+.weblink-update-form .aui-form-validator-message {
+	border-radius: 2px;
+	width: 302px;
+}
+
+.weblink_admin .lfr-search-container tr:hover td {
+	background: #D3E8F1;
+	border: 1px solid #D3E8F1;
+}
+
+.weblink_admin .lfr-search-container .delta-selector, .weblink_admin .lfr-search-container .page-selector
+	{
+	padding-right: 5px;
+}
+
+.weblink_admin .lfr-search-container .delta-selector select,
+	.weblink_admin .lfr-search-container .page-selector select {
+	border-radius: 2px !important;
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+.weblink_admin .weblink_category_search_form input[type="text"],
+	.weblink_admin .weblink_search_form input[type="text"] {
+	width: 260px;
+}
+
+.weblink_admin .weblink_advance_search_form {
+	border: 1px solid #E4E4E4;
+	border-radius: 2px;
+	padding: 10px 0px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.weblink_admin .weblink_advance_search_form table tr {
+	height: 35px;
+}
+
+.weblink_admin .weblink_advance_search_form table tr td:first-child {
+	padding-right: 15px;
+}
+
+.weblink_admin .weblink_advance_search_form select {
+	width: 312px;
+}
+
+.weblink_admin .weblink_advance_search_form	input[type="text"] {
+	width: 300px;
+	color: #454545;
+}
+
+.weblink_list_title_display_style {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.weblink_list_title_display_style ul {
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+}
+
+.weblink_list_title_display_style ul li {
+	background: url("/weblink-portlet/images/weblinks_icon.png") no-repeat
+		scroll 0 6px transparent;
+	padding-left: 10px;
+	padding-top: 6px;
+	height: 25px;
+}
+
+.weblink_list_title_display_style  ul li a {
+	display: block;
+	text-decoration: none;
+	color: #00528B;
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+.weblink_list_title_display_style  ul li a:hover {
+	color: #ff5800;
+}
+
+/* CONFIG PAGE */
+.weblink-config-container {
+	padding: 10px;
+	border: 1px solid #d2d2d2;
+	font-size: 12px;
+	color: #434343;
+	border-radius: 2px;
+	font-weight: bold;
+}
+
+.weblink-config-container select {
+	padding: 4px !important;
+}
+
+.weblink-config-container table {
+	border-collapse: collapse;
+}
+
+.weblink-config-container table tr {
+	height: 35px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.weblink-config-container table tr:last-child {
+	height: 35px;
+	border-bottom: none;
+}
+
+.weblink-config-container table tr td {
+	padding: 5px 0px;
+}
+
+/* Multi Tab Style */
+.weblink_multi_tabs_display_style {
+	font-size: 12px;
+	font-weight: normal;
+	border: 1px solid #D2D2D2;
+}
+
+.weblink_multi_tabs_display_style .weblink_tab_names {
+	background: url("/weblink-portlet/images/weblink_tabs_bg.png") repeat-x
+		scroll 0 0 #D2D2D2;
+	height: 26px;
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.tab-hidden {
+	display: none;
+}
+
+.weblink_multi_tabs_display_style .weblink_tab_contents {
+	padding: 5px;
+	font-size: 13px;
+}
+
+.weblink_tab_names .weblink_tab_name {
+	border-left: 1px solid #FFFFFF;
+	cursor: pointer;
+}
+
+.weblink_tab_names .weblink_tab_name a {
+	text-decoration: none;
+	font-size: 13px;
+	color: #434343;
+	display: inline-block;
+	padding: 5px 10px 4px;
+	font-weight: bold;
+}
+
+.weblink_tab_names ul {
+	overflow: hidden;
+	background: #d2d2d2;
+	margin: 0px;
+	padding: 0px;
+}
+
+.weblink_tab_names ul li {
+	float: left;
+	list-style: none;
+}
+
+.weblink_tab_names .weblink_tab_name a:hover {
+	color: #ffffff;
+}
+
+.weblink_tab_names .weblink-active-tab {
+	background-color: #1B59A3;
+	text-shadow: -1px -1px 0 #3A3A3A;
+}
+
+.weblink_tab_names .weblink-active-tab a {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.weblink_tab_names .weblink-active-tab a:hover {
+	color: #ffffff;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.weblink-tab-content {
+	padding: 0px;
+	margin: 0px;
+}
+
+.weblink-tab-content ul {
+	list-style: none outside none;
+	width: 33%;
+	float: left;
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+.weblink-tab-content ul li {
+	background: url("/weblink-portlet/images/li-red-icon.jpg") no-repeat
+		scroll 0 6px transparent;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+.weblink-tab-content  ul li a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+	padding-left: 10px;
+}
+
+.weblink-tab-content  ul li a:hover {
+	color: #B50008;
+}

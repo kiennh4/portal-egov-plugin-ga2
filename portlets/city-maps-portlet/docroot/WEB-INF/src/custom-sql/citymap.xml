@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.citymaps.service.persistence.CityMapFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	citymap.companyId,
+    			citymap.groupId,
+    			citymap.userId,
+    			citymap.userName,
+    			
+    			citymap.mapId,
+    			citymap.mapTypeId,
+    			citymap.mapImageId,
+    			citymap.mapName,
+    			citymap.mapDesc,
+    			
+    			citymap.createDate,
+    			citymap.modifiedDate
+    	
+    	FROM 	citymap
+    	           
+        WHERE               
+                (citymap.mapName LIKE ?)
+                
+                AND (citymap.groupId = ?)
+                
+                AND (citymap.mapTypeId = ?)
+                
+        ORDER BY citymap.mapName ASC
+	]]>
+</sql>
+
+</custom-sql>

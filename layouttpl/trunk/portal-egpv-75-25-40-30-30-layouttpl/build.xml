@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="portal-egpv-75-25-40-30-30-layouttpl" basedir="." default="deploy">
+	<property name="plugin.version" value="1" />
+
+	<import file="../build-common-layouttpl.xml" />
+</project>

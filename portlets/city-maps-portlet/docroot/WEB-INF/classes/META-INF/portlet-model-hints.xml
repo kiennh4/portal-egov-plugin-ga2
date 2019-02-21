@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.portal_egov.portlet.citymaps.model.CityMap">
+		<field name="mapId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="mapTypeId" type="long" />
+		<field name="mapImageId" type="long" />
+		<field name="mapName" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="mapDesc" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+	</model>
+	<model name="com.portal_egov.portlet.citymaps.model.CityMapType">
+		<field name="typeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="typeName" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="typeDesc" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+	</model>
+</model-hints>

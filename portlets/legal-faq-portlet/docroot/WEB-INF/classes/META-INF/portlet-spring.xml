@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.legal_faq.service.LegalFAQCategoryLocalService" class="com.portal_egov.portlet.legal_faq.service.impl.LegalFAQCategoryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.legal_faq.service.LegalFAQCategoryService" class="com.portal_egov.portlet.legal_faq.service.impl.LegalFAQCategoryServiceImpl" />
+	<bean id="com.portal_egov.portlet.legal_faq.service.persistence.LegalFAQCategoryPersistence" class="com.portal_egov.portlet.legal_faq.service.persistence.LegalFAQCategoryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.legal_faq.service.persistence.LegalFAQCategoryFinder" class="com.portal_egov.portlet.legal_faq.service.persistence.LegalFAQCategoryFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.legal_faq.service.LegalFAQEntryLocalService" class="com.portal_egov.portlet.legal_faq.service.impl.LegalFAQEntryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.legal_faq.service.LegalFAQEntryService" class="com.portal_egov.portlet.legal_faq.service.impl.LegalFAQEntryServiceImpl" />
+	<bean id="com.portal_egov.portlet.legal_faq.service.persistence.LegalFAQEntryPersistence" class="com.portal_egov.portlet.legal_faq.service.persistence.LegalFAQEntryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.legal_faq.service.persistence.LegalFAQEntryFinder" class="com.portal_egov.portlet.legal_faq.service.persistence.LegalFAQEntryFinderImpl" parent="basePersistence" />
+</beans>

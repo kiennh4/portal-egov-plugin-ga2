@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.portal_egov.portlet.tthc.model.TTHC_Attribute" />
+	<import class="com.portal_egov.portlet.tthc.model.TTHC_Category" />
+	<import class="com.portal_egov.portlet.tthc.model.TTHC_Entry" />
+	<class name="com.portal_egov.portlet.tthc.model.impl.TTHC_AttributeImpl" table="tthc_attribute">
+		<cache usage="read-write" />
+		<id name="attributeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="tthcEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="attributeTypeId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="attributeIndex" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="attributeName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="attributeValue" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.portal_egov.portlet.tthc.model.impl.TTHC_CategoryImpl" table="tthc_category">
+		<cache usage="read-write" />
+		<id name="categoryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="parentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryTypeId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categoryDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="displayPriority" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.portal_egov.portlet.tthc.model.impl.TTHC_EntryImpl" table="tthc_entry">
+		<cache usage="read-write" />
+		<id name="entryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="levelId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="departmentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="audienceId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="resultTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entryCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="entryName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="entryDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="processGuide" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="processType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="processTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="processFee" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="processRequirement" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="processFoundationDocument" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,169 @@
+/* Common Style */
+.product-slider-portlet .aui-field-content {
+  padding-bottom: 10px; }
+
+.product-slider-portlet select, .product-slider-portlet input[type="text"] {
+  /* width: 360px;
+  display: inline-block; 
+  padding: 5px;
+  color: #555555;
+  vertical-align: middle;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;*/ }
+
+.product-slider-portlet select {
+  padding: 4px; }
+
+.product-slider-portlet select:focus, .product-slider-portlet input[type="text"]:focus {
+  /* border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  IE6-9
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+  	rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+  	rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+  	rgba(82, 168, 236, 0.6); */ }
+
+/* Portlet Configuration */
+.product-slider-config-wrapper {
+  margin: 0px;
+  padding: 0px;
+  color: #434343;
+  font-size: 12px; }
+
+.product-slider-config-wrapper .aui-tabview-list {
+  background: none;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  margin-bottom: -2px; }
+
+.product-slider-config-wrapper .aui-tabview-list .aui-tab {
+  background: #dedede;
+  margin: 0 3px 0 0;
+  border: 0 !important; }
+
+.product-slider-config-wrapper .aui-tabview-list .aui-tab-active {
+  background: #FFF !important; }
+
+.product-slider-config-wrapper .aui-tabview-list .aui-tab-active .aui-tab-content {
+  border-bottom: transparent !important; }
+
+.product-slider-config-wrapper .aui-tabview-list .aui-tab .aui-tab-content {
+  background: none !important;
+  border-color: #d3d3d3 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; }
+
+.product-slider-config-wrapper .aui-tabview-list .aui-tab .aui-tab-label {
+  text-shadow: none !important;
+  color: #313131;
+  padding: 10px 16px 6px 16px;
+  font-size: 11px; }
+
+.product-slider-config-wrapper .product-filter, .product-slider-config-wrapper .display-settings {
+  padding: 15px;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px; }
+
+.product-slider-config-wrapper .product-filter h2, .product-slider-config-wrapper .display-settings h2 {
+  font-size: 12px;
+  color: #00528B;
+  border-bottom: 1px solid #d3d3d3; }
+
+.product-slider-config-wrapper .product-filter select {
+  width: auto !important; }
+
+.product-slider-config-wrapper .product-filter input[type="text"] {
+  width: 100px !important; }
+
+.product-slider-config-wrapper .product-filter .root-product-category {
+  font-weight: bold !important; }
+
+.product-slider-config-wrapper .product-filter select {
+  width: 300px; }
+
+.product-slider-config-wrapper .product-filter input[type="text"] {
+  width: 300px; }
+
+.product-slider-default-style-wrapper {
+  width: 100%;
+  height: 270px;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px; }
+
+.product-slider-default-style-wrapper .header-title {
+  text-align: center;
+  padding: 10px 0px; }
+
+.product-slider-default-style-wrapper .header-title a {
+  display: block;
+  font-size: 20px;
+  color: #0065b0;
+  text-shadow: 1px 1px white; }
+
+.product-slider-default-style-wrapper .slider-container {
+  height: 218px; }
+
+.product-slider-default-style-wrapper .slider-container ul {
+  padding: 0px;
+  margin: 0px;
+  position: relative; }
+
+.product-slider-default-style-wrapper .slider-container ul li:first-child {
+  margin-left: 10px; }
+
+.product-slider-default-style-wrapper .slider-container ul li {
+  float: left;
+  list-style: none;
+  margin-right: 10px; }
+
+.slider-container .slider-product .product-image {
+  background: #fff;
+  margin: 0;
+  text-align: center; }
+
+.slider-container .slider-product .product-name {
+  display: block;
+  overflow: hidden;
+  font-size: 11px;
+  text-align: center; }
+
+.slider-container .slider-product .product-price {
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  display: block; }
+
+.slider-containerl .jcarousel-skin-tango .jcarousel-clip-horizontal {
+  width: 650px !important;
+  margin-left: 45px !important; }
+
+.slider-container .jcarousel-skin-tango .jcarousel-item-horizontal {
+  margin-right: 10px; }
+
+.slider-container .jcarousel-skin-tango .jcarousel-item {
+  width: 150px;
+  height: 238px; }
+
+.slider-container .slider-product {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  text-align: center;
+  margin-right: 15px; }
+

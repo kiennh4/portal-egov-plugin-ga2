@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	
+	<portlet>
+		<portlet-name>citymaps</portlet-name>
+		<display-name>City Maps</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.citymaps.CityMaps
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-jsp</name>
+			<value>/html/view/configuration.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/CityMapsLanguage</resource-bundle>
+		<portlet-info>
+			<title>City Maps</title>
+			<short-title>City Maps</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>cityMapId</supported-public-render-parameter>
+	</portlet>
+	<portlet>
+		<portlet-name>citymaps_admin</portlet-name>
+		<display-name>City Maps Admin</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.citymaps.CityMapsAdmin
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/admin/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/CityMapsAdminLanguage</resource-bundle>
+		<portlet-info>
+			<title>City Maps Admin</title>
+			<short-title>City Maps Admin</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>citymap_types</portlet-name>
+		<display-name>City Map Types</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.citymaps.CityMapTypes
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/map_types/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/CityMapTypesLanguage</resource-bundle>
+		<portlet-info>
+			<title>City Map Types</title>
+			<short-title>City Map Types</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>cityMapId</supported-public-render-parameter>
+	</portlet>
+	<portlet>
+		<portlet-name>citymap_banner</portlet-name>
+		<display-name>City Map Banner</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.citymaps.CityMapBanner
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/citymap_banner/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-jsp</name>
+			<value>/html/citymap_banner/configuration.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/CityMapBannerLanguage</resource-bundle>
+		<portlet-info>
+			<title>City Map Banner</title>
+			<short-title>City Map Banner</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+		
+	<public-render-parameter>
+		<identifier>cityMapId</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:cityMapId</qname>
+	</public-render-parameter>
+	
+</portlet-app>

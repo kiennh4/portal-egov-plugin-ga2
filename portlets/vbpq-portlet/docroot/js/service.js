@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.vbpq", "com.portal_egov.portlet.vbpq.service", "vbpq-portlet");

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.portal_egov.portlet.contacts.model.Contacts">
+		<field name="contactId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="departmentId" type="long" />
+		<field name="imageId" type="long" />
+		<field name="contactName" type="String">
+			<hint name="max-length">150</hint>
+		</field>
+		<field name="jobTitle" type="String">
+			<hint name="max-length">150</hint>
+		</field>
+		<field name="phoneNumbers" type="String">
+			<hint name="max-length">75</hint>
+		</field>
+		<field name="homePhone" type="String" />
+		<field name="mobile" type="String">
+			<hint name="max-length">75</hint>
+		</field>
+		<field name="email" type="String">
+			<hint name="max-length">75</hint>
+		</field>
+		<field name="displayPriority" type="int" />
+		<field name="contactStatus" type="int" />
+	</model>
+	<model name="com.portal_egov.portlet.contacts.model.ContactsDepartment">
+		<field name="departmentId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="parentId" type="long" />
+		<field name="departmentName" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="departmentAddress" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="departmentPhone" type="String">
+			<hint name="max-length">75</hint>
+		</field>
+		<field name="departmentWebsite" type="String">
+			<hint name="max-length">150</hint>
+		</field>
+		<field name="departmentEmail" type="String">
+			<hint name="max-length">75</hint>
+		</field>
+		<field name="displayPriority" type="int" />
+		<field name="departmentStatus" type="int" />
+	</model>
+	<model name="com.portal_egov.portlet.contacts.model.ContactsDepartmentProperty">
+		<field name="propertyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="departmentId" type="long" />
+		<field name="propertyKey" type="String">
+			<hint name="max-length">150</hint>
+		</field>
+		<field name="propertyValue" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="propertyType" type="String" />
+	</model>
+	<model name="com.portal_egov.portlet.contacts.model.ContactsProperty">
+		<field name="propertyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="contactId" type="long" />
+		<field name="propertyKey" type="String">
+			<hint name="max-length">150</hint>
+		</field>
+		<field name="propertyValue" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="propertyType" type="String" />
+	</model>
+</model-hints>

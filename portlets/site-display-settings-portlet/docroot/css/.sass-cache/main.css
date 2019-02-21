@@ -1,0 +1,14 @@
+.site-display-settings-portlet .setting-container .setting-menu {
+  width: 30%; }
+  .site-display-settings-portlet .setting-container .setting-menu a.setting-menu-item {
+    padding: 5px 0 5px 5px; }
+  .site-display-settings-portlet .setting-container .setting-menu a.active {
+    background-color: #5c696e;
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: none; }
+  .site-display-settings-portlet .setting-container .setting-menu a:focus {
+    outline: none; }
+.site-display-settings-portlet .setting-container .setting-content {
+  width: 65%; }
+

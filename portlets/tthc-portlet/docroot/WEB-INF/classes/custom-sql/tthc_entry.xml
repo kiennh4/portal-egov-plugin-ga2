@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+<sql id="com.portal_egov.portlet.tthc.service.persistence.TTHC_EntryFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT * FROM tthc_entry
+    	           
+        WHERE               
+                (tthc_entry.entryCode LIKE ? OR tthc_entry.entryName LIKE ?) 
+                
+                AND (tthc_entry.groupId = ?)
+            	           	
+        ORDER BY createDate DESC
+        
+        LIMIT ?,?
+	]]>
+</sql>
+
+<sql id="com.portal_egov.portlet.tthc.service.persistence.TTHC_EntryFinder.findByMultiCondition">
+	<![CDATA[
+    	SELECT * FROM tthc_entry
+    	           
+        WHERE               
+                (tthc_entry.entryCode LIKE ? OR tthc_entry.entryName LIKE ?) AND             			
+            	
+            	(tthc_entry.levelId = ?) AND 
+            	
+            	(tthc_entry.departmentId = ?) AND 
+            	
+            	(tthc_entry.categoryId = ?) AND 
+            	            	
+            	(tthc_entry.audienceId = ?) AND 
+            	
+            	(tthc_entry.resultTypeId = ?) AND 
+            	            	            	           	           	
+            	(tthc_entry.groupId = ?)
+            	           	
+        ORDER BY createDate DESC
+        
+        LIMIT ?,?
+	]]>
+</sql>
+</custom-sql>

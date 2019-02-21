@@ -1,0 +1,260 @@
+.tourism_map_admin {
+  font-size: 12px;
+  font-weight: normal;
+  color: #434343; }
+
+.tourism_map_admin .lfr-header-row {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background: url("/tourism_map-portlet/images/admin_tool_bar_bg.png") repeat-x scroll 0 0 #d9d9d9;
+  border: 1px solid #C9C9C9; }
+
+.tourism_map_admin .lfr-header-row-content {
+  padding: 2px 4px 0 !important; }
+
+.tourism_map_admin .aui-field-content {
+  margin-bottom: 10px; }
+
+.tourism_map_admin .aui-field-label {
+  padding-bottom: 2px; }
+
+.tourism_map_admin .aui-form-validator-message {
+  border-radius: 2px;
+  width: 302px; }
+
+.tourism_map_admin select,
+.tourism_map_admin textarea,
+.tourism_map_admin input[type="file"],
+.tourism_map_admin input[type="text"] {
+  display: inline-block;
+  padding: 5px !important;
+  color: #555555;
+  vertical-align: middle;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  border-radius: 3px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  transition: border linear 0.2s, box-shadow linear 0.2s !important; }
+
+.tourism_map_admin select:focus,
+.tourism_map_admin textarea:focus,
+.tourism_map_admin input[type="text"]:focus {
+  border-color: rgba(82, 168, 236, 0.8) !important;
+  outline: 0;
+  background-color: #ffffff !important;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important; }
+
+.tourism_map_admin input[type="text"] {
+  width: 300px; }
+
+.tourism_map_admin input[type="file"] {
+  background-image: none;
+  width: 300px; }
+
+.tourism_map_admin textarea {
+  width: 300px;
+  height: 50px; }
+
+.tourism_map_admin select {
+  width: 312px; }
+
+.tourism_map_admin .map_config_form, .tourism_map_admin .marker_group_update_form {
+  padding: 10px;
+  margin: 0px; }
+
+.tourism_map_admin .map_config_form select {
+  width: auto; }
+
+.tourism_map_wrapper_panel {
+  border: 1px solid #E4E4E4;
+  padding: 0px;
+  margin: 0px;
+  background-color: white; }
+
+.tourism_map_wrapper_panel .map_container {
+  height: 600px;
+  width: 100%; }
+
+.tourism_map_wrapper_panel .map_image-content {
+  margin: 0px;
+  padding: 0px; }
+
+.menu_container {
+  border-bottom: 1px solid #E8E8E8;
+  padding-left: 10px;
+  padding-bottom: 10px; }
+
+.marker_list_container {
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.menu_container ul, .marker_list_container ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+
+.menu_container ul li, .marker_list_container ul li {
+  padding: 0px;
+  margin: 0px; }
+
+.marker_list_container .selected a,
+.marker_list_container .selected .marker-item-content-wrapper,
+.marker_list_container .selected .marker-item-content-wrapper:hover {
+  background-color: #427EAD;
+  color: #FFFFFF !important; }
+
+.marker_list_container .selected a,
+.marker_list_container .selected a:hover {
+  color: #ffffff !important; }
+
+.menu_container ul li:hover .group-item-edit-trigger,
+.menu_container ul li:focus .group-item-edit-trigger,
+.menu_container ul li .group-item-edit-trigger:focus,
+.menu_container ul li:hover .group-item-delete-trigger,
+.menu_container ul li:focus .group-item-delete-trigger,
+.menu_container ul li .group-item-delete-trigger:focus,
+.marker_list_container ul li:hover .marker-item-edit-trigger,
+.marker_list_container ul li:focus .marker-item-edit-trigger,
+.marker_list_container ul li .marker-item-edit-trigger:focus,
+.marker_list_container ul li:hover .marker-item-delete-trigger,
+.marker_list_container ul li:focus .marker-item-delete-trigger,
+.marker_list_container ul li .marker-item-delete-trigger:focus {
+  clip: rect(auto, auto, auto, auto); }
+
+.menu_container .group-item-content-wrapper,
+.marker_list_container .marker-item-content-wrapper {
+  position: relative;
+  padding-left: 5px; }
+
+.menu_container .group-item-content-wrapper:hover,
+.marker_list_container .marker-item-content-wrapper:hover {
+  background: none repeat scroll 0 0 #D3DADD; }
+
+.menu_container .group-item-content-wrapper .group-item-edit-trigger,
+.marker_list_container .marker-item-content-wrapper .marker-item-edit-trigger {
+  background-image: url("/html/themes/control_panel/images/common/edit.png") !important;
+  background-repeat: no-repeat;
+  clip: rect(0pt, 0pt, 0pt, 0pt);
+  display: block;
+  height: 22px;
+  margin-top: -13px;
+  padding: 0px !important;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  width: 16px; }
+
+.menu_container .group-item-content-wrapper .group-item-delete-trigger,
+.marker_list_container .marker-item-content-wrapper .marker-item-delete-trigger {
+  background-image: url("/html/themes/control_panel/images/common/delete.png") !important;
+  background-repeat: no-repeat;
+  clip: rect(0pt, 0pt, 0pt, 0pt);
+  display: block;
+  height: 22px;
+  margin-top: -13px;
+  padding: 0px !important;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 16px; }
+
+.menu_container .group-item-content-wrapper .group-name a {
+  background: url("/city_maps-portlet/images/map_type_icon.png") no-repeat scroll 0 5px transparent;
+  color: #00528B;
+  display: block;
+  padding: 5px 8px 5px 20px;
+  text-decoration: none;
+  font-weight: bold; }
+
+.marker_list_container .marker-item-content-wrapper .marker-name a {
+  background: url("/tourism_map-portlet/images/marker_icon.png") no-repeat scroll 0 5px transparent;
+  display: block;
+  padding: 5px 8px 5px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #5C85AD; }
+
+.menu_container .maptype-item-content-wrapper .group-name a:HOVER,
+.marker_list_container .marker-item-content-wrapper .marker-name a:HOVER {
+  color: #FF5800; }
+
+.menu_container .selected a:hover,
+.marker_list_container .selected a:hover {
+  color: #FFB683; }
+
+.menu_container .selected a, .menu_container .selected .group-item-content-wrapper, .menu_container .selected .group-item-content-wrapper:hover {
+  background-color: #427EAD;
+  color: #FFFFFF !important; }
+
+.marker-info-wrapper {
+  margin: 0px;
+  padding: 0px; }
+
+.marker-info-wrapper .marker-title {
+  font-size: 12px;
+  color: #bc0000;
+  font-weight: bold;
+  text-shadow: 1px 1px #e8e8e8; }
+
+.marker-info-wrapper .marker-address {
+  font-size: 11px;
+  color: #00528b; }
+
+.marker-info-wrapper .marker-image {
+  float: left;
+  display: block;
+  padding-right: 10px; }
+
+.marker-info-wrapper .marker-image img {
+  padding: 1px;
+  border: 1px solid #E4E4E4; }
+
+.marker-info-wrapper .marker-info {
+  display: block;
+  font-size: 12px;
+  color: #434343;
+  text-align: justify; }
+
+.tourism_map_config_form {
+  padding: 10px;
+  margin: 0px;
+  border: 1px solid #E4E4E4;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #434343; }
+
+.tourism_map_config_form .aui-field-content {
+  margin-bottom: 10px; }
+
+.tourism_map_config_form input[type="text"] {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #A1A2A4;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
+  padding: 5px 1px;
+  text-shadow: none;
+  width: 260px;
+  color: #454545; }
+
+.tourism_map_config_form select {
+  width: auto;
+  background-image: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
+  padding: 3px;
+  border: 1px solid #A1A2A4;
+  color: #454545;
+  text-shadow: none; }
+

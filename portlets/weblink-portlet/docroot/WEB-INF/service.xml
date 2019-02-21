@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.portal_egov.portlet.weblinks" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>weblinks</namespace>
+	
+	<!-- Entity luu thong tin phan loai lien ket -->
+	<entity name="WeblinkCategory" local-service="true" remote-service="true">
+		
+		<!-- PK fields -->
+		<column name="categoryId" type="long" primary="true"></column>
+		
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		
+		<column name="modifiedDate" type="Date"></column>
+		<!-- Other fields -->
+		<column name="categoryName" type="String"></column>
+		<column name="categoryDesc" type="String"></column>
+		<column name="categoryIconId" type="long"></column>
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="createDate"></order-column>
+		</order>
+		
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		
+		<!-- Reference -->
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portal" entity="Resource"></reference>
+	</entity>
+	
+	<!-- Entity luu thong tin lien ket website-->
+	<entity name="Weblink" local-service="true" remote-service="true">
+		
+		<!-- PK fields -->
+		<column name="weblinkId" type="long" primary="true"></column>
+		
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- Other fields -->
+		<column name="weblinkCategoryId" type="long"></column>
+		<column name="weblinkName" type="String"></column>
+		<column name="weblinkDesc" type="String"></column>
+		<column name="weblinkURL" type="String"></column>
+		<column name="weblinkIconId" type="long"></column>
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="createDate"></order-column>
+		</order>
+		
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		<finder name="Category" return-type="Collection">
+			<finder-column name="weblinkCategoryId"></finder-column>
+		</finder>
+		
+		<!-- Reference -->
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portal" entity="Resource"></reference>
+	</entity>
+	<exceptions>
+		<exception>WeblinkCategoryName</exception>
+		<exception>WeblinkName</exception>
+	</exceptions>
+</service-builder>

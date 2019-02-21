@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.weblinks.service.persistence.WeblinkCategoryFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	weblinkcategory.companyId,
+    			weblinkcategory.groupId,
+    			weblinkcategory.userId,
+    			weblinkcategory.userName,
+    			
+    			weblinkcategory.categoryId,
+    			weblinkcategory.categoryName,
+    			weblinkcategory.categoryDesc,
+    			weblinkcategory.categoryIconId,
+    			weblinkcategory.createDate,
+    			weblinkcategory.modifiedDate
+    	
+    	FROM 	weblinkcategory
+    	           
+        WHERE               
+                (weblinkcategory.categoryName LIKE ?)
+                
+                AND (weblinkcategory.groupId = ?)
+                
+        ORDER BY weblinkcategory.categoryName ASC
+	]]>
+</sql>
+
+</custom-sql>

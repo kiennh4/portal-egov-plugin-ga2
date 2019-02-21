@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder
+	package-path="com.portal_egov.portlet.legal_faq" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>legalfaq</namespace>
+	<entity name="LegalFAQEntry" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="entryId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+
+		<!-- Other fields -->
+		
+		<!-- ID cua chuyen muc -->
+		<column name="categoryId" type="long" />
+		<!-- Ten nguoi dat cau hoi -->
+		<column name="citizenName" type="String" />
+		<!-- So dt cua nguoi dat cau hoi -->
+		<column name="citizenPhone" type="String" />
+		<!-- Email cua nguoi hoi -->
+		<column name="citizenEmail" type="String" />
+		
+		<!-- Ngay dat cau hoi -->
+        <column name="citizenAddress" type="String"></column>
+		<column name="askDate" type="Date" />
+		
+		<!-- Tieu de cau hoi -->
+		<column name="askTitle" type="String" />
+		<!-- Noi dung cau hoi -->
+		<column name="askContent" type="String" />
+		
+		<column name="answerDate" type="Date" />
+		<!-- Noi dung cau tra loi -->
+		<column name="answerContent" type="String" />
+				
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="publishDate" type="Date" />
+		
+		<!-- Luot xem -->
+		<column name="viewCount" type="int" />
+		<!-- Trang thai xuat ban -->
+		<column name="publishStatus" type="int" />
+		<column name="status" type="int" />
+		
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="publishDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+				
+		<finder name="Category" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="categoryId" />
+		</finder>
+							
+		<finder name="CategoryAndStatus" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="categoryId" />
+			<finder-column name="publishStatus" />
+			<finder-column name="status" />
+		</finder>
+									
+		<finder name="CompanyAndStatus" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="publishStatus" />
+			<finder-column name="status" />
+		</finder>
+												
+		<finder name="GroupAndStatus" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="publishStatus" />
+			<finder-column name="status" />
+		</finder>
+				
+		<finder name="Status" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="status" />
+		</finder>
+										
+		<finder name="PublishStatus" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="publishStatus" />
+		</finder>
+						
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+	
+	<!-- Chuyen muc hoi dap -->
+	<entity name="LegalFAQCategory" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<column name="categoryId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+
+		<!-- Other fields -->
+		<column name="parentId" type="long" />
+		<column name="categoryName" type="String" />
+		<column name="categoryDesc" type="String" />
+		
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="categoryName" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+				
+		<finder name="Parent" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="parentId" />
+		</finder>
+				
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+</service-builder>

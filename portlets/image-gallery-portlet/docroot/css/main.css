@@ -1,0 +1,45 @@
+.imageGallerySliderFrame{
+	margin:0 auto;
+	position:relative;
+	z-index:0;
+}
+
+.imageGallerySlider {
+    position:relative;
+}
+
+.imageGallerySlider DIV {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+    background-color: #FFF;
+}
+
+.imageGallerySlider .active {
+    z-index:10;
+    opacity:1.0;
+}
+
+.imageGallerySlider .last-active {
+    z-index:9;
+}
+
+.imageGallerySlider img {
+    display: block;
+    border: 1px solid #E4E4E4;
+    padding: 1px;
+}
+
+	
+.imageGallerySliderFrame .view-gallery-links{
+	text-align: right;
+	margin-top: 5px;
+}
+		
+.imageGallerySliderFrame .view-gallery-links a{
+	background: url("/image-gallery-portlet/images/red_arrow.png") no-repeat scroll 0px 5px transparent;
+	text-decoration: underline;
+	padding-left: 6px;
+}

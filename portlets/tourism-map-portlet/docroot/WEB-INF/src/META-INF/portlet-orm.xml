@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.portal_egov.portlet.tourism_map.model.impl.TourismMapMarkerModelImpl">
+		<attributes>
+			<id name="markerId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="markerGroupId" />
+			<basic name="markerTitle" />
+			<basic name="markerInfo" />
+			<basic name="markerAddress" />
+			<basic name="markerImageId" />
+			<basic name="markerLongitude" />
+			<basic name="markerLatitude" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.tourism_map.model.impl.TourismMapMarkerGroupModelImpl">
+		<attributes>
+			<id name="markerGroupId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="markerGroupName" />
+			<basic name="markerGroupInfo" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.portal_egov.portlet.tourism_map.model.impl.TourismMapMarkerImpl" name="TourismMapMarker">
+		<table name="TourismMapMarker" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.tourism_map.model.impl.TourismMapMarkerGroupImpl" name="TourismMapMarkerGroup">
+		<table name="TourismMapMarkerGroup" />
+		<attributes />
+	</entity>
+</entity-mappings>

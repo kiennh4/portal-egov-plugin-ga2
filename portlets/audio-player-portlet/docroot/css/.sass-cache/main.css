@@ -1,0 +1,221 @@
+.scroll-left {
+  direction: rtl; }
+
+.audio-admin .admin-btn {
+  padding: 0px;
+  margin-top: 3px;
+  margin-left: 3px;
+  display: inline-block;
+  float: left; }
+
+.audio-search-form {
+  padding: 0px;
+  margin-right: 3px;
+  margin-top: 2px;
+  display: inline-block;
+  float: right; }
+
+.audio-list {
+  border: 1px solid #ccc;
+  background: white; }
+
+.audio-menu, .album-menu {
+  margin-top: 0px; }
+
+.albumListTable, .audioListTable {
+  direction: ltr; }
+
+.albumListTable .album-item {
+  width: 95%;
+  list-style: none;
+  padding: 5px;
+  border-right: 1px solid #ccc; }
+
+.albumListTable .add-new-album {
+  width: 95%;
+  list-style: none;
+  padding: 5px; }
+
+.albumListTable li table tr td p {
+  margin: 0px; }
+
+.albumListTable .album-item:hover {
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 0px;
+  background: beige;
+  cursor: pointer; }
+
+.albumName, .audioName {
+  font-size: 13px;
+  color: blueviolet;
+  font-weight: bold; }
+
+.albumInfo, .audioInfo {
+  font-size: 12px; }
+
+.albumDate, .audioDate {
+  font-size: 10px;
+  font-style: italic; }
+
+.audioListTable li table tr td p {
+  margin: 0px; }
+
+.audioListTable .audio-item:hover {
+  background: beige;
+  cursor: pointer; }
+
+.audioListTable li {
+  width: 95%;
+  list-style: none;
+  padding: 5px; }
+
+.audioName {
+  font-size: 14px;
+  color: blueviolet; }
+
+.ablum-active {
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 0px;
+  background: beige;
+  cursor: pointer; }
+
+.album-deactive {
+  border: 0px;
+  border-right: 1px solid #ccc;
+  background: transparent; }
+
+.add-new-album {
+  width: 95%;
+  list-style: none;
+  padding: 5px;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px; }
+
+.add-new-album:hover {
+  background: beige;
+  cursor: pointer; }
+
+.audio-player-content .audioplayer-small-style .album-info {
+  padding-bottom: 10px; }
+.audio-player-content .audioplayer-small-style .album-cover {
+  padding-right: 10px; }
+.audio-player-content .audioplayer-small-style .album-cover img {
+  width: 80px;
+  height: 80px; }
+.audio-player-content .audioplayer-small-style .album-detail {
+  color: #00528b; }
+.audio-player-content .audioplayer-small-style .album-selector a {
+  text-decoration: none;
+  font-size: 11px; }
+.audio-player-content .audioplayer-small-style .album-list {
+  width: 100%;
+  height: 100px;
+  overflow: auto;
+  background: white;
+  color: black;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 12px;
+  display: none; }
+.audio-player-content .audioplayer-small-style .album-list .album-cover img {
+  width: 32px;
+  height: 32px; }
+.audio-player-content .audioplayer-small-style .album-list .album-list-title p {
+  margin: 0px;
+  font-size: 13px;
+  padding-left: 10px; }
+.audio-player-content .audioplayer-small-style .album-list .album-item {
+  border-bottom: 1px solid #eee;
+  padding: 1px;
+  background: white; }
+.audio-player-content .audioplayer-small-style .album-list .album-item:hover {
+  color: blueviolet; }
+.audio-player-content .audioplayer-small-style .audio-item {
+  list-style: none;
+  font-size: 1.07em;
+  border-bottom: 1px solid #eee;
+  padding: 2px;
+  cursor: pointer; }
+.audio-player-content .audioplayer-small-style .audio-item:hover {
+  background: #eee;
+  color: blue; }
+.audio-player-content .audioplayer-small-style .audio-active {
+  background: #eee; }
+.audio-player-content .audioplayer-small-style .audio-deactive {
+  background: white; }
+.audio-player-content .audioplayer-small-style .audio-playlist ul {
+  margin-left: 0px !important; }
+.audio-player-content .audioplayer-big-style {
+  height: 300px;
+  background: white; }
+  .audio-player-content .audioplayer-big-style .selected-album-name, .audio-player-content .audioplayer-big-style .selected-album-info, .audio-player-content .audioplayer-big-style .selected-album-num-audio {
+    margin-bottom: 0px;
+    font-size: 12px;
+    color: blueviolet; }
+  .audio-player-content .audioplayer-big-style .album-list {
+    width: 40%;
+    height: 300px;
+    overflow: auto;
+    background: white;
+    color: black;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 14px;
+    float: left; }
+  .audio-player-content .audioplayer-big-style .album-list .album-info {
+    float: left;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ccc; }
+  .audio-player-content .audioplayer-big-style .album-list .album-list-item {
+    width: 100%;
+    max-height: 230px;
+    overflow: auto; }
+  .audio-player-content .audioplayer-big-style .album-list .album-list-title p {
+    margin: 0px;
+    font-size: 13px;
+    padding-left: 10px; }
+  .audio-player-content .audioplayer-big-style .album-list .album-item {
+    border-bottom: 1px solid #eee;
+    padding: 1px;
+    background: white; }
+  .audio-player-content .audioplayer-big-style .album-list .album-item:hover {
+    color: blueviolet; }
+  .audio-player-content .audioplayer-big-style .audioplayer-list {
+    width: 58%;
+    border-left: 1px solid #eee;
+    float: left;
+    height: 300px;
+    margin-top: -10px; }
+  .audio-player-content .audioplayer-big-style .audio-item {
+    list-style: none;
+    font-size: 1.15em;
+    border-bottom: 1px solid #eee;
+    padding: 2px;
+    cursor: pointer;
+    font-family: sans-serif; }
+  .audio-player-content .audioplayer-big-style .audio-item:hover {
+    background: #eee;
+    color: blue; }
+
+.admin-update-form .audio-list {
+  width: 100%;
+  height: 200px;
+  overflow: auto;
+  background: #ccc; }
+
+.album-admin-form .selected-audio-class .audio-selected-item-class {
+  width: 96%;
+  margin: 2px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 5px 5px;
+  background: #dff4ff;
+  cursor: pointer; }
+.album-admin-form .selected-audio-class .audio-selected-item-class:hover {
+  background: #C7ECFF; }
+

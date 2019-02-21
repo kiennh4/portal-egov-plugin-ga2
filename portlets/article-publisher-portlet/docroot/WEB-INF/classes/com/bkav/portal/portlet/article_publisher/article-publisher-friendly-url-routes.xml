@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 6.1.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_6_0_0.dtd">
+
+<!-- SourceFormatter.Ignore -->
+
+<routes>
+	<route>
+		<pattern>view_content/{type}/{assetEntryId:\d+}/{urlTitle:(?!id)[^/]+}/{groupId:\d+}</pattern>
+		<implicit-parameter name="p_p_state">normal</implicit-parameter>
+		<implicit-parameter name="struts_action">/asset_publisher/view_content</implicit-parameter>
+	</route>
+	<route>
+		<pattern>view_content/{type}/{assetEntryId:\d+}/{urlTitle:(?!id)[^/]+}</pattern>
+		<implicit-parameter name="p_p_state">normal</implicit-parameter>
+		<implicit-parameter name="struts_action">/asset_publisher/view_content</implicit-parameter>
+	</route>
+	<route>
+		<pattern>view_content/{type}/{urlTitle:(?!id)[^/]+}</pattern>
+		<implicit-parameter name="p_p_state">normal</implicit-parameter>
+		<implicit-parameter name="struts_action">/asset_publisher/view_content</implicit-parameter>
+	</route>
+</routes>

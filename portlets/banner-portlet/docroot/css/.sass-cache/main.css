@@ -1,0 +1,275 @@
+.banner-admin-form .aui-field-content {
+  padding-bottom: 10px; }
+
+.banner-admin-form .aui-form-validator-message {
+  border-radius: 2px;
+  width: 302px; }
+
+.banner-admin-form select,
+.banner-config-form textarea,
+.banner-config-form input[type="text"],
+.banner-admin-form textarea,
+.admin-search-form input[type="text"],
+.banner-config-search-form input[type="text"],
+.banner-admin-form input[type="file"],
+.banner-admin-form input[type="text"] {
+  display: inline-block;
+  padding: 5px !important;
+  color: #555555;
+  vertical-align: middle;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  border-radius: 3px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  transition: border linear 0.2s, box-shadow linear 0.2s !important; }
+
+.banner-admin-form select:focus,
+.banner-config-form textarea:focus,
+.banner-config-form input[type="text"]:focus,
+.banner-admin-form textarea:focus,
+.admin-search-form input[type="text"]:focus,
+.banner-config-search-form input[type="text"]:focus,
+.banner-admin-form input[type="file"]:focus,
+.banner-admin-form input[type="text"]:focus {
+  border-color: rgba(82, 168, 236, 0.8) !important;
+  outline: 0;
+  background-color: #ffffff !important;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important; }
+
+.banner-admin {
+  font-size: 12px;
+  font-weight: normal;
+  color: #434343;
+  background: white;
+  border: 1px solid #c9c9c9; }
+
+.banner-admin .lfr-header-row {
+  margin-bottom: 20px;
+  background: url("/banner-portlet/images/banner_admin_tool_bar_bg.png") repeat-x scroll 0 0 #d9d9d9;
+  border-bottom: 1px solid #C9C9C9; }
+
+.banner-admin .lfr-header-row-content {
+  padding: 2px 4px 0 !important; }
+
+.banner-admin .admin-btn {
+  padding: 0px;
+  margin-top: 3px;
+  margin-left: 3px;
+  display: inline-block;
+  float: left; }
+
+.admin-search-form {
+  padding: 0px;
+  margin-right: 3px;
+  margin-top: 2px;
+  display: inline-block;
+  float: right; }
+
+.admin-search-form input[type="text"] {
+  width: 240px;
+  padding: 4px !important; }
+
+.admin-search-form select {
+  border-radius: 3px;
+  width: 160px; }
+
+.banner-admin .banner-groups-container {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.banner-admin .banner-list-container {
+  height: 100%;
+  background-color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-left: 1px solid #F2F2F2; }
+
+.banner-groups-container ul, .banner-list-container ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+
+.banner-groups-container ul li,
+.banner-list-container ul li {
+  padding: 5px;
+  margin: 0px; }
+
+.banner-list-container ul li {
+  margin: 0px;
+  float: left; }
+
+.banner-groups-container ul li:hover .group-item-edit-trigger,
+.banner-groups-container ul li:focus .group-item-edit-trigger,
+.banner-groups-container ul li .group-item-edit-trigger:focus,
+.banner-groups-container ul li:hover .group-item-delete-trigger,
+.banner-groups-container ul li:focus .group-item-delete-trigger,
+.banner-groups-container ul li .group-item-delete-trigger:focus,
+.banner-list-container ul li:hover .banner-item-edit-trigger,
+.banner-list-container ul li:focus .banner-item-edit-trigger,
+.banner-list-container ul li .banner-item-edit-trigger:focus,
+.banner-list-container ul li:hover .banner-item-delete-trigger,
+.banner-list-container ul li:focus .banner-item-delete-trigger,
+.banner-list-container ul li .banner-item-delete-trigger:focus {
+  clip: rect(auto, auto, auto, auto); }
+
+.banner-groups-container .group-item-content-wrapper,
+.banner-list-container .banner-item-content-wrapper {
+  position: relative;
+  padding-left: 5px; }
+
+.banner-list-container .banner-item-content-wrapper {
+  margin: 5px;
+  border-radius: 2px;
+  width: 220px;
+  height: 100px; }
+
+.banner-groups-container .group-item-content-wrapper:hover,
+.banner-list-container .banner-item-content-wrapper:hover {
+  background: none repeat scroll 0 0 #D3E8F1; }
+
+.banner-groups-container .group-item-content-wrapper .group-item-edit-trigger,
+.banner-list-container .banner-item-content-wrapper .banner-item-edit-trigger {
+  background-image: url("/html/themes/control_panel/images/common/edit.png") !important;
+  background-repeat: no-repeat;
+  clip: rect(0pt, 0pt, 0pt, 0pt);
+  display: block;
+  height: 22px;
+  margin-top: -13px;
+  padding: 0px !important;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  width: 16px; }
+
+.banner-groups-container .group-item-content-wrapper .group-item-delete-trigger,
+.banner-list-container .banner-item-content-wrapper .banner-item-delete-trigger {
+  background-image: url("/html/themes/control_panel/images/common/delete.png") !important;
+  background-repeat: no-repeat;
+  clip: rect(0pt, 0pt, 0pt, 0pt);
+  display: block;
+  height: 22px;
+  margin-top: -13px;
+  padding: 0px !important;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 16px; }
+
+.banner-groups-container .group-item-content-wrapper .group-name a {
+  background: url("/html/themes/control_panel/images/common/folder_empty.png") no-repeat scroll 0 5px transparent;
+  color: #00528B;
+  display: block;
+  padding: 5px 8px 5px 20px;
+  text-decoration: none;
+  font-weight: bold; }
+
+.banner-list-container .banner-item-content-wrapper .banner-title a {
+  display: block;
+  padding: 5px 8px 5px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #5C85AD; }
+
+.banner-list-container .banner-item-content-wrapper .banner-title img.banner-image-thumbnail {
+  background: #EAEAEA;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+  margin-top: 5px;
+  padding: 5px;
+  max-height: 40px;
+  max-width: 140px; }
+
+.banner-list-container .banner-item-content-wrapper .banner-action-triger {
+  margin: 0px; }
+
+.banner-groups-container .group-item-content-wrapper .group-name a:HOVER,
+.banner-list-container .banner-item-content-wrapper .banner-title a:HOVER {
+  color: white; }
+
+.banner-groups-container .selected .group-item-content-wrapper,
+.banner-list-container .selected .banner-item-content-wrapper {
+  background: none repeat scroll 0 0 #D3E8F1; }
+
+.banner-list-container .selected a {
+  color: white !important;
+  text-decoration: none; }
+
+.banner-groups-container .selected a:hover,
+.banner-list-container .selected a:hover {
+  color: #FFB683; }
+
+.banner-groups-container .selected a,
+.banner-groups-container .selected .group-item-content-wrapper,
+.banner-list-container .selected a,
+.banner-list-container .selected .banner-item-content-wrapper:hover {
+  background-color: #D3E8F1;
+  color: #FFFFFF !important; }
+
+/* BANNER ADMIN FORM */
+.banner-admin-form {
+  margin: 0px;
+  padding: 10px 0px; }
+
+.banner-admin-form input[type="text"],
+.banner-admin-form input[type="file"] {
+  width: 300px;
+  color: #454545; }
+
+.banner-admin-form select {
+  width: 312px; }
+
+.banner-admin-form textarea {
+  width: 300px;
+  height: 50px; }
+
+.banner-admin-form img.banner-thumbnail-img {
+  padding: 1px;
+  border: 1px solid #E4E4E4;
+  max-height: 90px;
+  max-width: 310px; }
+
+.banner-image-wrapper {
+  margin-bottom: 10px; }
+
+/* BANNER VIEW CONFIG */
+.banner-config-form {
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px; }
+
+.banner-config-form input[type="text"] {
+  width: 140px; }
+
+.banner-config-form textarea {
+  width: 240px;
+  height: 40px; }
+
+.banner-config-form .aui-field-content {
+  padding-bottom: 15px; }
+
+.banner-config-search-form {
+  display: inline-block;
+  float: right;
+  padding-bottom: 5px; }
+
+.banner-config-search-form input[type="text"] {
+  width: 300px; }
+
+.banner-thumbnail img {
+  padding: 1px;
+  border: 1px solid #d2d2d2;
+  max-width: 400px;
+  max-height: 150px; }
+

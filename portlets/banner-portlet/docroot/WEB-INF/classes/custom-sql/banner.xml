@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.banner.service.persistence.BannerFinder.findByTitle">	
+	<![CDATA[
+    	SELECT 	Banner.companyId,
+    			Banner.groupId,
+    			Banner.userId,
+    			Banner.userName,
+    			Banner.createDate,
+    			Banner.modifiedDate,
+    			
+    			Banner.bannerId,
+    			Banner.bannerGroupId,
+    			Banner.bannerTitle,
+    			Banner.bannerLink,
+    			Banner.bannerImageId,
+    			Banner.viewCounter,
+    			Banner.bannerStatus
+    	
+    	FROM 	Banner
+    	           
+        WHERE               
+                (Banner.bannerTitle LIKE ?)
+                
+                AND (Banner.groupId = ?)
+                
+                AND (Banner.bannerGroupId = ?)
+                
+        ORDER BY Banner.bannerTitle ASC
+	]]>
+</sql>
+
+</custom-sql>

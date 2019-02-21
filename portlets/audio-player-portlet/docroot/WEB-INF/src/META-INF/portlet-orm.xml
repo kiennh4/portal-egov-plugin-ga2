@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.bkav.portal.portlet.audioplayer.model.impl.AlbumAudioMapModelImpl">
+		<attributes>
+			<id name="mapId" />
+			<basic name="albumId" />
+			<basic name="audioId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.bkav.portal.portlet.audioplayer.model.impl.AudioAlbumModelImpl">
+		<attributes>
+			<id name="albumId" />
+			<basic name="albumName" />
+			<basic name="albumInfo" />
+			<basic name="albumCoverId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifyDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="viewCounter" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.bkav.portal.portlet.audioplayer.model.impl.AudioFileModelImpl">
+		<attributes>
+			<id name="audioId" />
+			<basic name="audioName" />
+			<basic name="audioInfo" />
+			<basic name="audioType" />
+			<basic name="audioFileId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifyDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="viewCounter" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.bkav.portal.portlet.audioplayer.model.impl.AlbumAudioMapImpl" name="AlbumAudioMap">
+		<table name="AudioPlayer_AlbumAudioMap" />
+		<attributes />
+	</entity>
+	<entity class="com.bkav.portal.portlet.audioplayer.model.impl.AudioAlbumImpl" name="AudioAlbum">
+		<table name="AudioPlayer_AudioAlbum" />
+		<attributes />
+	</entity>
+	<entity class="com.bkav.portal.portlet.audioplayer.model.impl.AudioFileImpl" name="AudioFile">
+		<table name="AudioPlayer_AudioFile" />
+		<attributes />
+	</entity>
+</entity-mappings>

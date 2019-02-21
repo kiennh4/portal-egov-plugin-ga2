@@ -1,0 +1,264 @@
+/* Admin Page */
+.complaints_admin-portlet .aui-field-content {
+  padding-bottom: 10px; }
+
+.complaints_admin-portlet textarea,
+.complaints_admin-portlet select,
+.complaints_admin-portlet input[type="text"],
+.complaint-search-form input[type="text"] {
+  display: inline-block;
+  padding: 5px !important;
+  color: #555555;
+  vertical-align: middle;
+  -webkit-border-radius: 2px !important;
+  -moz-border-radius: 2px !important;
+  border-radius: 2px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+  transition: border linear 0.2s, box-shadow linear 0.2s !important; }
+
+.complaints_admin-portlet select:focus,
+.complaints_admin-portlet textarea:focus,
+.complaints_admin-portlet input[type="text"]:focus,
+.complaint-search-form input[type="text"]:focus {
+  border-color: rgba(82, 168, 236, 0.8) !important;
+  outline: 0;
+  background-color: #ffffff !important;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important; }
+
+.complaint-admin {
+  font-size: 12px;
+  font-weight: normal;
+  color: #434343; }
+
+.complaint-admin .lfr-header-row {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background: url("/complaints-portlet/html/images/admin_tool_bar_bg.png") repeat-x scroll 0 0 #d9d9d9;
+  border: 1px solid #C9C9C9; }
+
+.complaint-admin .lfr-header-row-content {
+  padding: 2px 4px 0 !important; }
+
+.complaint-admin .permission-btn-row {
+  float: left; }
+
+.complaint-admin .complaint-search-form {
+  float: right; }
+
+.complaint-admin .lfr-search-container tr:hover td {
+  background: #D3E8F1;
+  border: 1px solid #D3E8F1; }
+
+.complaint-update-form .aui-form-validator-message {
+  width: 642px;
+  border-radius: 2px; }
+
+.complaint-update-form input[type="text"] {
+  width: 640px; }
+
+.complaint-update-form textarea {
+  width: 640px;
+  height: 60px; }
+
+.complaint-file-attachment-list {
+  padding: 10px 0px;
+  max-width: 650px !important; }
+
+.complaint-file-attachment-list .lfr-search-container .taglib-search-iterator-page-iterator-top,
+.complaint-file-attachment-list .lfr-search-container .taglib-search-iterator-page-iterator-bottom {
+  display: none; }
+
+.complaint-update-form .complaint-attachment-uploader {
+  max-width: 650px !important;
+  padding: 10px 0px; }
+
+.complaint-attachment-uploader .lfr-upload-container .upload-target {
+  border-radius: 2px !important; }
+
+.complaint-attachment-uploader .lfr-upload-container .upload-target,
+.complaint-attachment-uploader .lfr-upload-container .pending-files-info {
+  margin-right: 0px !important; }
+
+.complaint-attachment-uploader .lfr-upload-container .upload-list-info,
+.complaint-attachment-uploader .lfr-upload-container .manage-upload-target {
+  display: none; }
+
+.complaint-attachment-uploader .lfr-upload-container .upload-list ul li {
+  margin-right: 0px !important; }
+
+.complaint-update-form span.cke_skin_kama {
+  border: 1px solid #E4E4E4;
+  border-radius: 3px;
+  padding: 0px;
+  width: 650px !important;
+  min-height: 300px !important; }
+
+.complaint-update-form .cke_skin_kama .cke_wrapper {
+  background-color: #E9E9E9; }
+
+.complaint-update-form .cke_skin_kama .cke_wrapper table tr {
+  height: 20px; }
+
+.complaint-update-form .cke_skin_kama .cke_wrapper table tr td {
+  padding: 0px; }
+
+.complaint-update-form .cke_skin_kama .cke_contents {
+  height: 300px !important; }
+
+/* COMPLAINT CATEGORY PORTLET	 */
+.complaint_category-portlet .portlet-content {
+  padding: 0px !important; }
+
+.complaint_category-portlet .portlet {
+  margin: 0px !important; }
+
+.complaint-category {
+  margin: 0px;
+  padding: 0px; }
+
+.complaint-category ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none outside none; }
+
+.complaint-category ul li {
+  padding: 6px 0px;
+  border-bottom: 1px solid #f1f2f3; }
+
+.complaint-category ul li:hover {
+  background: #D3E8F1; }
+
+.complaint-category ul li:last-child {
+  border: none; }
+
+.complaint-category ul li a {
+  background: url("/complaints-portlet/html/images/category_bullet.png") no-repeat scroll 5px 5px transparent;
+  padding-left: 20px;
+  font-weight: bold; }
+
+/* 	COMPLAINT VIEW PAGE */
+.complaint-view {
+  margin: 0px;
+  padding: 0px; }
+
+.complaint-search-form {
+  background: url("/complaints-portlet/html/images/complaint_search_form_bg.jpg") repeat-x scroll 0 0 transparent;
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  height: 150px;
+  width: 100%;
+  position: relative;
+  font-size: 12px; }
+
+.complaint-search-form .form-bg {
+  background: url("/complaints-portlet/html/images/complaint_search_form_left_content_bg.jpg") scroll 0 0 transparent;
+  float: left;
+  width: 123px;
+  height: 141px; }
+
+.complaint-search-form .form-bg .title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #FFFFFF;
+  padding-left: 30px;
+  margin-top: 50px; }
+
+.complaint-search-form .form-content {
+  float: left;
+  position: relative;
+  height: 141px;
+  padding-left: 20px; }
+
+.complaint-search-form .form-content .lfr-form-row {
+  border: none;
+  padding: 0px;
+  margin: 0px; }
+
+.complaint-search-form .form-content .lfr-form-row:hover {
+  background: none;
+  border: none; }
+
+.complaint-search-form input[type="text"] {
+  width: 300px;
+  margin-right: 5px; }
+
+.complaint-search-form .search-guide {
+  font-weight: normal;
+  color: #454545;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block; }
+
+.complaint-search-form .search-guide .search-form-title {
+  font-weight: bold;
+  color: #00528B;
+  font-size: 14px;
+  text-shadow: 1px 1px white;
+  padding-bottom: 10px; }
+
+.complaint-search-form .search-guide .search-guide-content {
+  font-weight: normal; }
+
+.complaint-search-result {
+  margin: 0px;
+  padding: 0px; }
+
+.complaint-search-result .search-result-title {
+  font-weight: bold;
+  color: #bc0000;
+  font-size: 12px;
+  text-shadow: 1px 1px white;
+  padding-bottom: 10px; }
+
+.complaint-search-result .lfr-search-container .delta-selector {
+  display: none; }
+
+/* 	COMPLAINT PREVIEW PAGE */
+.complaint-preview {
+  font-size: 12px;
+  color: #434343; }
+
+.complaint-detail .content-row {
+  padding: 5px 0px; }
+
+.complaint-detail .content-row-title {
+  padding: 5px 0px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #00528b;
+  border-bottom: 1px solid #f1f2f3; }
+
+.complaint-detail .content-row {
+  padding: 5px 0px; }
+
+.complaint-detail .complaint-description,
+.complaint-detail .complaint-content,
+.complaint-preview .complaint-attachment {
+  padding: 10px 0px; }
+
+.complaint-detail .complaint-description {
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+.complaint-detail .complaint-content {
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+.complaint-preview .complaint-attachment a {
+  text-decoration: underline; }
+

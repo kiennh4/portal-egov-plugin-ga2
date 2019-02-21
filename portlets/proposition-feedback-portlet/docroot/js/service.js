@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.propositionfeedback", "com.portal_egov.portlet.proposition_feedback.service", "proposition-feedback-portlet");

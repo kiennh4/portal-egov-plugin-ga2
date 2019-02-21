@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<service name="Plugin_employee_EmployeeService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.bkav.portal.portlet.employee.service.http.EmployeeServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="EmployeeServiceSoap" />
+		<parameter name="wsdlServiceElement" value="EmployeeServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_employee_EmployeeService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.employee.portlet.portal.bkav.com" />
+	</service>
+</deployment>

@@ -1,0 +1,26 @@
+<div class="footer-menu">
+	
+</div>
+
+<div class="copyright">
+		
+	#if ($theme_display.isShowPageSettingsIcon())
+		<span class="lfr-meta-actions" >
+				<a class="taglib-icon quickEditLayoutSet" href="$editFooterURL" data-width="700" id="quickEditFooter">
+					<img class="icon" src="$themeDisplay.getPathThemeImages()/common/edit.png" alt="#language("edit-footer")" title="#language("edit-footer")">
+				</a>
+		</span>
+	#end
+
+	#if ($footerContent == "")
+		<div class="copy-right-content">
+			<b>CỔNG THÔNG TIN ĐIỆN TỬ ỦY BAN NHÂN DÂN HUYỆN ĐẮK TÔ - TỈNH KON TUM</b><br/>
+				Cơ quản chủ quản: Ủy ban nhân dân huyện Đắk Tô <br/>
+				Chịu trách nhiệm: A Mịch, Chức vụ: Phó Chủ Tịch Ủy ban nhân dân huyện Đắk Tô<br/>
+				Địa chỉ: 217 Lê Duẩn, thị trấn Đắk Tô, huyện Đắk Tô, tỉnh Kon Tum<br/>
+			 <br/>
+		</div>
+	#else	
+		$footerContent
+	#end
+</div>

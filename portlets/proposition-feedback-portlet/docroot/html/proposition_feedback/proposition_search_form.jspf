@@ -1,0 +1,197 @@
+<%@page import="com.liferay.portal.util.PortalUtil"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.util.PropositionConstants"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.service.PropositionCategoryLocalServiceUtil"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.model.PropositionCategory"%>
+<%@page import="java.util.List"%>
+<%@page import="com.liferay.portal.kernel.util.StringPool"%>
+<%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.util.PropositionUtil"%>
+<%@page import="com.liferay.portal.service.UserLocalServiceUtil"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui" %>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+<%@ taglib uri="http://liferay.com/tld/util" prefix="liferay-util" %>
+
+<%
+	//Tu khoa tim kiem
+	String propositionSearchKeyword = ParamUtil.getString(request, "propositionSearchKeyword",StringPool.BLANK);
+	
+	//Id cua chuyen muc duoc chon trong form tim kiem
+	long searchCategoryId = ParamUtil.getLong(request, "searchCategoryId",0L);
+	
+	//Id cua Co quan soan thao duoc chon trong form tim kiem
+	long searchCompilationDepartmentId = ParamUtil.getLong(request, "searchCompilationDepartmentId",0L);
+	
+	//Id cua Uy ban tham tra du thao duoc chon trong form tim kiem
+	long searchVerificationDepartmentId = ParamUtil.getLong(request, "searchVerificationDepartmentId",0L);
+	
+	//Trang thai cua du thao
+	//Gia tri mac dinh tuong ung voi tim kiem tat ca cac du thao da duoc publish
+	int searchPropositionStatus = ParamUtil.getInteger(request, "searchPropositionStatus",-1);
+	
+	//Trang thai tim kiem don gian hoac nang cao?
+	boolean advancedSearch = false;
+	
+	if((searchCategoryId > 0) || (searchCompilationDepartmentId > 0) || (searchVerificationDepartmentId > 0)){
+		
+		advancedSearch = true;
+	}
+	
+	//Danh sach chuyen muc,linh vuc cua du thao (categoryTypeId = 1)
+	List<PropositionCategory> categoryList = PropositionCategoryLocalServiceUtil.findByTypeAndCompany(companyId,
+																					PropositionConstants.PROPOSITION_CATEGORY_TYPE_ID);	
+	//Danh sach Co quan soan thao du luat (categoryTypeId = 2)
+	List<PropositionCategory> compilationDepartmentList = PropositionCategoryLocalServiceUtil.findByTypeAndCompany(companyId,
+																					PropositionConstants.COMPILATION_DEPARTMENT_CATEGORY_TYPE_ID);	
+	//Danh sach Uy ban tham tra noi dung du thao luat (categoryTypeId = 3)
+	List<PropositionCategory> verificationDepartmentList = PropositionCategoryLocalServiceUtil.findByTypeAndCompany(companyId,
+																					PropositionConstants.VERIFICATION_DEPARTMENT_CATEGORY_TYPE_ID);	
+%>
+
+<liferay-portlet:renderURL var="propositionSearchFormURL">
+	<liferay-portlet:param name="jspPage" value="/html/proposition_feedback/view_search_result.jsp" />
+</liferay-portlet:renderURL>
+
+<div class="proposition_search_form_wrapper">
+	
+	<div class="proposition_search_form_left_content">
+	</div>
+	
+	<div class="proposition_search_form_center_content">
+		
+		<div class="proposition_search_form">
+			<aui:form name="proposition_search_form" method="post" action="<%=propositionSearchFormURL %>">
+								
+				<div id="<portlet:namespace/>propositionSearchFormHelp" 
+					class="proposition_search_form_help_content <%= advancedSearch ? "aui-helper-hidden" : "" %>">
+					<span class ="search_form_title"><liferay-ui:message key="proposition-search-form"/></span>
+					<br/>
+					<span class ="help_content">
+						<liferay-ui:message key="please-enter-proposition-name-or-keyword-on-search-content-below"/>
+						<br/>
+						<liferay-ui:message key="select-advance-search-for-more-search-options"/>
+					</span>
+				</div>
+				
+				<div>
+					<input type="text" id="<portlet:namespace/>propositionSearchKeyword" name="propositionSearchKeyword" value='<%= propositionSearchKeyword%>'/>
+					<aui:button type="submit" value="search"/>
+				</div>
+
+				<div id="<portlet:namespace/>propositionAdvancedSearchWrapper" 
+					class="proposition_search_form_advance_option <%= advancedSearch ? StringPool.BLANK : "aui-helper-hidden"%>">
+					<table>
+						<tr>
+							<td>
+								<aui:select name="searchCategoryId" label="">
+									<aui:option value="0" selected="<%=(searchCategoryId == 0L) %>" label="proposition-category" />
+									<%for(PropositionCategory category : categoryList){%>
+										<aui:option value="<%=category.getCategoryId()%>" label="<%=category.getCategoryName() %>"
+													selected="<%=(searchCategoryId == category.getCategoryId())%>"
+										/>				
+									<%}%>					
+								</aui:select>
+							</td>
+							<td>
+								<aui:select name="searchCompilationDepartmentId" label="">
+									<aui:option value="0" selected="<%=(searchCompilationDepartmentId == 0L) %>" label="proposition-compilation-department" />
+									<%for(PropositionCategory compilationDepartment : compilationDepartmentList){%>
+										<aui:option value="<%=compilationDepartment.getCategoryId()%>" label="<%=compilationDepartment.getCategoryName() %>"
+													selected="<%=(searchCompilationDepartmentId == compilationDepartment.getCategoryId())%>"
+										/>				
+									<%}%>					
+								</aui:select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<aui:select name="searchVerificationDepartmentId" label="">
+									<aui:option value="0" selected="<%=(searchVerificationDepartmentId == 0L) %>" label="proposition-verification-department" />
+									<%for(PropositionCategory verificarionDepartment : verificationDepartmentList){%>
+										<aui:option value="<%=verificarionDepartment.getCategoryId()%>" label="<%=verificarionDepartment.getCategoryName() %>"
+													selected="<%=(searchVerificationDepartmentId == verificarionDepartment.getCategoryId())%>"
+										/>				
+									<%}%>					
+								</aui:select>
+							</td>					
+							<td>
+								<aui:select name="searchPropositionStatus" label="">
+									<aui:option value="-1" selected="<%=(searchPropositionStatus == -1) %>" label="proposition-status" />
+																														
+									<aui:option value="<%=PropositionConstants.PUBLISH_PROPOSITION_STATUS_VALUE %>" 
+												selected="<%=(searchPropositionStatus == PropositionConstants.PUBLISH_PROPOSITION_STATUS_VALUE) %>" 
+												label="publish-proposition" />
+												
+									<aui:option value="<%=PropositionConstants.RELEASED_PROPOSITION_STATUS_VALUE %>" 
+												selected="<%=(searchPropositionStatus == PropositionConstants.RELEASED_PROPOSITION_STATUS_VALUE) %>" 
+												label="released-proposition" />	
+																								
+									<aui:option value="<%=PropositionConstants.UNRELEASE_PROPOSITION_STATUS_VALUE %>" 
+												selected="<%=(searchPropositionStatus == PropositionConstants.UNRELEASE_PROPOSITION_STATUS_VALUE) %>" 
+												label="unrelease-proposition" />
+			
+								</aui:select>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</aui:form>
+		</div>
+	</div>
+		
+	<div class="proposition_search_form_right_content">
+		<span class="proposition_search_form_help">
+			<a href="javascript:;"><liferay-ui:message key="help"/></a>
+		</span>
+		
+		<span class="show_proposition_advanced_search_form">
+			<div class="show_advanced">
+				<a id="<portlet:namespace/>showAdvancedSearchToggleLink" href="javascript:;"><liferay-ui:message key="advance-search"/></a>
+			</div>
+		</span>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	AUI().ready('aui-base',function(A){
+		
+		var propositionSearchInput = A.one('#<portlet:namespace/>propositionSearchKeyword');
+		
+		if(propositionSearchInput){
+			
+			propositionSearchInput.focus();
+		}
+		
+		var showAdvancedSearchToggleLink = A.one('#<portlet:namespace/>showAdvancedSearchToggleLink');
+		
+		var propositionSearchFormHelp = A.one('#<portlet:namespace/>propositionSearchFormHelp');
+		
+		var propositionAdvancedSearchWrapper = A.one('#<portlet:namespace/>propositionAdvancedSearchWrapper');
+		
+		if(showAdvancedSearchToggleLink && propositionSearchFormHelp && propositionAdvancedSearchWrapper){
+			
+			showAdvancedSearchToggleLink.on('click',function(){
+				
+				console.log('show-advanced-search');
+				
+				if(propositionAdvancedSearchWrapper.hasClass('aui-helper-hidden')){
+					
+					propositionAdvancedSearchWrapper.show();
+					propositionSearchFormHelp.hide();
+				}else{
+					
+					propositionAdvancedSearchWrapper.hide();
+					propositionSearchFormHelp.show();
+				}
+				
+				propositionSearchInput.focus();
+			});
+		}
+	});
+
+</script>
+

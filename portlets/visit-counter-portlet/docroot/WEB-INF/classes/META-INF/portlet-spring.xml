@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.visit_counter.service.VisitCounterLocalService" class="com.portal_egov.portlet.visit_counter.service.impl.VisitCounterLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.visit_counter.service.VisitCounterService" class="com.portal_egov.portlet.visit_counter.service.impl.VisitCounterServiceImpl" />
+	<bean id="com.portal_egov.portlet.visit_counter.service.persistence.VisitCounterPersistence" class="com.portal_egov.portlet.visit_counter.service.persistence.VisitCounterPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.visit_counter.service.VisitCounterDayLogLocalService" class="com.portal_egov.portlet.visit_counter.service.impl.VisitCounterDayLogLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.visit_counter.service.VisitCounterDayLogService" class="com.portal_egov.portlet.visit_counter.service.impl.VisitCounterDayLogServiceImpl" />
+	<bean id="com.portal_egov.portlet.visit_counter.service.persistence.VisitCounterDayLogPersistence" class="com.portal_egov.portlet.visit_counter.service.persistence.VisitCounterDayLogPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.visit_counter.service.VisitCounterLogLocalService" class="com.portal_egov.portlet.visit_counter.service.impl.VisitCounterLogLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.visit_counter.service.VisitCounterLogService" class="com.portal_egov.portlet.visit_counter.service.impl.VisitCounterLogServiceImpl" />
+	<bean id="com.portal_egov.portlet.visit_counter.service.persistence.VisitCounterLogPersistence" class="com.portal_egov.portlet.visit_counter.service.persistence.VisitCounterLogPersistenceImpl" parent="basePersistence" />
+</beans>

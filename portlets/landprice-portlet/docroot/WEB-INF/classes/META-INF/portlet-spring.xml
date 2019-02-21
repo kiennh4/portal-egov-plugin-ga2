@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.landprice.service.LandLocationLocalService" class="com.portal_egov.portlet.landprice.service.impl.LandLocationLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.landprice.service.LandLocationService" class="com.portal_egov.portlet.landprice.service.impl.LandLocationServiceImpl" />
+	<bean id="com.portal_egov.portlet.landprice.service.persistence.LandLocationPersistence" class="com.portal_egov.portlet.landprice.service.persistence.LandLocationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.landprice.service.persistence.LandLocationFinder" class="com.portal_egov.portlet.landprice.service.persistence.LandLocationFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.landprice.service.LandPriceLocalService" class="com.portal_egov.portlet.landprice.service.impl.LandPriceLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.landprice.service.LandPriceService" class="com.portal_egov.portlet.landprice.service.impl.LandPriceServiceImpl" />
+	<bean id="com.portal_egov.portlet.landprice.service.persistence.LandPricePersistence" class="com.portal_egov.portlet.landprice.service.persistence.LandPricePersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.landprice.service.persistence.LandPriceFinder" class="com.portal_egov.portlet.landprice.service.persistence.LandPriceFinderImpl" parent="basePersistence" />
+</beans>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.portal_egov.portlet.ykct" auto-namespace-tables="false">
+	<author>DucDVd</author>
+	<namespace>ykct</namespace>
+	
+	<entity name="YKCT_Entry" local-service="true" remote-service="true">
+		
+		<!-- PK fields -->
+		<column name="entryId" type="long" primary="true"></column>
+		
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- Other fields -->
+		
+		<!-- Y kien cu tri -->
+		<column name="entryName" type="String"></column>
+		<!-- Chuyen muc  -->
+		<column name="categoryId" type="long"></column>
+		<!-- Duong dan file dinh kem (Truong hop luu duong dan tren server khac 
+		hoac luu duong dan tuong doi den thu muc chua file tren server Portal) -->
+		<column name="fileAttachmentURL" type="String"></column>
+		
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate"></order-column>
+		</order>
+		
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		<finder name="Category" return-type="Collection">
+			<finder-column name="categoryId"></finder-column>
+		</finder>
+		
+		<!-- Reference -->
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portal" entity="Resource"></reference>
+	</entity>
+	
+	<entity name="YKCT_Category" local-service="true" remote-service="true">
+		
+		<!-- PK fields -->
+		<column name="categoryId" type="long" primary="true"></column>
+		
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- Other fields -->
+		
+		<!-- Ten phan loai -->
+		<column name="categoryName" type="String"></column>
+		<!-- Mo ta -->
+		<column name="categoryDesc" type="String"></column>
+		
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate"></order-column>
+		</order>
+		
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		
+		<!-- Reference -->
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portal" entity="Resource"></reference>
+	</entity>
+	
+	<!-- 
+		Entity mapping id cua van ban voi id cua tai lieu dinh kem
+	-->
+    <entity name="YKCT_DlFileEntries" table="ykct_dlfileentries" local-service="true" remote-service="true">
+	    
+	    <!-- PK -->
+	     <column name="id" type="long" primary="true"/>
+	    
+	    <!-- Id cua YKCT -->
+	    <column name="ykctEntryId" type="long"/>
+		
+		<!-- Id cua tai lieu dinh kem -->
+		<column name="fileEntryId" type="long"/>
+
+		<!-- Finder -->
+		<finder return-type="Collection" name="YKCTEntry">
+			<finder-column name="ykctEntryId" />			
+		</finder>
+		
+		<finder return-type="Collection" name="DLFileEntry">
+			<finder-column name="fileEntryId" />			
+		</finder>
+
+    </entity>
+</service-builder>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionFeedbackFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT * FROM PropositionFeedback
+    	           
+        WHERE               
+                (PropositionFeedback.feedbackTitle LIKE ? OR PropositionFeedback.citizenName LIKE ?) 
+                
+                AND (PropositionFeedback.propositionId = ?)
+                
+                AND (PropositionFeedback.status = ?)
+                
+                AND (PropositionFeedback.groupId = ?)
+                
+        ORDER BY PropositionFeedback.createDate DESC
+	]]>
+</sql>
+
+</custom-sql>

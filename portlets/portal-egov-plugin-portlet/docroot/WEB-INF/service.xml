@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.bkav.portal.portlet.portalplugins" auto-namespace-tables="false">
+    <author>AnhBDb</author>
+    <namespace>portalplugins</namespace>
+    <entity name="PortalPlugins" local-service="true">
+        <column name="pluginId" type="long" primary="true"></column>
+        <column name="pluginName" type="String"></column>
+        <column name="pluginCode" type="String"></column>
+        <column name="pluginVersion" type="double"></column>
+        <column name="pluginType" type="int"></column>
+        <column name="ePortalId" type="long"></column>
+        <column name="isImportant" type="int"></column>
+        <column name="pluginDescription" type="String" ></column>
+        <column name="pluginUpdateInfo" type="String" ></column>
+        <column name="pluginSize" type="double"></column>
+        <column name="warFileId" type="long"></column>
+        <column name="signFileId" type="long"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifyDate" type="Date"></column>
+        <column name="groupId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="companyId" type="long"></column>
+        <column name="userName" type="String"></column>
+        <order by="desc">
+            <order-column name="pluginVersion" case-sensitive="false"></order-column>
+            <order-column name="modifyDate" case-sensitive="false"></order-column>
+            <order-column name="pluginName" case-sensitive="true"></order-column>
+        </order>
+        <finder name="GroupId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
+        <finder name="CompanyId" return-type="Collection">
+            <finder-column name="companyId"></finder-column>
+        </finder>
+        <finder name="PluginCode" return-type="PortalPlugins">
+            <finder-column name="pluginCode"></finder-column>
+        </finder>
+        <finder name="CodeAndVersion" return-type="PortalPlugins">
+            <finder-column name="pluginCode"></finder-column>
+            <finder-column name="pluginVersion"></finder-column>
+            <finder-column name="groupId"></finder-column>
+        </finder>
+        <finder name="ePortalId" return-type="Collection">
+            <finder-column name="ePortalId"></finder-column>
+        </finder>
+    </entity>
+    <entity name="ePortals" local-service="true">
+        <column name="eportalId" type="long" primary="true"></column>
+        <column name="eportalName" type="String"></column>
+        <column name="eportalCode" type="String"></column>
+        <column name="eportalDomain" type="String"></column>
+        <column name="eportalVersion" type="String"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifyDate" type="Date"></column>
+        <column name="groupId" type="long"></column>
+        <column name="companyId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="userName" type="String"></column>
+        <order by="desc">
+            <order-column name="modifyDate"></order-column>
+        </order>
+        <finder name="GroupId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
+        <finder name="CompanyId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
+        <finder name="ePortalCode" return-type="ePortals">
+            <finder-column name="eportalCode"></finder-column>
+        </finder>
+        <finder name="ePortalDomain" return-type="ePortals">
+            <finder-column name="eportalDomain"></finder-column>
+            <finder-column name="groupId"></finder-column>
+        </finder>
+    </entity>
+</service-builder>

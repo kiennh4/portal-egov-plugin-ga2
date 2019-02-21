@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.proposition_feedback.service.PropositionLocalService" class="com.portal_egov.portlet.proposition_feedback.service.impl.PropositionLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.proposition_feedback.service.PropositionService" class="com.portal_egov.portlet.proposition_feedback.service.impl.PropositionServiceImpl" />
+	<bean id="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionPersistence" class="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionFinder" class="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.proposition_feedback.service.PropositionCategoryLocalService" class="com.portal_egov.portlet.proposition_feedback.service.impl.PropositionCategoryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.proposition_feedback.service.PropositionCategoryService" class="com.portal_egov.portlet.proposition_feedback.service.impl.PropositionCategoryServiceImpl" />
+	<bean id="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionCategoryPersistence" class="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionCategoryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.proposition_feedback.service.PropositionFeedbackLocalService" class="com.portal_egov.portlet.proposition_feedback.service.impl.PropositionFeedbackLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.proposition_feedback.service.PropositionFeedbackService" class="com.portal_egov.portlet.proposition_feedback.service.impl.PropositionFeedbackServiceImpl" />
+	<bean id="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionFeedbackPersistence" class="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionFeedbackPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionFeedbackFinder" class="com.portal_egov.portlet.proposition_feedback.service.persistence.PropositionFeedbackFinderImpl" parent="basePersistence" />
+</beans>

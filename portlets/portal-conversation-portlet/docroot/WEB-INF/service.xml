@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.portal_egov.portlet.conversation" auto-namespace-tables="false">
+	<author>DucDVd</author>
+	<namespace>conversation</namespace>
+	
+	<!-- Chuyen muc giao luu -->
+	<entity name="CO_Category" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<column name="categoryId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+
+		<!-- Other fields -->
+		<column name="parentCategoryId" type="long" />
+		<column name="categoryName" type="String" />
+		<column name="categoryDesc" type="String" />
+		<column name="threadCount" type="int" />
+		
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="categoryName" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+				
+		<finder name="ParentAndCompany" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="parentCategoryId" />
+		</finder>
+							
+		<finder name="ParentAndGroup" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="parentCategoryId" />
+		</finder>	
+		
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+		
+	<!-- Thread/Chu de giao luu -->
+	<entity name="CO_Thread" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<column name="threadId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+
+		<!-- Other fields -->
+		<column name="parentThreadId" type="long" />
+		<column name="categoryId" type="long" />
+		
+		<!-- Ten buoi giao luu -->
+		<column name="threadName" type="String" />
+		
+		<!-- Ten co quan to chuc giao luu -->
+		<column name="departmentName" type="String" />
+		
+		<!-- Thanh phan tham gia -->
+		<column name="participants" type="String" />
+		
+		<!-- Mo ta noi dung buoi giao luu -->
+		<column name="threadDesc" type="String" />
+
+		<!-- Thoi gian bat dau buoi giao luu -->
+		<column name="startDate" type="Date" />
+		
+		<!-- Thoi gian ket thuc buoi giao luu -->
+		<column name="endDate" type="Date" />
+		
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<column name="viewCount" type="int" />
+		<column name="conversationCount" type="int" />
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusDate" type="Date" />
+		
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="startDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+				
+		<finder name="StatusAndCompany" return-type="Collection">
+			<finder-column name="status" />
+			<finder-column name="companyId" />
+		</finder>
+						
+		<finder name="StatusAndGroup" return-type="Collection">
+			<finder-column name="status" />
+			<finder-column name="groupId" />
+		</finder>
+						
+		<finder name="ParentThreadAndCompany" return-type="Collection">
+			<finder-column name="parentThreadId" />
+			<finder-column name="companyId" />
+		</finder>
+						
+		<finder name="ParentThreadAndGroup" return-type="Collection">
+			<finder-column name="parentThreadId" />
+			<finder-column name="groupId" />
+		</finder>
+									
+		<finder name="ParentThreadAndCompanyAndStatus" return-type="Collection">
+			<finder-column name="parentThreadId" />
+			<finder-column name="companyId" />
+			<finder-column name="status" />
+		</finder>
+						
+		<finder name="ParentThreadAndGroupAndStatus" return-type="Collection">
+			<finder-column name="parentThreadId" />
+			<finder-column name="groupId" />
+			<finder-column name="status" />
+		</finder>
+									
+		<finder name="CategoryAndCompany" return-type="Collection">
+			<finder-column name="categoryId" />
+			<finder-column name="companyId" />
+		</finder>
+						
+		<finder name="CategoryAndGroup" return-type="Collection">
+			<finder-column name="categoryId" />
+			<finder-column name="groupId" />
+		</finder>
+												
+		<finder name="CategoryAndCompanyAndStatus" return-type="Collection">
+			<finder-column name="categoryId" />
+			<finder-column name="companyId" />
+			<finder-column name="status" />
+		</finder>
+						
+		<finder name="CategoryAndGroupAndStatus" return-type="Collection">
+			<finder-column name="categoryId" />
+			<finder-column name="groupId" />
+			<finder-column name="status" />
+		</finder>	
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+			
+	<!-- Noi dung trao doi,giao luu,hoi dap -->
+	<entity name="CO_Conversation" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<column name="conversationId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+
+		<!-- Other fields -->
+		<column name="threadId" type="long" />
+		<column name="title" type="String" />
+		
+		<column name="askUserName" type="String" />
+		<column name="askUserInfo" type="String" />
+		<column name="askContent" type="String" />
+		
+		<column name="answerUserName" type="String" />
+		<column name="answerUserInfo" type="String" />
+		<column name="answerContent" type="String" />
+		
+		<column name="askDate" type="Date" />
+		<column name="answerDate" type="Date" />
+		
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusDate" type="Date" />
+		
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="answerDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+				
+		<finder name="StatusAndCompany" return-type="Collection">
+			<finder-column name="status" />
+			<finder-column name="companyId" />
+		</finder>
+						
+		<finder name="StatusAndGroup" return-type="Collection">
+			<finder-column name="status" />
+			<finder-column name="groupId" />
+		</finder>
+								
+		<finder name="ThreadAndCompany" return-type="Collection">
+			<finder-column name="threadId" />
+			<finder-column name="companyId" />
+		</finder>
+						
+		<finder name="ThreadAndGroup" return-type="Collection">
+			<finder-column name="threadId" />
+			<finder-column name="groupId" />
+		</finder>				
+		<finder name="ThreadAndCompanyAndStatus" return-type="Collection">
+			<finder-column name="threadId" />
+			<finder-column name="companyId" />
+			<finder-column name="status" />
+		</finder>
+						
+		<finder name="ThreadAndGroupAndStatus" return-type="Collection">
+			<finder-column name="threadId" />
+			<finder-column name="groupId" />
+			<finder-column name="status" />
+		</finder>
+			
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+</service-builder>

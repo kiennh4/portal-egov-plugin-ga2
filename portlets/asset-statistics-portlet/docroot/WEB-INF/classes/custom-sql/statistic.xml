@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.bkav.portal_egov.portlet.asset_statistics.service.persistence.StatisticEntityFinder.getAssetCounter">	
+	<![CDATA[
+	   	SELECT COUNT(*) AS COUNT_VALUE
+	   	
+	   	FROM 	assetentry 
+	   	
+	   	INNER JOIN assetentries_assetcategories
+	   	
+	   	ON assetentries_assetcategories.entryId = assetentry.entryId
+	   	           
+	       WHERE   
+	       		assetentry.visible = 1
+	       		
+	       		AND assetentry.groupId = ?
+	       		
+	       		AND assetentry.classNameId = ?
+	       		
+	       		AND assetentry.userId = ?
+	       		
+	       		AND assetentries_assetcategories.categoryId = ? 
+	       		
+	       		AND assetentry.publishDate >= ?
+	       		
+	       		AND assetentry.publishDate <= ?
+	]]>
+</sql>
+
+<sql id="com.bkav.portal_egov.portlet.asset_statistics.service.persistence.StatisticEntityFinder.getAssetEntry">	
+	<![CDATA[
+	   	SELECT *
+	   	
+	   	FROM 	assetentry 
+	   	
+	   	INNER JOIN assetentries_assetcategories
+	   	
+	   	ON assetentries_assetcategories.entryId = assetentry.entryId
+	   	           
+	       WHERE   
+	       		assetentry.visible = 1
+	       		
+	       		AND assetentry.groupId = ?
+	       		
+	       		AND assetentry.classNameId = ?
+	       		
+	       		AND assetentry.userId = ?
+	       		
+	       		AND assetentries_assetcategories.categoryId = ? 
+	       		
+	       		AND assetentry.publishDate >= ?
+	       		
+	       		AND assetentry.publishDate <= ?
+	]]>
+</sql>
+
+</custom-sql>

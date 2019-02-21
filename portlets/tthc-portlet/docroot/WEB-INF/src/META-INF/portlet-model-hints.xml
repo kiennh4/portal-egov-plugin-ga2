@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.portal_egov.portlet.tthc.model.TTHC_Attribute">
+		<field name="attributeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="tthcEntryId" type="long" />
+		<field name="attributeTypeId" type="int" />
+		<field name="attributeIndex" type="int" />
+		<field name="attributeName" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="attributeValue" type="String">
+			<hint name="max-length">3000</hint>
+		</field>
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.portal_egov.portlet.tthc.model.TTHC_Category">
+		<field name="categoryId" type="long" />
+		<field name="parentId" type="long" />
+		<field name="categoryTypeId" type="int" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="categoryName" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="categoryDesc" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="displayPriority" type="int" />
+	</model>
+	<model name="com.portal_egov.portlet.tthc.model.TTHC_Entry">
+		<field name="entryId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="levelId" type="long" />
+		<field name="departmentId" type="long" />
+		<field name="categoryId" type="long" />
+		<field name="audienceId" type="long" />
+		<field name="resultTypeId" type="long" />
+		<field name="entryCode" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="entryName" type="String">
+			<hint name="max-length">3000</hint>
+		</field>
+		<field name="entryDesc" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="processGuide" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="processType" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="processTime" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="processFee" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="processRequirement" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="processFoundationDocument" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>

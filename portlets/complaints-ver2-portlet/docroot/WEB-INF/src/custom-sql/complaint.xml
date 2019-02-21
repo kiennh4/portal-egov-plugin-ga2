@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.bkav.portal.portlet.compaints.service.persistence.ComplaintsFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	*
+    	
+    	FROM 	Complaints
+    	           
+        WHERE   
+        		Complaints.groupId = ?
+        		
+                AND (UPPER(Complaints.complaintName) LIKE ?
+                		OR UPPER(Complaints.complaintNumber) LIKE ? 
+                		OR UPPER(Complaints.complaintDesc) LIKE ? 
+                		OR UPPER(Complaints.complaintContent) LIKE ? 
+                	)
+                
+        ORDER BY Complaints.modifiedDate DESC
+	]]>
+</sql>
+
+</custom-sql>

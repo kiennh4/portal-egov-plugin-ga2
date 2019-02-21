@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql id="com.bkav.portal.portlet.audioplayer.service.persistence.AudioFileFinder.findByKeyword">	
+		<![CDATA[
+	    	SELECT 	AudioFile.companyId,
+	    			AudioFile.groupId,
+	    			AudioFile.userId,
+	    			AudioFile.userName,
+	    			AudioFile.createDate,
+	    			AudioFile.modifyDate,
+	    			
+	    			AudioFile.viewCounter,
+	    			AudioFile.audioId,
+	    			AudioFile.audioName,
+	    			AudioFile.audioInfo,
+	    			AudioFile.audioType,
+	    			AudioFile.audioFileId
+	    	
+	    	FROM 	AudioPlayer_AudioFile AudioFile
+	    	           
+	        WHERE               
+	                (AudioFile.audioName LIKE ?) AND (AudioFile.groupId = ?)
+	                
+	        ORDER BY AudioFile.createDate DESC
+		]]>
+	</sql>
+</custom-sql>

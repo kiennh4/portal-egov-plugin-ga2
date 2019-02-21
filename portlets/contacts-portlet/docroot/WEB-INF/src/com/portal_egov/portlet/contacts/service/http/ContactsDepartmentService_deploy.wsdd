@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<service name="Plugin_contacts_ContactsDepartmentService" provider="java:RPC" style="rpc" use="encoded">
+		<typeMapping xmlns:ns="http://model.contacts.portlet.portal_egov.com" qname="ns:ContactsDepartmentSoap" type="java:com.portal_egov.portlet.contacts.model.ContactsDepartmentSoap" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></typeMapping>
+		<operation xmlns:operNS="urn:http.service.contacts.portlet.portal_egov.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="countChildDepartment" qname="operNS:countChildDepartment" returnQName="countChildDepartmentReturn" returnType="rtns:int" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="departmentId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.contacts.portlet.portal_egov.com" name="deleteDepartment" qname="operNS:deleteDepartment" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="departmentId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.contacts.portlet.portal_egov.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getChildDepartments" qname="operNS:getChildDepartments" returnQName="getChildDepartmentsReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="parentDepartmentId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.contacts.portlet.portal_egov.com" xmlns:rtns="http://model.contacts.portlet.portal_egov.com" name="getDepartment" qname="operNS:getDepartment" returnQName="getDepartmentReturn" returnType="rtns:ContactsDepartmentSoap" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="departmentId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.contacts.portlet.portal_egov.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGroupDepartments" qname="operNS:getGroupDepartments" returnQName="getGroupDepartmentsReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.contacts.portlet.portal_egov.com" name="updateDepartmentParent" qname="operNS:updateDepartmentParent" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="departmentId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="parentDepartmentId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.contacts.portlet.portal_egov.com" name="updateDepartmentState" qname="operNS:updateDepartmentState" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="departmentId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="displayPriority" type="tns:int"></parameter>
+		</operation>
+		<parameter name="allowedMethods" value="countChildDepartment deleteDepartment getChildDepartments getDepartment getGroupDepartments updateDepartmentParent updateDepartmentState" />
+		<parameter name="className" value="com.portal_egov.portlet.contacts.service.http.ContactsDepartmentServiceSoap" />
+		<parameter name="schemaUnqualified" value="http://model.contacts.portlet.portal_egov.com" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="ContactsDepartmentServiceSoap" />
+		<parameter name="wsdlServiceElement" value="ContactsDepartmentServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_contacts_ContactsDepartmentService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.contacts.portlet.portal_egov.com" />
+	</service>
+</deployment>

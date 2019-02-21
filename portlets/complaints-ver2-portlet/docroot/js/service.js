@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.complaint", "com.bkav.portal.portlet.complaints.service", "complaints-ver2-portlet");

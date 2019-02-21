@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.bkav.portal.portlet.video" auto-namespace-tables="false">
+	<author>hungdx</author>
+	<namespace>video</namespace>
+
+	<entity name="VideoEntry" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+		<column name="entryId" type="long" primary="true" />
+
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="name" type="String" />
+		<column name="description" type="String" />
+		<column name="videoType" type="String" />
+		<column name="videoUrl" type="String" />
+		<column name="videoFileId" type="long" />
+		<column name="thumbnailImage" type="boolean" />
+		<column name="thumbnailImageId" type="long" />
+
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+	</entity>
+    <entity name="VideoCategory" local-service="true">
+        <column name="categoryId" type="long" primary="true"></column>
+        <column name="groupId" type="long" primary="false"></column>
+        <column name="companyId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="userName" type="String"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifiedDate" type="Date"></column>
+        <column name="categoryName" type="String"></column>
+        <order by="desc">
+            <order-column name="modifiedDate" order-by="desc"></order-column>
+        </order>
+        <finder name="Group" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
+    </entity>
+    <entity name="VideoCategoryMap" local-service="true">
+        <column name="mapId" type="long" primary="true"></column>
+        <column name="categoryId" type="long"></column>
+        <column name="entryId" type="long"></column>
+        <finder name="Category" return-type="Collection">
+            <finder-column name="categoryId"></finder-column>
+        </finder>
+        <finder name="Entry" return-type="Collection">
+            <finder-column name="entryId"></finder-column>
+        </finder>
+    </entity>
+	
+	<exceptions>
+		<exception>VideoFileType</exception>
+		<exception>VideoFileSize</exception>
+		<exception>ThumbnailImageFileType</exception>
+		<exception>ThumbnailImageFileSize</exception>
+	</exceptions>
+</service-builder>

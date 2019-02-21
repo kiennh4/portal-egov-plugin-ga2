@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.citizeninquiry", "com.portal_egov.portlet.citizen_inquiry.service", "citizen-inquiry-portlet");

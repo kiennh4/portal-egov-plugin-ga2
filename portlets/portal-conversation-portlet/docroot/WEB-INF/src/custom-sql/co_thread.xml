@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.conversation.service.persistence.CO_ThreadFinder.findByKeywordAndStatus">	
+	<![CDATA[
+    	SELECT * FROM co_thread
+    	           
+        WHERE               
+                (co_thread.threadName LIKE ? OR co_thread.threadDesc LIKE ?) 
+                
+                AND (co_thread.companyId = ?)
+                
+                AND (co_thread.status = ?)
+                
+        ORDER BY co_thread.startDate DESC
+	]]>
+</sql>
+
+</custom-sql>

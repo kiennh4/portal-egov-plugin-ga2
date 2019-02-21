@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.contacts.service.ContactsLocalService" class="com.portal_egov.portlet.contacts.service.impl.ContactsLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.contacts.service.ContactsService" class="com.portal_egov.portlet.contacts.service.impl.ContactsServiceImpl" />
+	<bean id="com.portal_egov.portlet.contacts.service.persistence.ContactsPersistence" class="com.portal_egov.portlet.contacts.service.persistence.ContactsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.contacts.service.persistence.ContactsFinder" class="com.portal_egov.portlet.contacts.service.persistence.ContactsFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.contacts.service.ContactsDepartmentLocalService" class="com.portal_egov.portlet.contacts.service.impl.ContactsDepartmentLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.contacts.service.ContactsDepartmentService" class="com.portal_egov.portlet.contacts.service.impl.ContactsDepartmentServiceImpl" />
+	<bean id="com.portal_egov.portlet.contacts.service.persistence.ContactsDepartmentPersistence" class="com.portal_egov.portlet.contacts.service.persistence.ContactsDepartmentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.contacts.service.persistence.ContactsDepartmentFinder" class="com.portal_egov.portlet.contacts.service.persistence.ContactsDepartmentFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.contacts.service.ContactsDepartmentPropertyLocalService" class="com.portal_egov.portlet.contacts.service.impl.ContactsDepartmentPropertyLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.contacts.service.ContactsDepartmentPropertyService" class="com.portal_egov.portlet.contacts.service.impl.ContactsDepartmentPropertyServiceImpl" />
+	<bean id="com.portal_egov.portlet.contacts.service.persistence.ContactsDepartmentPropertyPersistence" class="com.portal_egov.portlet.contacts.service.persistence.ContactsDepartmentPropertyPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.contacts.service.persistence.ContactsDepartmentPropertyFinder" class="com.portal_egov.portlet.contacts.service.persistence.ContactsDepartmentPropertyFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.contacts.service.ContactsPropertyLocalService" class="com.portal_egov.portlet.contacts.service.impl.ContactsPropertyLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.contacts.service.ContactsPropertyService" class="com.portal_egov.portlet.contacts.service.impl.ContactsPropertyServiceImpl" />
+	<bean id="com.portal_egov.portlet.contacts.service.persistence.ContactsPropertyPersistence" class="com.portal_egov.portlet.contacts.service.persistence.ContactsPropertyPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.contacts.service.persistence.ContactsPropertyFinder" class="com.portal_egov.portlet.contacts.service.persistence.ContactsPropertyFinderImpl" parent="basePersistence" />
+</beans>

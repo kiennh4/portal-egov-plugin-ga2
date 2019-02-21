@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.portal_egov.portlet.inquiry" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>inquiry</namespace>
+
+	<!-- Entity luu thong tin lien ket website-->
+	<entity name="OnlineInquiry" local-service="true" remote-service="true">
+		
+		<!-- PK fields -->
+		<column name="inquiryId" type="long" primary="true"></column>
+		
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- Other fields -->
+		
+		<column name="fullName" type="String"></column>
+		<column name="phoneNumbers" type="String"></column>
+		<column name="emailAddress" type="String"></column>
+		
+		<column name="inquiryContent" type="String"></column>
+		
+		<column name="inquiryStatus" type="int"></column>
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="createDate"></order-column>
+		</order>
+		
+		<!-- Finder methods -->
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		
+		<!-- Reference -->
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portal" entity="Resource"></reference>
+	</entity>
+</service-builder>

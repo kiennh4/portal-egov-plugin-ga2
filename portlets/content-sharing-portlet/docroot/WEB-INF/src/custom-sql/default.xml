@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql id="com.bkav.portal.portlet.contentsharing.service.persistence.ContentSharingFinder.listFromTable">	
+		<![CDATA[
+	    	SELECT 	*
+	    	
+	    	FROM 	$table_name  
+	    	
+	    	WHERE companyId = ?
+	                
+		]]>
+	</sql>
+</custom-sql>

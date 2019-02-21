@@ -1,0 +1,94 @@
+.video-image-display-portlet .video-image-display-content {
+  padding-bottom: 5px;
+  border: 1px solid #ccc; }
+  .video-image-display-portlet .video-image-display-content .display-panel {
+    width: 100%;
+    background: #0788d9;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px #434343; }
+    .video-image-display-portlet .video-image-display-content .display-panel table {
+      width: 100%; }
+    .video-image-display-portlet .video-image-display-content .display-panel table tr td {
+      border: 1px solid #eee;
+      padding: 5px; }
+    .video-image-display-portlet .video-image-display-content .display-panel table tr td:hover {
+      cursor: pointer;
+      background: #B29EFF; }
+    .video-image-display-portlet .video-image-display-content .display-panel .tab-display.active {
+      background: #B29EFF; }
+    .video-image-display-portlet .video-image-display-content .display-panel .tab-display {
+      background: #0788d9; }
+  .video-image-display-portlet .video-image-display-content .image-gallery-display-content {
+    width: 100%; }
+  .video-image-display-portlet .video-image-display-content .video-gallery-display-content {
+    display: none; }
+    .video-image-display-portlet .video-image-display-content .video-gallery-display-content .video-player-default-style .top-video-title {
+      background: url("/video-player-portlet/images/player-icon.png") no-repeat scroll 0 12px transparent;
+      padding: 10px 0px;
+      text-shadow: 1px 1px white;
+      font-size: 14px;
+      font-weight: bold;
+      padding-left: 20px; }
+      .video-image-display-portlet .video-image-display-content .video-gallery-display-content .video-player-default-style .top-video-title a {
+        color: #bc0000; }
+    .video-image-display-portlet .video-image-display-content .video-gallery-display-content .video-player-default-style .video-playlist {
+      padding-left: 5px;
+      max-height: 80px;
+      overflow: auto; }
+      .video-image-display-portlet .video-image-display-content .video-gallery-display-content .video-player-default-style .video-playlist ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px; }
+      .video-image-display-portlet .video-image-display-content .video-gallery-display-content .video-player-default-style .video-playlist li {
+        list-style-type: none; }
+    .video-image-display-portlet .video-image-display-content .video-gallery-display-content .video-player-default-style .video-title {
+      background: url("/video-player-portlet/images/li-red-icon.jpg") no-repeat scroll 0 4px transparent;
+      padding-left: 15px; }
+    .video-image-display-portlet .video-image-display-content .video-gallery-display-content .video-player-default-style .video-upload-date {
+      font-size: 10px;
+      color: #ccc;
+      padding-left: 5px; }
+    .video-image-display-portlet .video-image-display-content .video-gallery-display-content .video-player-default-style .view-more-video-link {
+      float: right; }
+      .video-image-display-portlet .video-image-display-content .video-gallery-display-content .video-player-default-style .view-more-video-link a {
+        text-decoration: underline; }
+
+.imageGallerySliderFrame {
+  margin: 0 auto;
+  position: relative;
+  z-index: 0; }
+
+.imageGallerySlider {
+  position: relative; }
+
+.imageGallerySlider DIV {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  opacity: 0.0;
+  background-color: #FFF; }
+
+.imageGallerySlider .active {
+  z-index: 10;
+  opacity: 1.0; }
+
+.imageGallerySlider .last-active {
+  z-index: 9; }
+
+.imageGallerySlider img {
+  display: block;
+  border: 1px solid #E4E4E4;
+  padding: 1px; }
+
+.imageGallerySliderFrame .view-gallery-links {
+  text-align: right;
+  margin-top: 5px; }
+
+.imageGallerySliderFrame .view-gallery-links a {
+  background: url("/image-gallery-portlet/images/red_arrow.png") no-repeat scroll 0px 5px transparent;
+  text-decoration: underline;
+  padding-left: 6px; }
+

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.portal_egov.portlet.banner.model.Banner" />
+	<import class="com.portal_egov.portlet.banner.model.BannerGroup" />
+	<class name="com.portal_egov.portlet.banner.model.impl.BannerImpl" table="Banner">
+		<cache usage="read-write" />
+		<id name="bannerId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="bannerGroupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="bannerTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bannerLink" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bannerImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="viewCounter" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="bannerStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.portal_egov.portlet.banner.model.impl.BannerGroupImpl" table="BannerGroup">
+		<cache usage="read-write" />
+		<id name="bannerGroupId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="groupName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

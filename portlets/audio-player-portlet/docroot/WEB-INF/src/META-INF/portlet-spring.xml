@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.bkav.portal.portlet.audioplayer.service.AlbumAudioMapLocalService" class="com.bkav.portal.portlet.audioplayer.service.impl.AlbumAudioMapLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.audioplayer.service.AlbumAudioMapService" class="com.bkav.portal.portlet.audioplayer.service.impl.AlbumAudioMapServiceImpl" />
+	<bean id="com.bkav.portal.portlet.audioplayer.service.persistence.AlbumAudioMapPersistence" class="com.bkav.portal.portlet.audioplayer.service.persistence.AlbumAudioMapPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.audioplayer.service.AudioAlbumLocalService" class="com.bkav.portal.portlet.audioplayer.service.impl.AudioAlbumLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.audioplayer.service.AudioAlbumService" class="com.bkav.portal.portlet.audioplayer.service.impl.AudioAlbumServiceImpl" />
+	<bean id="com.bkav.portal.portlet.audioplayer.service.persistence.AudioAlbumPersistence" class="com.bkav.portal.portlet.audioplayer.service.persistence.AudioAlbumPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.audioplayer.service.AudioFileLocalService" class="com.bkav.portal.portlet.audioplayer.service.impl.AudioFileLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.audioplayer.service.AudioFileService" class="com.bkav.portal.portlet.audioplayer.service.impl.AudioFileServiceImpl" />
+	<bean id="com.bkav.portal.portlet.audioplayer.service.persistence.AudioFilePersistence" class="com.bkav.portal.portlet.audioplayer.service.persistence.AudioFilePersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.audioplayer.service.persistence.AudioFileFinder" class="com.bkav.portal.portlet.audioplayer.service.persistence.AudioFileFinderImpl" parent="basePersistence" />
+</beans>

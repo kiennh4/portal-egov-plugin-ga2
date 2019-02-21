@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql file="custom-sql/department.xml" />
+	<sql file="custom-sql/employee.xml" />
+	<sql file="custom-sql/post.xml" />
+</custom-sql>

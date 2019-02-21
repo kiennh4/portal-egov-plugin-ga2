@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.portal_egov.portlet.legal_faq.model.impl.LegalFAQCategoryModelImpl">
+		<attributes>
+			<id name="categoryId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="parentId" />
+			<basic name="categoryName" />
+			<basic name="categoryDesc" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.legal_faq.model.impl.LegalFAQEntryModelImpl">
+		<attributes>
+			<id name="entryId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="categoryId" />
+			<basic name="citizenName" />
+			<basic name="citizenPhone" />
+			<basic name="citizenEmail" />
+			<basic name="citizenAddress" />
+			<basic name="askDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="askTitle" />
+			<basic name="askContent" />
+			<basic name="answerDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="answerContent" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="publishDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="viewCount" />
+			<basic name="publishStatus" />
+			<basic name="status" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.portal_egov.portlet.legal_faq.model.impl.LegalFAQCategoryImpl" name="LegalFAQCategory">
+		<table name="LegalFAQCategory" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.legal_faq.model.impl.LegalFAQEntryImpl" name="LegalFAQEntry">
+		<table name="LegalFAQEntry" />
+		<attributes />
+	</entity>
+</entity-mappings>

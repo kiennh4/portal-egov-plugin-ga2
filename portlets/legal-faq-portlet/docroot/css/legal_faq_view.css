@@ -1,0 +1,429 @@
+
+/* FORM STYLE */
+		
+	.legal-faq-portlet-config-panel{
+		color: #434343 !important;
+		padding: 10px;
+		border: 1px solid #d2d2d2;
+	}
+				
+	.legal-faq-header-row .legal-faq-search-form select,
+	.legal-faq-header-row .legal-faq-search-form input[type="text"],	
+	.legal-faq-give-ask-form select,
+	.legal-faq-give-ask-form input[type="text"]{
+	  display: inline-block;
+	  background-image: none;
+	  padding: 5px !important;
+	  color: #555555;
+	  vertical-align: middle;
+	  -webkit-border-radius: 3px !important;
+	     -moz-border-radius: 3px !important;
+	          border-radius: 3px !important;
+	  background-color: #ffffff !important;
+	  border: 1px solid #cccccc ;
+	  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+	     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+	          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+	  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+	     -moz-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+	       -o-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+	          transition: border linear 0.2s, box-shadow linear 0.2s !important;
+	}
+	
+			
+	.legal-faq-header-row .legal-faq-search-form select:focus,
+	.legal-faq-header-row .legal-faq-search-form input[type="text"]:focus,
+	.legal-faq-give-ask-form select:focus,
+	.legal-faq-give-ask-form input[type="text"]:focus{
+	  border-color: rgba(82, 168, 236, 0.8) !important;
+	  outline: 0;
+	  outline: thin dotted \9;
+	  /* IE6-9 */
+	
+	  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+	     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+	          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+	}
+					
+	.legal-faq-give-ask-form span.cke_skin_kama{
+		border: 1px solid #E4E4E4;
+    	border-radius: 3px;
+    	padding: 0px;
+	}
+		
+	.legal-faq-give-ask-form .cke_skin_kama .cke_wrapper{
+		background-color: #E9E9E9;
+	}
+		
+	.legal-faq-give-ask-form .cke_skin_kama .cke_focus{
+		outline-color:rgba(82, 168, 236, 0.8) !important;
+	}
+
+/* FAQ VIEW PAGE */
+
+	.legal-faq-header-row{
+		padding-bottom: 20px;
+		margin: 0px;
+	}
+		
+	.legal-faq-header-row .legal-faq-search-form{
+		background: url("/legal-faq-portlet/images/faq_search_form_bg.jpg") repeat-x scroll 0 0 transparent;
+		text-align: left;
+		width: 100%;
+		position: relative;
+		font-size: 12px;
+		border: 1px solid #d2d2d2;
+		border-radius:2px;
+	}
+			
+	.legal-faq-header-row .legal-faq-search-form .search-icon{
+		float: left;
+		width: 123px;
+		height: 141px;
+		cursor: pointer;
+		padding-right: 20px;
+		
+	}
+				
+	.legal-faq-header-row .legal-faq-search-form .search-icon .img{
+		width: 123px;
+		height: 141px;
+	}
+	
+	.legal-faq-header-row .legal-faq-search-form .search-form{
+		display: block;
+		margin-top: 10px;
+	}
+		
+	.legal-faq-header-row .legal-faq-search-form .search-form .search-form-title{
+		font-weight: bold;
+		color: #00528B;
+		font-size: 14px;
+		text-shadow: 1px 1px white;
+		padding-bottom: 5px;
+	}
+			
+	.legal-faq-header-row .legal-faq-search-form .search-form .search-form-guide{
+		font-weight: normal;
+		color: #434343;
+		padding-bottom: 5px;
+	}
+			
+	.legal-faq-header-row .legal-faq-search-form input[type="text"]{
+		width: 300px !important;
+	}
+		
+	.legal-faq-header-row .legal-faq-search-form select{
+		width: 312px;
+		margin-top: 5px;
+	}
+				
+	.legal-faq-header-row .category-faqs-title{
+		padding-top: 20px;
+		padding-bottom: 10px;
+		float: left;
+		font-weight: bold;
+		color: #bc0000;
+		text-shadow: 1px 1px #e4e4e4;
+	}
+			
+	.legal-faq-header-row .faq-control-row{
+		padding: 10px 0px;
+		float: right;
+	}
+	
+	.legal-faq-entries-list{
+		padding: 0;
+		margin: 0px;
+	}
+		
+	.legal-faq-entries-list .faq-entry{
+		border-top: 1px solid #e8e8e8;
+	}
+			
+	.legal-faq-entries-list .faq-entry .ask-title{
+		margin: 10px 0px;
+	}
+				
+	.legal-faq-entries-list .faq-entry .ask-title a{
+		text-decoration: none;
+		color: #00528B;
+		font-weight: bold;
+		background: url("/legal-faq-portlet/images/icon/faq_icon.png") no-repeat scroll 0px 0px transparent;
+		padding-left: 22px;
+		display: block;
+		font-size: 11px;
+	}
+				
+	.legal-faq-entries-list .faq-entry .ask-title a:hover{
+		color: #FF5800;
+	}
+			
+	.legal-faq-entries-list .faq-entry .ask-content{
+		padding-left: 22px;
+		text-align: justify;
+	}
+				
+	.legal-faq-entries-list .faq-entry .ask-content .view-full-ask-content-url{
+		font-size: 11px;
+		color: #00528B;
+		text-decoration: underline;
+	}
+				
+	.legal-faq-entries-list .faq-entry .ask-metadata{
+		color: #9C9C9C;
+		font-size: 11px;
+		text-align: right;
+		margin: 5px 0px;
+	}
+					
+	.legal-faq-entries-list .delta-selector,
+	.legal-faq-entries-list .page-selector{
+		padding-right: 5px;
+	}
+				
+	.legal-faq-entries-list .delta-selector select,
+	.legal-faq-entries-list .page-selector select{
+		border-radius: 2px !important;
+		padding: 0px !important;
+		margin: 0px !important;
+	}
+
+/* GIVE ASK FORM */
+
+	.legal-faq-give-ask-form{
+		font-size: 12px;
+		color: #00528B;
+	}
+	
+	.legal-faq-give-ask-form .aui-field-content{
+		padding-bottom: 15px;
+	}
+			
+	.legal-faq-give-ask-form .aui-field-label,
+	.legal-faq-give-ask-form .aui-field-label-inline-label{
+		width: 165px;
+		float: left;
+	}
+		
+	.legal-faq-give-ask-form .captcha-holder{
+		padding-left: 165px;
+	}
+			
+	.legal-faq-give-ask-form .captcha-holder .aui-field-label{
+		float: none;
+	}
+			
+	.legal-faq-give-ask-form .aui-button-holder{
+		padding-left: 165px;
+	}
+	
+	.legal-faq-give-ask-form .form-title{
+		border-bottom: 1px solid #E4E4E4;
+		font-size: 14px;
+		font-weight: bold;
+		padding: 5px;
+		color: #00528b;
+		text-shadow: 1px 1px #E8E8E8;	
+		padding: 5px;
+	}
+		
+	.legal-faq-give-ask-form .form-content{
+		padding: 10px;
+	}		
+		
+	.legal-faq-give-ask-form .form-content .aui-form-validator-message{
+		border-radius: 2px;
+		width: 402px;
+	}
+			
+	.legal-faq-header-row .legal-faq-search-form input[type="text"],
+	.legal-faq-give-ask-form .form-content input[type="text"]{
+		width: 400px;
+	}
+				
+	.legal-faq-give-ask-form .form-content textarea{
+		width: 400px;
+		height: 120px;
+	}
+	
+	.legal-faq-give-ask-form .form-content select{
+		width: 312px;
+	}	
+		
+	.legal-faq-give-ask-form .form-content span.cke_skin_kama{
+		border: 1px solid #E4E4E4;
+    	border-radius: 3px;
+    	padding: 0px;
+    	max-width: 500px;
+	}
+	
+	.legal-faq-give-ask-form .form-content .cke_skin_kama .cke_wrapper{
+		background-color: #E9E9E9;
+	}
+	
+	.legal-faq-give-ask-form .form-content .cke_skin_kama .cke_wrapper table tr{
+		
+		height: 20px;
+	}	
+	.legal-faq-give-ask-form .form-content .cke_skin_kama .cke_wrapper table tr td{
+		padding: 0px;
+	}
+				
+	.legal-faq-give-ask-form .form-content .aui-column-content{
+		padding: 0px !important;
+	} 
+		
+	.legal-faq-give-ask-form .form-content .taglib-captcha img{
+		height: 40px;
+		width: 152px;
+	}
+			
+	.legal-faq-give-ask-form .form-content .taglib-captcha input[type="text"]{
+		width: 140px !important;
+	} 
+	
+	.legal-faq-give-ask-form .form-content .captcha_reload{
+		cursor: pointer;
+	}
+	
+	.legal-faq-give-ask-form .form-content .captcha_reload img{
+		height: 42px;
+    	margin-top: 10px;
+	}
+
+/* FAQ DETAILS */
+	
+	.legal_faq_navigation_row{
+		display: block in-line;
+	}
+	
+	.legal_faq_navigation_row a:hover{
+		color: #FF5800;
+	}
+		
+	.give_ask_icon a{
+		text-decoration: none;
+		color: #00528B;
+		font-weight: bold;
+		background: url("/legal-faq-portlet/images/give_ask_icon.jpg") no-repeat scroll 0px 1px transparent;
+		padding-left: 22px;
+		padding-right: 10px;
+	}
+	
+	.back_icon a{
+		text-decoration: none;
+		color: #00528B;
+		font-weight: bold;
+		background: url("/legal-faq-portlet/images/back_icon.jpeg") no-repeat scroll 0px -1px transparent;
+		padding-left: 22px;
+	}
+	
+	.legal_faq_view .give_ask_button_row{
+		padding: 15px 0px;
+	}
+			
+	.legal_faq_ask_content{
+		text-align: justify;
+		border-top: 1px solid #F4F4F4;
+	}
+				
+	.legal_faq_ask_content .ask_title{
+		margin: 10px 0;
+	}
+	
+	.legal_faq_ask_content .ask_title a {
+		text-decoration: none;
+		color: #00528B;
+		font-weight: bold;
+		background: url("/legal-faq-portlet/images/icon/faq_icon.png") no-repeat scroll 0 0 transparent;
+		padding-left: 22px;
+		display: block;
+		font-size: 11px;
+	}
+	
+	.legal_faq_ask_content .ask_content {
+		padding-left: 22px;
+		text-align: justify;
+	}
+	
+	.legal_faq_ask_content .ask_metadata {
+		color: #9C9C9C;
+		font-size: 11px;
+		text-align: right;
+		margin: 5px 0;
+	}
+
+	.legal_faq_answer_content{
+		display: block;
+		text-align: justify;
+		margin: 20px 0px;
+	}
+	
+	.legal_faq_answer_content .answer_title{
+		margin: 10px 0px;
+	}
+		
+	.legal_faq_answer_content .answer_title a{
+		text-decoration: none;
+		color: #00528B;
+		font-weight: bold;
+		background: url("/legal-faq-portlet/images/answer_title_icon.gif") no-repeat scroll 0px -1px transparent;
+		padding-left: 22px;
+	}
+			
+	.legal_faq_ask_content .ask_title a:hover,
+	.legal_faq_answer_content .answer_title a:hover{
+		color: #FF5800;
+	}	
+	
+	.legal_faq_answer_content .answer_content{
+		padding-left: 22px;
+		text-align: justify;
+	}
+		
+	.legal_faq_answer_content .answer_metadata{
+		color: #9C9C9C;
+		font-size: 11px;
+		text-align: right;
+		margin: 5px 0px;
+	}
+	
+	.related_faq_entry{
+		border-top: 1px solid #E4E4E4;
+		padding-top: 10px;
+		margin: 0px;
+	}
+		
+	.related_faq_entry .related_title{
+		font-size: 11px;
+		font-weight: bold;
+		color: #00528B;
+	}
+	.related_faq_entry ul{
+	    list-style: none outside none;
+    	margin: 0;
+    	padding: 0;
+	}	
+	
+		
+	.related_faq_entry ul li{
+    	background: url("/legal-faq-portlet/images/brown_bullet.gif") no-repeat scroll 0 10px transparent;   	
+    	padding-left: 10px;
+    	padding-top: 7px;
+    	height: 25px;
+	}
+
+	.related_faq_entry  ul li a{
+	    font-size: 12px !important;
+	    text-decoration: none;
+	    color: #00528B;
+	}
+		
+	.related_entry  ul a:hover{
+	 	color: #0066CC;
+	}
+	.related_entry  .publish_date{
+		color: #9C9C9C;
+		font-size: 10px;
+	}

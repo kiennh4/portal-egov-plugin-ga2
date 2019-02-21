@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.vbpq.service.VBPQ_CategoryLocalService" class="com.portal_egov.portlet.vbpq.service.impl.VBPQ_CategoryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.vbpq.service.VBPQ_CategoryService" class="com.portal_egov.portlet.vbpq.service.impl.VBPQ_CategoryServiceImpl" />
+	<bean id="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_CategoryPersistence" class="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_CategoryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_CategoryFinder" class="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_CategoryFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.vbpq.service.VBPQ_DlFileEntriesLocalService" class="com.portal_egov.portlet.vbpq.service.impl.VBPQ_DlFileEntriesLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.vbpq.service.VBPQ_DlFileEntriesService" class="com.portal_egov.portlet.vbpq.service.impl.VBPQ_DlFileEntriesServiceImpl" />
+	<bean id="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_DlFileEntriesPersistence" class="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_DlFileEntriesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.vbpq.service.VBPQ_EntryLocalService" class="com.portal_egov.portlet.vbpq.service.impl.VBPQ_EntryLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.vbpq.service.VBPQ_EntryService" class="com.portal_egov.portlet.vbpq.service.impl.VBPQ_EntryServiceImpl" />
+	<bean id="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_EntryPersistence" class="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_EntryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_EntryFinder" class="com.portal_egov.portlet.vbpq.service.persistence.VBPQ_EntryFinderImpl" parent="basePersistence" />
+</beans>

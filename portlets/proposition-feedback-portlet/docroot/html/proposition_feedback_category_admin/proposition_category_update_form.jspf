@@ -1,0 +1,115 @@
+<%@page import="com.liferay.portal.kernel.util.Validator"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.util.PropositionConstants"%>
+<%@page import="java.util.List"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.service.PropositionCategoryLocalServiceUtil"%>
+<%@page import="com.portal_egov.portlet.proposition_feedback.model.PropositionCategory"%>
+<%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
+<%@page import="com.liferay.portal.util.PortalUtil"%>
+	
+<%
+	long categoryId = ParamUtil.getLong(request, "categoryId",0L);
+				 
+	long currentParentCategoryId = 0L;
+				 
+	PropositionCategory currentCategory = null;
+	
+	if(categoryId > 0){
+		
+		currentCategory = PropositionCategoryLocalServiceUtil.getPropositionCategory(categoryId);
+		
+		if(currentCategory != null){
+			
+			currentParentCategoryId = currentCategory.getParentId();
+		}
+	}
+	
+	List<PropositionCategory> parentCategoryList = PropositionCategoryLocalServiceUtil.findByTypeAndCompany(companyId, categoryTypeId);
+	
+	String categoryType = ParamUtil.getString(request, "categoryType");
+	
+	String parentCategoryTitle = "proposition-parent-category";
+	String categoryNameTitle = "proposition-category-name";
+	String categoryDescTitle = "proposition-category-desc";
+	
+	if(Validator.equals(categoryType, "compilationDepartment") || Validator.equals(categoryType, "verificationDepartment")){
+		
+		parentCategoryTitle = "parent-proposition-department";
+		categoryNameTitle = "proposition-department-name";
+		categoryDescTitle = "proposition-department-desc";
+	}
+	
+	String redirectURL = ParamUtil.getString(request, "redirectURL",PortalUtil.getCurrentURL(request));
+	
+	String currentTabName = ParamUtil.getString(request,"tabs1","Categories");
+	
+%>
+
+<div class="proposition-category-update-form" align="center">
+	
+	<liferay-portlet:actionURL  name="updatePropositionCategory" var="updateCategoryURL">
+		<liferay-portlet:param name="categoryId" value="<%=String.valueOf(categoryId) %>"/>
+		<portlet:param name="redirectURL" value="<%=redirectURL%>"/>
+	</liferay-portlet:actionURL>
+	
+	<aui:form name="proposition_category_update_form"  method="post" action="<%=updateCategoryURL%>">
+		<table>
+			<tr>
+				<td><liferay-ui:message key="<%=categoryNameTitle %>"/> (<liferay-ui:message key="required"/>)</td>
+				
+				<td><aui:input type="text" name="categoryName" label="" 
+								value='<%= currentCategory != null ? currentCategory.getCategoryName() : ""%>'/>
+				</td>
+			</tr>								
+			<tr>
+				<td><liferay-ui:message key="<%=categoryDescTitle %>"/></td>
+				
+				<td>
+					<aui:input type="textarea" name="categoryDesc" label="" 
+								value='<%= currentCategory != null ? currentCategory.getCategoryDesc(): ""%>'/>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><liferay-ui:message key=""/></td>
+				
+				<td>			
+					<div class="aui-button-holder">												
+						<aui:button type="submit" value="save"/>
+						<aui:button type="button" value="cancel" href="<%=redirectURL %>"/>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<aui:input name="categoryTypeId" type="hidden" value="<%=categoryTypeId %>"/>
+		<aui:input name="redirectURL" type="hidden" value="<%=redirectURL %>"/>
+	</aui:form>
+</div>
+
+<aui:script >
+	
+	AUI().ready('aui-base,aui-form-validator,aui-overlay-context-panel',function(A){
+		
+		var categoryNameInput = A.one('#<portlet:namespace />categoryName');
+		
+		if(categoryNameInput){
+			categoryNameInput.focus();
+		}
+				
+		window.validator = new A.FormValidator({
+	
+	        boundingBox: document.<portlet:namespace />proposition_category_update_form,
+	
+	        rules: {
+	            <portlet:namespace />categoryName: {
+	                required: true,
+	                rangeLength: ['1','150']
+	            },
+	            <portlet:namespace />categoryDesc: {
+	                required: false,
+	                rangeLength: ['0','300']
+	            }
+	        }
+	    });
+	});
+
+</aui:script>

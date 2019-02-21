@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.bkav.portal.portlet.audioplayer.model.AlbumAudioMap">
+		<field name="mapId" type="long" />
+		<field name="albumId" type="long" />
+		<field name="audioId" type="long" />
+	</model>
+	<model name="com.bkav.portal.portlet.audioplayer.model.AudioAlbum">
+		<field name="albumId" type="long" />
+		<field name="albumName" type="String" />
+		<field name="albumInfo" type="String" />
+		<field name="albumCoverId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="viewCounter" type="long" />
+	</model>
+	<model name="com.bkav.portal.portlet.audioplayer.model.AudioFile">
+		<field name="audioId" type="long" />
+		<field name="audioName" type="String" />
+		<field name="audioInfo" type="String" />
+		<field name="audioType" type="String" />
+		<field name="audioFileId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="viewCounter" type="long" />
+	</model>
+</model-hints>

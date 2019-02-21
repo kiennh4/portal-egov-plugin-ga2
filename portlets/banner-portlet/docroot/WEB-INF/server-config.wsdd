@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<globalConfiguration>
+		<parameter name="adminPassword" value="admin" />
+		<parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl" />
+		<parameter name="sendXsiTypes" value="true" />
+		<parameter name="sendMultiRefs" value="true" />
+		<parameter name="sendXMLDeclaration" value="true" />
+		<parameter name="axis.sendMinimizedElements" value="true" />
+		<requestFlow>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter name="scope" value="session" />
+			</handler>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter name="scope" value="request" />
+				<parameter name="extension" value=".jwr" />
+			</handler>
+		</requestFlow>
+	</globalConfiguration>
+	<handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder" />
+	<handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper" />
+	<handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler" />
+	<transport name="http">
+		<requestFlow>
+			<handler type="URLMapper" />
+			<handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler" />
+		</requestFlow>
+	</transport>
+	<transport name="local">
+		<responseFlow>
+			<handler type="LocalResponder" />
+		</responseFlow>
+	</transport>
+	<service name="Plugin_banner_BannerGroupService" provider="java:RPC" style="rpc" use="encoded">
+		<operation xmlns:operNS="urn:http.service.banner.portlet.portal_egov.com" name="deleteBannerGroup" qname="operNS:deleteBannerGroup" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="bannerGroupId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.banner.portlet.portal_egov.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getBannerGroups" qname="operNS:getBannerGroups" returnQName="getBannerGroupsReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+		</operation>
+		<parameter name="allowedMethods" value="deleteBannerGroup getBannerGroups" />
+		<parameter name="className" value="com.portal_egov.portlet.banner.service.http.BannerGroupServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="BannerGroupServiceSoap" />
+		<parameter name="wsdlServiceElement" value="BannerGroupServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_banner_BannerGroupService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.banner.portlet.portal_egov.com" />
+	</service>
+	<service name="Plugin_banner_BannerService" provider="java:RPC" style="rpc" use="encoded">
+		<typeMapping xmlns:ns="http://model.banner.portlet.portal_egov.com" qname="ns:BannerSoap" type="java:com.portal_egov.portlet.banner.model.BannerSoap" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></typeMapping>
+		<operation xmlns:operNS="urn:http.service.banner.portlet.portal_egov.com" name="deleteBanner" qname="operNS:deleteBanner" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="bannerId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.banner.portlet.portal_egov.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="findByKeyword" qname="operNS:findByKeyword" returnQName="findByKeywordReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="bannerGroupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="searchKeyword" type="tns:string"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.banner.portlet.portal_egov.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getAllBanners" qname="operNS:getAllBanners" returnQName="getAllBannersReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.banner.portlet.portal_egov.com" xmlns:rtns="http://model.banner.portlet.portal_egov.com" name="getBanner" qname="operNS:getBanner" returnQName="getBannerReturn" returnType="rtns:BannerSoap" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="bannerId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.banner.portlet.portal_egov.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGroupBanners" qname="operNS:getGroupBanners" returnQName="getGroupBannersReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="bannerGroupId" type="tns:long"></parameter>
+		</operation>
+		<parameter name="allowedMethods" value="deleteBanner findByKeyword getAllBanners getBanner getGroupBanners" />
+		<parameter name="className" value="com.portal_egov.portlet.banner.service.http.BannerServiceSoap" />
+		<parameter name="schemaUnqualified" value="http://model.banner.portlet.portal_egov.com" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="BannerServiceSoap" />
+		<parameter name="wsdlServiceElement" value="BannerServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_banner_BannerService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.banner.portlet.portal_egov.com" />
+	</service>
+</deployment>

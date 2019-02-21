@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.bkav.portal.portlet.complaints.model.Complaints" />
+	<import class="com.bkav.portal.portlet.complaints.model.Complaints_DLFileEntries" />
+	<class name="com.bkav.portal.portlet.complaints.model.impl.ComplaintsImpl" table="Complaints">
+		<cache usage="read-write" />
+		<id name="complaintId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="complaintNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="signingDate" type="org.hibernate.type.TimestampType" />
+		<property name="complaintName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="complaintDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="complaintContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="replyDocument" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.bkav.portal.portlet.complaints.model.impl.Complaints_DLFileEntriesImpl" table="Complaints_DLFileEntries">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="complaintId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

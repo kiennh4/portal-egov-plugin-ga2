@@ -1,0 +1,43 @@
+<div class="footer-menu">
+	<div class="footer-menu-wrapper">
+		<ul>
+			<li class="$nav_item_class">
+				<a href="/trang-chu"><span>Trang chủ</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/gioi-thieu"><span>Giới thiệu</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/thu-vien-anh"><span>Thư viện ảnh</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/lien-he"><span>Liên hệ</span></a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="copyright">
+		
+	#if ($theme_display.isShowPageSettingsIcon())
+		<span class="lfr-meta-actions" >
+				<a class="taglib-icon quickEditLayoutSet" href="$editFooterURL" data-width="700" id="quickEditFooter">
+					<img class="icon" src="$themeDisplay.getPathThemeImages()/common/edit.png" alt="#language("edit-footer")" title="#language("edit-footer")">
+				</a>
+		</span>
+	#end
+
+	#if ($footerContent == "")
+		<div class="copy-right-content">
+			<b>CỔNG THÔNG TIN ĐIỆN TỬ SỞ NỘI VỤ TỈNH BÀ RỊA VŨNG TÀU</b><br/>
+	
+			Giấy phép số 241?GP-BC, 11/06/2007 của Cục báo chí <br/>
+			
+			Trụ sở: Địa chỉ 137 đường 24/7 phường Phước Hiệp, Thành Phố Bà Rịa, Tỉnh Bà Rịa Vũng Tàu <br/>
+			
+			Ghi rõ nguồn Cổng thông tin điện tử Sở Nội Vụ - Tỉnh Bà Rịa Vũng Tàu khi trích dẫn thông tin từ địa chỉ này <br/>
+		</div>
+	#else	
+		$footerContent
+	#end
+</div>

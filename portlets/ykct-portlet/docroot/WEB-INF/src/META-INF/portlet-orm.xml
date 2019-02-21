@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.portal_egov.portlet.ykct.model.impl.YKCT_CategoryModelImpl">
+		<attributes>
+			<id name="categoryId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="categoryName" />
+			<basic name="categoryDesc" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.ykct.model.impl.YKCT_DlFileEntriesModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="ykctEntryId" />
+			<basic name="fileEntryId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.ykct.model.impl.YKCT_EntryModelImpl">
+		<attributes>
+			<id name="entryId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="entryName" />
+			<basic name="categoryId" />
+			<basic name="fileAttachmentURL" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.portal_egov.portlet.ykct.model.impl.YKCT_CategoryImpl" name="YKCT_Category">
+		<table name="YKCT_Category" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.ykct.model.impl.YKCT_DlFileEntriesImpl" name="YKCT_DlFileEntries">
+		<table name="ykct_dlfileentries" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.ykct.model.impl.YKCT_EntryImpl" name="YKCT_Entry">
+		<table name="YKCT_Entry" />
+		<attributes />
+	</entity>
+</entity-mappings>

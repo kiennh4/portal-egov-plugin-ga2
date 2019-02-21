@@ -1,0 +1,37 @@
+.topic-admin-portlet .topic-admin .topic-admin-btn {
+  float: left; }
+.topic-admin-portlet .topic-admin input {
+  margin: 3px; }
+.topic-admin-portlet .update-topic-form .topic-input-text {
+  width: 200px; }
+
+.topic-portlet .list-topic-big .topic-item-big {
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  list-style: none; }
+.topic-portlet .list-topic-big .topic-item-big:last-child {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 0px;
+  list-style: none; }
+.topic-portlet .list-topic-small ul {
+  margin: 0px; }
+.topic-portlet .list-topic-small ul li {
+  list-style: none;
+  padding: 5px;
+  border-bottom: 1px solid #eee; }
+.topic-portlet .list-topic-small ul li:last-child {
+  list-style: none;
+  padding: 5px;
+  border-bottom: 0px; }
+.topic-portlet .list-topic-small .topic-item-small {
+  font-size: 12px;
+  font-weight: bold;
+  list-style: none;
+  background: url("topic_item.png") no-repeat scroll 5px 5px transparent; }
+.topic-portlet .list-topic-small .topic-item-small a {
+  padding-left: 20px; }
+

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.bkav.portal.portlet.employee.model.impl.DepartmentModelImpl">
+		<attributes>
+			<id name="depId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="depName" />
+			<basic name="depAddres" />
+			<basic name="depPhone" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.bkav.portal.portlet.employee.model.impl.EmployeeModelImpl">
+		<attributes>
+			<id name="emplId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="name" />
+			<basic name="birthday">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="male" />
+			<basic name="phone" />
+			<basic name="addres" />
+			<basic name="email" />
+			<basic name="postId" />
+			<basic name="depId" />
+			<basic name="sal" />
+			<basic name="breakDay" />
+			<basic name="addDay" />
+			<basic name="endDate" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.bkav.portal.portlet.employee.model.impl.PostModelImpl">
+		<attributes>
+			<id name="postId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="postName" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.bkav.portal.portlet.employee.model.impl.DepartmentImpl" name="Department">
+		<table name="Department" />
+		<attributes />
+	</entity>
+	<entity class="com.bkav.portal.portlet.employee.model.impl.EmployeeImpl" name="Employee">
+		<table name="Employee" />
+		<attributes />
+	</entity>
+	<entity class="com.bkav.portal.portlet.employee.model.impl.PostImpl" name="Post">
+		<table name="Post" />
+		<attributes />
+	</entity>
+</entity-mappings>

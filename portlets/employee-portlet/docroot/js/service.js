@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.employee", "com.bkav.portal.portlet.employee.service", "employee-portlet");

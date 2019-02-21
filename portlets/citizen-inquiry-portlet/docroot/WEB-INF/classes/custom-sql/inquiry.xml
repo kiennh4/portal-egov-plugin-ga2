@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.citizen_inquiry.service.persistence.CitizenInquiryFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	*
+    	
+    	FROM 	CitizenInquiry
+    	           
+        WHERE   
+        		CitizenInquiry.groupId = ?
+        		
+        		AND CitizenInquiry.approved = 1
+        		
+        		AND (CitizenInquiry.categoryId = ?)  
+        		          
+                AND (UPPER(CitizenInquiry.inquiryTitle) LIKE ? OR UPPER(CitizenInquiry.inquiryContent) LIKE ? OR UPPER(CitizenInquiry.citizenName) LIKE ?)
+                
+                
+                
+        ORDER BY CitizenInquiry.inquiryTitle ASC
+	]]>
+</sql>
+
+</custom-sql>

@@ -1,0 +1,28 @@
+.site-display-settings-portlet{
+	
+	.setting-container{
+		
+		.setting-menu{
+			width: 30%;
+						
+			a.setting-menu-item{
+				padding: 5px 0 5px 5px;
+			}
+			
+			a.active{
+				background-color: #5c696e;
+				font-weight:bold;
+				color: #FFF;
+				text-decoration: none;
+			}
+			
+			a:focus{
+				outline: none;
+			}
+		}
+		
+		.setting-content{
+			width: 65%;
+		}
+	}
+}

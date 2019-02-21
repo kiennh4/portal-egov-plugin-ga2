@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+<sql id="com.portal_egov.portlet.ykct.service.persistence.YKCT_EntryFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	YKCT_Entry.*
+    			
+    			
+    	FROM 	YKCT_Entry
+    	           
+        WHERE           
+                (UPPER(YKCT_Entry.entryName) LIKE ?)          			
+            	
+            	 AND (YKCT_Entry.groupId = ?)
+            	           	
+        ORDER BY modifiedDate DESC
+        
+        LIMIT ?,?
+	]]>
+</sql>
+
+<sql id="com.portal_egov.portlet.ykct.service.persistence.YKCT_EntryFinder.findByMultiCondition">
+	<![CDATA[
+    	SELECT 	YKCT_Entry.*
+    	
+    	FROM 	YKCT_Entry
+    	          
+        WHERE
+        		(YKCT_Entry.groupId = ?)
+        		               
+                AND (UPPER(YKCT_Entry.entryName) LIKE ?)          			
+            	
+            	AND (YKCT_Entry.categoryId = ?)
+            	            	           	
+        ORDER BY modifiedDate DESC
+        
+	]]>
+</sql>
+
+</custom-sql>

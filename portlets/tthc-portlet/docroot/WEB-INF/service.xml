@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.portal_egov.portlet.tthc" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>tthc</namespace>
+
+	<!-- Entity TTHC -->
+	<entity name="TTHC_Entry" table="tthc_entry" local-service="true" remote-service="true">
+		
+		<!-- PK -->
+	    <column name="entryId" type="long" primary="true" />
+	    		
+		<!-- Portal field -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		
+	    <!-- Id cua cap thuc hien TTHC -->
+		<column name="levelId" type="long"  />	    		
+		<!-- Id cua co quan truc tiep thuc hien TTHC -->
+		<column name="departmentId" type="long"  />
+		<!-- Id cua linh vuc thong ke TTHC -->
+		<column name="categoryId" type="long" />
+		<!-- Id cua Doi tuong thuc hien -->
+		<column name="audienceId" type="long" />
+		<!-- Id cua Ket qua thuc hien TTHC -->
+		<column name="resultTypeId" type="long" />
+					    
+	    <!-- Ma so TTHC -->
+		<column name="entryCode" type="String"  />	    		
+		<!-- Ten thu tuc -->
+		<column name="entryName" type="String"  />
+		<!-- Mo ta thu tuc -->
+		<column name="entryDesc" type="String" />
+		<!-- Cac buoc thuc hien(Huong dan thuc hien) -->
+		<column name="processGuide" type="String" />							    
+	    <!-- Cach thuc thuc hien -->
+		<column name="processType" type="String"  />	    		
+		<!-- Thoi han giai quyet -->
+		<column name="processTime" type="String"  />		
+		<!-- Phi thuc hien thu tuc -->
+		<column name="processFee" type="String" />
+		<!-- Dieu kien de thuc hien TTHC -->
+		<column name="processRequirement" type="String" />
+		<!-- Co so phap ly cua thu tuc(danh sach cac van ban,dieu luat quy dinh TTHC) -->
+		<column name="processFoundationDocument" type="String" />
+			
+		<!-- Ngay tao thu tuc -->
+		<column name="createDate" type="Date" />
+		<!-- Ngay chinh sua thu tuc gan nhat -->
+		<column name="modifiedDate" type="Date" />
+								
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate"/>			
+		</order>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="Company">
+			<finder-column name="companyId" />			
+		</finder>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="Group">
+			<finder-column name="groupId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="LevelAndCompany">
+			<finder-column name="levelId" />
+			<finder-column name="companyId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="LevelAndGroup">
+			<finder-column name="levelId" />
+			<finder-column name="groupId" />			
+		</finder>
+						
+		<!-- Finder -->
+		<finder return-type="Collection" name="DepartmentAndCompany">
+			<finder-column name="departmentId" />
+			<finder-column name="companyId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="DepartmentAndGroup">
+			<finder-column name="departmentId" />
+			<finder-column name="groupId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="CategoryAndCompany">
+			<finder-column name="categoryId" />
+			<finder-column name="companyId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="CategoryAndGroup">
+			<finder-column name="categoryId" />
+			<finder-column name="groupId" />			
+		</finder>
+										
+		<!-- Finder -->
+		<finder return-type="Collection" name="AudienceAndCompany">
+			<finder-column name="audienceId" />
+			<finder-column name="companyId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="AudienceAndGroup">
+			<finder-column name="audienceId" />
+			<finder-column name="groupId" />			
+		</finder>
+																						
+		<!-- Finder -->
+		<finder return-type="Collection" name="ResultTypeAndCompany">
+			<finder-column name="resultTypeId" />
+			<finder-column name="companyId" />			
+		</finder>
+												
+		<!-- Finder -->
+		<finder return-type="Collection" name="ResultTypeAndGroup">
+			<finder-column name="resultTypeId" />
+			<finder-column name="groupId" />
+		</finder>
+		
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+	
+	   	
+	<!-- 
+		Entity Phan loai Thu tuc hanh chinh
+		Luu thong tin ve Cap thuc hien TTHC,Co quan thuc hien,Linh vuc thong ke,Doi tuong thuc hien,ket qua thuc hien TTHC
+		Phan biet thong qua categoryTypeId
+		categoryType = 1 tuong ung voi Cap thuc hien TTHC (Cap TW,Cap Tinh/TP,Cap Huyen/ThiXa,Cap Xa/Phuong,...)
+		categoryType = 2 tuong ung voi Co quan thuc hien TTHC 
+		categoryType = 3 tuong ung voi Linh vuc thong ke TTHC
+		categoryType = 4 tuong ung voi Doi tuong thuc hien TTHC (Ca nhan,to chuc,doanh nghiep,...)
+		categoryType = 5 tuong ung voi Ket qua thuc hien TTHC TTHC (Quyet dinh,Xac nhan,...)
+	-->
+    <entity name="TTHC_Category" table="tthc_category" local-service="true" remote-service="true">
+	    <!-- PK -->
+	    <column name="categoryId" type="long" primary="true" />
+		
+		<!-- Id category cap cha -->
+		<column name="parentId" type="long"  />
+		
+		<column name="categoryTypeId" type="int" />
+				
+		<!-- Portal field -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		
+		<!-- Ten phan loai -->
+		<column name="categoryName" type="String" />
+		<!-- Mo ta -->
+		<column name="categoryDesc" type="String" />
+		
+		<!-- Ngay tao -->
+		<column name="createDate" type="Date" />
+		<!-- Ngay chinh sua -->
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Thu tu uu tien hien thi -->
+		<column name="displayPriority" type="int" />
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="displayPriority"/>
+		</order>
+		
+		<!-- Finder -->
+		<finder return-type="Collection" name="Company">
+			<finder-column name="companyId" />			
+		</finder>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="Group">
+			<finder-column name="groupId" />			
+		</finder>
+										
+		<!-- Finder -->
+		<finder return-type="Collection" name="ParentAndCompany">
+			<finder-column name="parentId" />
+			<finder-column name="companyId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="ParentAndGroup">
+			<finder-column name="parentId" />
+			<finder-column name="groupId" />			
+		</finder>
+						
+		<!-- Finder -->
+		<finder return-type="Collection" name="TypeAndCompany">
+			<finder-column name="categoryTypeId" />
+			<finder-column name="companyId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="TypeAndGroup">
+			<finder-column name="categoryTypeId" />
+			<finder-column name="groupId" />			
+		</finder>
+		
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+    </entity>
+    
+    	   	
+	<!-- 
+		Entity Thuoc tinh cua thu tuc hanh chinh
+		Luu thong tin cac thuoc tinh dong cua TTHC nhu trinh tu thuc hien,le phi,thanh phan ho so,...
+		Phan loai thuoc tinh dua vao attributeTypeId
+		attributeTypeId = 1 tuong ung voi Id cua van ban phap quy quy dinh TTHC
+		attributeTypeId = 2 tuong ung voi Thanh phan ho so,van ban,bieu mau kem theo thu tuc
+		attributeTypeId = 3 tuong ung voi Id cua bieu mau,file dinh kem thu tuc
+	-->
+    <entity name="TTHC_Attribute" table="tthc_attribute" local-service="true" remote-service="true">
+    	<!-- PK -->
+	    <column name="attributeId" type="long" primary="true" />
+	    	    				
+		<!-- Portal field -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		
+	    <!-- attribute group -->
+	   	<column name="tthcEntryId" type="long"/>
+	    <column name="attributeTypeId" type="int"/>
+	   	<column name="attributeIndex" type="int" />
+	   			
+		<!-- Ten thuoc tinh -->
+		<column name="attributeName" type="String" />
+		<!-- Gia tri thuoc tinh-->
+		<column name="attributeValue" type="String" />
+		<!-- Ngay tao -->
+		<column name="createDate" type="Date" />
+		<!-- Ngay chinh sua -->
+		<column name="modifiedDate" type="Date" />
+	   			
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="attributeIndex"/>
+		</order>
+
+		<!-- Finder -->
+		<finder return-type="Collection" name="TTHCEntryAndCompany">
+			<finder-column name="companyId" />
+			<finder-column name="tthcEntryId" />
+		</finder>
+		
+		<!-- Finder -->
+		<finder return-type="Collection" name="TTHCEntryAndGroup">
+			<finder-column name="groupId" />
+			<finder-column name="tthcEntryId" />
+		</finder>
+		
+		<!-- Finder -->
+		<finder return-type="Collection" name="TTHCEntryAndAttributeTypeAndCompany">
+			<finder-column name="companyId" />
+			<finder-column name="tthcEntryId" />
+			<finder-column name="attributeTypeId" />
+		</finder>
+														
+		<!-- Finder -->
+		<finder return-type="Collection" name="TTHCEntryAndAttributeTypeAndGroup">
+			<finder-column name="groupId" />
+			<finder-column name="tthcEntryId" />
+			<finder-column name="attributeTypeId" />
+		</finder>
+						
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+    </entity>
+ 
+</service-builder>

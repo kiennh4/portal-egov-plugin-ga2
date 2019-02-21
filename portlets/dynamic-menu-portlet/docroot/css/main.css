@@ -1,0 +1,320 @@
+.dynamic-menu-portlet{
+	
+	.portlet-title{
+		padding: 5px 5px;
+	}
+	
+	.portlet-topper-toolbar{
+		top: 8px;
+	}
+	
+	.portlet-content{
+		padding: 0!important;
+		border: none;
+		box-shadow: 0 1px 1px 1px #ddd!important;
+	}
+	
+	.menu-search-form{
+		float: right;
+	}
+	
+	.dynamic-menu-update-form{
+	
+		padding: 0px;
+		margin: 0px;
+		
+		input[type="text"],
+		textarea{
+			width: 320px;
+		}
+		
+		textarea{
+			height: 60px;
+		}
+		
+		.aui-field-content{
+			padding-bottom: 10px;
+		}
+		
+		h3{
+			margin: 0px;
+			padding: 5px 0;
+			border-bottom: 1px solid #d2d2d2;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		
+		ul{
+			padding: 0px;
+			margin: 0px;
+			list-style-type: none;
+		}
+				
+		ul.sub-menu-item-wrapper{
+			padding-left: 10px;
+		}
+				
+		ul li{
+			padding: 5px 0px;
+			position: relative;
+		}
+										
+		ul li a{
+			display: block;
+			background: url("/dynamic-menu-portlet/images/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
+			text-decoration: none;
+			padding-left: 10px;
+		}
+		
+		ul li.root-item{
+			background: none;
+			font-weight: bold;
+			padding-left: 0px;
+		}
+		
+		.menu-action{
+			top: 0px;
+		}
+	}
+
+	.menu-action{
+		position: absolute;
+		top: 10px;
+		right: 0;
+	}
+	
+	.add-menu-item-trigger {
+	    background-image: url("/html/themes/control_panel/images/common/add.png") !important;
+	    background-repeat: no-repeat;
+	    position: absolute !important;
+	    border: none !important;
+	    clip: rect(0pt, 0pt, 0pt, 0pt);
+	    display: block;
+	    height: 22px;
+	    padding: 0px !important;
+	    right: 65px;
+	    width: 16px !important;
+	}
+	
+	.update-menu-item-trigger {
+	    background-image: url("/html/themes/control_panel/images/common/edit.png") !important;
+	    background-repeat: no-repeat;
+	    position: absolute !important;
+	    border: none !important;
+	    clip: rect(0pt, 0pt, 0pt, 0pt);
+	    display: block;
+	    height: 22px;
+	    padding: 0px !important;
+	    right: 45px;
+	    width: 16px !important;
+	}
+	
+	.delete-menu-item-trigger {
+	    background-image: url("/html/themes/control_panel/images/common/delete.png") !important;
+	    background-repeat: no-repeat;
+	    border: none !important;
+	    position: absolute !important;
+	    clip: rect(0pt, 0pt, 0pt, 0pt);
+	    display: block;
+	    height: 22px;
+	    padding: 0px !important;
+	    right: 25px;
+	    width: 16px !important;
+	}
+			
+	.menu-item:hover .add-menu-item-trigger,
+	.menu-item:hover .update-menu-item-trigger, 
+	.menu-item:hover .delete-menu-item-trigger{
+	    clip: rect(auto, auto, auto, auto);
+	}
+				
+	.add-menu-item-trigger:after,
+	.update-menu-item-trigger:after, 
+	.delete-menu-item-trigger:after{
+		border: none !important;
+		margin-top: 0px !important;
+		margin-right: 0px !important;
+	}
+
+	.dynamic-menu-style-1{
+		padding: 0px;
+		margin: 0px;
+		
+		ul{
+			padding: 0px;
+			margin: 0px;
+			list-style: none;
+		}
+		
+		ul.sub-menu-item-wrapper{
+			display:none;
+		}
+		
+		.root-menu-item-wrapper {
+			background-color: #f7f7f7;
+		}
+		
+		.root-menu-item-wrapper li {
+			position: relative;
+			padding-left: 10px;
+		}
+				
+		.root-menu-item-wrapper li.root-item{
+			background: url("/dynamic-menu-portlet/images/root-menu-item-bg.jpg") top left repeat-x;
+			border-top: 1px solid #d2d2d2;
+			font-weight: bold;
+		}
+		
+		.root-menu-item-wrapper li.selected {
+			background-color: #f2f2f2;
+		}
+		
+		.root-menu-item-wrapper li a {
+			background: url("/dynamic-menu-portlet/images/arrow-bullet.png") 0px 10px no-repeat;
+			display: block;
+			padding: 5px 10px;
+			text-decoration: none;
+		}
+				
+		.root-menu-item-wrapper li a:hover {
+			color: #ff5800;
+		}
+		
+		.root-menu-item-wrapper li>ul li {
+			padding-left: 10px;
+		}
+		
+		.root-menu-item-wrapper li>ul li a {
+			font-weight: normal;
+		}
+		
+		.root-menu-item-wrapper li>ul li>ul li {
+			padding-left: 20px;
+		}
+	}
+	
+	.dynamic-menu-style-2{
+		/*** ESSENTIAL STYLES ***/
+		.sf-menu, .sf-menu * {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+		.sf-menu li:hover > ul,
+		.sf-menu li.sfHover > ul {
+			display: block;
+		}
+		
+		.sf-menu ul ul {
+			top: 0;
+			left: 100%;
+		}
+		
+		.sf-menu ul {
+			width: 100%;
+			position: absolute;
+			display: none;
+			left:100%;
+			top: 0;
+			z-index: 99;
+		}
+		
+		.sf-menu li {
+			width: 100%;
+			position: relative;
+			background: #0788d9;
+			white-space: nowrap; /* no need for Supersubs plugin */
+			*white-space: normal; /* ...unless you support IE7 (let it wrap) */
+			-webkit-transition: background .2s;
+			transition: background .2s;
+		}
+
+		.sf-menu li:hover,
+		.sf-menu li.sfHover {
+			background: #CFDEFF;
+			-webkit-transition: none;
+			transition: none;
+		}
+		
+		.sf-menu a {
+			color: #fff;
+			font-weight: bold;
+			display: block;
+			position: relative;
+			border-top: 1px solid #dFeEFF; /* fallback colour must use full shorthand */
+			border-top: 1px solid rgba(255,255,255,.5);
+			padding: .75em 1em;
+			text-decoration: none;
+			zoom: 1; /* IE7 */
+		}
+		
+		.sf-menu a:hover {
+			color: #ff5800;
+		}
+		
+		.sf-menu ul li a{
+			border-left: 1px solid #fff;
+		}
+		
+		/*** arrows (for all except IE7) **/
+		.sf-arrows .sf-with-ul {
+			padding-right: 2.5em;
+			*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+		}
+		/* styling for both css and generated arrows */
+		.sf-arrows .sf-with-ul:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 1em;
+			margin-top: -3px;
+			height: 0;
+			width: 0;
+			/* order of following 3 rules important for fallbacks to work */
+			border: 5px solid transparent;
+			border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+			border-top-color: rgba(255,255,255,.5);
+		}
+		.sf-arrows > li > .sf-with-ul:focus:after,
+		.sf-arrows > li:hover > .sf-with-ul:after,
+		.sf-arrows > .sfHover > .sf-with-ul:after {
+			border-top-color: white; /* IE8 fallback colour */
+		}
+		/* styling for right-facing arrows */
+		.sf-arrows ul .sf-with-ul:after {
+			margin-top: -5px;
+			margin-right: -3px;
+			border-color: transparent;
+			border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+			border-left-color: rgba(255,255,255,.5);
+		}
+		.sf-arrows ul li > .sf-with-ul:focus:after,
+		.sf-arrows ul li:hover > .sf-with-ul:after,
+		.sf-arrows ul .sfHover > .sf-with-ul:after {
+			border-left-color: white;
+		}
+		
+		
+		/*** alter arrow directions ***/
+		.sf-vertical.sf-arrows > li > .sf-with-ul:after {
+		  margin-top: -5px;
+		  margin-right: -3px;
+		  border-color: transparent;
+		  border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+		  border-left-color: rgba(255,255,255,.5);
+		}
+		.sf-vertical.sf-arrows li > .sf-with-ul:focus:after,
+		.sf-vertical.sf-arrows li:hover > .sf-with-ul:after,
+		.sf-vertical.sf-arrows .sfHover > .sf-with-ul:after {
+		  border-left-color: white;
+		}
+	}
+}
+				
+.js .controls-hidden .dynamic-menu-portlet .menu-item:hover .add-menu-item-trigger,
+.js .controls-hidden .dynamic-menu-portlet .menu-item:hover .update-menu-item-trigger, 
+.js .controls-hidden .dynamic-menu-portlet .menu-item:hover .delete-menu-item-trigger{
+    clip: rect(0pt, 0pt, 0pt, 0pt);
+}

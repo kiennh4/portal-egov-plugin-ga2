@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.portal_egov.portlet.proposition_feedback.model.Proposition">
+		<field name="propositionId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="categoryId" type="long" />
+		<field name="compilationDepartmentId" type="long" />
+		<field name="verificationDepartmentId" type="long" />
+		<field name="propositionName" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="propositionDesc" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="propositionContent" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="documentFileId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="viewCount" type="int" />
+		<field name="feedbackCount" type="int" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusDate" type="Date" />
+	</model>
+	<model name="com.portal_egov.portlet.proposition_feedback.model.PropositionCategory">
+		<field name="categoryId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="categoryTypeId" type="int" />
+		<field name="parentId" type="long" />
+		<field name="categoryName" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="categoryDesc" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="propositionCount" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.portal_egov.portlet.proposition_feedback.model.PropositionFeedback">
+		<field name="feedbackId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="propositionId" type="long" />
+		<field name="feedbackFileAttId" type="long" />
+		<field name="feedbackTitle" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="feedbackContent" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="citizenName" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="citizenEmail" type="String">
+			<hint name="max-length">150</hint>
+		</field>
+		<field name="citizenPhone" type="String">
+			<hint name="max-length">75</hint>
+		</field>
+		<field name="citizenAddress" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusDate" type="Date" />
+	</model>
+</model-hints>

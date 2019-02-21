@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	
+	<portlet>
+		<portlet-name>proposition_feedback</portlet-name>
+		<display-name>Proposition Feedback</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.proposition_feedback.PropositionFeedback
+		</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/proposition_feedback/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-jsp</name>
+			<value>/html/proposition_feedback/configuration.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/Proposition_Language</resource-bundle>
+		<portlet-info>
+			<title>Proposition Feedback</title>
+			<short-title>Proposition Feedback</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>proposition_feedback_admin</portlet-name>
+		<display-name>Proposition Feedback Admin</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.proposition_feedback.PropositionFeedbackAdmin
+		</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/proposition_feedback_admin/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/Proposition_Admin_Language</resource-bundle>
+		<portlet-info>
+			<title>Proposition Feedback Admin</title>
+			<short-title>Proposition Feedback Admin</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>proposition_feedback_category_admin</portlet-name>
+		<display-name>Proposition Feedback Category Admin</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.proposition_feedback.PropositionFeedbackCategoryAdmin
+		</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>
+				/html/proposition_feedback_category_admin/view.jsp
+			</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/Proposition_Category_Admin_Language</resource-bundle>
+		<portlet-info>
+			<title>Proposition Feedback Category Admin</title>
+			<short-title>
+				Proposition Feedback Category Admin
+			</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>lastest_proposation</portlet-name>
+		<display-name>Lastest Proposation</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.proposition_feedback.LastestProposation
+		</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/lastest_proposation/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-jsp</name>
+			<value>/html/lastest_proposation/configuration.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/Proposition_Lastest_Language</resource-bundle>
+		<portlet-info>
+			<title>Lastest Proposation</title>
+			<short-title>Lastest Proposation</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>propositionId</supported-public-render-parameter>
+		<supported-public-render-parameter>feedbackId</supported-public-render-parameter>
+	</portlet>
+	<portlet>
+		<portlet-name>lastest_proposation_feedback</portlet-name>
+		<display-name>Lastest Proposation Feedback</display-name>
+		<portlet-class>
+			com.portal_egov.portlet.proposition_feedback.LastestProposationFeedback
+		</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/lastest_proposation_feedback/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-jsp</name>
+			<value>/html/lastest_proposation_feedback/configuration.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/Feedback_Lastest_Language</resource-bundle>
+		<portlet-info>
+			<title>Lastest Proposation Feedback</title>
+			<short-title>Lastest Proposation Feedback</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>propositionId</supported-public-render-parameter>
+		<supported-public-render-parameter>feedbackId</supported-public-render-parameter>
+	</portlet>
+			
+	<public-render-parameter>
+		<identifier>propositionId</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:propositionId</qname>
+	</public-render-parameter>
+			
+	<public-render-parameter>
+		<identifier>feedbackId</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:feedbackId</qname>
+	</public-render-parameter>
+</portlet-app>

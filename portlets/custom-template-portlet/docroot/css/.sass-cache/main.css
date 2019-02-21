@@ -1,0 +1,170 @@
+.custom-template .custom-template-1 {
+  width: 100%;
+  height: auto;
+  text-align: center; }
+.custom-template .custom-template-2 {
+  text-align: center; }
+  .custom-template .custom-template-2 .style-content {
+    color: #fff;
+    height: 90px;
+    padding-top: 13px;
+    background-color: #1b4792; }
+    .custom-template .custom-template-2 .style-content .text {
+      padding-top: 10px; }
+      .custom-template .custom-template-2 .style-content .text p {
+        margin: 0 !important;
+        font-size: 15px; }
+    .custom-template .custom-template-2 .style-content .action {
+      padding-top: 10px;
+      /* Buttons styles start */ }
+      .custom-template .custom-template-2 .style-content .action button {
+        display: inline-block;
+        border-radius: 50px;
+        padding: 8px 30px;
+        margin: 0;
+        text-shadow: unset;
+        text-decoration: none;
+        background: #fff;
+        color: #105290;
+        font-family: sans-serif;
+        line-height: 1;
+        cursor: pointer;
+        text-align: center;
+        transition: background 250ms ease-in-out, transform 150ms ease;
+        -webkit-appearance: none;
+        -moz-appearance: none; }
+      .custom-template .custom-template-2 .style-content .action button:hover,
+      .custom-template .custom-template-2 .style-content .action button:focus {
+        background: #4bb2f9; }
+.custom-template .custom-template-3 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative; }
+  .custom-template .custom-template-3 ul {
+    list-style: none; }
+    .custom-template .custom-template-3 ul li {
+      float: left; }
+.custom-template .custom-template-4 {
+  margin: 0 auto;
+  padding: 0; }
+  .custom-template .custom-template-4 .frm-register {
+    text-align: center; }
+  .custom-template .custom-template-4 input[type=text] {
+    width: 400px;
+    display: inline-block;
+    margin-right: 15px;
+    border: none;
+    height: 30px; }
+  .custom-template .custom-template-4 input[type=text]:focus, .custom-template .custom-template-4 input[type=password]:focus {
+    background-color: #ddd;
+    outline: none; }
+  .custom-template .custom-template-4 .btn-submit {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 35px;
+    margin: 0;
+    text-shadow: unset;
+    text-decoration: none;
+    background: #4bb2f9;
+    color: #fff;
+    font-family: sans-serif;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+.custom-template .style-title {
+  margin-bottom: 50px; }
+  .custom-template .style-title h3 {
+    font-size: 22px;
+    margin: 0 !important;
+    text-align: center; }
+  .custom-template .style-title .sperator {
+    width: 30px;
+    height: 2px;
+    background: #1e459d;
+    margin: 0 auto; }
+
+.div_Nophoso {
+  float: left;
+  width: 70%;
+  margin: 0 17% 0 13%; }
+
+.div_Nophoso .title_Nophoso {
+  width: 100%;
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #105290;
+  padding: 20px 0px; }
+
+.div_dangky {
+  width: 100%;
+  float: left; }
+
+.dk_colfull {
+  width: 100%;
+  float: left; }
+
+.dk_colleft {
+  float: left;
+  width: 30%;
+  font-weight: bold;
+  padding: 10px 0px;
+  text-align: right;
+  padding-right: 10px; }
+
+.dk_colright {
+  float: left;
+  width: 64%;
+  text-align: left;
+  padding: 10px 0px; }
+
+.dk_colleft_no {
+  float: left;
+  width: 30%;
+  font-weight: bold;
+  padding: 2px 0px;
+  text-align: right;
+  padding-right: 10px; }
+
+.dk_colright_no {
+  float: left;
+  text-align: left;
+  width: 64%;
+  padding: 2px 0px; }
+
+.div_Nophoso .nhap {
+  color: red;
+  font-weight: normal;
+  font-size: 22px;
+  margin-right: 5px; }
+
+.div_Nophoso .textbox_dk {
+  padding: 8px !important;
+  border-radius: 0 !important;
+  width: 98%; }
+
+.div_Nophoso .button {
+  margin-top: 10px;
+  background: #105290;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 15px; }
+
+.add_filehoso {
+  list-style: none;
+  margin: 15px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  line-height: 18px; }
+
+.add_filehoso li {
+  color: #105290; }
+

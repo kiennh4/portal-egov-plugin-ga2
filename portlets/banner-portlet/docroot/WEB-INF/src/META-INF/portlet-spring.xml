@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.portal_egov.portlet.banner.service.BannerLocalService" class="com.portal_egov.portlet.banner.service.impl.BannerLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.banner.service.BannerService" class="com.portal_egov.portlet.banner.service.impl.BannerServiceImpl" />
+	<bean id="com.portal_egov.portlet.banner.service.persistence.BannerPersistence" class="com.portal_egov.portlet.banner.service.persistence.BannerPersistenceImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.banner.service.persistence.BannerFinder" class="com.portal_egov.portlet.banner.service.persistence.BannerFinderImpl" parent="basePersistence" />
+	<bean id="com.portal_egov.portlet.banner.service.BannerGroupLocalService" class="com.portal_egov.portlet.banner.service.impl.BannerGroupLocalServiceImpl" />
+	<bean id="com.portal_egov.portlet.banner.service.BannerGroupService" class="com.portal_egov.portlet.banner.service.impl.BannerGroupServiceImpl" />
+	<bean id="com.portal_egov.portlet.banner.service.persistence.BannerGroupPersistence" class="com.portal_egov.portlet.banner.service.persistence.BannerGroupPersistenceImpl" parent="basePersistence" />
+</beans>

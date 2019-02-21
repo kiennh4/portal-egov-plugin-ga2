@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.bkav.portal.portlet.employee.service.persistence.DepartmentFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	Department.companyId,
+    			Department.groupId,
+    			Department.userId,
+    			Department.userName,
+    			Department.depId,
+    			Department.depName,
+    			Department.depAddres,
+    			Department.depPhone,
+    			Department.createDate,
+    			Department.modifiedDate
+    	
+    	FROM 	Department
+    	           
+        WHERE   
+                (Department.depName LIKE ?)
+                AND (Department.groupId = ?) 
+                
+        ORDER BY Department.depName ASC
+	]]>
+</sql>
+
+</custom-sql>

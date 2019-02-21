@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql file="custom-sql/weblink.xml" />
+	<sql file="custom-sql/weblink_category.xml" />
+</custom-sql>

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.portal_egov.portlet.proposition_feedback.model.Proposition" />
+	<import class="com.portal_egov.portlet.proposition_feedback.model.PropositionCategory" />
+	<import class="com.portal_egov.portlet.proposition_feedback.model.PropositionFeedback" />
+	<class name="com.portal_egov.portlet.proposition_feedback.model.impl.PropositionImpl" table="Proposition">
+		<cache usage="read-write" />
+		<id name="propositionId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="compilationDepartmentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="verificationDepartmentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="propositionName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="propositionDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="propositionContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="documentFileId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="viewCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="feedbackCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.portal_egov.portlet.proposition_feedback.model.impl.PropositionCategoryImpl" table="PropositionCategory">
+		<cache usage="read-write" />
+		<id name="categoryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryTypeId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="parentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categoryDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="propositionCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.portal_egov.portlet.proposition_feedback.model.impl.PropositionFeedbackImpl" table="PropositionFeedback">
+		<cache usage="read-write" />
+		<id name="feedbackId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="propositionId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="feedbackFileAttId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="feedbackTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="feedbackContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="citizenName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="citizenEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="citizenPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="citizenAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

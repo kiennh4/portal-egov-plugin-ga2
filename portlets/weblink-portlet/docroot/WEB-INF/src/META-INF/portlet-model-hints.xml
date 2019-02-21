@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.portal_egov.portlet.weblinks.model.Weblink">
+		<field name="weblinkId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="weblinkCategoryId" type="long" />
+		<field name="weblinkName" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="weblinkDesc" type="String">
+			<hint name="max-length">450</hint>
+		</field>
+		<field name="weblinkURL" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="weblinkIconId" type="long" />
+	</model>
+	<model name="com.portal_egov.portlet.weblinks.model.WeblinkCategory">
+		<field name="categoryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="categoryName" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="categoryDesc" type="String">
+			<hint name="max-length">450</hint>
+		</field>
+		<field name="categoryIconId" type="long" />
+	</model>
+</model-hints>

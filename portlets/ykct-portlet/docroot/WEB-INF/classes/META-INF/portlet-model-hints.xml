@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.portal_egov.portlet.ykct.model.YKCT_Category">
+		<field name="categoryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="categoryName" type="String" />
+		<field name="categoryDesc" type="String" />
+	</model>
+	<model name="com.portal_egov.portlet.ykct.model.YKCT_DlFileEntries">
+		<field name="id" type="long" />
+		<field name="ykctEntryId" type="long" />
+		<field name="fileEntryId" type="long" />
+	</model>
+	<model name="com.portal_egov.portlet.ykct.model.YKCT_Entry">
+		<field name="entryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="entryName" type="String" />
+		<field name="categoryId" type="long" />
+		<field name="fileAttachmentURL" type="String" />
+	</model>
+</model-hints>

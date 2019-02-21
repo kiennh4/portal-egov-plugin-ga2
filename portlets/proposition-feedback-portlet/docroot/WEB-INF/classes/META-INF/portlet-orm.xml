@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.portal_egov.portlet.proposition_feedback.model.impl.PropositionModelImpl">
+		<attributes>
+			<id name="propositionId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="categoryId" />
+			<basic name="compilationDepartmentId" />
+			<basic name="verificationDepartmentId" />
+			<basic name="propositionName" />
+			<basic name="propositionDesc" />
+			<basic name="propositionContent" />
+			<basic name="documentFileId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="viewCount" />
+			<basic name="feedbackCount" />
+			<basic name="status" />
+			<basic name="statusByUserId" />
+			<basic name="statusDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="statusByUserUuid" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.proposition_feedback.model.impl.PropositionCategoryModelImpl">
+		<attributes>
+			<id name="categoryId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="categoryTypeId" />
+			<basic name="parentId" />
+			<basic name="categoryName" />
+			<basic name="categoryDesc" />
+			<basic name="propositionCount" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.portal_egov.portlet.proposition_feedback.model.impl.PropositionFeedbackModelImpl">
+		<attributes>
+			<id name="feedbackId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="propositionId" />
+			<basic name="feedbackFileAttId" />
+			<basic name="feedbackTitle" />
+			<basic name="feedbackContent" />
+			<basic name="citizenName" />
+			<basic name="citizenEmail" />
+			<basic name="citizenPhone" />
+			<basic name="citizenAddress" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="status" />
+			<basic name="statusByUserId" />
+			<basic name="statusDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="statusByUserUuid" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.portal_egov.portlet.proposition_feedback.model.impl.PropositionImpl" name="Proposition">
+		<table name="Proposition" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.proposition_feedback.model.impl.PropositionCategoryImpl" name="PropositionCategory">
+		<table name="PropositionCategory" />
+		<attributes />
+	</entity>
+	<entity class="com.portal_egov.portlet.proposition_feedback.model.impl.PropositionFeedbackImpl" name="PropositionFeedback">
+		<table name="PropositionFeedback" />
+		<attributes />
+	</entity>
+</entity-mappings>

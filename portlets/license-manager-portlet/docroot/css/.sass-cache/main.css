@@ -1,0 +1,21 @@
+.license-manager-portlet .license-manager h1, .license-manager-portlet .license-manager h2, .license-manager-portlet .license-manager h3 {
+  margin: 5px 0px; }
+.license-manager-portlet .license-manager .license-info {
+  padding-bottom: 20px; }
+  .license-manager-portlet .license-manager .license-info .product-name {
+    color: #bc0000; }
+  .license-manager-portlet .license-manager .license-info .product-versions {
+    margin: 0px;
+    font-size: 12px;
+    font-weight: normal; }
+  .license-manager-portlet .license-manager .license-info .provider-name {
+    font-size: 12px;
+    color: #ff5800; }
+  .license-manager-portlet .license-manager .license-info .license-table {
+    width: 100%; }
+  .license-manager-portlet .license-manager .license-info .license-table th.header-title {
+    padding-left: 0px; }
+  .license-manager-portlet .license-manager .license-info .license-table td, .license-manager-portlet .license-manager .license-info .license-table th {
+    padding: 0 5px;
+    vertical-align: top; }
+

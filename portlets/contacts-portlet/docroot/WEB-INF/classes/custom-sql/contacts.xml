@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.contacts.service.persistence.ContactsFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	contacts.companyId,
+    			contacts.groupId,
+    			contacts.userId,
+    			contacts.userName,
+    			
+    			contacts.contactId,
+    			contacts.departmentId,
+    			contacts.imageId,
+    			contacts.contactName,
+    			contacts.jobTitle,
+    			contacts.phoneNumbers,
+    			contacts.homePhone,
+    			contacts.mobile,
+    			contacts.email,
+    			contacts.createDate,
+    			contacts.modifiedDate,
+    			contacts.displayPriority,
+    			contacts.contactStatus
+    	
+    	FROM 	contacts
+    	           
+        WHERE               
+                ((contacts.contactName LIKE ?) OR (contacts.phoneNumbers LIKE ?) OR (contacts.mobile LIKE ?) OR (contacts.email LIKE ?))
+                
+                AND (contacts.groupId = ?)
+                
+                AND (contacts.contactStatus = ?)
+                
+        ORDER BY contacts.displayPriority ASC
+	]]>
+</sql>
+
+<sql id="com.portal_egov.portlet.contacts.service.persistence.ContactsFinder.findByKeywordAndDepartment">	
+	<![CDATA[
+    	SELECT 	contacts.companyId,
+    			contacts.groupId,
+    			contacts.userId,
+    			contacts.userName,
+    			
+    			contacts.contactId,
+    			contacts.departmentId,
+    			contacts.imageId,
+    			contacts.contactName,
+    			contacts.jobTitle,
+    			contacts.phoneNumbers,
+    			contacts.homePhone,
+    			contacts.mobile,
+    			contacts.email,
+    			contacts.createDate,
+    			contacts.modifiedDate,
+    			contacts.displayPriority,
+    			contacts.contactStatus
+    	
+    	FROM 	contacts
+    	           
+        WHERE               
+                ((contacts.contactName LIKE ?) OR (contacts.phoneNumbers LIKE ?) OR (contacts.mobile LIKE ?) OR (contacts.email LIKE ?))
+                
+                AND (contacts.groupId = ?)
+                
+                AND (contacts.departmentId = ?)
+                
+                AND (contacts.contactStatus = ?)
+                
+        ORDER BY contacts.displayPriority ASC
+	]]>
+</sql>
+</custom-sql>

@@ -1,0 +1,31 @@
+<div class="footer-menu">
+	<ul>
+			<li class="$nav_item_class">
+				<a href="/lien-he"><span>THÔNG TIN LIÊN HỆ</span></a>
+			</li>
+	</ul>
+</div>
+
+<div class="copyright">
+		
+	#if ($theme_display.isShowPageSettingsIcon())
+		<span class="lfr-meta-actions" >
+				<a class="taglib-icon quickEditLayoutSet" href="$editFooterURL" data-width="700" id="quickEditFooter">
+					<img class="icon" src="$themeDisplay.getPathThemeImages()/common/edit.png" alt="#language("edit-footer")" title="#language("edit-footer")">
+				</a>
+		</span>
+	#end
+
+	#if ($footerContent == "")
+		<div class="copy-right-content">
+			<b>CỔNG THÔNG TIN ĐIỆN TỬ THÀNH PHỐ BÀ RỊA VŨNG TÀU</b><br/>
+				UBND THÀNH PHỐ BÀ RỊA, TỈNH BÀ RỊA VŨNG TÀU <br/>
+				Cơ quan chủ quản: Ủy ban nhân dân thành phố Bà Rịa, tỉnh Bà Rịa - Vũng Tàu <br/>
+				Chịu trách nhiệm chính Ông Võ Văn Điệp - Phó chủ tịch UBND TP - Trưởng Ban Biên Tập<br/>
+				Địa chỉ: 137 Đường 27/4 phường Phước Hiệp, thành phố Bà Rịa, tỉnh Bà Rịa Vũng Tàu<br/>
+			 <br/>
+		</div>
+	#else	
+		$footerContent
+	#end
+</div>

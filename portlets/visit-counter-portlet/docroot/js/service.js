@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.visitcounter", "com.portal_egov.portlet.visit_counter.service", "visit-counter-portlet");

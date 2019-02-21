@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.bkav.portal.portlet.portalplugins.service.ePortalsLocalService" class="com.bkav.portal.portlet.portalplugins.service.impl.ePortalsLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.portalplugins.service.ePortalsService" class="com.bkav.portal.portlet.portalplugins.service.impl.ePortalsServiceImpl" />
+	<bean id="com.bkav.portal.portlet.portalplugins.service.persistence.ePortalsPersistence" class="com.bkav.portal.portlet.portalplugins.service.persistence.ePortalsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.portalplugins.service.persistence.ePortalsFinder" class="com.bkav.portal.portlet.portalplugins.service.persistence.ePortalsFinderImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.portalplugins.service.PortalPluginsLocalService" class="com.bkav.portal.portlet.portalplugins.service.impl.PortalPluginsLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.portalplugins.service.PortalPluginsService" class="com.bkav.portal.portlet.portalplugins.service.impl.PortalPluginsServiceImpl" />
+	<bean id="com.bkav.portal.portlet.portalplugins.service.persistence.PortalPluginsPersistence" class="com.bkav.portal.portlet.portalplugins.service.persistence.PortalPluginsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.portalplugins.service.persistence.PortalPluginsFinder" class="com.bkav.portal.portlet.portalplugins.service.persistence.PortalPluginsFinderImpl" parent="basePersistence" />
+</beans>

@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	
+	<portlet>
+		<portlet-name>tthc</portlet-name>
+		<display-name>TTHC Portlet</display-name>
+		<portlet-class>com.portal_egov.portlet.tthc.TTHCPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/tthc_view/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-jsp</name>
+			<value>/html/tthc_view/configuration.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/TTHC_Language</resource-bundle>
+		<portlet-info>
+			<title>TTHC Portlet</title>
+			<short-title>TTHCPortlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>tthcEntryId</supported-public-render-parameter>
+		<supported-public-render-parameter>tthcCategoryId</supported-public-render-parameter>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>tthc_category_management</portlet-name>
+		<portlet-class>com.portal_egov.portlet.tthc.TTHCCategoryAdmin</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/tthc_category_admin/tthc_category_admin.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/TTHC_Category_Management_Language</resource-bundle>
+		<portlet-info>
+			<title>TTHC Category</title>
+			<short-title>TTHC Category</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>tthc_entry_management</portlet-name>
+		<portlet-class>com.portal_egov.portlet.tthc.TTHCAdmin</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/tthc_admin/tthc_admin.jsp</value>
+		</init-param>
+		<init-param>
+			<name>check-auth-token</name>
+            <value>false</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/TTHC_Admin_Language</resource-bundle>
+		<portlet-info>
+			<title>TTHC</title>
+			<short-title>TTHC</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>tthc_categories</portlet-name>
+		<display-name>TTHC Categories</display-name>
+		<portlet-class>com.portal_egov.portlet.tthc.TTHCCategoriesPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/tthc_categories_portlet/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-jsp</name>
+			<value>/html/tthc_categories_portlet/config.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/TTHC_Category_Language</resource-bundle>
+		<portlet-info>
+			<title>TTHC Categories</title>
+			<short-title>TTHCCategoriesPortlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>tthcCategoryId</supported-public-render-parameter>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>tthc_lastest_entries</portlet-name>
+		<display-name>TTHC Lastest Entries</display-name>
+		<portlet-class>com.portal_egov.portlet.tthc.TTHCLastestEntriesPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/tthc_lastest_entries_portlet/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-jsp</name>
+			<value>/html/tthc_lastest_entries_portlet/config.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>vi_VN</supported-locale>
+		<resource-bundle>content/TTHC_Lastest_Language</resource-bundle>
+		<portlet-info>
+			<title>TTHC Lastest Entries</title>
+			<short-title>TTHCLastestEntriesPortlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>tthcEntryId</supported-public-render-parameter>
+	</portlet>
+	
+	<public-render-parameter>
+		<identifier>tthcEntryId</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:tthcEntryId</qname>
+	</public-render-parameter>
+		
+	<public-render-parameter>
+		<identifier>tthcCategoryId</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:tthcCategoryId</qname>
+	</public-render-parameter>
+	
+</portlet-app>

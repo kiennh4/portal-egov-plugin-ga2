@@ -1,0 +1,43 @@
+.lfr-header-row {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background: url("/contacts-portlet/images/contact_admin_tool_bar_bg.png") repeat-x scroll 0 0 #d9d9d9;
+  border: 1px solid #C9C9C9; }
+
+.statiscals-form {
+  border: 1px solid #E4E4E4;
+  font-size: 12px;
+  font-weight: bold; }
+
+.statiscals-form {
+  padding-bottom: 10px; }
+
+.statiscals-form table tr {
+  height: 40px; }
+
+.statiscals-form table tr td {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.statiscals-form .aui-form-validator-message {
+  border-radius: 2px;
+  width: 302px; }
+
+.lfr-header-row {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background: url("/contacts-portlet/images/contact_admin_tool_bar_bg.png") repeat-x scroll 0 0 #d9d9d9;
+  border: 1px solid #C9C9C9; }
+
+.add_new_posts_button {
+  display: inline-block;
+  float: left; }
+
+.post_search_form {
+  display: inline-block;
+  float: right; }
+
+.lfr-search-container tr:hover td {
+  background: #D3E8F1;
+  border: 1px solid #D3E8F1; }
+

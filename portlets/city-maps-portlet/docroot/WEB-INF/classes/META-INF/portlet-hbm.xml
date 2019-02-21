@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.portal_egov.portlet.citymaps.model.CityMap" />
+	<import class="com.portal_egov.portlet.citymaps.model.CityMapType" />
+	<class name="com.portal_egov.portlet.citymaps.model.impl.CityMapImpl" table="CityMap">
+		<cache usage="read-write" />
+		<id name="mapId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="mapTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="mapImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="mapName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mapDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.portal_egov.portlet.citymaps.model.impl.CityMapTypeImpl" table="CityMapType">
+		<cache usage="read-write" />
+		<id name="typeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="typeName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="typeDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

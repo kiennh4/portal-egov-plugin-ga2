@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.tthc", "com.portal_egov.portlet.tthc.service", "tthc-portlet");

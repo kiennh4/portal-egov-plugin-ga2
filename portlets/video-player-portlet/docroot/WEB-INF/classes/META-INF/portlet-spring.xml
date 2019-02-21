@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.bkav.portal.portlet.video.service.VideoCategoryLocalService" class="com.bkav.portal.portlet.video.service.impl.VideoCategoryLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.video.service.VideoCategoryService" class="com.bkav.portal.portlet.video.service.impl.VideoCategoryServiceImpl" />
+	<bean id="com.bkav.portal.portlet.video.service.persistence.VideoCategoryPersistence" class="com.bkav.portal.portlet.video.service.persistence.VideoCategoryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.video.service.VideoCategoryMapLocalService" class="com.bkav.portal.portlet.video.service.impl.VideoCategoryMapLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.video.service.VideoCategoryMapService" class="com.bkav.portal.portlet.video.service.impl.VideoCategoryMapServiceImpl" />
+	<bean id="com.bkav.portal.portlet.video.service.persistence.VideoCategoryMapPersistence" class="com.bkav.portal.portlet.video.service.persistence.VideoCategoryMapPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.video.service.VideoEntryLocalService" class="com.bkav.portal.portlet.video.service.impl.VideoEntryLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.video.service.VideoEntryService" class="com.bkav.portal.portlet.video.service.impl.VideoEntryServiceImpl" />
+	<bean id="com.bkav.portal.portlet.video.service.persistence.VideoEntryPersistence" class="com.bkav.portal.portlet.video.service.persistence.VideoEntryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.video.service.persistence.VideoEntryFinder" class="com.bkav.portal.portlet.video.service.persistence.VideoEntryFinderImpl" parent="basePersistence" />
+</beans>

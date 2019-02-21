@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.bkav.portal.portlet.employee.model.Department" />
+	<import class="com.bkav.portal.portlet.employee.model.Employee" />
+	<import class="com.bkav.portal.portlet.employee.model.Post" />
+	<class name="com.bkav.portal.portlet.employee.model.impl.DepartmentImpl" table="Department">
+		<cache usage="read-write" />
+		<id name="depId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="depName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="depAddres" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="depPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.bkav.portal.portlet.employee.model.impl.EmployeeImpl" table="Employee">
+		<cache usage="read-write" />
+		<id name="emplId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="birthday" type="org.hibernate.type.TimestampType" />
+		<property name="male" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phone" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="addres" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="postId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="depId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sal" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="breakDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="addDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="endDate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.bkav.portal.portlet.employee.model.impl.PostImpl" table="Post">
+		<cache usage="read-write" />
+		<id name="postId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="postName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+
+<web-app id="Liferay_Portal" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<servlet>
+		<servlet-name>Thumbnail Image Servlet</servlet-name>
+		<servlet-class>com.liferay.portal.servlet.ThumbnailServlet</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Thumbnail Image Servlet 140x90</servlet-name>
+		<servlet-class>com.liferay.portal.servlet.ThumbnailServlet</servlet-class>
+		<init-param>
+			<param-name>width</param-name>
+			<param-value>140</param-value>
+		</init-param>
+		<init-param>
+			<param-name>height</param-name>
+			<param-value>90</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>Thumbnail Image Servlet 180x110</servlet-name>
+		<servlet-class>com.liferay.portal.servlet.ThumbnailServlet</servlet-class>
+		<init-param>
+			<param-name>width</param-name>
+			<param-value>180</param-value>
+		</init-param>
+		<init-param>
+			<param-name>height</param-name>
+			<param-value>110</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>Thumbnail Image Servlet 260x140</servlet-name>
+		<servlet-class>com.liferay.portal.servlet.ThumbnailServlet</servlet-class>
+		<init-param>
+			<param-name>width</param-name>
+			<param-value>260</param-value>
+		</init-param>
+		<init-param>
+			<param-name>height</param-name>
+			<param-value>140</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>Thumbnail Image Servlet 300x180</servlet-name>
+		<servlet-class>com.liferay.portal.servlet.ThumbnailServlet</servlet-class>
+		<init-param>
+			<param-name>width</param-name>
+			<param-value>300</param-value>
+		</init-param>
+		<init-param>
+			<param-name>height</param-name>
+			<param-value>180</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>Thumbnail Image Servlet 400x300</servlet-name>
+		<servlet-class>com.liferay.portal.servlet.ThumbnailServlet</servlet-class>
+		<init-param>
+			<param-name>width</param-name>
+			<param-value>400</param-value>
+		</init-param>
+		<init-param>
+			<param-name>height</param-name>
+			<param-value>300</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Thumbnail Image Servlet</servlet-name>
+		<url-pattern>/thumbnail/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Thumbnail Image Servlet 140x90</servlet-name>
+		<url-pattern>/thumbnail/140x90/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Thumbnail Image Servlet 180x110</servlet-name>
+		<url-pattern>/thumbnail/180x110/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Thumbnail Image Servlet 260x140</servlet-name>
+		<url-pattern>/thumbnail/260x140/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Thumbnail Image Servlet 300x180</servlet-name>
+		<url-pattern>/thumbnail/300x180/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Thumbnail Image Servlet 400x300</servlet-name>
+		<url-pattern>/thumbnail/400x300/*</url-pattern>
+	</servlet-mapping>
+</web-app>

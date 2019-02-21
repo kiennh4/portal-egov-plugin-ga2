@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.landprice.service.persistence.LandPriceFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	*
+    	
+    	FROM 	LandPrice
+    	           
+        WHERE   
+        		LandPrice.groupId = ?
+        		
+        		AND LandPrice.locationId = ?
+        		
+        		AND LandPrice.statisticYear = ?
+        		
+                AND UPPER(LandPrice.title) LIKE ?
+                
+        ORDER BY LandPrice.createDate DESC
+	]]>
+</sql>
+
+</custom-sql>

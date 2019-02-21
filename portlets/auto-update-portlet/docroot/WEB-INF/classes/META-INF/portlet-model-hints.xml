@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.bkav.portal.portlet.autoupdate.model.UpdatePlugins">
+		<field name="pluginId" type="long" />
+		<field name="pluginName" type="String" />
+		<field name="pluginCode" type="String" />
+		<field name="pluginType" type="int" />
+		<field name="currentVersion" type="double" />
+		<field name="previousVersions" type="String" />
+		<field name="currentSize" type="double" />
+		<field name="createDate" type="Date" />
+		<field name="modifyDate" type="Date" />
+		<field name="serverCompanyId" type="long" />
+	</model>
+</model-hints>

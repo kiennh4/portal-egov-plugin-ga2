@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.bkav.portal.portlet.employee.model.Department">
+		<field name="depId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="depName" type="String" />
+		<field name="depAddres" type="String" />
+		<field name="depPhone" type="String" />
+	</model>
+	<model name="com.bkav.portal.portlet.employee.model.Employee">
+		<field name="emplId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="birthday" type="Date" />
+		<field name="male" type="String" />
+		<field name="phone" type="long" />
+		<field name="addres" type="String" />
+		<field name="email" type="String" />
+		<field name="postId" type="long" />
+		<field name="depId" type="long" />
+		<field name="sal" type="long" />
+		<field name="breakDay" type="int" />
+		<field name="addDay" type="int" />
+		<field name="endDate" type="String" />
+	</model>
+	<model name="com.bkav.portal.portlet.employee.model.Post">
+		<field name="postId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="postName" type="String" />
+	</model>
+</model-hints>

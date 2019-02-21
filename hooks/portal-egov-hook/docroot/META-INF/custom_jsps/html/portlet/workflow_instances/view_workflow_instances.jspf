@@ -1,0 +1,72 @@
+<%--
+/**
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+--%>
+
+<%
+String tabs2 = ParamUtil.getString(request, "tabs2", "pending-assets");
+
+PortletURL portletURL = renderResponse.createRenderURL();
+
+portletURL.setParameter("tabs1", "submissions");
+portletURL.setParameter("tabs2", tabs2);
+%>
+
+<liferay-ui:tabs
+	names="pending-assets,completed-assets,asset-statistic"
+	param="tabs2"
+	portletURL="<%= portletURL %>"
+/>
+
+<c:choose>
+	<c:when test='<%=tabs2.equals("asset-statistic") %>'>
+		<liferay-util:include page="/html/portlet/workflow_instances/asset_statistic.jsp" servletContext="<%=this.getServletContext() %>"/>
+	</c:when>
+	
+	<c:otherwise>
+		<%
+		try {
+			boolean completedInstances = true;
+		
+			if (tabs2.equals("pending-assets")) {
+				completedInstances = false;
+			}
+		%>
+		
+			<%@ include file="/html/portlet/workflow_instances/workflow_instances.jspf" %>
+		
+		<%
+		}
+		catch (Exception e) {
+			if (_log.isWarnEnabled()) {
+				_log.warn("Error retrieving workflow instances", e);
+			}
+		%>
+		
+			<div class="portlet-msg-error">
+				<liferay-ui:message key="an-error-occurred-while-retrieving-the-list-of-instances" />
+			</div>
+		
+		<%
+		}
+		
+		PortalUtil.addPortletBreadcrumbEntry(request, LanguageUtil.get(pageContext, tabs2), currentURL);
+		%>	
+	</c:otherwise>
+</c:choose>
+
+
+<%!
+private static Log _log = LogFactoryUtil.getLog("portal-web.docroot.html.portlet.workflow_instances.view_workflow_instances_jspf");
+%>

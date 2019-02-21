@@ -1,0 +1,121 @@
+
+/* Admin Page */
+	
+	.landprice-portlet .aui-field-content{
+		padding-bottom: 10px;
+	}
+		
+	.landprice-portlet  textarea,
+	.landprice-portlet  select,
+	.landprice-portlet  input[type="text"],
+	.landprice-search-form  input[type="text"]{
+		display: inline-block;
+		padding: 5px !important;
+		color: #555555;
+		vertical-align: middle;
+		-webkit-border-radius: 2px !important;
+		   -moz-border-radius: 2px !important;
+		        border-radius: 2px !important;
+		background-color: #ffffff !important;
+		border: 1px solid #cccccc ;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+		   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+		        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+		-webkit-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+		   -moz-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+		     -o-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+		        transition: border linear 0.2s, box-shadow linear 0.2s !important;
+	}
+	
+	.landprice-portlet  select:focus,
+	.landprice-portlet  textarea:focus,
+	.landprice-portlet  input[type="text"]:focus,
+	.landprice-search-form  input[type="text"]:focus{
+		border-color: rgba(82, 168, 236, 0.8) !important;
+		outline: 0;
+		background-color: #ffffff !important;
+		outline: thin dotted \9;
+		/* IE6-9 */
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+		   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+		        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+	}
+
+	.landprice-admin{
+		font-size: 12px;
+		font-weight: normal;
+		color: #434343;
+	}
+	
+	.landprice-admin .lfr-header-row{
+		margin-bottom: 10px;
+		border-radius: 4px;
+		background: url("/landprice-portlet/images/admin_tool_bar_bg.png") repeat-x scroll 0 0 #D9D9D9;
+    	border: 1px solid #C9C9C9;
+	}
+	
+	.landprice-admin .lfr-header-row-content{
+		padding: 2px 4px 0 !important;
+	}
+	
+	.landprice-admin .permission-btn-row{
+		float: left;
+	}	
+		
+	.landprice-admin .landprice-search-form{
+		float: right;
+	}
+			
+	.landprice-admin .landprice-search-form select{
+		padding: 4px !important;
+	}
+		
+	.landprice-admin .lfr-search-container tr:hover td{
+		background: #D3E8F1;
+		border: 1px solid #D3E8F1;
+	}
+		
+	.landprice-update-form .aui-form-validator-message{
+		width: 642px;
+		border-radius: 2px;
+	}
+	
+	.landprice-update-form input[type="text"]{
+		width: 640px;
+	}
+		
+	.landprice-update-form textarea{
+		width: 640px;
+		height: 60px;
+	}
+	
+	.landprice-update-form span.cke_skin_kama{
+		border: 1px solid #E4E4E4;
+    	border-radius: 3px;
+    	padding: 0px;
+    	width: 650px !important;
+    	min-height: 300px !important;
+	}
+	
+	.landprice-update-form .cke_skin_kama .cke_wrapper{
+		background-color: #E9E9E9;
+	}
+	
+	.landprice-update-form .cke_skin_kama .cke_wrapper table tr{
+		height: 20px;
+	}	
+	
+	.landprice-update-form .cke_skin_kama .cke_wrapper table tr td{
+		padding: 0px;
+	}
+	
+	.landprice-update-form .cke_skin_kama .cke_contents{
+		height: 300px !important;
+	}
+	
+	.land-price-content{
+		max-height: 800px;
+		overflow-x:hidden;
+		overflow-y:scroll;
+		padding: 10px 0px;
+	}

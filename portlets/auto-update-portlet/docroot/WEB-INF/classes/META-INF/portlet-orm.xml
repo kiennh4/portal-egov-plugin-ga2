@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.bkav.portal.portlet.autoupdate.model.impl.UpdatePluginsModelImpl">
+		<attributes>
+			<id name="pluginId" />
+			<basic name="pluginName" />
+			<basic name="pluginCode" />
+			<basic name="pluginType" />
+			<basic name="currentVersion" />
+			<basic name="previousVersions" />
+			<basic name="currentSize" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifyDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="serverCompanyId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.bkav.portal.portlet.autoupdate.model.impl.UpdatePluginsImpl" name="UpdatePlugins">
+		<table name="AutoUpdate_UpdatePlugins" />
+		<attributes />
+	</entity>
+</entity-mappings>

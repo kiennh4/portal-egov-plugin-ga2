@@ -1,0 +1,101 @@
+.focus-asset-portlet .portlet-config-form .config-title {
+  border-bottom: 1px solid #bfbfbf;
+  padding: 10px 0px;
+  font-size: 16px;
+  margin-bottom: 10px; }
+.focus-asset-portlet .portlet-config-form .lfr-form-row {
+  padding: 0px;
+  margin: 10px 0px; }
+.focus-asset-portlet .portlet-config-form .lfr-form-row:hover {
+  border: solid #ccc;
+  border-width: 0px 0px 1px 0px;
+  background: #fff; }
+.focus-asset-portlet .portlet-config-form .style-thumbnail img {
+  max-width: 750px;
+  max-height: 400px; }
+.focus-asset-portlet .portlet-config-form .aui-field-content {
+  margin-bottom: 10px; }
+.focus-asset-portlet .portlet-config-form .aui-field-label,
+.focus-asset-portlet .portlet-config-form .aui-choice-label {
+  font-weight: bold;
+  margin-bottom: 5px; }
+.focus-asset-portlet .focus-asset-display-style-1 {
+  width: 100%;
+  clear: both; }
+  .focus-asset-portlet .focus-asset-display-style-1 .asset-summary-panel {
+    width: 58%;
+    float: left;
+    position: relative; }
+    .focus-asset-portlet .focus-asset-display-style-1 .asset-summary-panel .asset-image img {
+      width: 400px;
+      height: 300px;
+      max-width: 400px;
+      max-height: 300px;
+      background: #fff;
+      box-shadow: 0 1px 3px 2px #d2d2d2;
+      padding: 4px; }
+    .focus-asset-portlet .focus-asset-display-style-1 .asset-summary-panel .asset-title {
+      width: 400px;
+      opacity: 0.7;
+      position: absolute;
+      background: #333333;
+      bottom: 4px;
+      padding: 12px 0px;
+      margin: 4px; }
+      .focus-asset-portlet .focus-asset-display-style-1 .asset-summary-panel .asset-title a {
+        color: white;
+        font-weight: bold;
+        padding-left: 10px;
+        display: block;
+        font-size: 14px; }
+  .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel {
+    width: 40%;
+    float: right;
+    box-shadow: 0 1px 3px 2px #d2d2d2; }
+    .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-header {
+      background: url("../images/common/focus-asset-panel-header-bg.jpg") repeat-x transparent;
+      height: 30px;
+      line-height: 30px;
+      margin: 2px;
+      border: 1px solid #e8e8e8;
+      border-bottom: none; }
+      .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-header .header-title {
+        background: url("../images/common/focus-icon.png") no-repeat 2px 2px transparent;
+        color: #bc0000;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: 1px 1px #ccc;
+        padding-left: 20px; }
+    .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content {
+      margin: 0px;
+      padding: 2px;
+      text-align: justify; }
+      .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li {
+          border-top: 1px dotted #E4E4E4;
+          padding: 5px;
+          padding-left: 5px;
+          height: 34px; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li:first-child {
+          border-top: none; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li:hover,
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li.selected {
+          background: #f0f0f0; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li:hover a,
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li.selected a {
+          color: #bc0000;
+          text-shadow: 1px 1px #e8e8e8; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul a {
+          background: url("../images/custom_icon/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
+          color: #00528B;
+          text-decoration: none;
+          padding-left: 12px;
+          display: block;
+          margin-right: 5px; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul a:hover {
+          color: #bc0000; }
+

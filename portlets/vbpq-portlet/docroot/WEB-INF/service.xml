@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.portal_egov.portlet.vbpq" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>vbpq</namespace>
+   
+    <entity name="VBPQ_Entry" table="vbpq_entry" local-service="true" remote-service="true">
+	    <!-- PK -->
+	    <column name="entryId" type="long" primary="true" />
+		
+		<!-- Id cua co quan ban hanh -->
+		<column name="departmentId" type="long"  />
+		<!-- Id cua linh vuc van ban -->
+		<column name="categoryId" type="long" />
+		<!-- Id cua Loai van ban -->
+		<column name="docTypeId" type="long" />
+		
+		<!-- Portal field -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		
+		<!-- Ten van ban -->
+		<column name="entryName" type="String" />
+		<!-- So hieu van ban -->
+		<column name="entryCode" type="String" />
+		<!-- Trich yeu van ban -->
+		<column name="entryDesc" type="String" />
+		<!-- Duong dan file dinh kem (Truong hop luu duong dan tren server khac 
+		hoac luu duong dan tuong doi den thu muc chua file tren server Portal) -->
+		<column name="fileAttachmentURL" type="String" />
+		<!-- Ten nguoi ky duyet van ban -->
+		<column name="publicatorName" type="String" />
+		
+		<!-- Ngay tao van ban -->
+		<column name="createDate" type="Date" />
+		<!-- Ngay chinh sua van ban -->
+		<column name="modifiedDate" type="Date" />
+		<!-- Ngay ban hanh van ban -->
+		<column name="publishDate" type="Date" />
+		<!-- Ngay co hieu luc -->
+		<column name="executeDate" type="Date" />
+		<!-- Ngay het hieu luc -->
+		<column name="expirationDate" type="Date" />
+		
+		<!-- Van ban co hieu luc vo thoi han -->
+		<column name="neverExpired" type="boolean" />
+		<!-- Trang thai cua van ban -->
+		<column name="active" type="boolean" />
+				
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="publishDate"/>			
+		</order>
+		
+		<!-- Finder -->
+		<finder return-type="Collection" name="Company">
+			<finder-column name="companyId" />			
+		</finder>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="Group">
+			<finder-column name="groupId" />			
+		</finder>
+						
+		<!-- Finder -->
+		<finder return-type="Collection" name="DepartmentAndCompany">
+			<finder-column name="departmentId" />
+			<finder-column name="companyId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="DepartmentAndGroup">
+			<finder-column name="departmentId" />
+			<finder-column name="groupId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="CategoryAndCompany">
+			<finder-column name="categoryId" />
+			<finder-column name="companyId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="CategoryAndGroup">
+			<finder-column name="categoryId" />
+			<finder-column name="groupId" />			
+		</finder>
+										
+		<!-- Finder -->
+		<finder return-type="Collection" name="DocTypeAndCompany">
+			<finder-column name="docTypeId" />
+			<finder-column name="companyId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="DocTypeAndGroup">
+			<finder-column name="docTypeId" />
+			<finder-column name="groupId" />			
+		</finder>
+																						
+		<!-- Finder -->
+		<finder return-type="Collection" name="ExpirationAndCompany">
+			<finder-column name="neverExpired" />
+			<finder-column name="companyId" />			
+		</finder>
+												
+		<!-- Finder -->
+		<finder return-type="Collection" name="ExpirationAndGroup">
+			<finder-column name="neverExpired" />
+			<finder-column name="groupId" />
+		</finder>
+														
+		<!-- Finder -->
+		<finder return-type="Collection" name="StatusAndCompany">
+			<finder-column name="active" />
+			<finder-column name="companyId" />			
+		</finder>
+												
+		<!-- Finder -->
+		<finder return-type="Collection" name="StatusAndGroup">
+			<finder-column name="active" />
+			<finder-column name="groupId" />
+		</finder>
+		
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+    </entity>
+    
+    	
+	<!-- 
+		Entity Phan loai Van Ban Phap Quy 
+		Luu thong tin ve Co quan ban hanh VBPQ,Linh vuc thong ke VBPQ va Loai VBPQ
+	-->
+    <entity name="VBPQ_Category" table="vbpq_category" local-service="true" remote-service="true">
+	    <!-- PK -->
+	    <column name="categoryId" type="long" primary="true" />
+		
+		<!-- Id cap cha -->
+		<column name="parentId" type="long"  />
+		
+		<!-- 
+			typeId giup phan biet tieu chi phan loai VBPQ thuoc loai nao.
+			typeId = 1 tuong ung voi Co quan ban hanh VBPQ
+			typeId = 2 tuong ung voi Loai VBPQ
+			typeId = 3 tuong ung voi Linh vuc thong ke VBPQ
+		-->
+		<column name="typeId" type="int" />
+				
+		<!-- Portal field -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		
+		<!-- Ten phan loai -->
+		<column name="categoryName" type="String" />
+		<!-- Mo ta -->
+		<column name="categoryDesc" type="String" />
+		
+		<!-- Ngay tao -->
+		<column name="createDate" type="Date" />
+		<!-- Ngay chinh sua -->
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Trang thai -->
+		<column name="active" type="boolean" />
+		
+		<!-- Thu tu uu tien hien thi -->
+		<column name="displayPriority" type="int" />
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="displayPriority"/>
+		</order>
+		
+		<!-- Finder -->
+		<finder return-type="Collection" name="Company">
+			<finder-column name="companyId" />			
+		</finder>
+				
+		<!-- Finder -->
+		<finder return-type="Collection" name="Group">
+			<finder-column name="groupId" />			
+		</finder>
+										
+		<!-- Finder -->
+		<finder return-type="Collection" name="ParentAndCompany">
+			<finder-column name="parentId" />
+			<finder-column name="companyId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="ParentAndGroup">
+			<finder-column name="parentId" />
+			<finder-column name="groupId" />			
+		</finder>
+						
+		<!-- Finder -->
+		<finder return-type="Collection" name="TypeAndCompany">
+			<finder-column name="typeId" />
+			<finder-column name="companyId" />			
+		</finder>
+								
+		<!-- Finder -->
+		<finder return-type="Collection" name="TypeAndGroup">
+			<finder-column name="typeId" />
+			<finder-column name="groupId" />			
+		</finder>
+														
+		<!-- Finder -->
+		<finder return-type="Collection" name="StatusAndCompany">
+			<finder-column name="active" />
+			<finder-column name="companyId" />			
+		</finder>
+												
+		<!-- Finder -->
+		<finder return-type="Collection" name="StatusAndGroup">
+			<finder-column name="active" />
+			<finder-column name="groupId" />
+		</finder>
+		
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+		<reference package-path="com.liferay.portal" entity="User" />
+    </entity>
+    
+        
+    	
+	<!-- 
+		Entity mapping id cua van ban voi id cua tai lieu dinh kem
+	-->
+    <entity name="VBPQ_DlFileEntries" table="vbpq_dlfileentries" local-service="true" remote-service="true">
+	    
+	    <!-- PK -->
+	     <column name="id" type="long" primary="true"/>
+	    
+	    <!-- Id cua VBPQ -->
+	    <column name="vbpqEntryId" type="long"/>
+		
+		<!-- Id cua tai lieu dinh kem -->
+		<column name="fileEntryId" type="long"/>
+
+		<!-- Finder -->
+		<finder return-type="Collection" name="VBPQEntry">
+			<finder-column name="vbpqEntryId" />			
+		</finder>
+		
+		<finder return-type="Collection" name="DLFileEntry">
+			<finder-column name="fileEntryId" />			
+		</finder>
+
+    </entity>
+</service-builder>

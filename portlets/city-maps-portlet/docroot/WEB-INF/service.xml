@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.portal_egov.portlet.citymaps" auto-namespace-tables="false">
+	<author>HungDX</author>
+	<namespace>citymaps</namespace>
+	
+	<!-- 
+	Entity lưu thông tin về các loại bản đồ hành chính : Bản đồ địa giới,bản đồ mạng lưới giao thông,bản đồ quy hoạch,...
+	 -->
+	<entity name="CityMapType" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="typeId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<!-- Tên loại bản đồ -->
+		<column name="typeName" type="String" />
+		<!-- Thông tin loại bản đồ.VD: Gồm những loại bản đồ nào,đặc điểm,... -->
+		<column name="typeDesc" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="typeName" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+				
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+	</entity>
+	
+	<!-- 
+	Entity lưu thông tin bản đồ hành chính của Tỉnh/TP chủ quản Portal
+	 -->
+	<entity name="CityMap" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="mapId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<!-- Id phân loại bản đồ -->
+		<column name="mapTypeId" type="long"/>
+		<!-- Ảnh bản đồ -->
+		<column name="mapImageId" type="long" />
+		<!-- Tên bản đồ -->
+		<column name="mapName" type="String" />
+		<!-- Thông tin bản đồ.VD: Cơ quan ban hành,tỷ lệ,chú thích bản đồ,... -->
+		<column name="mapDesc" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="mapTypeId" />
+			<order-column name="mapName" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+		
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+				
+		<finder name="Type" return-type="Collection">
+			<finder-column name="mapTypeId" />
+		</finder>
+				
+		<!-- Reference -->	    	    		    
+	    <reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="Resource" />
+	</entity>
+		
+	<exceptions>
+		<exception>CityMapTypeName</exception>
+		<exception>NoSuchCityMapType</exception>
+		<exception>CityMapName</exception>
+		<exception>CityMapImageSize</exception>
+		<exception>CityMapImageType</exception>
+		<exception>CityMapImageName</exception>
+		<exception>NoSuchCityMap</exception>
+    </exceptions>
+</service-builder>

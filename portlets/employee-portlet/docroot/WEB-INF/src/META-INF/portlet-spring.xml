@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.bkav.portal.portlet.employee.service.DepartmentLocalService" class="com.bkav.portal.portlet.employee.service.impl.DepartmentLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.employee.service.DepartmentService" class="com.bkav.portal.portlet.employee.service.impl.DepartmentServiceImpl" />
+	<bean id="com.bkav.portal.portlet.employee.service.persistence.DepartmentPersistence" class="com.bkav.portal.portlet.employee.service.persistence.DepartmentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.employee.service.persistence.DepartmentFinder" class="com.bkav.portal.portlet.employee.service.persistence.DepartmentFinderImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.employee.service.EmployeeLocalService" class="com.bkav.portal.portlet.employee.service.impl.EmployeeLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.employee.service.EmployeeService" class="com.bkav.portal.portlet.employee.service.impl.EmployeeServiceImpl" />
+	<bean id="com.bkav.portal.portlet.employee.service.persistence.EmployeePersistence" class="com.bkav.portal.portlet.employee.service.persistence.EmployeePersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.employee.service.persistence.EmployeeFinder" class="com.bkav.portal.portlet.employee.service.persistence.EmployeeFinderImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.employee.service.PostLocalService" class="com.bkav.portal.portlet.employee.service.impl.PostLocalServiceImpl" />
+	<bean id="com.bkav.portal.portlet.employee.service.PostService" class="com.bkav.portal.portlet.employee.service.impl.PostServiceImpl" />
+	<bean id="com.bkav.portal.portlet.employee.service.persistence.PostPersistence" class="com.bkav.portal.portlet.employee.service.persistence.PostPersistenceImpl" parent="basePersistence" />
+	<bean id="com.bkav.portal.portlet.employee.service.persistence.PostFinder" class="com.bkav.portal.portlet.employee.service.persistence.PostFinderImpl" parent="basePersistence" />
+</beans>

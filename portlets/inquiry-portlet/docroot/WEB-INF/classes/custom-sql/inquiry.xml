@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+
+<sql id="com.portal_egov.portlet.inquiry.service.persistence.OnlineInquiryFinder.findByKeyword">	
+	<![CDATA[
+    	SELECT 	*
+    	
+    	FROM 	OnlineInquiry
+    	           
+        WHERE   
+        		OnlineInquiry.groupId = ?
+        		
+                AND (UPPER(OnlineInquiry.fullName) LIKE ? 
+                		OR UPPER(OnlineInquiry.phoneNumbers) LIKE ? 
+                		OR UPPER(OnlineInquiry.emailAddress) LIKE ?
+                		OR UPPER(OnlineInquiry.inquiryContent) LIKE ?
+                	)
+                
+        ORDER BY OnlineInquiry.createDate ASC
+	]]>
+</sql>
+
+</custom-sql>

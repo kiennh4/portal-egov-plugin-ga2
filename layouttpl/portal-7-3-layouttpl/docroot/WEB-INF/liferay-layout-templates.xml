@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE layout-templates PUBLIC "-//Liferay//DTD Layout Templates 6.1.0//EN" "http://www.liferay.com/dtd/liferay-layout-templates_6_1_0.dtd">
+
+<layout-templates>
+	<custom>
+		<layout-template id="portal_7_3" name="P70/30">
+			<template-path>/portal_7_3.tpl</template-path>
+			<wap-template-path>/portal_7_3.wap.tpl</wap-template-path>
+			<thumbnail-path>/portal_7_3.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="column1" name="Column 1">
+			<template-path>/column1.tpl</template-path>
+			<wap-template-path>/column1.wap.tpl</wap-template-path>
+			<thumbnail-path>/column1.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="columns3070" name="Columns 30/70">
+			<template-path>/columns3070.tpl</template-path>
+			<wap-template-path>/columns3070.wap.tpl</wap-template-path>
+			<thumbnail-path>/columns3070.png</thumbnail-path>
+		</layout-template>
+	</custom>
+</layout-templates>

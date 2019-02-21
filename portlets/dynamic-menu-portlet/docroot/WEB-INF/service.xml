@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.bkav.portal.portlet.dynamic_menu" auto-namespace-tables="false">
+	<author>hungdx</author>
+	<namespace>dynamic_menu</namespace>
+
+	<entity name="DynamicMenu" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="menuId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+		<column name="description" type="String" />
+		<column name="itemCount" type="int" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+	</entity>
+	
+	<entity name="DynamicMenuItem" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="itemId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="menuId" type="long" />
+		<column name="parentId" type="long" />
+		<column name="name" type="String" />
+		<column name="url" type="String" />
+		<column name="urlType" type="String" />
+		<column name="position" type="int" />
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="parentId" />
+			<order-column name="position" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+		
+		<finder name="Menu" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="menuId" />
+		</finder>
+				
+		<finder name="Parent" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="parentId" />
+		</finder>
+						
+		<finder name="G_M_P" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="menuId" />
+			<finder-column name="parentId" />
+		</finder>
+	</entity>
+</service-builder>
