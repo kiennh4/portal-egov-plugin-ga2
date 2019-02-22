@@ -669,7 +669,7 @@ public class ArticlePublisherUtil {
 
 	private static final String _THUMBNAIL_FILTER_PATH = "/thumbnail/";
 
-	private static final String _THUMBNAIL_DEFAULT_SIZE = "140x90";
+	private static final String _THUMBNAIL_DEFAULT_SIZE = "400x300";
 
 	private static final String _SYSTEM_QUERY_KEY = "com.bkav.portal.memcache.key";
 

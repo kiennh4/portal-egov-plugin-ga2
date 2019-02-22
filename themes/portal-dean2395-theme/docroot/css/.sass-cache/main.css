@@ -2133,7 +2133,7 @@ body > .lfr-menu-list, body > .lfr-menu-list ul, .lfr-actions, .aui-dialog-conte
 body {
   font-size: 13px !important;
   color: #434343;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: #fff; }
 
 .wrapper {
@@ -2176,7 +2176,8 @@ body {
 .content-wrapper iframe {
   width: 100% !important;
   height: 100% !important;
-  overflow: hidden !important; }
+  overflow: hidden !important;
+  border: none !important; }
 
 .external-video-frame {
   width: 100%!important; }
@@ -2670,6 +2671,9 @@ hr, .separator {
 /* On screens that are 992px wide or less, go from four columns to two columns */
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 @media screen and (max-width : 480px) {
+  body {
+    font-family: 'Montserrat', sans-serif; }
+
   .navigation .sf-navbar li {
     float: none;
     display: block;
@@ -2770,6 +2774,19 @@ hr, .separator {
         width: 100%; }
       #column_2_1 .focus-asset-display-style-2 img {
         padding: 0; }
+
+  .portlet-boundary_article_publisher_WAR_articlepublisherportlet_ .article-publisher-display-style-10 div.style-asset:FIRST-CHILD {
+    padding-right: 5px; }
+    .portlet-boundary_article_publisher_WAR_articlepublisherportlet_ .article-publisher-display-style-10 div.style-asset:FIRST-CHILD .asset-img {
+      width: 100%;
+      float: none; }
+      .portlet-boundary_article_publisher_WAR_articlepublisherportlet_ .article-publisher-display-style-10 div.style-asset:FIRST-CHILD .asset-img img {
+        height: 66vw; }
+    .portlet-boundary_article_publisher_WAR_articlepublisherportlet_ .article-publisher-display-style-10 div.style-asset:FIRST-CHILD .asset-content {
+      float: none;
+      width: 100%; }
+    .portlet-boundary_article_publisher_WAR_articlepublisherportlet_ .article-publisher-display-style-10 div.style-asset:FIRST-CHILD .border-footer {
+      margin-top: 0; }
 
   .portlet-content {
     border: none; }

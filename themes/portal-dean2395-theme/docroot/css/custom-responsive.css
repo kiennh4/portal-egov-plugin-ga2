@@ -17,6 +17,9 @@
 }
 
 @media screen and (max-width : 480px) {
+	body{
+		font-family: 'Montserrat', sans-serif;
+	}
 	.navigation .sf-navbar li{
 		float: none;
 		display: block;
@@ -125,6 +128,23 @@
 			img{
 				padding: 0;
 			}
+		}
+	}
+	.portlet-boundary_article_publisher_WAR_articlepublisherportlet_ .article-publisher-display-style-10 div.style-asset:FIRST-CHILD{
+		padding-right: 5px;
+		.asset-img{
+			width:100%;
+			float: none;
+			img {
+				height: 66vw;
+			}
+		}
+		.asset-content{
+			float: none;
+			width: 100%;
+		}
+		.border-footer{
+			margin-top: 0;
 		}
 	}
 	.portlet-content{
