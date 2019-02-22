@@ -18,17 +18,12 @@
 		width:100%;
 	}
 }
+.navigation a#menu-responsive{
+	display: none;
+}
 .navigation{
 	.menu-row1{
 		padding: 2px;
-	}
-	.menu-row2{
-		width: 100%;
-		padding: 0 !important;
-		line-height: 20px;
-		#pull{
-			display: none;
-		}
 	}
 }
 .menu-row1 ul{
@@ -56,9 +51,12 @@
 }
 .navigation .main-menu{
 	position: relative;
-	width: 79.5%;
+	width: 80%;
 	height: 100%;
 	float: right;
+}
+.navigation .main-menu #pull{
+	display: none;
 }
 .sf-navbar {
 	z-index: 10;

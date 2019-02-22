@@ -165,19 +165,4 @@ $(function() {
             menu.removeAttr('style');
         }
     });
-    var mouse_is_inside = false;
-    
-    $(document).ready(function()
-    {
-    	menu = $('.navigation #navigation-menu');
-        $('#pull').hover(function(){ 
-            mouse_is_inside=true; 
-        }, function(){ 
-            mouse_is_inside=false; 
-        });
-
-        $("body").mouseup(function(){ 
-            if(! mouse_is_inside) menu.hide();
-        });
-    });
 });

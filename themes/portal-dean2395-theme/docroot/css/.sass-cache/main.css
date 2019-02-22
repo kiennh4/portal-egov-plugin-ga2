@@ -1152,14 +1152,11 @@ html > .lfr-dockbar-pinned {
     height: 100%;
     width: 100%; }
 
+.navigation a#menu-responsive {
+  display: none; }
+
 .navigation .menu-row1 {
   padding: 2px; }
-.navigation .menu-row2 {
-  width: 100%;
-  padding: 0 !important;
-  line-height: 20px; }
-  .navigation .menu-row2 #pull {
-    display: none; }
 
 .menu-row1 ul {
   padding-top: 10px;
@@ -1182,9 +1179,12 @@ html > .lfr-dockbar-pinned {
 
 .navigation .main-menu {
   position: relative;
-  width: 79.5%;
+  width: 80%;
   height: 100%;
   float: right; }
+
+.navigation .main-menu #pull {
+  display: none; }
 
 .sf-navbar {
   z-index: 10;
@@ -2689,6 +2689,9 @@ hr, .separator {
     background: #2954a2;
     position: absolute;
     display: none;
+    opacity: 0.9;
+    width: 250px;
+    padding-left: 10px;
     top: 40px; }
 
   .navigation .sf-navbar li ul {
@@ -2709,8 +2712,8 @@ hr, .separator {
         font-size: 14px;
         color: lightgray; }
 
-  .navigation a#pull {
-    display: block;
+  .navigation .main-menu a#pull {
+    display: block !important;
     position: relative;
     background-color: #283744;
     width: 100%; }
@@ -2727,22 +2730,40 @@ hr, .separator {
     top: 10px; }
 
   .navigation {
-    background: #2954a2;
-    height: 40px; }
+    height: 40px;
+    margin-bottom: 50px; }
 
   .navigation .menu-row1 {
-    display: none; }
+    display: block; }
+    .navigation .menu-row1 .hotline .contact {
+      display: none; }
+    .navigation .menu-row1 .hotline .site-map {
+      display: none; }
 
-  .navigation .menu-row2 {
-    position: relative; }
+  .navigation .main-menu {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #2954a2; }
+
+  .navigation .main-menu a#menu-responsive {
+    position: absolute;
+    padding-top: 8px;
+    text-transform: uppercase;
+    padding-left: 10px;
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    color: #fff; }
 
   .navigation .header-logo {
     width: 30%; }
     .navigation .header-logo img {
       height: 40px; }
 
-  .navigation .main-menu {
-    width: 69%; }
+  #column_1_1 {
+    display: none; }
 
   .portlet-boundary_slider_WAR_portalentsliderportlet_ {
     display: none !important; }
@@ -2788,6 +2809,9 @@ hr, .separator {
     .portlet-boundary_article_publisher_WAR_articlepublisherportlet_ .article-publisher-display-style-10 div.style-asset:FIRST-CHILD .border-footer {
       margin-top: 0; }
 
+  .portlet-boundary_focus_asset_WAR_focusassetportlet_ .portlet-topper {
+    display: none; }
+
   .portlet-content {
     border: none; }
 
@@ -2817,7 +2841,35 @@ hr, .separator {
 
   .portlet-content {
     padding: 0;
-    margin: 0; } }
+    margin: 0; }
+
+  .portal_7_3 .aui-w70 {
+    width: 100%;
+    display: block; }
+  .portal_7_3 .aui-w30 {
+    width: 100%;
+    display: block; }
+
+  .asset_publisher_view_full_content {
+    padding: 5px; }
+    .asset_publisher_view_full_content .asset_title {
+      text-align: unset !important; }
+
+  .asset_publisher_view_full_content .journal-content-article img {
+    width: 100% !important;
+    max-width: 100% !important; }
+
+  #footer {
+    height: 375px; }
+
+  .portlet-boundary_image_gallery_WAR_imagegalleryportlet_ .imageGallerySliderFrame {
+    width: 100% !important; }
+    .portlet-boundary_image_gallery_WAR_imagegalleryportlet_ .imageGallerySliderFrame .imageGallerySlider {
+      width: 100% !important; }
+      .portlet-boundary_image_gallery_WAR_imagegalleryportlet_ .imageGallerySliderFrame .imageGallerySlider .image-thumbnail-preview {
+        width: 100% !important; }
+    .portlet-boundary_image_gallery_WAR_imagegalleryportlet_ .imageGallerySliderFrame img {
+      width: 100% !important; } }
 /* @import url(focus-asset-portlet.css); */
 /* @import url(article-publisher-portlet.css); */
 .portlet-asset-publisher {
@@ -2932,7 +2984,7 @@ hr, .separator {
       width: 100%; }
   .portlet-asset-publisher .asset_publisher_view_full_content .asset_title {
     color: #00528B;
-    text-align: left !important;
+    text-align: left;
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 10px;

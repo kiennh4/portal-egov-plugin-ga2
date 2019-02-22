@@ -16,14 +16,11 @@
     height: 100%;
     width: 100%; }
 
+.navigation a#menu-responsive {
+  display: none; }
+
 .navigation .menu-row1 {
   padding: 2px; }
-.navigation .menu-row2 {
-  width: 100%;
-  padding: 0 !important;
-  line-height: 20px; }
-  .navigation .menu-row2 #pull {
-    display: none; }
 
 .menu-row1 ul {
   padding-top: 10px;
@@ -46,9 +43,12 @@
 
 .navigation .main-menu {
   position: relative;
-  width: 79.5%;
+  width: 80%;
   height: 100%;
   float: right; }
+
+.navigation .main-menu #pull {
+  display: none; }
 
 .sf-navbar {
   z-index: 10;

@@ -110,7 +110,7 @@
       width: 100%; }
   .portlet-asset-publisher .asset_publisher_view_full_content .asset_title {
     color: #00528B;
-    text-align: left !important;
+    text-align: left;
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 10px;
