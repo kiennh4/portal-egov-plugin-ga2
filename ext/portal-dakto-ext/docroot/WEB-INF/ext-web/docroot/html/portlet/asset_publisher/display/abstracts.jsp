@@ -182,29 +182,27 @@
 		    <div style="clear: both;"></div>		
 			<div class="assetdesc">
 				<c:if test='<%=Validator.isNotNull(smallImagePath) %>'>	           				
-					<span class="assetdesc-img">
+					<div class="assetdesc-img">
 						<a href="<%=viewURL%>">
 							<img class="img-outsite" align="left" src="<%= smallImagePath %>" width="180" height="100" 
 								 onerror="this.src='/html/portlet/asset_publisher/images/default_image.jpg'"
 							/>
 						</a>
-					</span>
+					</div>
 				</c:if>
-				<span class="assetdesc-text">
+				<div class="assetdesc-content">
 					<div class="asset_title">
-				       <span class="assettile">
-				       	  <a href="<%=viewURL%>"><%= HtmlUtil.escape(title) %> </a>
-				       </span>
+				       	<a href="<%=viewURL%>"><%= HtmlUtil.escape(title) %> </a>
 				    </div>
-					<div >
+					<div class="asset-info">
 				    	<span class="asset-category-name"><%=assetCategoryName %></span>
 				    	|
 				    	<span class="asset-publish-date"><%=assetPublishDate %></span>
 				    </div>
-				    <div style = "text-align: justify;">
+				    <div style = "text-align: justify;" class="asset-sumary">
 						<%=StringUtil.shorten(HtmlUtil.extractText(summary), 240)%>
 					</div>
-				</span>  
+				</div>  
 				<span style="display: block; clear: both;"></span>           				
 			</div>
 			

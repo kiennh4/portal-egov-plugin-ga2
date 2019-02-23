@@ -13,9 +13,8 @@
 			<div class="sperator"></div>
 		</div>
 	</c:if>
-	<portlet:actionURL var="editUrl" name="fixExpandoTable"/>
 	<div class="frm-register">
-		<aui:form class="form-inline" action="<%=editUrl%>" method="post">
+		<aui:form class="form-inline" method="post">
 			<input type="text" id="rgst"
 				placeholder="<liferay-ui:message key="put-your-email"/>" name="rgst">
 			<button type="submit" class="btn-submit"><liferay-ui:message key="register"/></button>

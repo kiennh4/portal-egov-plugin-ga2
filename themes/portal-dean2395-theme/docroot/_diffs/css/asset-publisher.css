@@ -104,6 +104,7 @@
 			clear: left;
 			font-style: italic;
 		}
+		
 	}
 	.asset-content .asset_title{
 		
@@ -137,7 +138,7 @@
 		padding: 1px;
 	}
 	
-	.asset-abstract .assetdesc-text{
+	.asset-abstract .assetdesc-content{
 		width: 66%;
 	    color: #474747;
 	    display: block;
@@ -175,22 +176,23 @@
 		font-size: 22px !important;
 	}
 	
-	.asset_publisher_view_full_content .social_panel{
+	.asset_publisher_view_full_content .social-panel{
 		clear: both;
 		border-bottom: 1px solid #E4E4E4;
 		height: 25px;
 		margin-bottom: 15px;
 		margin-right: 10px;
+		width: 100%;
+		background-color: #f4f4f4 !important;
 	}
 				
-	.asset_publisher_view_full_content .social_panel .asset_publish_date{
+	.portlet-boundary_101_.asset_publisher_view_full_content .social_panel .asset_publish_date{
 		color: #868484;
 	    display: block;
 	    float: left;
 	    font-size: 11px !important;
 	    margin-top: 5px;
 	}
-					
 	.asset_publisher_view_full_content .social_icon{
 	    display: block;
 	    float: right;
