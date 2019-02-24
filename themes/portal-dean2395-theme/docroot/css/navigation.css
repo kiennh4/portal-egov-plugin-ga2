@@ -35,13 +35,15 @@
 	.hotline{
 		color: #D1361A;
 		font-weight: 600;
-		a {
-			color: #D1361A;
-		}
-		a:hover{
-			color: #333;
-			transition: all 0.3s ease-in-out 0.2s;
-		}
+	}
+	a {
+		color: #D1361A;
+		font-weight: 600;
+		color: #D1361A;
+	}
+	a:hover{
+		color: #333;
+		transition: all 0.3s ease-in-out 0.2s;
 	}
 }
 .menu-row1 ul li{

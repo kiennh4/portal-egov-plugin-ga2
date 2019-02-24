@@ -31,11 +31,13 @@
   .menu-row1 ul .hotline {
     color: #D1361A;
     font-weight: 600; }
-    .menu-row1 ul .hotline a {
-      color: #D1361A; }
-    .menu-row1 ul .hotline a:hover {
-      color: #333;
-      transition: all 0.3s ease-in-out 0.2s; }
+  .menu-row1 ul a {
+    color: #D1361A;
+    font-weight: 600;
+    color: #D1361A; }
+  .menu-row1 ul a:hover {
+    color: #333;
+    transition: all 0.3s ease-in-out 0.2s; }
 
 .menu-row1 ul li {
   display: inline-block;

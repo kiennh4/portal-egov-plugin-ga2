@@ -7,8 +7,14 @@
 		</div>
 		<div class="menu-row1">
 			<ul>
-				<li>
-					<span class="hotline">Hotline: 0966960790 <a href="/lien-he" target="_blank" class="contact">| Liên hệ</a> <a href="/sitemap" class="site-map">| Site Map</a></span>
+				<li class="li-hotline">
+					<span class="hotline">Hotline: 0966960790 </span>
+				</li>
+				<li class="li-contact">
+					<a href="/lien-he" target="_blank" class="contact">Li&#234;n h&#7879;</a>
+				</li>
+				<li class="li-sitemap">
+				 	<a href="/sitemap" class="site-map">Site Map</a>
 				</li>
 				<li>
 					<a href="javascript:;" id="vi" title="Viet Nam">

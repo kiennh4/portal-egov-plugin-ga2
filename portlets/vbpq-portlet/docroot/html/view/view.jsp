@@ -250,7 +250,7 @@
 						String	rowHREF = sb.toString();
 					%>
 					
-					<liferay-ui:search-container-column-text title='<%=LanguageUtil.get(locale, "view") %>'  
+					<liferay-ui:search-container-column-text  title='<%=LanguageUtil.get(locale, "view") %>'  
 							name="#" value="<%=String.valueOf(vbpqIndex)%>" href="<%=rowHREF %>"/>
 					
 					<liferay-ui:search-container-column-text title='<%=LanguageUtil.get(locale, "view") %>' 

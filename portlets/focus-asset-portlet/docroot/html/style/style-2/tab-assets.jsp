@@ -26,6 +26,8 @@
 				
 				String focusAssetTitle = StringUtil.shorten(focusAsset.getTitle(), 60);
 				
+				String fullFocusAssetTitle = focusAsset.getTitle();
+				
 				String viewAssetContentURL = FocusAssetUtil.getViewContentURL(request, focusAsset);
 				
 				String focusAssetImgPath = focusAsset.getSmallImagePath();
@@ -34,7 +36,7 @@
 					<a  href="<%=viewAssetContentURL%>"
 						title="<%=focusAsset.getTitle() %>"
 						data-assetId = "<%=assetEntryId %>" 
-						data-assetTitle="<%=focusAssetTitle%>" 
+						data-assetTitle="<%=fullFocusAssetTitle%>" 
 						data-imageSrcPath="<%=focusAssetImgPath%>"
 					>
 					<%=focusAssetTitle %>

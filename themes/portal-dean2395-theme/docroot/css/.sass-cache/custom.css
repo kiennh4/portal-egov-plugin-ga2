@@ -118,6 +118,10 @@ input[type="text"]:focus {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important; }
 
+input[type="button"], input[type="submit"] {
+  background: unset;
+  padding: 5px 10px; }
+
 a {
   color: #00528B;
   text-decoration: none; }

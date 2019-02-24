@@ -114,9 +114,9 @@ function getCurrentDateTime(){
 		currentTimeWrapper.innerHTML = currentTimeValue;
 	}
 }
-/*Custom javascript jquery*/
-$(document).ready(function(){
-	
+$(document).on("ready",function(){
+	$('.journal-content-article [style*="font-size"]').css('font-size', '');
+	$('.journal-content-article [style*="line-height"]').css('line-height', '');
 	$("#increaseText").on("click", function() {
        	current = parseInt($(".journal-content-article").css("font-size"));
         bc = current + parseInt(1); 
@@ -128,6 +128,10 @@ $(document).ready(function(){
         bc = current - parseInt(1); 
         $(".journal-content-article").css({"font-size" : bc});
 	});
+});
+
+/*Custom javascript jquery*/
+$(document).ready(function(){
 	/*Event click of button scroll top*/
     $(window).scroll(function () {
         if ($(this).scrollTop() > 400) {
