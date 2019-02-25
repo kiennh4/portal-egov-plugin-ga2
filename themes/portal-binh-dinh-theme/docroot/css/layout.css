@@ -17,9 +17,7 @@
 .portlet-column-content {
 	padding: 5px;
 }
-#layout-column_column-1{
-	padding: 0!important;
-}
+
 .portlet-column-content-only, .ltr .portlet-column-content-first, .rtl .portlet-column-content-last {
 	padding-left: 0;
 }

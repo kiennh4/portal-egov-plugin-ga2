@@ -138,11 +138,12 @@
 				
 				stringBuilder.append("/thumbnail/");
 				
-				if(assetEntryIndex==0){
+				stringBuilder.append("400x300");
+				/* if(assetEntryIndex==0){
 					stringBuilder.append("300x180");
 				}else{
 					stringBuilder.append("180x110");
-				}
+				} */
 				
 				stringBuilder.append(StringPool.SLASH);
 				

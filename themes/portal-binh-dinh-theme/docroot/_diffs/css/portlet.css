@@ -51,11 +51,11 @@
 
 body.portlet {
 	border: none;
-	margin-top: 30px;
 }
 
 .portlet-topper {
 	position: relative;
+	box-shadow: 0 1px 1px 1px #ddd;
 	padding-left: 6px;
 }
 
@@ -99,8 +99,7 @@ body.portlet {
 }
 
 .portlet-content, .portlet-minimized .portlet-content-container {
-	border-radius: 5px;
-	padding: 5px;
+	padding: 10px;
 }
 
 .portlet-minimized .portlet-content {
@@ -111,6 +110,7 @@ body.portlet {
 	background: url(../images/arrows/01_left.png) no-repeat 0 50%;
 	font-weight: bold;
 	padding: 5px 5px 5px 18px;
+	color: white !important;
 }
 
 .portlet-nested-portlets .portlet-boundary {
@@ -124,8 +124,6 @@ body.portlet {
 .portlet-borderless-container {
 	min-height: 2.5em;
 	position: relative;
-	padding: 5px;
-	margin-top: 30px;
 }
 
 .portlet-borderless-bar {

@@ -190,7 +190,9 @@
 				color: #bc0000;
 			}
 		}
-					
+		.external-video-frame{
+			width: 100% !important;
+		}		
 		.video-playlist{
 			padding-left: 5px;
 			max-height: 80px;

@@ -59,8 +59,10 @@
 	}
 	
 	List<AudioAlbum> albumListTemp = AudioAlbumLocalServiceUtil.findByGroup(groupId);
-	
-	String defaultAlbum = preferences.getValue("default-album",StringUtil.valueOf(albumListTemp.get(0).getAlbumId()));
+	String defaultAlbum = "";
+	if(albumListTemp != null && (albumListTemp.size() > 0)){
+		defaultAlbum = preferences.getValue("default-album",StringUtil.valueOf(albumListTemp.get(0).getAlbumId()));	
+	}
 	
 	String bigStyle = "big-style";
 	

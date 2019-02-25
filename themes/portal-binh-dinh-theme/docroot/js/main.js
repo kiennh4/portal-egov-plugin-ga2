@@ -114,9 +114,9 @@ function getCurrentDateTime(){
 		currentTimeWrapper.innerHTML = currentTimeValue;
 	}
 }
-/*Custom javascript jquery*/
-$(document).ready(function(){
-	
+$(document).on("ready",function(){
+	$('.journal-content-article [style*="font-size"]').css('font-size', '');
+	$('.journal-content-article [style*="line-height"]').css('line-height', '');
 	$("#increaseText").on("click", function() {
        	current = parseInt($(".journal-content-article").css("font-size"));
         bc = current + parseInt(1); 
@@ -128,25 +128,4 @@ $(document).ready(function(){
         bc = current - parseInt(1); 
         $(".journal-content-article").css({"font-size" : bc});
 	});
-	/*Event click of button scroll top*/
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 400) {
-            $('.scroll-up-btn').fadeIn();
-        } else {
-            $('.scroll-up-btn').fadeOut();
-        }
-     });
-    $('.scroll-up-btn').click(function () {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 600);
-        return false;
-    });
-    /* Update content from theme to solgan portlet*/
-    var sloganVal = $("#slogan").text();
-    $("#sloganContent").html(sloganVal);
-    
-    /*Set height of tab-container of focus_asset_portlet to image*/ 
-    var tabContainerHeight = $(".tab-content-container").height();
-    $("#_focus_asset_WAR_focusassetportlet_INSTANCE_HyCOAaEnSiY0_focus-asset-img").css("height",tabContainerHeight );
 });

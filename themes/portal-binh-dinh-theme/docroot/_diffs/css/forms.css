@@ -129,6 +129,18 @@ input[type="image"] {
 	padding: 0;
 }
 
+input[type="submit"], input[type="button"], input[type="reset"], button {
+	@include button-default;
+
+	&:hover {
+		@include button-hover;
+	}
+
+	&:focus {
+		@include button-focus;
+	}
+}
+
 input, textarea {
 	&.focus {
 		@include input-field-focus;
