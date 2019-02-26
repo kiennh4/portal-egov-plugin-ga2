@@ -1,8 +1,7 @@
-<%@ taglib uri="https://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="https://alloy.liferay.com/tld/aui" prefix="aui" %>
-<%@ taglib uri="https://liferay.com/tld/portlet" prefix="liferay-portlet" %>
-<%@ taglib uri="https://liferay.com/tld/ui" prefix="liferay-ui" %>
-<%@ taglib uri="https://liferay.com/tld/util" prefix="liferay-util" %>
+<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
+<%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui" %>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+<%@ taglib uri="http://liferay.com/tld/util" prefix="liferay-util" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
@@ -25,7 +24,7 @@
 			YQLQueryStr += '"';
 		
 		//URL trỏ đến csdl thời tiết của Yahoo 
-		var weatherForecastURL = "https://query.yahooapis.com/v1/public/yql?q=" + YQLQueryStr + "&format=json&callback=?";
+		var weatherForecastURL = "http://query.yahooapis.com/v1/public/yql?q=" + YQLQueryStr + "&format=json&callback=?";
 		
 		jQuery.getJSON(weatherForecastURL, function(data) {
 			
@@ -46,7 +45,7 @@
 					}
 					
 					//Đường dẫn đến ảnh nền tương ứng với thời tiết và thời điểm hiện tại(ngày/đêm)
-					var backgroundImagePath = 'https://l.yimg.com/os/mit/media/m/weather/images/icons/bkgnd/' + currentWeather.code + dayNightDetermine + '-791140.jpg';
+					var backgroundImagePath = 'http://l.yimg.com/os/mit/media/m/weather/images/icons/bkgnd/' + currentWeather.code + dayNightDetermine + '-791140.jpg';
 					
 					//Đường dẫn đến ảnh mô tả tương ứng với thời tiết và thời điểm hiện tại(ngày/đêm)
 					var weatherImagePath = 'https://l.yimg.com/os/mit/media/m/weather/images/icons/l/' + currentWeather.code + dayNightDetermine + '-100567.png';

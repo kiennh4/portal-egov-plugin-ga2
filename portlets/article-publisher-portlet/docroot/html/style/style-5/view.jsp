@@ -35,7 +35,7 @@
 				<%
 				for(AssetEntryCache assetCache : assetCacheList){
 					
-					String assetTitle = StringUtil.shorten(assetCache.getTitle(), 40);
+					String assetTitle = StringUtil.shorten(assetCache.getTitle(),50);
 					
 					String assetLink = ArticlePublisherUtil.getViewContentURL(request, assetCache);
 					

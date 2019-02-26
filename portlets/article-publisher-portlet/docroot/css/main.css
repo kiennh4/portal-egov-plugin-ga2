@@ -204,7 +204,7 @@
 	.article-publisher-display-style-5{
 		border: 1px solid #d2d2d2;
 		margin-bottom: 10px;
-		
+		overflow: hidden;
 		.style-title{
 			padding: 10px 0px 10px 40px;
 			font-size: 14px;
@@ -219,9 +219,7 @@
 			margin: 0;
 			
 			.jcarousel-skin-tango li{
-				font-size: 11px;
 				text-align: justify;
-				font-family: tahoma;
 				word-spacing: -1px;
 			}
 			
@@ -234,24 +232,30 @@
 			}
 			
 			.jcarousel-skin-tango .jcarousel-clip-horizontal {
-			    width:  670px;
-			    margin-left: 38px;
+			    width:  720px;
+			    margin-left: 10px;
 			}
 			
 			
 			.jcarousel-skin-tango .jcarousel-item {
-			    width: 120px;
+			    width: 140px;
 			    height: auto;
+			    .asset-image{
+			    	height: 90px;
+			    	width: 100%;
+			    }
+			    .asset-title{
+			    	text-align: left;
+			    }
 			}
 			
 			.jcarousel-skin-tango .jcarousel-item-horizontal {
 				margin-left: 0;
-				margin-right: 15px;
+				margin-right: 5px;
 			}
 			
 			.jcarousel-skin-tango .jcarousel-item-horizontal img{
-				padding: 1px;
-				border: 1px solid #ddd;
+				padding: 0px;
 			}
 			
 			.jcarousel-skin-tango .jcarousel-item-horizontal span
@@ -346,8 +350,8 @@
 			}
 			
 			.jcarousel-skin-tango img{
-				width: 120px;
-				height: 75px;
+				width: 100%;
+				height: 100%;
 			}
 		}
 	}
@@ -391,10 +395,8 @@
 			    margin-top: 2px;     
 				    				
 				.small-img{
-				    height: 90px;	
-				    width: 140px;	
-				    border: 1px solid #E4E4E4;         
-				    padding: 1px;
+				    height: 100px;	
+				    width: 145px;	         
 				}
 			}
 						

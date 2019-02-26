@@ -6,8 +6,9 @@
 
 <head>
 	<title>$the_title - $company_name</title>
-	<meta name="description" content="Cổng thông tin điện tử Đảng Bộ tỉnh Phú Yên, tin tức tỉnh ủy tỉnh Phú Yên, tin tức về Đảng Cộng Sản Phú Yên">
-    <meta name="keywords" content="Phú Yên, tỉnh ủy Phú Yên, Đảng Cộng Sản Phú Yên">
+	<meta name="description" content="Cổng thông tin điện tử Tỉnh Ủy Bình , tin tức về Đảng Cộng Sản Bình Định">
+    <meta name="keywords" content="Phú Yên, Cổng thông tin điện tử , Đảng Cộng Sản Bình Định">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
 	$theme.include($top_head_include)
 </head>
 
@@ -31,13 +32,13 @@
 		
 		<div class="flash-banner-wrapper">
 			<div class="flash-banner">
-				#set($flashBannerUrl="$themeDisplay.getPathThemeImages()/banner/1050x150.swf")
-				#set($staticBannerUrl="$themeDisplay.getPathThemeImages()/banner/static-banner-py.jpg")
+				#set($flashBannerUrl="$themeDisplay.getPathThemeImages()/banner/bannerBD.swf")
+				#set($staticBannerUrl="$themeDisplay.getPathThemeImages()/banner/static-banner.png")
 				<input type="hidden" name="imgUrl" id="imgUrl" value="$staticBannerUrl">
 				<object class="test">
 					<param name="wmode" value="transparent">
 					<EMBED  SRC="$flashBannerUrl" 
-							WIDTH="1050" 
+							WIDTH="1075" 
 							HEIGHT="150"
 							PLAY="true" 
 							LOOP="true" 
@@ -108,11 +109,12 @@
 	 	function setupBanner() { 
 	 		var flashBanner = $(".flash-banner");
 	 		var imgUrl = $("#imgUrl").val();
+	 		var imgStatic = "<img src='" + imgUrl + "' width='" + "100%" + "' height='" + "150" + "'/>"
      		if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 )
      		{
         		console.log('Opera');
         		flashBanner.find(".test").remove();
-        		flashBanner.append("<img src='" + imgUrl + "' width='" + "1050" + "' height='" + "150" + "'/>");
+        		flashBanner.append(imgStatic);
     		}
 		    else if(navigator.userAgent.indexOf("Chrome") != -1 )
 		    {
@@ -122,25 +124,25 @@
 		    {
 		        console.log('Safari');
 		        flashBanner.find(".test").remove();
-        		flashBanner.append("<img src='" + imgUrl + "' width='" + "1050" + "' height='" + "150" + "'/>");
+        		flashBanner.append(imgStatic);
 		    }
 		    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
 		    {
 		        console.log('Firefox');
 		        flashBanner.find(".test").remove();
-        		flashBanner.append("<img src='" + imgUrl + "' width='" + "1050" + "' height='" + "150" + "'/>");
+        		flashBanner.append(imgStatic);
 		    }
 		    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
 		    {
 		      	console.log('IE'); 
 		      	flashBanner.find(".test").remove();
-        		flashBanner.append("<img src='" + imgUrl + "' width='" + "1050" + "' height='" + "150" + "'/>");
+        		flashBanner.append(imgStatic);
 		    }  
 		    else
 		    {
 		        console.log('unknown');
 		        flashBanner.find(".test").remove();
-        		flashBanner.append("<img src='" + imgUrl + "' width='" + "1050" + "' height='" + "150" + "'/>");
+        		flashBanner.append(imgStatic);
 		    }
 		}
 	</script>

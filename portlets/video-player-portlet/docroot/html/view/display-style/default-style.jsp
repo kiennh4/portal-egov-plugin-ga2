@@ -102,8 +102,8 @@
 						            flashplayer: '/video-player-portlet/jwplayer/jwplayer.flash.swf',
 						            file: '<%=topVideoURL%>',
 						            image: '<%=topVideoThumbnailURL %>',
-				    		        height: '100%',
-						            width: '100%',
+				    		        height: <%=videoFrameHeight%>,
+						            width: <%=videoFrameWidth%>,
 						            autostart: <%=autoPlay %>
 						        });
 						        jwplayer("<portlet:namespace />videoPlayer").onReady (function (){
@@ -111,6 +111,7 @@
 						        });
 						        
 							});
+							
 						</aui:script>
 					</c:otherwise>
 				</c:choose>

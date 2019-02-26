@@ -124,7 +124,8 @@
       text-decoration: underline; }
 .article-publisher-portlet .article-publisher-display-style-5 {
   border: 1px solid #d2d2d2;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  overflow: hidden; }
   .article-publisher-portlet .article-publisher-display-style-5 .style-title {
     padding: 10px 0px 10px 40px;
     font-size: 14px;
@@ -139,26 +140,28 @@
      *  Horizontal Buttons
      */ }
     .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango li {
-      font-size: 11px;
       text-align: justify;
-      font-family: tahoma;
       word-spacing: -1px; }
     .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango .jcarousel-direction-rtl {
       direction: rtl; }
     .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango .jcarousel-clip {
       overflow: hidden; }
     .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango .jcarousel-clip-horizontal {
-      width: 670px;
-      margin-left: 38px; }
+      width: 720px;
+      margin-left: 10px; }
     .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango .jcarousel-item {
-      width: 120px;
+      width: 140px;
       height: auto; }
+      .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango .jcarousel-item .asset-image {
+        height: 90px;
+        width: 100%; }
+      .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango .jcarousel-item .asset-title {
+        text-align: left; }
     .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango .jcarousel-item-horizontal {
       margin-left: 0;
-      margin-right: 15px; }
+      margin-right: 5px; }
     .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango .jcarousel-item-horizontal img {
-      padding: 1px;
-      border: 1px solid #ddd; }
+      padding: 0px; }
     .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango .jcarousel-item-horizontal span {
       color: #00528B; }
     .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango .jcarousel-item-horizontal span:HOVER {
@@ -216,8 +219,8 @@
       cursor: default;
       background-position: -96px 0; }
     .article-publisher-portlet .article-publisher-display-style-5 .style-content .jcarousel-skin-tango img {
-      width: 120px;
-      height: 75px; }
+      width: 100%;
+      height: 100%; }
 .article-publisher-portlet .article-publisher-display-style-6 {
   padding: 10px;
   text-align: justify; }
@@ -243,10 +246,8 @@
     margin-right: 10px;
     margin-top: 2px; }
     .article-publisher-portlet .article-publisher-display-style-6 .top-asset .top-asset-img .small-img {
-      height: 90px;
-      width: 140px;
-      border: 1px solid #E4E4E4;
-      padding: 1px; }
+      height: 100px;
+      width: 145px; }
   .article-publisher-portlet .article-publisher-display-style-6 .top-asset .top-asset-summary {
     display: block;
     font-size: 12px;

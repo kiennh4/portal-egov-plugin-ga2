@@ -1,10 +1,11 @@
 /* ---------- Main navigation ---------- */
 .navigation {
   width: 100%;
-  height: 36px;
-  line-height: 36px;
-  background-color: #da0f05;
-  border-radius: 0px; }
+  height: 40px;
+  line-height: 40px;
+  background-color: #ea0000;
+  border-radius: 0px;
+  font-size: 14px; }
 
 .sf-navbar {
   position: relative;
@@ -50,22 +51,21 @@ li {
 
 .sf-navbar img.right-arrow {
   position: absolute;
-  right: 5px;
+  right: 1px;
   top: 14px; }
 
 .sf-navbar ul {
-  background: #b90e01;
+  background: #ea0000;
   list-style: none;
   padding: 0;
   left: 0;
-  opacity: 0.9;
   margin: 0;
   position: absolute;
   display: none;
   z-index: 99; }
 
 .sf-navbar li:hover {
-  background: #da0f05;
+  background: #ea0000;
   /* only transition out, not in */
   -webkit-transition: none;
   transition: none; }
@@ -78,13 +78,16 @@ li {
   float: none; }
 
 .navigation li:HOVER a {
-  background: #b90e01; }
+  background: #ea0000; }
+
+.navigation li a:HOVER {
+  color: #ffd900; }
 
 .sf-navbar li.selected {
   background-color: #f02d1e; }
 
 .sf-navbar li.selected a {
-  color: yellow; }
+  color: #ffd900; }
 
 .sf-navbar li.selected ul li a {
   color: #fff; }
@@ -120,6 +123,7 @@ li {
   float: left;
   padding: 2px 0px 2px 20px;
   height: 16px;
+  font-size: 13px;
   white-space: nowrap; }
 
 .sub-navigation .top_notify {

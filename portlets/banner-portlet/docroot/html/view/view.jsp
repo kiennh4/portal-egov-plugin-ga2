@@ -61,12 +61,6 @@
 			    width:   <%=bannerImageWidth %>,
 			    display: 'block'
 			});
-			if(<%=bannerImageBorder %>){
-				bannerImage.setStyles({
-				    border:  '1px solid #D3D3D3',
-				    padding: '1px'
-				});
-			}
 		}
 	});
 </aui:script>

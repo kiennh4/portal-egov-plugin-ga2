@@ -284,6 +284,11 @@
 	.banner-image-wrapper{
 		margin-bottom: 10px;
 	}
+	.banner-image-wrapper img{
+		padding: 0;
+		border: none;
+	}
+	
 	
 /* BANNER VIEW CONFIG */	
 	.banner-config-form{

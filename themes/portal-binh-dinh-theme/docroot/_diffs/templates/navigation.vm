@@ -16,14 +16,11 @@
 					<li>
 				#end
 			#end
-
-				<a href="$nav_item.getURL()" $nav_item.getTarget()>
-					$nav_item.icon() $nav_item.getName()
-					#if($nav_item.hasChildren())
-						<img src="$themeDisplay.getPathThemeImages()/common/arrow-down.png" class="down-arrow">
-					#end
-				</a>
 				#if ($nav_item.hasChildren())
+					<a href="$nav_item.getURL()" $nav_child.getTarget()>
+						$nav_item.icon() $nav_item.getName()
+						<img src="$themeDisplay.getPathThemeImages()/common/arrow-down.png" class="down-arrow">
+					</a>
 					<ul class="sub-menu">
 						#foreach ($nav_child in $nav_item.getChildren())
 							#if ($nav_child.isSelected())
@@ -32,7 +29,7 @@
 								<li>
 							#end
 								#if($nav_child.hasChildren())
-									<a href="$nav_child.getURL()" $nav_child.getTarget()>
+									<a href="javascript:;">
 										$nav_child.getName()
 										<img src="$themeDisplay.getPathThemeImages()/common/arrow-right.png" class="right-arrow">
 									</a>
@@ -52,6 +49,10 @@
 							</li>
 						#end
 					</ul>
+				#else
+					<a href="$nav_item.getURL()" $nav_child.getTarget()>
+						$nav_item.icon() $nav_item.getName()
+					</a>
 				#end
 			</li>
 		#end

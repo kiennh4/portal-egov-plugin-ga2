@@ -192,6 +192,9 @@
 		}
 		.external-video-frame{
 			width: 100% !important;
+			#_videoplayer_WAR_videoplayerportlet_videoPlayer{
+				width: 100% !important
+			}
 		}		
 		.video-playlist{
 			padding-left: 5px;
