@@ -22,9 +22,7 @@
   z-index: 9; }
 
 .imageGallerySlider img {
-  display: block;
-  border: 1px solid #E4E4E4;
-  padding: 1px; }
+  display: block; }
 
 .imageGallerySliderFrame .view-gallery-links {
   text-align: right;

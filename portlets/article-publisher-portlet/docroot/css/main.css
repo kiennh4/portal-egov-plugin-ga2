@@ -402,7 +402,6 @@
 						
 			.top-asset-summary{
 			    display: block;
-			    font-size: 12px;
 			    font-weight: normal;
 			    text-align: justify;
 			}
@@ -428,7 +427,7 @@
 			}
 				
 			ul li{
-				background: url("../images/custom_icon/li-blue-icon.png") no-repeat scroll 0 9px transparent;
+				background: url("../images//li-blue-icon.png") no-repeat scroll 0 9px transparent;
 			    list-style: none outside none;
 			    margin: 0;
 			    padding: 3px 0 0 10px;

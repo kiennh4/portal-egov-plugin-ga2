@@ -126,6 +126,8 @@
           display: block;
           color: #fff;
           padding: 0px 10px; }
+        .focus-asset-portlet .focus-asset-display-style-2 .asset-summary-container .asset-summary-content .asset-title a:HOVER {
+          color: #ff0700; }
       .focus-asset-portlet .focus-asset-display-style-2 .asset-summary-container .asset-summary-content .asset-summary {
         width: 300px; }
   .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container {
@@ -195,7 +197,6 @@
           text-shadow: 1px 1px #d2d2d2; }
         .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul a {
           background: url("/focus-asset-portlet/images/custom_icon/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
-          color: #00528B;
           text-decoration: none;
           font-weight: 600;
           padding-left: 12px;
