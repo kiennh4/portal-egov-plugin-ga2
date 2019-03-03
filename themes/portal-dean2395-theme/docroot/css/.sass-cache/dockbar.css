@@ -352,8 +352,7 @@ html > .lfr-dockbar-pinned {
   color: #FFF;
   font-size: 1.2em;
   font-weight: bold;
-  min-height: 30px;
-  padding: 5px; }
+  min-height: 30px; }
 
 .controls-hidden .page-customization-bar {
   display: none; }
@@ -369,8 +368,4 @@ html > .lfr-dockbar-pinned {
   color: #EEE;
   font-size: 0.8em;
   padding: 0 1em; }
-
-.page-customization-bar .reset-prototype {
-  display: inline;
-  padding-left: 1em; }
 

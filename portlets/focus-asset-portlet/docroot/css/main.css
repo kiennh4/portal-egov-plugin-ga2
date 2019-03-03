@@ -300,6 +300,9 @@
 					a:hover{
 						color: #ff0700;
 					}
+					a span.focus-asset-title-mobile{
+						display: none;
+					}
 				}
 			}
 		}

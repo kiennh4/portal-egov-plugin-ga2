@@ -12,16 +12,6 @@
 <%
 	List<AssetEntryCache> assetCacheList = ArticlePublisherUtil.getAssetList(request,numbersOfEntriesDisplay);
 %>
-<style>
-	.jcarousel-skin-tango .asset-title a{
-		font-size: 13px;
-		font-family: "Open Sans",sans-serif;
-	}
-	
-	#_article_publisher_WAR_articlepublisherportlet_INSTANCE_ocPjQXt4CuJN_jcarousel{
-		left: -5px;
-	}
-</style>
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
 		<div class="article-publisher-display-style-5">

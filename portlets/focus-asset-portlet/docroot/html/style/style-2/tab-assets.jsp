@@ -23,7 +23,7 @@
 				 AssetEntryCache focusAsset = tabAssetList.get(i);
 				
 				long assetEntryId = focusAsset.getEntryId();
-				
+				String fullAssetTitle = focusAsset.getTitle().trim();
 				String focusAssetTitle = StringUtil.shorten(focusAsset.getTitle(), 60);
 				
 				String fullFocusAssetTitle = focusAsset.getTitle();
@@ -39,8 +39,11 @@
 						data-assetTitle="<%=fullFocusAssetTitle%>" 
 						data-imageSrcPath="<%=focusAssetImgPath%>"
 					>
-					<%=focusAssetTitle %>
+						<span class="focus-asset-title">
+							<%=focusAssetTitle %>
+						</span>
 						
+						<span class="focus-asset-title-mobile"><%=fullAssetTitle%></span>
 					</a>
 				</li>
 		<%

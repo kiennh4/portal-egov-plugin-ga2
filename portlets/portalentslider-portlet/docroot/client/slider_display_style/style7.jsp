@@ -24,13 +24,13 @@
 		</div>
 	</c:if>
 	<div id="jssor_7" 
-		style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1055px; height: <%=sliderHeight %>px; overflow: hidden; visibility: hidden;">
+		style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1024px; height: <%=sliderHeight %>px; overflow: hidden; visibility: hidden;">
 		<!-- Loading Screen -->
 		<div data-u="loading" class="jssorl-009-spin"
 			style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.7);">
 		</div>
 		<div data-u="slides"
-			style="cursor: default; position: relative; top: 0px; left: 0px; width: 1055px; height: <%=sliderHeight %>px; overflow: hidden;">
+			style="cursor: default; position: relative; top: 0px; left: 0px; width: 1024px; height: <%=sliderHeight %>px; overflow: hidden;">
 			<%
 				if (Validator.isNotNull(sliderItems)) {
 
@@ -80,7 +80,7 @@
 	    var jssor_7_slider = new $JssorSlider$("jssor_7", jssor_7_options);
 	
 	    /*#region responsive code begin*/
-	    var MAX_WIDTH = 1055;
+	    var MAX_WIDTH = 1024;
 	
 	    function ScaleSlider() {
 	        var containerElement = jssor_7_slider.$Elmt.parentNode;
