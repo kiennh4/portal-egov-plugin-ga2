@@ -1,0 +1,39 @@
+.rss-portlet .rss-search {
+  float: right; }
+  .rss-portlet .rss-search input[type="text"] {
+    width: 250px;
+    border-radius: 0px !important; }
+  .rss-portlet .rss-search select,
+  .rss-portlet .rss-search .search-pages select {
+    padding: 3px !important;
+    border-radius: 0px !important; }
+.rss-portlet .rss-config-form .aui-field-content {
+  margin-bottom: 10px; }
+.rss-portlet .rss-config-form .aui-choice-label {
+  font-weight: bold;
+  margin-bottom: 5px; }
+.rss-portlet .rss-update-form input[type="text"] {
+  width: 300px;
+  border-radius: 0px !important; }
+.rss-portlet .top-asset {
+  margin: 0; }
+  .rss-portlet .top-asset .asset-title {
+    font-weight: bold;
+    padding-bottom: 10px; }
+  .rss-portlet .top-asset .asset-summary .summary-content {
+    text-align: justify; }
+  .rss-portlet .top-asset .publish-date {
+    font-weight: bold; }
+.rss-portlet .older-asset {
+  display: block; }
+  .rss-portlet .older-asset a {
+    background: url("/rss-portlet/images/li-red-icon.jpg") no-repeat scroll 0 4px transparent;
+    color: #00528B;
+    text-decoration: none;
+    padding-left: 12px; }
+.rss-portlet .publish-date {
+  font-size: 10px;
+  color: #ccc; }
+.rss-portlet .separator {
+  border-color: #d2d2d2 transparent #FFF; }
+

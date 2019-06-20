@@ -1,0 +1,73 @@
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.3'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="1409196605887939"
+  theme_color="#0084ff"
+  logged_in_greeting="Chào bạn, thôi có thể giúp gì cho bạn?"
+  logged_out_greeting="Chào bạn, thôi có thể giúp gì cho bạn?">
+</div>
+<div class="footer-menu">
+	<div class="footer-menu-wrapper">
+		<ul>
+			<li class="$nav_item_class">
+				<a href="/trang-chu"><span>Trang chủ</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/gioi-thieu"><span>Giới thiệu</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/so-do-cong-thong-tin"><span>Sơ đồ cổng thông tin</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/thu-vien-anh"><span>Thư viện ảnh</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/thu-vien-video"><span>Thư viện video</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/lien-he"><span>Liên hệ</span></a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="copyright">	
+	#if ($theme_display.isShowPageSettingsIcon())
+		<span class="lfr-meta-actions" >
+				<a class="taglib-icon quickEditLayoutSet" href="$editFooterURL" data-width="700" id="quickEditFooter">
+					<img class="icon" src="$themeDisplay.getPathThemeImages()/common/edit.png" alt="#language("edit-footer")" title="#language("edit-footer")">
+				</a>
+		</span>
+	#end
+	#if($footerContent == "")
+		<div class="copy-right-content">
+			<b>Bản quyền © 2012 Tỉnh Ủy Phú Yên</b><br/>
+			Địa chỉ:02 Đường Nguyễn Hữu Thọ , TP Tuy Hòa</br>
+			Điện thoại: 84573826648 - Fax: 84573826648<br/>
+			Email: tuphuyentb1@tuphuyen, BBTWebsite@phuyendcs.vn
+		</div>
+		<div class="bottom-right-content">
+			Tổng biên tập: Nguyễn Hữu Hiệp UVBTTU</br>
+			Phó tổng biên tập: Lê Tấn Hổ TUV, Chánh VPTU
+		</div>
+	#else
+		$footerContent
+	#end
+</div>

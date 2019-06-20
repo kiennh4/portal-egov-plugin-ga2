@@ -22,6 +22,8 @@ import com.bkav.portal.portlet.rss.service.base.RssFeedLocalServiceBaseImpl;
 import com.bkav.portal.portlet.rss.service.persistence.RssFeedFinderUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.search.Indexer;
+import com.liferay.portal.kernel.search.IndexerRegistryUtil;
 import com.liferay.portal.service.ServiceContext;
 
 /**
@@ -50,26 +52,28 @@ public class RssFeedLocalServiceImpl extends RssFeedLocalServiceBaseImpl {
 	 * com.bkav.portal.portlet.rss.service.RssFeedLocalServiceUtil} to access
 	 * the rss feed local service.
 	 */
-	
-	public List<RssFeed> findByGroup(long groupId) throws SystemException{
+
+	public List<RssFeed> findByGroup(long groupId) throws SystemException {
 		return rssFeedPersistence.findByGroup(groupId);
-	}	
-	
-	public List<RssFeed> findByKeyword(long groupId,String keyword,int start,int end) throws SystemException{
-		
+	}
+
+	public List<RssFeed> findByKeyword(long groupId, String keyword, int start,
+			int end) throws SystemException {
+
 		return RssFeedFinderUtil.findByKeyword(groupId, keyword, start, end);
 	}
-	
-	public RssFeed addFeed(long companyId,long groupId,long userId,String userName,
-			String name,String url,String description,int status,ServiceContext serviceContext)
-					throws SystemException, PortalException{
-		
+
+	public RssFeed addFeed(long companyId, long groupId, long userId,
+			String userName, String name, String url, String description,
+			int status, ServiceContext serviceContext) throws SystemException,
+			PortalException {
+
 		Date now = new Date();
-		
+
 		long id = counterLocalService.increment();
-		
+
 		RssFeed feed = rssFeedPersistence.create(id);
-		
+
 		feed.setCompanyId(companyId);
 		feed.setGroupId(groupId);
 		feed.setUserId(userId);
@@ -80,20 +84,28 @@ public class RssFeedLocalServiceImpl extends RssFeedLocalServiceBaseImpl {
 		feed.setUrl(url);
 		feed.setDescription(description);
 		feed.setStatus(status);
-		
-		resourceLocalService.addModelResources(feed, serviceContext);
-		
+
+		if (serviceContext.isAddGroupPermissions()
+				|| serviceContext.isAddGuestPermissions()) {
+			addFeedResource(feed, serviceContext.isAddGroupPermissions(),
+					serviceContext.isAddGroupPermissions());
+		} else {
+			addFeedResource(feed, serviceContext.getGroupPermissions(),
+					serviceContext.getGuestPermissions());
+		}
+
 		return rssFeedPersistence.update(feed, false);
 	}
-	
-	public RssFeed updateFeed(long id,long companyId,long groupId,long userId,String userName,
-			String name,String url,String description,int status,ServiceContext serviceContext)
-					throws SystemException, PortalException{
-		
+
+	public RssFeed updateFeed(long id, long companyId, long groupId,
+			long userId, String userName, String name, String url,
+			String description, int status, ServiceContext serviceContext)
+			throws SystemException, PortalException {
+
 		Date now = new Date();
-		
+
 		RssFeed feed = rssFeedPersistence.fetchByPrimaryKey(id);
-		
+
 		feed.setCompanyId(companyId);
 		feed.setGroupId(groupId);
 		feed.setUserId(userId);
@@ -103,23 +115,32 @@ public class RssFeedLocalServiceImpl extends RssFeedLocalServiceBaseImpl {
 		feed.setUrl(url);
 		feed.setDescription(description);
 		feed.setStatus(status);
-		
-		if ((serviceContext.getGroupPermissions() != null) ||
-			(serviceContext.getGuestPermissions() != null)) {
+		rssFeedPersistence.update(feed, false);
+		// Lucene Indexer
+		Indexer indexer = IndexerRegistryUtil.getIndexer(RssFeed.class);
 
-			updateFeedResource(
-				feed, serviceContext.getGroupPermissions(),
-				serviceContext.getGuestPermissions());
+		if (indexer != null) {
+			indexer.reindex(feed);
 		}
-		
-		return rssFeedPersistence.update(feed, false);
+
+		return feed;
 	}
-	
-	protected void updateFeedResource(RssFeed feed, String[] groupPermissions,
+
+	protected void addFeedResource(RssFeed feed, boolean addGroupPermissions,
+			boolean addGuestPermissions) throws PortalException,
+			SystemException {
+
+		resourceLocalService.addResources(feed.getCompanyId(),
+				feed.getGroupId(), feed.getUserId(), RssFeed.class.getName(),
+				feed.getPrimaryKey(), false, addGroupPermissions,
+				addGuestPermissions);
+	}
+
+	private void addFeedResource(RssFeed feed, String[] groupPermissions,
 			String[] guestPermissions) throws PortalException, SystemException {
 
-		resourceLocalService.updateResources(feed.getCompanyId(),
-				feed.getGroupId(), RssFeed.class.getName(),
-				feed.getPrimaryKey(), groupPermissions, guestPermissions);
+		resourceLocalService.addModelResources(feed.getCompanyId(),
+				feed.getGroupId(), feed.getUserId(), RssFeed.class.getName(),
+				feed.getId_(), groupPermissions, guestPermissions);
 	}
 }

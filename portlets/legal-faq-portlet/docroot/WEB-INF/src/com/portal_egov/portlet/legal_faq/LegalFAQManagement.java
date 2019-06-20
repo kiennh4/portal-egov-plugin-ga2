@@ -200,7 +200,6 @@ public class LegalFAQManagement extends MVCPortlet {
 	public void updateFAQSettings(ActionRequest actionRequest, ActionResponse actionResponse) {
 
 		try {
-
 			PortletPreferences preferences = PortletPreferencesFactoryUtil.getPortletSetup(actionRequest);
 			
 			boolean autoSendEmail = ParamUtil.getBoolean(actionRequest, "autoSendEmail", true);

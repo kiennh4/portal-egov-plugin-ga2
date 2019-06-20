@@ -5,7 +5,7 @@
 	
 	<portlet>
 		<portlet-name>article_publisher</portlet-name>
-		<icon>/icon1.png</icon>
+		<icon>/icon.png</icon>
 		<configuration-action-class>com.bkav.portal.portlet.article_publisher.action.ConfigurationActionImpl</configuration-action-class>
 <!-- 		<friendly-url-mapper-class>com.liferay.portal.kernel.portlet.DefaultFriendlyURLMapper</friendly-url-mapper-class> -->
 <!-- 		<friendly-url-routes>com/bkav/portal/portlet/article_publisher/article-publisher-friendly-url-routes.xml</friendly-url-routes> -->

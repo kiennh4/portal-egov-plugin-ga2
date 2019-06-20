@@ -30,68 +30,84 @@ import com.liferay.util.ContentUtil;
 import com.liferay.util.mail.MailEngine;
 import com.portal_egov.portlet.legal_faq.model.LegalFAQEntry;
 
-
 public class FAQEmailUtil {
 
-	public static void sendMail(String emailContent){
-		
+	public static void sendMail(String emailContent) {
+
 		try {
-			
-			Layout controlPanel = LayoutLocalServiceUtil.getLayout(CONTROL_PANEL_LAYOUT_ID);
-			
-			PortletPreferences preferences = PortletPreferencesFactoryUtil.getPortletSetup(controlPanel, FAQ_ADMIN_PORTLET_ID, null);
-			
-			String fromEmailName = preferences.getValue("fromEmailName", "Admin");
-			
-			String fromEmailAddress = preferences.getValue("fromEmailAddress", "admin@portal-egov.com");
-			
-			String toEmailAddress = preferences.getValue("toEmailAddress", StringPool.BLANK);
-			
-			String emailSubject = preferences.getValue("emailSubject", "Portal-eGov");
-			
-			if(Validator.isNotNull(toEmailAddress)){
-				
-				InternetAddress fromEmail = new InternetAddress(fromEmailName, fromEmailAddress);
-				
+
+			Layout controlPanel = LayoutLocalServiceUtil
+					.getLayout(CONTROL_PANEL_LAYOUT_ID);
+
+			PortletPreferences preferences = PortletPreferencesFactoryUtil
+					.getPortletSetup(controlPanel, FAQ_ADMIN_PORTLET_ID, null);
+
+			String fromEmailName = preferences.getValue("fromEmailName",
+					"Admin");
+
+			String fromEmailAddress = preferences.getValue("fromEmailAddress",
+					"chuvanquang96@gmail.com");
+
+			String toEmailAddress = preferences.getValue("toEmailAddress",
+					"quangchuit96@gmail.com");
+
+			String emailSubject = preferences.getValue("emailSubject",
+					"Portal-eGov");
+
+			if (Validator.isNotNull(toEmailAddress)) {
+
+				InternetAddress fromEmail = new InternetAddress(fromEmailName,
+						fromEmailAddress);
+
 				InternetAddress toEmail = new InternetAddress(toEmailAddress);
-				
-				MailEngine.send(fromEmail, toEmail, emailSubject, emailContent, true);
+
+				MailEngine.send(fromEmail, toEmail, emailSubject, emailContent,
+						true);
 			}
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			_log.error(e);
 		}
 	}
 
-	public static String buildFAQEmailContent(LegalFAQEntry faqEntry){
-		
+	public static String buildFAQEmailContent(LegalFAQEntry faqEntry) {
+
 		try {
-			
-			SimpleDateFormat dateFormat = new SimpleDateFormat(" dd/MM/yyyy ' | ' hh:mm a");
-			
+
+			SimpleDateFormat dateFormat = new SimpleDateFormat(
+					" dd/MM/yyyy ' | ' hh:mm a");
+
 			VelocityEngine velocityEngine = new VelocityEngine();
 
 			velocityEngine.init();
 
 			VelocityContext velocityContext = new VelocityContext();
-			
+
 			Map<String, String> templateVariables = new HashMap<String, String>();
-			
-			templateVariables.put("notifyTitle",LanguageUtil.get(LOCATE, "faq-notify-email-title"));
-			templateVariables.put("askDateKeyword",LanguageUtil.get(LOCATE, "faq-notify-email-ask-date"));
-			templateVariables.put("senderNameKeyword",LanguageUtil.get(LOCATE, "faq-notify-email-sender-name"));
-			templateVariables.put("senderEmailKeyword",LanguageUtil.get(LOCATE, "faq-notify-email-sender-email"));
-			templateVariables.put("askTitleKeyword",LanguageUtil.get(LOCATE, "faq-notify-email-ask-title"));
-			templateVariables.put("askContentKeyword",LanguageUtil.get(LOCATE, "faq-notify-email-ask-content"));
-			templateVariables.put("notifyBottomKeyword",LanguageUtil.get(LOCATE, "faq-notify-email-notify-bottom"));
-			
-			templateVariables.put("askDate", dateFormat.format(faqEntry.getAskDate()));
+
+			templateVariables.put("notifyTitle",
+					LanguageUtil.get(LOCATE, "faq-notify-email-title"));
+			templateVariables.put("askDateKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-email-ask-date"));
+			templateVariables.put("senderNameKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-email-sender-name"));
+			templateVariables.put("senderEmailKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-email-sender-email"));
+			templateVariables.put("askTitleKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-email-ask-title"));
+			templateVariables.put("askContentKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-email-ask-content"));
+			templateVariables.put("notifyBottomKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-email-notify-bottom"));
+
+			templateVariables.put("askDate",
+					dateFormat.format(faqEntry.getAskDate()));
 			templateVariables.put("citizenName", faqEntry.getCitizenName());
 			templateVariables.put("citizenEmail", faqEntry.getCitizenEmail());
 			templateVariables.put("askTitle", faqEntry.getAskTitle());
 			templateVariables.put("askContent", faqEntry.getAskContent());
-			
-			Iterator<Map.Entry<String, String>> itr = templateVariables.entrySet().iterator();
+
+			Iterator<Map.Entry<String, String>> itr = templateVariables
+					.entrySet().iterator();
 
 			while (itr.hasNext()) {
 				Map.Entry<String, String> entry = itr.next();
@@ -107,25 +123,96 @@ public class FAQEmailUtil {
 			UnsyncStringWriter unsyncStringWriter = new UnsyncStringWriter();
 
 			String emailTemplate = ContentUtil.get(EMAIL_TEMPLATE_FILE_PATH);
-			
-			velocityEngine.evaluate(velocityContext, unsyncStringWriter,FAQEmailUtil.class.getName(), emailTemplate);
+
+			velocityEngine.evaluate(velocityContext, unsyncStringWriter,
+					FAQEmailUtil.class.getName(), emailTemplate);
 
 			return unsyncStringWriter.toString();
-			
-		}
-		catch (Exception e) {
+
+		} catch (Exception e) {
 			_log.error(e);
 			return StringPool.BLANK;
 		}
 	}
-	
+
+	public static String buildAnswerEmailContent(LegalFAQEntry legalFAQEntry) {
+
+		try {
+
+			SimpleDateFormat dateFormat = new SimpleDateFormat(
+					" dd/MM/yyyy ' | ' hh:mm a");
+
+			VelocityEngine velocityEngine = new VelocityEngine();
+
+			velocityEngine.init();
+
+			VelocityContext velocityContext = new VelocityContext();
+
+			Map<String, String> templateVariables = new HashMap<String, String>();
+
+			templateVariables.put("notifyAnswerTitle",
+					LanguageUtil.get(LOCATE, "faq-notify-answer-title"));
+			templateVariables.put("askDateKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-email-ask-date"));
+			templateVariables.put("senderNameKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-email-sender-name"));
+			templateVariables.put("senderEmailKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-email-sender-email"));
+			templateVariables.put("askTitleKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-email-ask-title"));
+			templateVariables.put("askContentKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-email-ask-content"));
+			templateVariables
+					.put("answerBottomKeyword", LanguageUtil.get(LOCATE,
+							"faq-notify-answer-notify-bottom"));
+			templateVariables.put("answserContentKeyword",
+					LanguageUtil.get(LOCATE, "faq-notify-answer-content"));
+			templateVariables.put("askDate",
+					dateFormat.format(legalFAQEntry.getAskDate()));
+			templateVariables
+					.put("citizenName", legalFAQEntry.getCitizenName());
+			templateVariables.put("citizenEmail",
+					legalFAQEntry.getCitizenEmail());
+			templateVariables.put("askTitle", legalFAQEntry.getAskTitle());
+			templateVariables.put("askContent", legalFAQEntry.getAskContent());
+			templateVariables.put("answerContent",
+					legalFAQEntry.getAnswerContent());
+			Iterator<Map.Entry<String, String>> itr = templateVariables
+					.entrySet().iterator();
+
+			while (itr.hasNext()) {
+				Map.Entry<String, String> entry = itr.next();
+
+				String key = entry.getKey();
+				Object value = entry.getValue();
+
+				if (Validator.isNotNull(key)) {
+					velocityContext.put(key, value);
+				}
+			}
+
+			UnsyncStringWriter unsyncStringWriter = new UnsyncStringWriter();
+
+			String emailTemplate = ContentUtil.get(EMAIL_TEMPLATE_FILE_PATH);
+
+			velocityEngine.evaluate(velocityContext, unsyncStringWriter,
+					FAQEmailUtil.class.getName(), emailTemplate);
+
+			return unsyncStringWriter.toString();
+
+		} catch (Exception e) {
+			_log.error(e);
+			return StringPool.BLANK;
+		}
+	}
+
 	private static Log _log = LogFactory.getLog(FAQEmailUtil.class.getName());
-	
-	private static final long CONTROL_PANEL_LAYOUT_ID = 10175;
+
+	private static final long CONTROL_PANEL_LAYOUT_ID = 10022;
 
 	private static final String FAQ_ADMIN_PORTLET_ID = "legal_faq_management_WAR_legal_fagportlet";
-	
+
 	private static final String EMAIL_TEMPLATE_FILE_PATH = "com/portal_egov/portlet/legal_faq/email/email_template.vm";
-	
+
 	public static final Locale LOCATE = new Locale("vi", "VN");
 }
