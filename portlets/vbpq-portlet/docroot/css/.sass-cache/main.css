@@ -1,7 +1,6 @@
 /* VBPQ-Category-Management */
 .vbpq-category-admin {
-  color: #434343;
-  font-size: 12px; }
+  color: #434343; }
 
 .vbpq-category-admin .lfr-header-row {
   margin-bottom: 10px;
@@ -89,7 +88,6 @@
 .vbpq_entry_management {
   margin: 0px;
   padding-bottom: 30px;
-  font-size: 12px;
   font-family: Tahoma;
   color: #454545; }
 
@@ -117,8 +115,6 @@
   padding: 5px 5px !important; }
 
 .vbpq_advance_search_form {
-  font-size: 12px;
-  font-family: Tahoma;
   font-weight: bold;
   border: 1px solid #E4E4E4;
   border-radius: 4px;
@@ -215,8 +211,7 @@
   text-align: left;
   height: 150px;
   width: 100%;
-  position: relative;
-  font-size: 12px; }
+  position: relative; }
 
 .vbpq_search_form_left_content {
   background: url("/vbpq-portlet/html/images/vbpq_search_form_left_content_bg.jpg") scroll 0 0 transparent;
@@ -325,7 +320,6 @@
   width: 100%; }
 
 .vbpq-search-result-title {
-  font-size: 12px;
   font-weight: bold;
   color: #00528B;
   text-shadow: 1px 1px #E4E4E4;
@@ -333,7 +327,6 @@
   float: left; }
 
 .vbpq_search_results {
-  font-size: 12px;
   font-weight: normal;
   color: #434343; }
 
@@ -362,8 +355,7 @@
 /* VBPQ-Category-Portlet */
 .vbpq-category-view {
   padding: 0px;
-  margin: 0px;
-  font-size: 12px; }
+  margin: 0px; }
 
 .vbpq-category-view ul {
   list-style: none outside none;
@@ -389,13 +381,11 @@
 
 /* VBPQ-Lastest-Entry-Portlet */
 .vbpq-lastest-entries {
-  font-size: 12px;
   padding: 0px;
   margin: 0px;
   text-align: justify; }
 
 .vbpq-lastest-entries {
-  font-size: 12px;
   padding: 0px;
   margin: 0px; }
 
@@ -453,7 +443,6 @@
   text-decoration: underline; }
 
 .vbpq-related-entries {
-  font-size: 12px;
   padding: 10px; }
 
 .vbpq-related-entries .related-title {
@@ -492,7 +481,6 @@
 .vbpq-dynamic-menu {
   padding: 0px;
   margin: 0px;
-  font-size: 12px;
   background: #F5F8FB; }
 
 .vbpq-dynamic-menu ul {

@@ -4,25 +4,28 @@
   z-index: 0; }
 
 .imageGallerySlider {
-  position: relative; }
+  position: relative;
+  width: 100%; }
 
 .imageGallerySlider DIV {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 8;
+  width: 100%;
   opacity: 0.0;
   background-color: #FFF; }
 
 .imageGallerySlider .active {
-  z-index: 10;
-  opacity: 1.0; }
+  z-index: 10; }
 
 .imageGallerySlider .last-active {
   z-index: 9; }
 
 .imageGallerySlider img {
-  display: block; }
+  display: block;
+  width: 100% !important;
+  max-width: 100%; }
 
 .imageGallerySliderFrame .view-gallery-links {
   text-align: right;

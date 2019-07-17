@@ -7,21 +7,22 @@
 <head>
 	<title>$the_title - $company_name</title>
 	<meta name="description" content="Cổng thông tin điện tử Tỉnh Ủy Bình , tin tức về Đảng Cộng Sản Bình Định">
-    <meta name="keywords" content="Phú Yên, Cổng thông tin điện tử , Đảng Cộng Sản Bình Định">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+    <meta name="keywords" content="Bình Định, Trang thông tin điện tử Bình Định , Đảng Cộng Sản Bình Định, DCS Bình Định,Tỉnh ủy Bình Định">
+    <meta content="Tin nhanh VnExpress" property="og:site_name"/>
+	<meta property="og:url" itemprop="url" content="http://binhdinh.dcs.vn"/>
+	<meta property="og:image" itemprop="thumbnailUrl" content="http://binhdinh.dcs.vn/documents/19/47303/1-8.jpg/d342e944-7298-43c6-a300-0062058303bf?version=1.0&t=1551189388000&imagePreview=1"/>
+	<meta content="Đảng Cộng Sản Tỉnh Bình Định - Trang thông tin điện tử Tỉnh Ủy Bình Định " itemprop="headline" property="og:title"/>
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	$theme.include($top_head_include)
 </head>
-
 <body class="$css_class" >
-
 	$theme.include($body_top_include)
-	
 	#if ($is_signed_in)
 		#dockbar()
-	#end
-	
+	#end			
 	<div class="body-wrapper">
-						
 		#if ($theme_display.isShowPageSettingsIcon())
 			<span class="lfr-meta-actions">
 				<a class="taglib-icon quickEditLayoutSet" href="$editBannerURL" data-width="700" id="quickEditBanner">
@@ -29,36 +30,14 @@
 				</a>
 			</span>
 		#end
-		
-		<div class="flash-banner-wrapper">
-			<div class="flash-banner">
-				#set($flashBannerUrl="$themeDisplay.getPathThemeImages()/banner/bannerBD.swf")
-				#set($staticBannerUrl="$themeDisplay.getPathThemeImages()/banner/static-banner.png")
-				<input type="hidden" name="imgUrl" id="imgUrl" value="$staticBannerUrl">
-				<object class="test">
-					<param name="wmode" value="transparent">
-					<EMBED  SRC="$flashBannerUrl" 
-							WIDTH="1075" 
-							HEIGHT="150"
-							PLAY="true" 
-							LOOP="true" 
-							QUALITY="high" 
-							scale="noborder" 
-							wmode="transparent" 
-							PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
-						> 
-					</EMBED>
-				</object>
-				<div style="clear:both"></div>
-			</div>
-			<div class="banner-bottom">
+		<div class="banner-wrapper">
+			<div clas="banner-content">
+				<img src="$themeDisplay.getPathThemeImages()/banner/co.gif" class="flag"/>
 			</div>
 		</div>
-		
 		#if ($has_navigation || $is_signed_in)
 			#parse ("$full_templates_path/navigation.vm")
 		#end
-		
 		<div class="content-wrapper">
 			#parse ("$full_templates_path/sub_navigation.vm")
 			<div id="content">
@@ -73,24 +52,20 @@
 				#end
 			</div>
 		</div>
-		
 		<footer id="footer" role="contentinfo">
 			#parse ("$full_templates_path/footer.vm")
 		</footer>
-		
 		$theme.include($body_bottom_include)
 				
-		<a href="#" class="scroll-up-btn">
+		<a href="javascript:;" class="scroll-up-btn">
 			<span class="btn-arrow"></span>
-			<span class="btn-text">#language("back-to-top")</span>
 		</a>
 	</div>
-	
 	<script type="text/javascript">
 	  $(document).ready(function () {
 	
 	      $(window).scroll(function () {
-	          if ($(this).scrollTop() > 100) {
+	          if ($(this).scrollTop() > 250) {
 	              $('.scroll-up-btn').fadeIn();
 	          } else {
 	              $('.scroll-up-btn').fadeOut();
@@ -103,48 +78,7 @@
 	          }, 600);
 	          return false;
 	      });
-	      setupBanner();
 	 	});
-	 	
-	 	function setupBanner() { 
-	 		var flashBanner = $(".flash-banner");
-	 		var imgUrl = $("#imgUrl").val();
-	 		var imgStatic = "<img src='" + imgUrl + "' width='" + "100%" + "' height='" + "150" + "'/>"
-     		if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 )
-     		{
-        		console.log('Opera');
-        		flashBanner.find(".test").remove();
-        		flashBanner.append(imgStatic);
-    		}
-		    else if(navigator.userAgent.indexOf("Chrome") != -1 )
-		    {
-		    	console.log('Chrome');
-		    }
-		    else if(navigator.userAgent.indexOf("Safari") != -1)
-		    {
-		        console.log('Safari');
-		        flashBanner.find(".test").remove();
-        		flashBanner.append(imgStatic);
-		    }
-		    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
-		    {
-		        console.log('Firefox');
-		        flashBanner.find(".test").remove();
-        		flashBanner.append(imgStatic);
-		    }
-		    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
-		    {
-		      	console.log('IE'); 
-		      	flashBanner.find(".test").remove();
-        		flashBanner.append(imgStatic);
-		    }  
-		    else
-		    {
-		        console.log('unknown');
-		        flashBanner.find(".test").remove();
-        		flashBanner.append(imgStatic);
-		    }
-		}
 	</script>
 	
 	<script type="text/javascript">
@@ -184,8 +118,7 @@
 			);
 		});
 </script>
+<script type="text/javascript" src="$javascript_folder/responsivevoice.js" charset="utf-8"></script>
 </body>
-
 $theme.include($bottom_include)
-
 </html>

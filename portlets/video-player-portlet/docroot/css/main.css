@@ -1,7 +1,11 @@
 @CHARSET "UTF-8";
-
+@import url(video-js.css);
+@import url(videojs-resolution-switcher.css);
 .video-player-portlet{
-	
+	.video-js{
+		width: 100% !important;
+		height: 100% !important;
+	}
 	.videos-content {
 		background: white;
 		border: 1px solid #eee;
@@ -187,7 +191,7 @@
 			padding-left: 20px;
 			
 			a{
-				color: #00528B;
+				color: #333;
 			}
 		}
 		.external-video-frame{
@@ -363,10 +367,6 @@
 			font-size: 14px;
 			font-weight:bold;
 			padding-left: 20px;
-			
-			a{
-				color: #00528B;
-			}
 		}
 	
 		.video-gallery{
@@ -431,7 +431,7 @@
 					
 					.video-name{
 						padding: 5px 0px;
-						
+						text-align: center;
 						.video-title{
 							background: url("/video-player-portlet/images/li-red-icon.jpg") no-repeat scroll 0 4px transparent;
 							padding-left:10px;
@@ -440,6 +440,7 @@
 						.video-upload-date {
 							color: #ccc;
 							font-size: 10px;
+							display: none;
 						}
 						
 					}
@@ -522,7 +523,7 @@
 			
 			.video-name{
 				padding: 5px 0px;
-				
+				text-align: center;
 				.video-title{
 					padding-left:0px;
 					margin-left:0px !important;
@@ -572,7 +573,7 @@
 		
 		.jcarousel-skin-tango .jcarousel-item-horizontal span
 		{
-			color: #00528B;
+			color: #333;
 		}
 		
 		.jcarousel-skin-tango .jcarousel-item-horizontal span:HOVER

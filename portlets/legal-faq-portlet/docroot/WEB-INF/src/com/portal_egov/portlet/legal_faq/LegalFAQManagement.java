@@ -7,6 +7,8 @@ import java.util.List;
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.PortletPreferences;
+import javax.portlet.PortletRequest;
+import javax.portlet.PortletURL;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -17,12 +19,15 @@ import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.portal.service.LayoutLocalServiceUtil;
 import com.liferay.portal.service.ServiceContext;
 import com.liferay.portal.service.ServiceContextFactory;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
 import com.liferay.portlet.PortletPreferencesFactoryUtil;
+import com.liferay.portlet.PortletURLFactoryUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
+import com.portal_egov.portlet.legal_faq.email.FAQEmailUtil;
 import com.portal_egov.portlet.legal_faq.model.LegalFAQCategory;
 import com.portal_egov.portlet.legal_faq.model.LegalFAQEntry;
 import com.portal_egov.portlet.legal_faq.permission.LegalFAQCategoryPermission;
@@ -39,7 +44,10 @@ public class LegalFAQManagement extends MVCPortlet {
 	public void updateFAQEntry(ActionRequest actionRequest,ActionResponse actionResponse){
 		
 		try {
-			
+			ThemeDisplay themeDisplay = (ThemeDisplay) actionRequest.getAttribute(WebKeys.THEME_DISPLAY);
+			String jspPage = "/html/legal_faq_view/view_faq_entry.jsp";
+			String pageName = "/hoi-dap";
+			long plid = 0L;
 			long legalFAQEntryId = ParamUtil.getLong(actionRequest, "legalFAQEntryId",0L);
 			
 			long categoryId = ParamUtil.getLong(actionRequest, "categoryId",0L);
@@ -77,11 +85,11 @@ public class LegalFAQManagement extends MVCPortlet {
 				
 				faqEntryStatus = LegalFAQConstants.LEGAL_FAQ_ENTRY_ANSWERED_STATUS_VALUE;
 			}
-			
+			LegalFAQEntry entry = null;
 			if(legalFAQEntryId > 0){
 				
 				//update FAQ Entry
-				LegalFAQEntryLocalServiceUtil.updateFAQEntry(legalFAQEntryId, companyId, groupId, userId, categoryId,
+				entry = LegalFAQEntryLocalServiceUtil.updateFAQEntry(legalFAQEntryId, companyId, groupId, userId, categoryId,
 					citizenName, citizenPhone, citizenEmail, askDate, askTitle, askContent, answerDate, answerContent,
 					faqEntryPublishStatus, faqEntryStatus);
 			}else{
@@ -91,9 +99,28 @@ public class LegalFAQManagement extends MVCPortlet {
 				serviceContext.setGroupPermissions(new String[] {LegalFAQEntryPermission.VIEW});
 				serviceContext.setGuestPermissions(new String[] {LegalFAQEntryPermission.VIEW});
 				
-				LegalFAQEntryLocalServiceUtil.addFAQEntry(companyId, groupId, userId, categoryId, citizenName,
+				entry = LegalFAQEntryLocalServiceUtil.addFAQEntry(companyId, groupId, userId, categoryId, citizenName,
 					citizenPhone, citizenEmail, citizenAddress, askDate, askTitle, askContent, answerDate, answerContent,
 					faqEntryPublishStatus, faqEntryStatus, serviceContext);
+				legalFAQEntryId = entry.getEntryId();
+			}
+			if(faqEntryStatus == 1){
+				try {
+					plid = LayoutLocalServiceUtil.getFriendlyURLLayout(themeDisplay.getScopeGroupId(),
+							false, pageName).getPlid();
+				} catch (Exception e) {
+					_log.error(e);
+				}
+				PortletURL redirectURL = PortletURLFactoryUtil.create(
+						PortalUtil.getHttpServletRequest(actionRequest), portletName, plid,
+						PortletRequest.RENDER_PHASE);
+				redirectURL.setParameter("legalFAQEntryId", String.valueOf(legalFAQEntryId));
+				redirectURL.setParameter("jspPage", jspPage);
+				String url = redirectURL.toString();
+				
+				String emailContent = FAQEmailUtil.buildAnswerEmailContent(entry, url);
+				
+				FAQEmailUtil.sendAnswerMail(emailContent, entry.getCitizenEmail());
 			}
 		}
 		catch (Exception e) {
@@ -264,6 +291,6 @@ public class LegalFAQManagement extends MVCPortlet {
 			return calendar.getTime();
 		}
 	}
-	
+	private String portletName = "legalfaq_WAR_legalfaqportlet";
 	private Log _log = LogFactory.getLog(LegalFAQManagement.class.getName());
 }

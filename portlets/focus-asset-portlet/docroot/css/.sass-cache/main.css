@@ -65,7 +65,6 @@
         font-size: 14px;
         font-weight: bold;
         text-transform: uppercase;
-        text-shadow: 1px 1px #ccc;
         padding-left: 20px; }
     .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content {
       margin: 0px;
@@ -88,8 +87,7 @@
           background: #f0f0f0; }
         .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li:hover a,
         .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li.selected a {
-          color: #ff0700;
-          text-shadow: 1px 1px #e8e8e8; }
+          color: #ff0700; }
         .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul a {
           background: url("/focus-asset-portlet/images/custom_icon/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
           color: #00528B;
@@ -167,13 +165,12 @@
         display: block;
         padding: 0px 12px;
         outline: none;
-        text-shadow: 1px 1px #d2d2d2;
         text-overflow: ellipsis;
         overflow: hidden;
         -ms-text-overflow: ellipsis; }
       .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-names-container ul li a:hover,
       .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-names-container ul li.active-tab a {
-        color: #ff0700; }
+        color: #b10700; }
     .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container {
       margin: 0px;
       padding: 2px;
@@ -185,7 +182,6 @@
         .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul li {
           border-top: 1px dotted #E4E4E4;
           padding: 5px;
-          padding-left: 5px;
           height: 34px; }
         .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul li:first-child {
           border-top: none; }
@@ -193,17 +189,16 @@
           background: #f6f7f8; }
         .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul li:hover a,
         .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul li.selected a {
-          color: #ff0700;
-          text-shadow: 1px 1px #d2d2d2; }
+          color: #b10700; }
         .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul a {
           background: url("/focus-asset-portlet/images/custom_icon/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
           text-decoration: none;
-          font-weight: 600;
-          padding-left: 12px;
-          font-size: 13px;
+          padding-left: 10px;
           display: block; }
         .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul a:hover {
-          color: #ff0700; }
+          color: #b10700; }
+        .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul a span.focus-asset-title-mobile {
+          display: none; }
 .focus-asset-portlet .focus-asset-display-style-3 {
   width: 100%;
   clear: both;
@@ -298,12 +293,12 @@
           background: #f6f7f8; }
         .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul li:hover a,
         .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul li.selected a {
-          color: #ff0700;
-          text-shadow: 1px 1px #d2d2d2; }
+          color: #ff0700; }
         .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul a {
           background: url("/focus-asset-portlet/images/custom_icon/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
           color: #00528B;
           text-decoration: none;
+          font-weight: 500;
           padding-left: 12px;
           display: block; }
         .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul a:hover {
@@ -407,8 +402,7 @@
           background: #f6f7f8; }
         .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul li:hover a,
         .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul li.selected a {
-          color: #ff0700;
-          text-shadow: 1px 1px #d2d2d2; }
+          color: #ff0700; }
         .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul a {
           color: #00528B;
           text-decoration: none;
@@ -416,192 +410,63 @@
           display: block; }
         .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul a:hover {
           color: #ff0700; }
-.focus-asset-portlet .focus-asset-display-style-6 {
-  width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0 auto; }
-  .focus-asset-portlet .focus-asset-display-style-6 .row-1 {
-    height: 100%;
-    padding: 0px;
-    position: relative; }
-    .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-1 {
-      width: 65%;
-      height: 400px;
-      overflow: hidden;
-      float: left;
-      position: relative; }
-      .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-1 .header {
-        bottom: 0px;
-        position: absolute;
-        left: 0;
-        width: 90%;
-        padding: 0 20px;
-        z-index: 2; }
-        .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-1 .header .article-title {
-          font-size: 2.4em;
-          letter-spacing: -1px;
-          line-height: 1.2;
-          color: #ffffff;
-          font-weight: bold; }
-          .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-1 .header .article-title a {
-            color: #fff; }
-      .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-1 .article-thumbnail a img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; }
-    .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-1::BEFORE {
-      height: 200px;
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#1f264e));
-      background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, #1f264e 100%); }
-    .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-2 {
-      width: 33.5%;
-      margin-left: 10px;
-      float: left;
-      height: 400px;
-      overflow: hidden;
-      background-color: #151739; }
-      .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-2 .header {
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        padding: 10px 5px;
-        height: 220px; }
-        .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-2 .header .article-title {
-          font-size: 1.4em;
-          line-height: 1.4;
-          letter-spacing: -1px;
-          font-weight: bold;
-          color: #333;
-          text-align: left; }
-          .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-2 .header .article-title a {
-            color: #fff; }
-      .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-2 .article-thumbnail {
-        height: 220px;
-        margin-bottom: 0; }
-      .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-2 .article-thumbnail a {
-        display: block;
-        width: 100%;
-        height: 100%; }
-      .focus-asset-portlet .focus-asset-display-style-6 .row-1 .top-asset-2 .article-thumbnail a img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; }
-  .focus-asset-portlet .focus-asset-display-style-6 .row-2 {
-    height: 100%; }
-    .focus-asset-portlet .focus-asset-display-style-6 .row-2 .top-asset-item {
-      position: relative;
-      margin-bottom: 4px;
-      background-color: #151739;
-      width: 32%;
-      float: left;
-      margin-top: 10px; }
-      .focus-asset-portlet .focus-asset-display-style-6 .row-2 .top-asset-item .header {
-        position: absolute;
-        bottom: 15px;
-        left: 0;
-        width: 90%;
-        padding: 0 20px;
-        z-index: 2; }
-        .focus-asset-portlet .focus-asset-display-style-6 .row-2 .top-asset-item .header .article-title {
-          font-size: 1em;
-          font-weight: bold;
-          color: #333;
-          text-align: left; }
-          .focus-asset-portlet .focus-asset-display-style-6 .row-2 .top-asset-item .header .article-title a {
-            color: #fff; }
-    .focus-asset-portlet .focus-asset-display-style-6 .row-2 .top-asset-item::BEFORE {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      height: 130px;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#1f264e));
-      background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, #1f264e 100%); }
-    .focus-asset-portlet .focus-asset-display-style-6 .row-2 .top-asset-item:first-child {
-      width: 32%;
-      margin-right: 10px; }
-    .focus-asset-portlet .focus-asset-display-style-6 .row-2 .top-asset-item:last-child {
-      width: 33.5%;
-      margin-left: 10px; }
-    .focus-asset-portlet .focus-asset-display-style-6 .row-2 .article-thumbnail a img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover; }
-.focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-  .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row1 {
-    width: 63%;
-    float: left;
-    position: relative; }
-    .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row1 .header {
-      position: absolute;
-      text-align: justify;
-      bottom: 20px;
-      z-index: 100000; }
-      .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row1 .header .article-title {
-        padding: 0px 20px; }
-      .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row1 .header a {
-        font-weight: 700;
-        font-size: 22px;
-        color: #fff; }
-  .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row1:BEFORE {
-    height: 200px;
-    content: '';
-    position: absolute;
-    bottom: 18px;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#1f264e));
-    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, #1f264e 100%); }
-  .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row2 {
-    float: right;
-    width: 35%; }
-    .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row2 .top-asset-item {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 100px; }
-      .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row2 .top-asset-item .article-thumbnail {
-        width: 25%;
-        float: left;
-        height: 100%; }
-      .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row2 .top-asset-item .header {
-        text-align: justify;
-        margin-left: 5px;
-        width: 68%;
-        float: left;
-        height: 100%; }
-        .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row2 .top-asset-item .header a {
-          font-weight: 700; }
-  .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row3 {
-    width: 63%;
+.focus-asset-portlet .focus-asset-display-style-5 .firstFive {
+  width: 49%;
+  float: left; }
+.focus-asset-portlet .focus-asset-display-style-5 .secondFive {
+  width: 49%;
+  float: right; }
+.focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .header-topper {
+  background: url(../images/background/bg-kieu1.png) repeat-x bottom left;
+  color: #fff0a4;
+  padding-left: 0 !important;
+  height: 25px;
+  box-shadow: 0 1px 1px 0px #ddd !important; }
+  .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .header-topper .header-title {
+    padding-left: 3px;
+    white-space: nowrap;
+    line-height: 26px;
+    position: relative;
+    height: 25px;
+    color: #ffff00;
+    text-transform: uppercase;
+    padding-right: 60px;
+    background: url(../images/background/h3-kieu1.png) no-repeat bottom right;
+    font-weight: bold; }
+  .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .header-topper .header-icon {
     float: left; }
-    .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row3 .top-asset-item {
-      width: 49%;
-      float: left;
-      margin-left: 10px; }
-      .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row3 .top-asset-item img {
-        height: 150px !important; }
-      .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row3 .top-asset-item a {
-        font-weight: 700; }
-    .focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container .row3 .top-asset-item:FIRST-CHILD {
-      margin-left: 0 !important; }
-.focus-asset-portlet .focus-asset-display-style-7 .focus-asset-container img {
+    .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .header-topper .header-icon .box-icon {
+      position: relative;
+      top: 3px; }
+  .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .header-topper a {
+    color: #fff0a4; }
+.focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .list-news {
   width: 100%;
-  height: 100%;
-  border-radius: 5px; }
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 10px; }
+  .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .list-news .top-asset {
+    width: 100%;
+    margin: 5px 0px; }
+    .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .list-news .top-asset .asset-title {
+      padding: 2px 0px !important;
+      font-weight: bold; }
+      .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .list-news .top-asset .asset-title a {
+        color: #b10700; }
+    .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .list-news .top-asset .small-img {
+      float: left;
+      width: 45%;
+      height: 120px;
+      padding: 4px;
+      line-height: 25px; }
+    .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .list-news .top-asset .summary-content {
+      text-align: justify;
+      font-size: 14px; }
+  .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .list-news .older-asset {
+    background: url(../images/custom_icon/li-red-icon.jpg) no-repeat scroll left center;
+    padding: 0 0 0 15px !important;
+    text-align: justify;
+    margin-bottom: 5px; }
+    .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .list-news .older-asset .asset-title a {
+      font-weight: 500; }
 

@@ -194,6 +194,7 @@
 			</span>
 			<a href="javascript:void(0)" id="decreaseText"> <b>A</b> <sup>-</sup></a>
 			<a href="javascript:void(0)" id="increaseText"> <b>A</b> <sup>+</sup></a>
+			<button class="article-audio" id="btnSpeak"></button>
 		</div>
 	</div>
 	
@@ -281,7 +282,6 @@
 				/>
 			</c:if>
 		</div>
-		
 		<c:if test="<%= show %>">
 			<div class="asset-metadata">
 				<%@ include file="/html/portlet/asset_publisher/asset_metadata.jspf" %>

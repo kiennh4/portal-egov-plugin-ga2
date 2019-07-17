@@ -28,7 +28,7 @@
     font-size: 12px;
     color: #747474; }
   .portlet-asset-publisher .asset-abstract-first .asset_title a {
-    color: #00528B;
+    color: #333;
     font-size: 25px;
     font-weight: bold;
     text-decoration: none; }
@@ -42,11 +42,11 @@
     width: 300px; }
   .portlet-asset-publisher .asset-abstract-first .assetdesc-img a img {
     width: 300px;
-    height: 16vw; }
+    height: 18vw; }
   .portlet-asset-publisher .asset-abstract-first .assetdesc-text {
     color: #474747;
     display: block;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: normal;
     text-align: left; }
   .portlet-asset-publisher .asset-abstract-first .border-footer {
@@ -60,15 +60,15 @@
     clear: right;
     margin-bottom: 10px;
     margin-top: 10px;
-    font-family: 'Roboto',"Helvetica Neue",Helvetica,sans-serif;
-    font-size: 15px; }
+    font-family: 'Helvetica_Regular', sans-serif;
+    font-size: 16px; }
     .portlet-asset-publisher .asset-content .asset-description {
       clear: left;
       font-style: italic; }
   .portlet-asset-publisher .asset-content .asset_title {
     padding-bottom: 5px; }
   .portlet-asset-publisher .asset-abstract .asset_title a {
-    color: #00528B;
+    color: #333;
     font-size: 15px !important;
     font-weight: bold;
     text-decoration: none; }
@@ -84,7 +84,7 @@
     width: 100%; }
   .portlet-asset-publisher .asset-abstract .assetdesc-img a img {
     width: 100%;
-    height: 12vw; }
+    height: 15vw; }
   .portlet-asset-publisher .asset-abstract .assetdesc-content {
     width: 66%;
     color: #474747;
@@ -101,12 +101,15 @@
     width: 100%; }
   .portlet-asset-publisher .asset_publisher_view_full_content {
     font-size: 17px;
-    font-family: 'Roboto',"Helvetica Neue",Helvetica,sans-serif;
+    font-family: 'Helvetica_Regular', sans-serif;
     text-align: justify; }
     .portlet-asset-publisher .asset_publisher_view_full_content .asset-abstract .assetdesc-text {
       width: 100%; }
+    .portlet-asset-publisher .asset_publisher_view_full_content p {
+      font-family: 'Helvetica_Regular', sans-serif !important; }
+    .portlet-asset-publisher .asset_publisher_view_full_content div span {
+      font-family: 'Helvetica_Regular', sans-serif; }
   .portlet-asset-publisher .asset_publisher_view_full_content .asset_title {
-    color: #00528B;
     text-align: left;
     font-weight: bold;
     padding-top: 10px;
@@ -133,7 +136,9 @@
     text-decoration: none; }
   .portlet-asset-publisher .asset_publisher_view_full_content .social_icon a {
     text-decoration: none;
-    color: #00528B; }
+    color: #333; }
+  .portlet-asset-publisher .asset_publisher_view_full_content .journal-content-article div {
+    font-family: 'Helvetica_Regular', sans-serif !important; }
   .portlet-asset-publisher .asset_publisher_view_full_content .social_icon .mail_icon {
     padding-left: 5px; }
   .portlet-asset-publisher .asset_publisher_view_full_content .asset-metadata {
@@ -178,7 +183,7 @@
     padding: 3px 0 0 10px; }
   .portlet-asset-publisher .related_asset .related_asset_list li a {
     text-decoration: none;
-    color: #00528B; }
+    color: #333; }
   .portlet-asset-publisher .related_asset .related_asset_list li a:hover {
     color: #FF5800; }
   .portlet-asset-publisher .related_asset .publish_date {
@@ -295,6 +300,15 @@
     padding-bottom: 1px; }
   .portlet-asset-publisher ul.title-list {
     margin-left: 0; }
+  .portlet-asset-publisher ul.title-list li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px; }
+    .portlet-asset-publisher ul.title-list li a .taglib-text {
+      text-decoration: none; }
+    .portlet-asset-publisher ul.title-list li a .icon {
+      position: relative;
+      top: -2px; }
 
 .portlet-configuration .aui-form .queryRules fieldset {
   padding: 0; }

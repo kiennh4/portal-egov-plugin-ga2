@@ -85,12 +85,11 @@ public class ConfigurationActionImpl extends DefaultConfigurationAction {
 
 				}
 			} else if (Validator.equals(displayStyle,
-					FocusAssetConstants.DISPLAY_STYLE_6)) {
-				updateStyle1Config(actionRequest, preferences);
-			}
-			else if (Validator.equals(displayStyle,
-					FocusAssetConstants.DISPLAY_STYLE_7)) {
-				updateStyle1Config(actionRequest, preferences);
+					FocusAssetConstants.DISPLAY_STYLE_5)) {
+				for(int i=0; i < FocusAssetConstants.STYLE_5_TAB_PARAM_PREFIXS.length; i++){
+					String tabPrefix = FocusAssetConstants.STYLE_5_TAB_PARAM_PREFIXS[i];
+					updateTabConfig(actionRequest, tabPrefix, preferences);
+				}
 			}
 
 			preferences.setValue("displayStyle", displayStyle);
@@ -225,6 +224,7 @@ public class ConfigurationActionImpl extends DefaultConfigurationAction {
 		preferences.setValue(configParamPrefix + "TabOrderByType", orderByType);
 
 	}
+	
 
 	private static Log _log = LogFactory.getLog(ConfigurationActionImpl.class
 			.getName());

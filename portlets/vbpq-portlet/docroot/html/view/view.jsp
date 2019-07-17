@@ -23,7 +23,6 @@
 <%@ taglib uri="http://liferay.com/tld/util" prefix="liferay-util"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-
 <%@include file="/html/view/init.jsp"%>
 
 <%

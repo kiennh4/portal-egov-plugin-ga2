@@ -114,7 +114,8 @@ function getCurrentDateTime(){
 		currentTimeWrapper.innerHTML = currentTimeValue;
 	}
 }
-$(document).on("ready",function(){
+$(document).on("ready",function(event){
+	event.preventDefault();
 	$('.journal-content-article [style*="font-size"]').css('font-size', '');
 	$('.journal-content-article [style*="line-height"]').css('line-height', '');
 	$("#increaseText").on("click", function() {
@@ -128,4 +129,97 @@ $(document).on("ready",function(){
         bc = current - parseInt(1); 
         $(".journal-content-article").css({"font-size" : bc});
 	});
+	$(".arcontactus-message-button").click(function(){
+		$("#chatbotContainer").fadeToggle();
+	});
+	$("#closeChatBot").click(function() {
+		$("#chatbotContainer").slideToggle();
+	});
+	$("#chatbotContainer").toggle();
+});
+$("#btnSpeak").on("click",function(){
+	console.log("Start speaking article content......");
+	var content = $(".journal-content-article").text();
+	content = content.replace(/\n|\r/g, "");
+	content = content.replace(/[^0-9a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ\s]/gi, ' ');
+	content = content.replace(/\s+/g, ' ');
+	content = content.trim();
+	console.log(content);
+	responsiveVoice.speak(content,'Vietnamese Female');
+	
+});
+$("#sendMessage").on("click", function(){
+	console.log("Start chat bot .....");
+	var message = $("#chatContent").val();
+	$("#botTemplate").remove();
+	if(message === ''){
+		return;
+	} else{
+		var userBlock = '<div class="container user">'
+			+ '<div class="content">'
+			+ 		message
+			+ '</div>'
+			+ '</div>';
+		$("#chatBotBody").append(userBlock);
+		var elementSroll = $('#chatBotBody')[0];
+		elementSroll.scrollTop = elementSroll.scrollHeight;
+		$("#chatContent").val("");
+		$.ajax({
+			url : "http://gdnnchatbot.bkavegov.vn:8000/chatbot/1?content=" + message,
+			type: "GET",
+			success: function(data) {
+				var responseMessage = JSON.stringify(data);
+				var jsonConvert = JSON.parse(responseMessage);
+				var chatbotBlock = '<div style="clear:both"></div><div class="container bot">'
+					+ '<div class="content">'
+					+ 		jsonConvert.Data
+					+ '</div>'
+					+ '</div>';
+				$("#chatBotBody").append(chatbotBlock);
+				elementSroll.scrollTop = elementSroll.scrollHeight;
+	        }, 
+	        error: function(jqXHR, textStatus, errorThrown) {
+	            alert(jqXHR.status);
+	        }
+		});
+	}
+});
+$('#chatContent').keypress(function (e) {
+	  if (e.which == 13) {
+		  	console.log("Start chat bot .....");
+		  	$("#botTemplate").remove();
+			var message = $("#chatContent").val();
+			
+			if(message === ''){
+				return;
+			} else{
+				var userBlock = '<div style="clear:both"><div class="container user">'
+					+ '<div class="content">'
+					+ 		message
+					+ '</div>'
+					+ '</div>';
+				$("#chatBotBody").append(userBlock);
+				var elementSroll = $('#chatBotBody')[0];
+				elementSroll.scrollTop = elementSroll.scrollHeight;
+				$("#chatContent").val("");
+				$.ajax({
+					url : "http://gdnnchatbot.bkavegov.vn:8000/chatbot/1?content=" + message,
+					type: "GET",
+					success: function(data) {
+						var responseMessage = JSON.stringify(data);
+						var jsonConvert = JSON.parse(responseMessage);
+						var chatbotBlock = '<div style="clear:both"></div><div class="container bot">'
+							+ '<div class="content">'
+							+ 		jsonConvert.Data
+							+ '</div>'
+							+ '</div>';
+						$("#chatBotBody").append(chatbotBlock);
+						elementSroll.scrollTop = elementSroll.scrollHeight;
+			        }, 
+			        error: function(jqXHR, textStatus, errorThrown) {
+			            alert(jqXHR.status);
+			        }
+				});
+			}
+	  }
 });

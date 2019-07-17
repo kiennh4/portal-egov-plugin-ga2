@@ -24,8 +24,8 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
-<script src="/video-player-portlet/jwplayer/jwplayer.js" type="text/javascript"></script>
-
+<script src="/video-player-portlet/jwplayer/video.js" type="text/javascript"></script>
+<script src="/video-player-portlet/jwplayer/videojs-resolution-switcher.js" type="text/javascript"></script>
 <%@include file="/html/view/init.jsp"%>
 
 <%

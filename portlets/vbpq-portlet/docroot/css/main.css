@@ -2,7 +2,6 @@
 		
 	.vbpq-category-admin{
 		color: #434343;
-		font-size: 12px;
 	}
 	
 	.vbpq-category-admin .lfr-header-row{
@@ -113,7 +112,6 @@
 	.vbpq_entry_management{
 		margin: 0px;
 		padding-bottom: 30px;
-		font-size: 12px;
 		font-family: Tahoma;
 		color: #454545;
 	}
@@ -148,8 +146,6 @@
 	}
 			
 	.vbpq_advance_search_form{
-		font-size: 12px;
-		font-family: Tahoma;
 		font-weight: bold;
 		border: 1px solid #E4E4E4;
 		border-radius: 4px;
@@ -269,7 +265,6 @@
 		height: 150px;
 		width: 100%;
 		position: relative;
-		font-size: 12px;
 	}
 	
 	.vbpq_search_form_left_content{
@@ -398,7 +393,6 @@
 	}
 					
 	.vbpq-search-result-title{
-		font-size: 12px;
 		font-weight: bold;
 		color: #00528B;
 		text-shadow: 1px 1px #E4E4E4;
@@ -407,7 +401,6 @@
 	}
 	
 	.vbpq_search_results{
-		font-size: 12px;
 		font-weight: normal;
 		color: #434343;
 	}
@@ -444,7 +437,6 @@
 	.vbpq-category-view{
 		padding: 0px;
 		margin: 0px;
-		font-size: 12px;
 	}
 	
 	.vbpq-category-view ul{
@@ -479,14 +471,12 @@
 /* VBPQ-Lastest-Entry-Portlet */
 		
 	.vbpq-lastest-entries{
-		font-size: 12px;
 		padding: 0px;
 		margin: 0px;
 		text-align: justify;
 	}
 	
 	.vbpq-lastest-entries{
-		font-size: 12px;
 		padding: 0px;
 		margin: 0px;
 	}
@@ -558,7 +548,6 @@
 	}
 	
 	.vbpq-related-entries{
-		font-size: 12px;
 		padding: 10px;
 	}
 		
@@ -606,7 +595,6 @@
 	.vbpq-dynamic-menu{
 		padding: 0px;
 		margin: 0px;
-		font-size: 12px;
 		background: #F5F8FB;
 	}
 	

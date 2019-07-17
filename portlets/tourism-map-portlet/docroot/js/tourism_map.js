@@ -30,7 +30,7 @@ AUI.add(
 									+ 	'</div>'
 									+ '</li>';
 		
-		var MARKER_ITEM_TEMPLATE 	= '<li class="marker-item results-row" data-markerId="{markerId}">'
+		var MARKER_ITEM_TEMPLATE 	= '<li class="marker-item results-row" name="{markerTitle}" data-markerId="{markerId}">'
 									+ 	'<div class="marker-item-content-wrapper">'
 									+ 		'<span class="marker-name">'
 									+ 			'<a href="javascript:;" data-markerId="{markerId}">{markerTitle}</a>'
@@ -237,7 +237,7 @@ AUI.add(
 							
 							//Add class selected cho marker được chọn hiện tại
 							selectedMarkerItem.addClass('selected');
-							
+				        	
 							//Lấy và hiển thị thông tin của marker được chọn trên bản đồ
 							instance._getJsonMarker(
 								selectedMarkerId,
@@ -259,6 +259,8 @@ AUI.add(
 										marker.setVisible(true);
 										
 										var markerInfoContent = instance._buildMarkerInfoContent(selectedMarker);
+										
+										instance.tourismMap.setCenter(new google.maps.LatLng(selectedMarker.markerLatitude, selectedMarker.markerLongitude));
 										
 										instance._showMarkerInfo(marker, markerInfoContent);
 									}
@@ -294,9 +296,9 @@ AUI.add(
 								markerInfoContent += 	'</br>';
 								markerInfoContent += 	'<span class="marker-address">' + markerAddress + '</span>';
 								markerInfoContent += 	'<div style="clear: both;"></div>';
-								markerInfoContent += 	'<span class="marker-image">';
+								/*markerInfoContent += 	'<span class="marker-image">';
 								markerInfoContent += 		'<img src="' + markerImagePath + '"/>';
-								markerInfoContent += 	'</span>';
+								markerInfoContent += 	'</span>';*/
 								markerInfoContent += 	'<span class="marker-info">' + markerInfo + '</span>';
 								markerInfoContent += '</div>';
 							
@@ -357,7 +359,7 @@ AUI.add(
 							
 							var buffer = [];
 							
-							buffer.push('<ul>');
+							buffer.push('<ul class="maker-list">');
 							
 							A.each(
 									markerList,
@@ -435,11 +437,11 @@ AUI.add(
 								markerInfoContent += 	'</br>';
 								markerInfoContent += 	'<span class="marker-address">' + markerAddress + '</span>';
 								markerInfoContent += 	'<div style="clear: both;"></div>';
-								markerInfoContent += 	'<span class="marker-image">';
+								markerInfoContent += 	'<span class="marker-info">' + markerInfo + '</span>';
+								/*markerInfoContent += 	'<span class="marker-image">';
 								markerInfoContent += 		'<img class="marker-image" src="' + markerImageURL + '"/>';
 								markerInfoContent += 	'</span>';
-								markerInfoContent += 	'<span class="marker-info">' + markerInfo + '</span>';
-								markerInfoContent += '</div>';
+*/								markerInfoContent += '</div>';
 							
 							instance._showMarkerInfo(marker, markerInfoContent);	
 						});
@@ -461,11 +463,11 @@ AUI.add(
 							instance.markerInfoWindow = null;
 						}
 
-						instance.markerInfoWindow = new google.maps.InfoWindow({
-							content: markerInfoContent
-						});
+						instance.markerInfoWindow = new google.maps.InfoWindow();
+						var infowindow = new google.maps.InfoWindow();
+						infowindow.setContent(markerInfoContent);
 						
-						instance.markerInfoWindow.open(instance.tourismMap, marker);
+						infowindow.open(instance.tourismMap, marker);
 					},
 					
 					/**

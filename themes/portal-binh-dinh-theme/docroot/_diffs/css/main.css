@@ -15,8 +15,9 @@
 @import url(extras.css);
 
 @import url(custom.css);
-/* @import url(home-fonts.css); */
-
+@import url(home-font.css);
+@import url(custom-responsive.css);
 /* @import url(focus-asset-portlet.css); */
 /* @import url(article-publisher-portlet.css); */
+
 @import url(asset-publisher.css);

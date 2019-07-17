@@ -1,226 +1,107 @@
-<%@page import="com.bkav.portal.portlet.focus_asset.cache.AssetEntryCache"%>
+<%@page import="sun.misc.FpUtils"%>
+<%@page
+	import="com.bkav.portal.portlet.focus_asset.cache.AssetEntryCache"%>
+<%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui" %>
-<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
-<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui"%>
+<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet"%>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
-<%@include file="/html/style/style-1/init.jsp"%>
+<%@include file="/html/style/style-5/init.jsp"%>
 
-<%
-	List<AssetEntryCache> focusAssetList = FocusAssetUtil.getAssetList(request);
-%>
 
-<c:choose>
-	<c:when test='<%=focusAssetList.size() > 0 %>'>
-	
-		<%
-		AssetEntryCache topAsset = focusAssetList.get(0);
-		
-		String topAssetTitle = StringUtil.shorten(topAsset.getTitle(), 120);
-		
-		String viewTopAssetContentURL = FocusAssetUtil.getViewContentURL(request, topAsset); //topAsset.getViewContentURL();
-		
-		String topAssetImgPath = topAsset.getSmallImagePath();
-		
-		%>
-		<div class="focus-asset-display-style-5">
-			<h1 class = "focus-asset-title"><img width = "10px" height = "10px" src = "/focus-asset-portlet/images/arrow-right.png"/><liferay-ui:message key = "focus-asset"/></h1>
-			<div class="asset-list-panel">
-				<div id="<portlet:namespace/>asset-description" class = "panel-description" >
-					<%=StringUtil.shorten(focusAssetList.get(0).getDescription(), 400)  %>
-				</div>
-				
-				
-				<div id="<portlet:namespace/>asset-list"  class="panel-content" style = "display:none;">
-					<ul>
-					<%
-						for(int i = 0; i < focusAssetList.size(); i++){
-							
-							AssetEntryCache focusAsset = focusAssetList.get(i);
-											
-							long assetEntryId = focusAsset.getEntryId();
-							
-							String focusAssetTitle = StringUtil.shorten(focusAsset.getTitle(), 90);
-							
-							String viewAssetContentURL = FocusAssetUtil.getViewContentURL(request, focusAsset);
-							
-							String focusAssetImgPath = focusAsset.getSmallImagePath();
-					%>
-							<li data-assetId = "<%=assetEntryId %>" class='focus-asset <%= (i == 0) ? "selected" : StringPool.BLANK%>'>
-								<a  href="<%=viewAssetContentURL%>"
-									title="<%=focusAsset.getTitle() %>"
-									data-assetId = "<%=assetEntryId %>" 
-									data-assetTitle="<%=focusAssetTitle%>" 
-									data-imageSrcPath="<%=focusAssetImgPath%>"
-									data-assetDesc = "<%=StringUtil.shorten(focusAsset.getDescription(), 400) %>"
-								>
-									<span><%=focusAssetTitle %></span>
-								</a>
-							</li>
-					<%
-						}
-					%>
-					</ul>
+<div class="focus-asset-display-style-5">
+	<%
+		for(int i=0; i < FocusAssetConstants.STYLE_5_TAB_PARAM_PREFIXS.length; i++){
+			String elementName = FocusAssetConstants.STYLE_5_TAB_PARAM_PREFIXS[i];
+			String tabPrefix = FocusAssetConstants.STYLE_5_TAB_PARAM_PREFIXS[i] + "TabTitle";
+			String tabName = preferences.getValue(tabPrefix, StringPool.BLANK);
+			String url = FocusAssetUtil.getOlderAssetsURL(request,elementName);
+	%>
+		<section class="article-slidebar <%= elementName%>">
+			<div class="header-topper">
+				<div class="header-title-inner">
+					<div class="header-icon">
+						<div class="header-title">
+						<a href="<%=url %>">
+							<span class="box-icon"><img alt="" src="/article-publisher-portlet/icon.png"></span>
+							<span class="title-text"><%= tabName %></span>
+						</a>
+						</div>
+					</div>
 				</div>
 			</div>
-			
-			<div id="<portlet:namespace/>asset-summary-panel" class="asset-summary-panel">
-				<div class="asset-image">
-					<a href="<%=viewTopAssetContentURL%>">
-						<img id="<portlet:namespace/>focus-asset-img" 
-						 	src="<%=topAssetImgPath %>"
-						 	onerror="this.src='/focus-asset-portlet/images/default-asset-image.jpg'"
-						 />
-					 </a>
-				</div>
+			<div class="list-news">
+			<%
+				List<AssetEntryCache> assetCacheList = FocusAssetUtil.getTabAssetList(request, elementName);
+				String topAssetSummary = "";
+				String topAssetImgPath = "";
 				
-				<div class="asset-title">
-					<a href="<%=viewTopAssetContentURL%>">
-						<span id="<portlet:namespace/>asset-title"><%=topAssetTitle %></span>
-					</a>
-				</div>
+				for(int index = 0; index < assetCacheList.size(); index ++){
+					
+					AssetEntryCache assetCache = assetCacheList.get(index);
+					
+					String assetTitle = StringUtil.shorten(assetCache.getTitle(), 120);
+					
+					String assetLink = FocusAssetUtil.getViewContentURL(request, assetCache); //assetCache.getViewContentURL();
+					
+					String publishDate = dateFormat.format(assetCache.getPublishDate());
+					
+					if(index == 0){
+						topAssetSummary = FocusAssetUtil.getContentSummary(request, assetCache.getClassPK(), 500);
+						topAssetImgPath = assetCache.getSmallImagePath();
+					}
+				%>
+					<c:choose>
+						<c:when test='<%=(index == 0)%>'>
+							<div class="top-asset">
+								<span class="asset-title">
+									<a href="<%=assetLink%>" title="<%=assetCache.getTitle()%>">
+										<%=assetTitle %>
+									</a>
+								</span>
+								
+								<div class="asset-summary">
+									<c:if test='<%=Validator.isNotNull(topAssetImgPath) %>'>
+										<span class="asset-image">
+											<a href="<%=assetLink%>">
+												<img class="small-img" align="left" 
+													src="<%= topAssetImgPath %>" 
+													title="<%=assetCache.getTitle()%>"
+													onerror="this.src='/article-publisher-portlet/images/default-asset-image.jpg'"	
+												/>
+											</a>
+										</span>
+									</c:if>
+									
+									<span class="summary-content"><%=topAssetSummary %></span>
+								</div>
+								
+								<div style="clear: both;"></div>
+							</div>
+						</c:when>
+						
+						<c:otherwise>
+							<div class="older-asset">
+								<span class="asset-title">
+									<a href="<%=assetLink%>" title="<%=assetCache.getTitle()%>"><%=assetTitle %></a>
+								</span>
+							</div>
+						</c:otherwise>
+					</c:choose>
+				<%
+				}
+				%>
 			</div>
-			
-			<div style="clear:both;"></div>
-		</div>
-	</c:when>
-	
-	<c:otherwise>
-		<%
-		renderRequest.setAttribute(WebKeys.PORTLET_CONFIGURATOR_VISIBILITY, Boolean.TRUE);
-		%>
-
-		<div class="portlet-configuration portlet-msg-info">
-			<aui:a href="<%= portletDisplay.getURLConfiguration() %>" 
-				label="no-asset-found" onClick="<%= portletDisplay.getURLConfigurationJS() %>" />
-		</div>
-	</c:otherwise>
-</c:choose>
+		</section>
+	<%
+		} 
+	%>
+	<div style="clear: both;"></div>
+</div>
 
 
-
-<aui:script>
-	AUI().ready(function(A){
-		
-		var autoPushData = null;
-		
-		var index = 1;
-		
-		var focusAssetList = A.all('#<portlet:namespace/>asset-list a');
-		
-		if(autoPushData){
-			clearInterval(autoPushData);
-		}
-		
-		autoPushData = setInterval(function(){
-				<portlet:namespace />autoPushAssetSummaryContent(focusAssetList);
-			},
-			4000
-		);
-		
-		focusAssetList.each(function(focusAsset,listIndex){
-			
-			focusAsset.on('mouseover',function(){
-			
-				A.all('#<portlet:namespace/>asset-list .focus-asset').removeClass('selected');
-			
-				<portlet:namespace />showAssetSummaryContent(focusAsset);
-				
-				if(autoPushData){
-					clearInterval(autoPushData);
-				}
-			});
-						
-			focusAsset.on('mouseout',function(){
-				
-				index = listIndex + 1;
-				
-				autoPushData = setInterval(function(){
-						<portlet:namespace />autoPushAssetSummaryContent(focusAssetList);
-					},
-					4000
-				);
-			});
-		});
-						
-		Liferay.provide(
-			window,
-			'<portlet:namespace />autoPushAssetSummaryContent',
-			function(focusAssetList) {
-			
-				var A = AUI();
-				
-				var assetNodes = focusAssetList._nodes;
-								
-				if(index >= assetNodes.length){
-					index = 0;
-				}
-				
-				var currentNode = assetNodes[index];
-				
-				var nodeItem = A.one('#<portlet:namespace/>asset-list li[data-assetId="' + currentNode.getAttribute('data-assetId') + '"]');
-				
-				if(nodeItem){
-					
-					A.all('#<portlet:namespace/>asset-list .focus-asset').removeClass('selected');
-					
-					nodeItem.addClass('selected');
-				}
-								
-				var assetLinks = A.all('#<portlet:namespace/>asset-summary-panel a');
-				
-				assetLinks.each(function(linkItem){
-					linkItem.setAttribute('href',currentNode.getAttribute('href'));
-				});
-				
-				var assetTitleHolder = A.one('#<portlet:namespace/>asset-title');
-				
-				assetTitleHolder.set('text',currentNode.getAttribute('data-assetTitle'));
-								
-				var assetImageHolder = A.one('#<portlet:namespace/>focus-asset-img');
-				
-				assetImageHolder.setAttribute('src',currentNode.getAttribute('data-imageSrcPath'));
-				
-				var assetDesc = A.one('#<portlet:namespace/>asset-description');
-				
-				assetDesc.text(currentNode.getAttribute('data-assetDesc'));
-				
-				index ++;
-			}
-		);
-				
-		Liferay.provide(
-			window,
-			'<portlet:namespace />showAssetSummaryContent',
-			function(focusAsset) {
-				
-				var A = AUI();
-				
-				var assetAncestor = focusAsset.ancestor('.focus-asset');
-				
-				if(assetAncestor){
-					assetAncestor.addClass('selected');
-				}
-				
-				var assetLinks = A.all('#<portlet:namespace/>asset-summary-panel a');
-				
-				assetLinks.each(function(linkItem){
-					linkItem.setAttribute('href',focusAsset.getAttribute('href'));
-				});
-				
-				var assetTitleHolder = A.one('#<portlet:namespace/>asset-title');
-				
-				assetTitleHolder.set('text',focusAsset.getAttribute('data-assetTitle'));
-								
-				var assetImageHolder = A.one('#<portlet:namespace/>focus-asset-img');
-				
-				assetImageHolder.setAttribute('src',focusAsset.getAttribute('data-imageSrcPath'));
-			}
-		);
-	});
-</aui:script>
-	
 

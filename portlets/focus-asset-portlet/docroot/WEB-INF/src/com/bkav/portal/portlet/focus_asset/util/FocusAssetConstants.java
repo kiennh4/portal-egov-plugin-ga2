@@ -12,9 +12,8 @@ public class FocusAssetConstants {
 	
 	public static final String DISPLAY_STYLE_5 = "style-5";
 	
-	public static final String DISPLAY_STYLE_6 = "style-6";
-	
-	public static final String DISPLAY_STYLE_7 = "style-7";
-	
 	public static final String[] STYLE_2_TAB_PARAM_PREFIXS = {"first","second","third"};
+	
+	public static final String[] STYLE_5_TAB_PARAM_PREFIXS = {"firstFive","secondFive"};
+	
 }

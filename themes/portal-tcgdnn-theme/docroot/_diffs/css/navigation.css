@@ -60,7 +60,7 @@ li{
 	top: 14px;
 }
 .sf-navbar ul {
-	background: #1a8be0;
+	background: #0593d9;
 	list-style: none;
 	padding: 0;
 	left: 0;
@@ -71,7 +71,7 @@ li{
 	z-index: 99;
 }
 .sf-navbar li:hover{
-	background: #1a8be0;
+	background: #0593d9;
 	/* only transition out, not in */
 	-webkit-transition: none;
 	transition: none;
@@ -88,13 +88,14 @@ li{
 	background: #1a8be0;
 }
 .navigation li a:HOVER{
-	color: #ffd900;
+	color: #fff;
+	font-weight: 700;
 }
 .sf-navbar li.selected{
 	background-color: #1a8be0;
 }
 .sf-navbar li.selected a{
-	color: #ffd900;
+	color: #fff;
 }
 .sf-navbar li.selected ul li a{
 	color: #fff;
@@ -110,7 +111,7 @@ li{
 	display: block;
 }
 .sf-navbar ul li a:hover{
-	color: #ffd900 !important;
+	color: #fff !important;
 }
 
 /* ---------- Sub Navigations ----------*/
@@ -118,7 +119,7 @@ li{
 	background-color: #F0F0F0;
 	border: 1px solid #C0C2C5;
 	clear: both;
-	padding: 5px;
+	position: relative;
 	z-index: 1;
 	font-size: 12px;
 	color: #00528B;
@@ -128,11 +129,11 @@ li{
 }
 
 .sub-navigation .date_time {
-	background: url("../images/custom_icon/clock.png") no-repeat scroll left
-		center transparent;
+	/* background: url("../images/custom_icon/clock.png") no-repeat scroll left
+		center transparent; */
 	color: #00528B;
 	float: left;
-	padding: 2px 0px 2px 20px;
+	padding: 12px 0px 10px 3px;
 	height: 16px;
 	font-size: 13px;
 	white-space: nowrap;
@@ -147,6 +148,9 @@ li{
 .sub-navigation .global-search-wrapper {
 	float: right;
 	height: 22px;
+	position: absolute;
+	right: 0;
+	top: 7px;
 }
 
 .sub-navigation .global-search-wrapper select {

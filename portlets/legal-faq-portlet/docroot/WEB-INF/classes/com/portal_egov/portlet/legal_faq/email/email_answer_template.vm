@@ -1,0 +1,14 @@
+<table style="width: 100%; border: none; font-family: tahoma; font-size: 13px;">
+	<tr>
+		<td style="padding: 5px 0px; font-size: 16px; font-weight: bold;">
+			<span  style="border-bottom: 1px solid #333; padding-bottom: 3px; width: 100%; display: block;">
+				$notifyTitleAnswer
+			</span>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 5px 0px;">T&#7893;ng C&#7909;c Gi&#225;o D&#7909;c Ngh&#7873; Nghi&#7879;p &#273;&#227; ti&#7871;p nh&#7853;n c&#226;u h&#7887;i c&#7911;a b&#7841;n v&#224;o <b>$askDate</b> v&#224; &#273;&#227; tr&#7843; l&#7901;i c&#226;u h&#7887;i c&#7911;a b&#7841;n truy c&#7853;p v&#224;o,
+			 <a href="$faqLink"> &#273;&#226;y </a> &#273;&#7875; xem c&#226;u tr&#7843; l&#7901;i.
+        </td>
+	</tr>	
+</table>

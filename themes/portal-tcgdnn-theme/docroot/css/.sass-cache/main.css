@@ -1193,7 +1193,7 @@ li {
   top: 14px; }
 
 .sf-navbar ul {
-  background: #1a8be0;
+  background: #0593d9;
   list-style: none;
   padding: 0;
   left: 0;
@@ -1204,7 +1204,7 @@ li {
   z-index: 99; }
 
 .sf-navbar li:hover {
-  background: #1a8be0;
+  background: #0593d9;
   /* only transition out, not in */
   -webkit-transition: none;
   transition: none; }
@@ -1220,13 +1220,14 @@ li {
   background: #1a8be0; }
 
 .navigation li a:HOVER {
-  color: #ffd900; }
+  color: #fff;
+  font-weight: 700; }
 
 .sf-navbar li.selected {
   background-color: #1a8be0; }
 
 .sf-navbar li.selected a {
-  color: #ffd900; }
+  color: #fff; }
 
 .sf-navbar li.selected ul li a {
   color: #fff; }
@@ -1241,14 +1242,14 @@ li {
   display: block; }
 
 .sf-navbar ul li a:hover {
-  color: #ffd900 !important; }
+  color: #fff !important; }
 
 /* ---------- Sub Navigations ----------*/
 .sub-navigation {
   background-color: #F0F0F0;
   border: 1px solid #C0C2C5;
   clear: both;
-  padding: 5px;
+  position: relative;
   z-index: 1;
   font-size: 12px;
   color: #00528B;
@@ -1257,22 +1258,26 @@ li {
   margin-bottom: 5px; }
 
 .sub-navigation .date_time {
-  background: url("../images/custom_icon/clock.png") no-repeat scroll left center transparent;
-  color: #bc0000;
+  /* background: url("../images/custom_icon/clock.png") no-repeat scroll left
+  	center transparent; */
+  color: #00528B;
   float: left;
-  padding: 2px 0px 2px 20px;
+  padding: 12px 0px 10px 3px;
   height: 16px;
   font-size: 13px;
   white-space: nowrap; }
 
 .sub-navigation .top_notify {
-  color: #bc0000;
+  color: #00528B;
   float: left;
   margin-left: 40px; }
 
 .sub-navigation .global-search-wrapper {
   float: right;
-  height: 22px; }
+  height: 22px;
+  position: absolute;
+  right: 0;
+  top: 7px; }
 
 .sub-navigation .global-search-wrapper select {
   display: none; }
@@ -1775,11 +1780,8 @@ input[type="submit"], input[type="button"], input[type="reset"], button {
   text-shadow: 1px 1px #FFF;
   width: auto; }
   input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover {
-    background: #b9ced9 url(../images/application/state_hover_bg.png) repeat-x 0 0;
-    border-color: #627782;
     color: #369; }
   input[type="submit"]:focus, input[type="button"]:focus, input[type="reset"]:focus, button:focus {
-    background: #ebebeb url(../images/application/state_active_bg.png) repeat-x 0 0;
     border-color: #555; }
 
 input.focus, textarea.focus {
@@ -1799,7 +1801,6 @@ input.focus, textarea.focus {
   width: auto;
   padding: 0; }
 .lfr-actions.lfr-extended:focus, .lfr-actions.lfr-extended:focus ul {
-  background: #ebebeb url(../images/application/state_active_bg.png) repeat-x 0 0;
   border-color: #555; }
 .lfr-actions.lfr-extended.disabled, .lfr-actions.lfr-extended.disabled ul, .lfr-actions.lfr-extended.disabled:hover, .lfr-actions.lfr-extended.disabled:hover ul {
   background: #d4d4d4 url(../images/portlet/header_bg.png) repeat-x 0 0;
@@ -1807,8 +1808,6 @@ input.focus, textarea.focus {
   color: #555;
   opacity: 0.5; }
 .lfr-actions.lfr-extended:hover, .lfr-actions.lfr-extended:hover ul {
-  background: #b9ced9 url(../images/application/state_hover_bg.png) repeat-x 0 0;
-  border-color: #627782;
   color: #369; }
 
 .lfr-actions.disabled .taglib-text {
@@ -2125,7 +2124,7 @@ body > .lfr-menu-list, body > .lfr-menu-list ul, .lfr-actions, .aui-dialog-conte
 body {
   /* background: url("../images/background/body-bg.png"); */
   font-size: 13px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Poppins",Arial,Helvetica,sans-serif;
   color: #434343;
   position: relative; }
 
@@ -2152,7 +2151,6 @@ body {
 
 .content-wrapper iframe {
   width: 100% !important;
-  height: 100% !important;
   overflow: hidden !important; }
 
 select,
@@ -2568,6 +2566,142 @@ hr, .separator {
     width: 50px;
     display: block;
     text-align: center; }
+
+.arcontactus-message-button {
+  width: 50px;
+  position: fixed;
+  height: 50px;
+  right: 30px;
+  bottom: 88px;
+  background: #4267b2;
+  border-radius: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer; }
+  .arcontactus-message-button .static {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -26px;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    color: #fff; }
+
+.chatbot-container {
+  width: 330px;
+  height: 370px;
+  background: #fff;
+  position: fixed;
+  bottom: 155px;
+  box-shadow: 0 0 0 1px #ddd;
+  padding: 5px;
+  border-radius: 10px;
+  z-index: 10000;
+  right: 40px; }
+  .chatbot-container .header {
+    align-items: center;
+    border-bottom: 1pt solid rgba(0, 0, 0, 0.1);
+    flex-basis: 10%;
+    height: 10%;
+    justify-content: space-between;
+    max-height: 28px;
+    min-height: 20px;
+    text-align: center;
+    width: 100%; }
+    .chatbot-container .header #closeChatBot {
+      position: absolute;
+      left: 13px;
+      color: #fff;
+      top: 9px;
+      height: 15px;
+      width: 15px;
+      background: #ddd;
+      border-radius: 5px; }
+  .chatbot-container .chat-form {
+    position: relative; }
+    .chatbot-container .chat-form a {
+      position: absolute;
+      cursor: pointer;
+      right: -4px;
+      bottom: -6px; }
+  .chatbot-container .chat-body {
+    padding: 7px 5px;
+    overflow-y: auto;
+    height: 297px;
+    width: 100%; }
+    .chatbot-container .chat-body ul {
+      margin: 0 !important; }
+  .chatbot-container .chat-body .container {
+    overflow-wrap: break-word;
+    width: 85%;
+    height: auto;
+    margin: 5px 0px;
+    color: #fff;
+    border-radius: 5px; }
+  .chatbot-container .chat-body .user {
+    float: right;
+    border-bottom-right-radius: 1.3em;
+    border-top-right-radius: 1.3em;
+    background: #0084ff;
+    margin-right: 5px; }
+    .chatbot-container .chat-body .user .content {
+      text-align: right; }
+  .chatbot-container .chat-body .bot {
+    border-bottom-left-radius: 1.3em;
+    border-top-left-radius: 1.3em;
+    background: #f1f0f0;
+    color: #333; }
+  .chatbot-container .chat-body .container .content {
+    padding: 5px 5px 5px 5px; }
+  .chatbot-container .chat-form input[type="text"] {
+    display: inline-block;
+    padding: 6px 5px !important;
+    width: 96%;
+    color: #555555;
+    vertical-align: middle;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    border-radius: 3px !important;
+    background-color: #ffffff !important;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s !important;
+    transition: border linear 0.2s, box-shadow linear 0.2s !important; }
+  .chatbot-container .chat-form input[type="text"]:focus {
+    border-color: rgba(82, 168, 236, 0.8) !important;
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important; }
+
+.article-audio {
+  background: url(../images/custom_icon/audio.png) no-repeat 0 0 !important;
+  width: 45px;
+  height: 25px;
+  border: none;
+  cursor: pointer; }
+
+.article-audio:HOVER {
+  color: #fff !important;
+  background: url(../images/custom_icon/audio.png) no-repeat 0 0 !important; }
 
 /* TAGLIB SEARCH ITERATOR */
 .taglib-page-iterator {

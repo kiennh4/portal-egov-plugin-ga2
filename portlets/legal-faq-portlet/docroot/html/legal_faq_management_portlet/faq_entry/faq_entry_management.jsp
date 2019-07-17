@@ -142,7 +142,7 @@
 																							
 			<liferay-ui:search-container-column-text name="#" value="<%=String.valueOf(legalFAQEntryIndex) %>" href="<%=rowHREF %>"/>
 								
-			<liferay-ui:search-container-column-text name="ask-title" 
+			<liferay-ui:search-container-column-text name="Ti&#234;u &#273;&#7873;" 
 				value="<%=StringUtil.shorten(faqEntry.getAskTitle(), 60) %>" 
 				orderable="<%=true %>"
 				orderableProperty="ask-title"

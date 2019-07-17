@@ -32,7 +32,7 @@
 
 					String assetTitle = StringUtil.shorten(
 									assetCache.getTitle(), 90);
-					String assetSumary = ArticlePublisherUtil.getContentSummary(request, assetCache.getClassPK(), 110);
+					String assetSumary = ArticlePublisherUtil.getContentSummary(request, assetCache.getClassPK(), 250);
 
 					String assetLink = ArticlePublisherUtil
 									.getViewContentURL(request, assetCache);
@@ -47,7 +47,8 @@
 							<h3><%=assetTitle %></h3>
 						</a>
 						<a href="<%=assetLink %>" title="<%=assetTitle%>" class="asset-thumb">
-							<img alt="<%=assetTitle %>" src="<%=assetImage%>" onerror="this.src='/article-publisher-portlet/images/default-asset-image.jpg'">
+							<img alt="<%=assetTitle %>" src="<%=assetImage%>" 
+							onerror="this.src='/article-publisher-portlet/images/default-asset-image.jpg'">
 						</a>
 						<h6>
 							<%=assetSumary %>

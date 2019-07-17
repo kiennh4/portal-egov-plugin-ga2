@@ -1,0 +1,343 @@
+.portlet-asset-publisher {
+  /* Hook by AnhBDB 23/09/2014 */
+  /* Hook by QuangCV 23/09/2018 */
+  /* End hook */ }
+  .portlet-asset-publisher .add-asset-selector {
+    margin-bottom: 1em;
+    overflow: auto; }
+  .portlet-asset-publisher .asset-abstract .asset-content p {
+    margin-bottom: 0; }
+  .portlet-asset-publisher .asset-abstract .asset-description {
+    clear: left; }
+  .portlet-asset-publisher .asset-abstract .asset-category-name {
+    font-weight: bold;
+    color: #ff5800; }
+  .portlet-asset-publisher .asset-abstract .asset-publish-date {
+    font-size: 12px;
+    color: #747474; }
+  .portlet-asset-publisher .asset-back-to {
+    text-align: right; }
+  .portlet-asset-publisher .asset-abstract-first .asset-content p {
+    margin-bottom: 0; }
+  .portlet-asset-publisher .asset-abstract-first .asset-description {
+    clear: left; }
+  .portlet-asset-publisher .asset-abstract-first .asset-category-name {
+    font-weight: bold;
+    color: #ff5800; }
+  .portlet-asset-publisher .asset-abstract-first .asset-publish-date {
+    font-size: 12px;
+    color: #747474; }
+  .portlet-asset-publisher .asset-abstract-first .asset_title a {
+    color: #00528B;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none; }
+  .portlet-asset-publisher .asset-abstract-first .asset_title a:hover {
+    color: #FF5800; }
+  .portlet-asset-publisher .asset-abstract-first .assetdesc-img {
+    display: block;
+    float: left;
+    margin-right: 18px;
+    margin-top: 4px;
+    width: 300px; }
+  .portlet-asset-publisher .asset-abstract-first .assetdesc-img a img {
+    width: 300px;
+    height: 16vw; }
+  .portlet-asset-publisher .asset-abstract-first .assetdesc-text {
+    color: #474747;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left; }
+  .portlet-asset-publisher .asset-abstract-first .border-footer {
+    border-top: 1px solid #E2E1E1;
+    clear: both;
+    height: 1px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    width: 100%; }
+  .portlet-asset-publisher .asset-content {
+    clear: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Helvetica_Regular', sans-serif !important;
+    font-size: 15px; }
+    .portlet-asset-publisher .asset-content .asset-description {
+      clear: left;
+      font-style: italic; }
+  .portlet-asset-publisher .asset-content .asset_title {
+    padding-bottom: 5px; }
+  .portlet-asset-publisher .asset-abstract .asset_title a {
+    color: #00528B;
+    font-size: 15px !important;
+    font-weight: bold;
+    text-decoration: none; }
+  .portlet-asset-publisher .asset-abstract .asset_title a:hover {
+    color: #FF5800; }
+  .portlet-asset-publisher .asset-abstract .assetdesc-img {
+    width: 30%;
+    display: block;
+    float: left;
+    margin-right: 18px;
+    margin-top: 4px; }
+  .portlet-asset-publisher .asset-abstract .assetdesc {
+    width: 100%; }
+  .portlet-asset-publisher .asset-abstract .assetdesc-img a img {
+    width: 100%;
+    height: 12vw; }
+  .portlet-asset-publisher .asset-abstract .assetdesc-content {
+    width: 66%;
+    color: #474747;
+    display: block;
+    font-weight: normal;
+    float: left;
+    text-align: left; }
+  .portlet-asset-publisher .asset-abstract .border-footer {
+    border-top: 1px solid #E2E1E1;
+    clear: both;
+    height: 1px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    width: 100%; }
+  .portlet-asset-publisher .asset_publisher_view_full_content {
+    font-size: 17px;
+    font-family: 'Helvetica_Regular', sans-serif !important;
+    text-align: justify; }
+    .portlet-asset-publisher .asset_publisher_view_full_content .asset-abstract .assetdesc-text {
+      width: 100%; }
+  .portlet-asset-publisher .asset_publisher_view_full_content .asset_title {
+    color: #00528B;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 22px !important; }
+  .portlet-asset-publisher .asset_publisher_view_full_content .social-panel {
+    clear: both;
+    border-bottom: 1px solid #E4E4E4;
+    height: 25px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    width: 100%;
+    background-color: #f4f4f4 !important; }
+  .portlet-asset-publisher .portlet-boundary_101_.asset_publisher_view_full_content .social_panel .asset_publish_date {
+    color: #868484;
+    display: block;
+    float: left;
+    font-size: 11px !important;
+    margin-top: 5px; }
+  .portlet-asset-publisher .asset_publisher_view_full_content .social_icon {
+    display: block;
+    float: right; }
+  .portlet-asset-publisher .asset_publisher_view_full_content .social_icon .taglib-icon .taglib-text {
+    text-decoration: none; }
+  .portlet-asset-publisher .asset_publisher_view_full_content .social_icon a {
+    text-decoration: none;
+    color: #00528B; }
+  .portlet-asset-publisher .asset_publisher_view_full_content .social_icon .mail_icon {
+    padding-left: 5px; }
+  .portlet-asset-publisher .asset_publisher_view_full_content .asset-metadata {
+    margin: 0px; }
+  .portlet-asset-publisher .related_asset_settings {
+    margin: 0px;
+    padding: 5px; }
+  .portlet-asset-publisher .related_asset_advanced_settings {
+    margin-top: 25px;
+    padding-left: 15px; }
+  .portlet-asset-publisher .related_asset_advanced_settings select {
+    width: auto;
+    background-image: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
+    padding: 4px;
+    border: 1px solid #A1A2A4;
+    border-radius: 3px; }
+  .portlet-asset-publisher .related_asset {
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px; }
+  .portlet-asset-publisher .related_asset .newer_related_asset {
+    padding-bottom: 10px; }
+  .portlet-asset-publisher .related_asset .older_related_asset {
+    padding-top: 10px; }
+  .portlet-asset-publisher .related_asset .related_asset_title {
+    color: #8A0000;
+    border-bottom: 1px solid #BCBCBC;
+    font-weight: bold;
+    padding-bottom: 5px; }
+  .portlet-asset-publisher .related_asset .related_asset_list {
+    padding-top: 5px;
+    margin: 0px; }
+  .portlet-asset-publisher .related_asset .related_asset_list ul {
+    padding: 0px;
+    margin: 0px; }
+  .portlet-asset-publisher .related_asset .related_asset_list li {
+    background: url("/html/portlet/asset_publisher/images/li_icon.gif") no-repeat scroll 0 9px transparent;
+    list-style: none outside none;
+    margin: 0;
+    padding: 3px 0 0 10px; }
+  .portlet-asset-publisher .related_asset .related_asset_list li a {
+    text-decoration: none;
+    color: #00528B; }
+  .portlet-asset-publisher .related_asset .related_asset_list li a:hover {
+    color: #FF5800; }
+  .portlet-asset-publisher .related_asset .publish_date {
+    color: #999999;
+    font-size: 10px;
+    padding-left: 2px; }
+  .portlet-asset-publisher .asset-categorization-title {
+    background: url("/html/portlet/asset_publisher/images/category_icon.png") no-repeat 0px 0px transparent;
+    font-size: 14px;
+    font-weight: bold;
+    color: #BC0000;
+    text-decoration: underline;
+    padding-left: 20px;
+    padding-bottom: 10px; }
+  .portlet-asset-publisher .asset-flag {
+    margin-top: 1.8em; }
+  .portlet-asset-publisher .asset-full-content.no-title .asset-user-actions {
+    padding-bottom: 2em; }
+  .portlet-asset-publisher .asset-edit {
+    float: right;
+    margin-left: 1em; }
+  .portlet-asset-publisher .asset-metadata {
+    clear: both;
+    margin-left: 25px;
+    overflow: hidden; }
+    .portlet-asset-publisher .asset-metadata span {
+      float: left; }
+    .portlet-asset-publisher .asset-metadata .metadata-categories span {
+      float: none; }
+  .portlet-asset-publisher .asset-more {
+    clear: left; }
+  .portlet-asset-publisher .asset-entries-group-label {
+    background-color: #DDD;
+    clear: both;
+    padding: 3px; }
+  .portlet-asset-publisher .asset-small-image {
+    float: right;
+    padding-left: 0.5em;
+    width: 150px; }
+  .portlet-asset-publisher .asset-actions {
+    float: right;
+    font-size: 11px;
+    font-weight: normal;
+    margin-bottom: 3px;
+    margin-top: 0; }
+  .portlet-asset-publisher .asset-title {
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 0.7em;
+    margin-right: 8px;
+    margin-top: 2em;
+    padding-bottom: 1px; }
+    .portlet-asset-publisher .asset-title .asset-actions img {
+      margin-left: 5px; }
+    .portlet-asset-publisher .asset-title a {
+      text-decoration: none; }
+      .portlet-asset-publisher .asset-title a:hover {
+        text-decoration: underline; }
+  .portlet-asset-publisher .asset-user-actions .export-actions, .portlet-asset-publisher .asset-user-actions .print-action, .portlet-asset-publisher .asset-user-actions .locale-actions {
+    float: right; }
+  .portlet-asset-publisher .asset-user-actions .locale-separator {
+    border-right: 1px solid #CCC;
+    float: right;
+    margin-right: 1em;
+    padding: 0.8em 0.5em; }
+  .portlet-asset-publisher .asset-user-actions .print-action {
+    margin: 0 1em; }
+  .portlet-asset-publisher .edit-controls {
+    margin-bottom: 20px; }
+  .portlet-asset-publisher .final-separator {
+    border: 0;
+    margin-bottom: 30px; }
+  .portlet-asset-publisher .lfr-meta-actions {
+    margin-right: 1em;
+    padding-top: 0; }
+  .portlet-asset-publisher .metadata-author {
+    background: url(@theme_image_path@/portlet/edit_guest.png) no-repeat 0 0;
+    float: left;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-left: 25px; }
+  .portlet-asset-publisher .metadata-entry {
+    color: #999; }
+  .portlet-asset-publisher .metadata-modified-date, .portlet-asset-publisher .metadata-create-date, .portlet-asset-publisher .metadata-publish-date, .portlet-asset-publisher .metadata-expiration-date {
+    background: url(@theme_image_path@/common/date.png) no-repeat 0 0;
+    color: #999;
+    margin-bottom: 1em;
+    padding-left: 25px; }
+  .portlet-asset-publisher .metadata-priority {
+    background: url(@theme_image_path@/common/top.png) no-repeat 0 20%;
+    margin-right: 10px;
+    padding-left: 25px; }
+  .portlet-asset-publisher .metadata-view-count {
+    margin-right: 10px; }
+  .portlet-asset-publisher .separator {
+    border-right: 1px solid #999;
+    clear: both;
+    margin: 25px 25px; }
+  .portlet-asset-publisher .taglib-asset-categories-summary {
+    float: left; }
+  .portlet-asset-publisher .taglib-asset-tags-summary {
+    float: left; }
+  .portlet-asset-publisher .title-list .asset-actions {
+    left: 10px;
+    position: relative; }
+  .portlet-asset-publisher .title-list .asset-metadata {
+    padding: 0; }
+  .portlet-asset-publisher .title-list a {
+    float: left; }
+  .portlet-asset-publisher li.title-list {
+    clear: both;
+    list-style: none;
+    margin-bottom: 0.15em;
+    margin-right: 8px;
+    padding-bottom: 1px; }
+  .portlet-asset-publisher ul.title-list {
+    margin-left: 0; }
+
+.portlet-configuration .aui-form .queryRules fieldset {
+  padding: 0; }
+  .portlet-configuration .aui-form .queryRules fieldset legend {
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0; }
+.portlet-configuration .aui-form .lfr-form-row {
+  background-color: #F3F3F3; }
+  .portlet-configuration .aui-form .lfr-form-row:hover {
+    background-color: #DFFCCB; }
+  .portlet-configuration .aui-form .lfr-form-row .aui-field {
+    line-height: 2; }
+    .portlet-configuration .aui-form .lfr-form-row .aui-field.tags-selector, .portlet-configuration .aui-form .lfr-form-row .aui-field.categories-selector {
+      clear: both;
+      line-height: 1.5;
+      margin-top: 5px;
+      width: 100%; }
+.portlet-configuration .aui-form .general-display-settings {
+  margin-bottom: 1em; }
+.portlet-configuration .lfr-panel .lfr-panel-titlebar {
+  margin-bottom: 0; }
+.portlet-configuration .lfr-panel-content {
+  background-color: #F8F8F8;
+  padding: 10px; }
+.portlet-configuration .dl-file-icon {
+  border-width: 0;
+  margin-right: 0.3em;
+  position: relative;
+  text-align: left;
+  top: 0.4em; }
+.portlet-configuration .add-asset-selector {
+  overflow: auto; }
+.portlet-configuration .asset-search {
+  margin-bottom: 1em; }
+.portlet-configuration .lfr-actions.select-existing-selector {
+  margin: 0 0 1em 1em; }
+.portlet-configuration .asset-subtype {
+  margin-left: 2em; }
+
+.ie .portlet-asset-publisher .asset-metadata {
+  height: 1%; }
+
+.social-boomarks-options {
+  margin-left: 2em; }
+

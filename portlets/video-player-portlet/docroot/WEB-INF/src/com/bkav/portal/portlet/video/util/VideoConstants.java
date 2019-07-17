@@ -17,7 +17,7 @@ public class VideoConstants {
 	
 	public static final String EXTERNAL_VIDEO_TYPE="external";
 	
-	public static final String[] DEFAULT_VIDEO_EXTENSIONS = {".flv",".mp4"};
+	public static final String[] DEFAULT_VIDEO_EXTENSIONS = {".avi,.flv",".mp4"};
 	
 	public static final String[] DEFAULT_IMAGE_THUMBNAIL_EXTENSIONS = {".gif",".jpeg",".jpg",".png"};
 	

@@ -180,22 +180,20 @@
 				preloadNeighborImages: true,
 				preloadAllImages: true,
 				showInfo: false
-			}		
+			}	
 		).render();
 		
 		
-		imageGallerySlider.setStyles({
-		    height:  <%=imageThumbnailHeight + 4%>,
-		    width:   <%=imageThumbnailWidth + 4%>
-		})
-		
+ 		imageGallerySlider.setStyles({
+ 		    height:  <%=imageThumbnailHeight + 4%>,
+ 		});
+ 		
 		if(<%=useCustomImageSize %>){
 		
 			var imageThumbnail = imageGallerySlider.all('img');
 			
 			imageThumbnail.setStyles({
-			    height:  <%=imageThumbnailHeight %>,
-			    width:   <%=imageThumbnailWidth %>
+ 			    height:  <%=imageThumbnailHeight %>,
 			})
 		}
 	}

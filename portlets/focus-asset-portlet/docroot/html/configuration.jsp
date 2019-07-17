@@ -35,10 +35,8 @@
 							selected='<%=Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_3) %>'/>
 				<aui:option label="<%=FocusAssetConstants.DISPLAY_STYLE_4 %>" value="<%=FocusAssetConstants.DISPLAY_STYLE_4 %>" 
 							selected='<%=Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_4) %>'/>
-				<aui:option label="<%=FocusAssetConstants.DISPLAY_STYLE_6%>" value="<%=FocusAssetConstants.DISPLAY_STYLE_6 %>" 
-							selected='<%=Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_6) %>'/> 
-				<aui:option label="<%=FocusAssetConstants.DISPLAY_STYLE_7%>" value="<%=FocusAssetConstants.DISPLAY_STYLE_7 %>" 
-							selected='<%=Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_7) %>'/> 
+				<aui:option label="<%=FocusAssetConstants.DISPLAY_STYLE_5 %>" value="<%=FocusAssetConstants.DISPLAY_STYLE_5 %>" 
+							selected='<%=Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_5) %>'/>
 			</aui:select> 
 		</div>
 		
@@ -57,12 +55,16 @@
 				<h3 class="config-title"><liferay-ui:message key="asset-query-rules"/></h3>
 				
 				<div id="<portlet:namespace/><%=FocusAssetConstants.DISPLAY_STYLE_1 %>" 
-					 class='style-setting <%=((Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_2)) || (Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_7))) ? "" : "aui-helper-hidden"%>'>
+					 class='style-setting <%=((Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_1))) ? "" : "aui-helper-hidden"%>'>
 					<liferay-util:include page="/html/style/style-1/config.jsp" servletContext="<%=getServletContext() %>" />
 				</div>
 				<div id="<portlet:namespace/><%=FocusAssetConstants.DISPLAY_STYLE_2 %>" 
-					 class='style-setting <%=((!Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_1))&&(!Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_6)) &&(!Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_7))) ? "" : "aui-helper-hidden"%>'>
+					 class='style-setting <%=((!Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_1)) && (!Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_5))) ? "" : "aui-helper-hidden"%>'>
 					<liferay-util:include page="/html/style/style-2/config.jsp" servletContext="<%=getServletContext() %>" />
+				</div>
+				<div id="<portlet:namespace/><%=FocusAssetConstants.DISPLAY_STYLE_5 %>" 
+					 class='style-setting <%=((Validator.equals(displayStyle, FocusAssetConstants.DISPLAY_STYLE_5))) ? "" : "aui-helper-hidden"%>'>
+					<liferay-util:include page="/html/style/style-5/config.jsp" servletContext="<%=getServletContext() %>" />
 				</div>
 			</div>
 		</div>
@@ -94,11 +96,16 @@
 					
 					styleThumbnailImg.setAttribute('src',selectedStyleThumbnailPath);
 				}
-				if ((selectedStyle=='<%=FocusAssetConstants.DISPLAY_STYLE_1.trim() %>')||(selectedStyle=='<%=FocusAssetConstants.DISPLAY_STYLE_6.trim() %>')||(selectedStyle=='<%=FocusAssetConstants.DISPLAY_STYLE_7.trim() %>'))
+				if ((selectedStyle=='<%=FocusAssetConstants.DISPLAY_STYLE_1.trim() %>')){
 					A.one('#<portlet:namespace/>' + '<%=FocusAssetConstants.DISPLAY_STYLE_1.trim() %>').show();
-				else
-					A.one('#<portlet:namespace/><%=FocusAssetConstants.DISPLAY_STYLE_2.trim() %>').show();
-			});
+				}
+				else {
+					if((selectedStyle=='<%=FocusAssetConstants.DISPLAY_STYLE_5.trim() %>'))
+						A.one('#<portlet:namespace/><%=FocusAssetConstants.DISPLAY_STYLE_5.trim() %>').show();
+					else
+						A.one('#<portlet:namespace/><%=FocusAssetConstants.DISPLAY_STYLE_2.trim() %>').show();
+				}
+			});	
 		}
 				
 		var closeConfigPageBtn = A.one('#<portlet:namespace/>cancelBtn');

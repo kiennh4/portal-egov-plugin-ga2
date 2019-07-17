@@ -2,50 +2,64 @@
 
 <%
 	/**
-	*	Style 1 config params
+	*	Style 5 config params
 	**/
 	
-	String styleTitle = preferences.getValue("styleTitle", LanguageUtil.get(locale, "title"));
+	String randomNameSpace = PortalUtil.generateRandomKey(request, "focus_assets") + StringPool.UNDERLINE;
 	
-	boolean showPublishDate = GetterUtil.getBoolean(preferences.getValue("showPublishDate", null),false);
+	/**
+	*	1st Tab Query Rules Parameters
+	**/
+	String firstTabTitle = preferences.getValue("firstFiveTabTitle","tab1");
 	
-	boolean queryContains = GetterUtil.getBoolean(preferences.getValue("queryContains", null),true);
+	boolean firstTabQueryContains = GetterUtil.getBoolean(preferences.getValue("firstFiveTabQueryContains", null),true);
 	
-	boolean queryAndOperator = GetterUtil.getBoolean(preferences.getValue("queryAndOperator", null),false);
+	boolean firstTabQueryAndOperator = GetterUtil.getBoolean(preferences.getValue("firstFiveTabQueryAndOperator", null),false);
 	
-	String queryName = preferences.getValue("queryName","assetTags");
+	String firstTabQueryName = preferences.getValue("firstFiveTabQueryName","assetTags");
 	
-	String queryValues = StringUtil.merge(preferences.getValues("queryValues", new String[0]));
+	String firstTabQueryValues = StringUtil.merge(preferences.getValues("firstFiveTabQueryValues", new String[0]));
 	
-	String[] queryValuesArray = preferences.getValues("queryValues", new String[0]);
-	
-	long[] allAssetCategoryIds = new long[0];
-	
-	String[] allAssetTagNames = new String[0];
-	
-	if(Validator.equals(queryName,"assetTags")){
+	if(Validator.equals(firstTabQueryName,"assetTags")){
 		
-		queryValues = ParamUtil.getString(request, "selectedTagsNames", queryValues);
+		firstTabQueryValues = ParamUtil.getString(request, "firstFiveTabSelectedTagsNames", firstTabQueryValues);
 		
-		allAssetTagNames = new String[queryValuesArray.length];
-		
-		allAssetTagNames = queryValuesArray;
 	}else {
-		
-		queryValues = ParamUtil.getString(request, "selectedCategoryIds", queryValues);
-		
-		allAssetCategoryIds = new long[queryValuesArray.length];
-		
-		for(int i = 0;i < queryValuesArray.length; i++){
-			allAssetCategoryIds[i] = Long.parseLong(queryValuesArray[i]);
-		}
+		firstTabQueryValues = ParamUtil.getString(request, "firstFiveTabSelectedCategoryIds", firstTabQueryValues);
 	}
 	
-	int numbersOfEntriesDisplay = GetterUtil.getInteger(preferences.getValue("numbersOfEntriesDisplay", "8"));
+	int firstTabEntriesDisplay = GetterUtil.getInteger(preferences.getValue("firstFiveTabEntriesDisplay", "6"));
 	
-	String orderByColumn = preferences.getValue("orderByColumn","publishDate");
+	String firstTabOrderByColumn = preferences.getValue("firstFiveTabOrderByColumn","publishDate");
 	
-	String orderByType = preferences.getValue("orderByType","DESC");
+	String firstTabOrderByType = preferences.getValue("firstFiveTabOrderByType","DESC");
+	
+	/**
+	*	2nd Tab Query Rules Parameters
+	**/
+	String secondTabTitle = preferences.getValue("secondFiveTabTitle","tab2");
+	
+	boolean secondTabQueryContains = GetterUtil.getBoolean(preferences.getValue("secondFiveTabQueryContains", null),true);
+	
+	boolean secondTabQueryAndOperator = GetterUtil.getBoolean(preferences.getValue("secondFiveTabQueryAndOperator", null),false);
+	
+	String secondTabQueryName = preferences.getValue("secondFiveTabQueryName","assetTags");
+	
+	String secondTabQueryValues = StringUtil.merge(preferences.getValues("secondFiveTabQueryValues", new String[0]));
+	
+	if(Validator.equals(secondTabQueryName,"assetTags")){
+		
+		secondTabQueryValues = ParamUtil.getString(request, "secondFiveTabSelectedTagsNames", secondTabQueryValues);
+		
+	}else {
+		secondTabQueryValues = ParamUtil.getString(request, "secondFiveTabSelectedCategoryIds", secondTabQueryValues);
+	}
+	
+	int secondTabEntriesDisplay = GetterUtil.getInteger(preferences.getValue("secondFiveTabEntriesDisplay", "6"));
+	
+	String secondTabOrderByColumn = preferences.getValue("secondFiveTabOrderByColumn","publishDate");
+	
+	String secondTabOrderByType = preferences.getValue("secondFiveTabOrderByType","DESC");
 %>
 
 

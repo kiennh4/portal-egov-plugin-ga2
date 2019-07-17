@@ -23,7 +23,8 @@
 <%@ taglib uri="http://liferay.com/tld/util" prefix="liferay-util" %>
  
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-
+<script src="/video-player-portlet/jwplayer/video.js" type="text/javascript"></script>
+<script src="/video-player-portlet/jwplayer/videojs-resolution-switcher.js" type="text/javascript"></script>
 <%@include file="/html/view/init.jsp"%>
 
 <%
@@ -84,18 +85,57 @@
 			String style = "width:" + videoFrameWidth +"px;height:" + videoFrameHeight + "px";
 			%>
 			<div class="video-player-frame" >
+				<div class="video-player" style="<%=style%>">
 				<c:choose>
 					<c:when test='<%=Validator.equals(topVideo.getVideoType(), VideoConstants.EXTERNAL_VIDEO_TYPE) %>'>
 						<div class="external-video-frame" style="<%=style%>">
-							<iframe id="videoFrame" width="<%=VideoConstants.DEFAULT_VIDEO_FRAME_WIDTH%>"
-								height="<%=VideoConstants.DEFAULT_VIDEO_FRAME_HEIGHT%>"
+							<iframe id="videoFrame" width="<%=VideoConstants.DEFAULT_VIDEO_FRAME_WIDTH%>" height="<%=videoFrameHeight %>"
 								src="<%=topVideoURL%>" allowfullscreen> </iframe>
 						</div>
 					</c:when>
-					
-					<c:otherwise>
-						<div class="video-player" style="<%=style%>" id="<portlet:namespace />videoPlayer"></div>
-									
+					<c:otherwise>	
+							<video id="player" class="video-js vjs-default-skin"  controls
+								preload="none" loop width="640" height="360"
+								poster="<%=topVideoThumbnailURL%>">
+							</video>
+							<aui:script>
+						        var player = videojs('player', {
+						            plugins: {
+						                videoJsResolutionSwitcher: {
+						                    dynamicLabel: true
+						                }
+						            }
+						        });
+						        player.updateSrc([
+						           	{
+										src: '<%=topVideoURL%>',
+										type: 'video/mp4',
+										res: 360,
+										label: '360p'
+									},
+						            {
+						                src: '<%=topVideoURL%>',
+						                type: 'video/mp4',
+						                res: 480,
+						                label: '480p'
+						            },
+						            {
+						                src: '<%=topVideoURL%>',
+						                type: 'video/mp4',
+						                res: 720,
+						                label: '720p'
+						            },
+						            {
+						                src: '<%=topVideoURL%>',
+						                type: 'video/mp4',
+						                res: 1080,
+						                label: '1080p'
+						            }
+						        ])
+	    					</aui:script>
+						
+						<%-- <div class="video-player" style="<%=style%>" id="<portlet:namespace />videoPlayer">
+						</div>		
 						<aui:script>
 							AUI().ready(function(A){
 								jwplayer("<portlet:namespace />videoPlayer").setup({
@@ -111,10 +151,10 @@
 						        });
 						        
 							});
-							
-						</aui:script>
+						</aui:script> --%>
 					</c:otherwise>
 				</c:choose>
+				</div>
 			</div>
 			
 			<div class="top-video-title">
@@ -131,6 +171,7 @@
 					String videoURL = VideoFileUtil.getViewVideoURL(themeDisplay, videoEntry);
 					
 					String videoPublishDate = dateTimeFormat.format(videoEntry.getCreateDate());
+					String videoType = videoEntry.getVideoType();
 				%>
 				
 				<%-- 	<liferay-portlet:renderURL var="videoPlaylistURL">
@@ -138,12 +179,12 @@
 					</liferay-portlet:renderURL> --%>
 					
 					<li>
-						<a href="javascript:;" title="<%=videoTitle %>" mediaurl="<%=videoURL%>" class="viewVideo">
+						<a href="javascript:;" title="<%=videoTitle %>" data-type="<%=videoType %>" mediaurl="<%=videoURL%>" class="viewVideo">
 							<span class="video-title"><%=videoTitle %></span>
-							<c:if test='<%=showVideoPublishDate %>'>
-								<span class="video-upload-date"><%=videoPublishDate %></span>
-							</c:if>
 						</a>
+						<c:if test='<%=showVideoPublishDate %>'>
+								<span class="video-upload-date"><%=videoPublishDate %></span>
+						</c:if>
 					</li>
 				<%
 				}
@@ -169,4 +210,3 @@
 		<liferay-ui:message key="no-video-found"/>
 	</c:otherwise>
 </c:choose>
-

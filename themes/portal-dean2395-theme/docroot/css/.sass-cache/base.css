@@ -12,7 +12,7 @@ table {
   clear: both; }
 
 fieldset, img {
-  border: none !important; }
+  border: 0; }
 
 address, caption, cite, code, dfn, th, var {
   font-style: normal;
@@ -29,9 +29,15 @@ abbr, acronym {
   border-bottom: 1px dotted #000;
   cursor: help; }
 
-* {
-  margin: 0;
-  padding: 0; }
+html {
+  overflow-y: scroll; }
+
+html.aui-dialog-iframe-root-node {
+  overflow: auto; }
+
+body {
+  background: #FFF;
+  font: 62.5%/1.4 Arial, Helvetica, Verdana, sans-serif; }
 
 body.portal-popup {
   background: none;
@@ -43,14 +49,26 @@ body.aui-dialog-iframe-popup {
 body.portal-iframe {
   padding: 0; }
 
+blockquote, ul, ol, dl {
+  margin: 1em; }
+
+ol, ul, dl {
+  margin-left: 2em; }
+
 ol {
   list-style: decimal outside; }
 
 ul {
   list-style: disc outside; }
 
+ul ul {
+  list-style-type: circle; }
+
 ol ol {
   list-style-type: upper-roman; }
+
+dl dd {
+  margin-left: 1em; }
 
 th {
   font-weight: bold; }

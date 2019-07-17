@@ -33,13 +33,10 @@
 }
 
 @mixin button-hover {
-	background: #B9CED9 url(../images/application/state_hover_bg.png) repeat-x 0 0;
-	border-color: #627782;
 	color: #369;
 }
 
 @mixin button-focus {
-	background: #EBEBEB url(../images/application/state_active_bg.png) repeat-x 0 0;
 	border-color: #555;
 }
 

@@ -6,6 +6,7 @@
 
 .imageGallerySlider {
     position:relative;
+    width: 100%;
 }
 
 .imageGallerySlider DIV {
@@ -13,13 +14,13 @@
     top:0;
     left:0;
     z-index:8;
+    width: 100%;
     opacity:0.0;
     background-color: #FFF;
 }
 
 .imageGallerySlider .active {
     z-index:10;
-    opacity:1.0;
 }
 
 .imageGallerySlider .last-active {
@@ -28,6 +29,8 @@
 
 .imageGallerySlider img {
     display: block;
+    width: 100% !important;
+    max-width: 100%;
 }
 
 	

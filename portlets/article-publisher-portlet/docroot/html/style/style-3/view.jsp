@@ -14,23 +14,16 @@
 <%
 	List<AssetEntryCache> assetCacheList = ArticlePublisherUtil.getAssetList(request,0);
 %>
-
+<script src="/article-publisher-portlet/js/jquery.vticker-min.js"></script>
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
 		<div class="article-publisher-display-style-3">
-			
-<!-- 			<div class="style-title"> -->
-<%-- 				<span class="title"><%=styleTitle %></span> --%>
-<!-- 			</div> -->
-			
-			<div class="style-asset">
-				<marquee behavior="up" direction="up" scrollamount="2" scrolldelay="5" 
-						 onmouseover="this.stop();" onmouseout="this.start();" height="320px;">
+			<div class="article-publisher-style-3">
 					<ul>
 					<%
 					for(AssetEntryCache assetCache : assetCacheList){
 						
-						String assetTitle = StringUtil.shorten(assetCache.getTitle(), 120);
+						String assetTitle = StringUtil.shorten(assetCache.getTitle(), 80);
 						
 						String assetLink = ArticlePublisherUtil.getViewContentURL(request, assetCache);
 						
@@ -49,7 +42,6 @@
 					}
 					%>
 					</ul>
-				</marquee>
 			</div>
 		</div>
 	</c:when>
@@ -65,3 +57,17 @@
 		</div>
 	</c:otherwise>
 </c:choose>
+<script>
+	$(document).on("ready", function(){
+		$('.article-publisher-style-3').vTicker({
+			   speed: 500,
+			   pause: 3000,
+			   showItems: 6,
+			   animation: 'fade',
+			   mousePause: true,
+			   height: 0,
+			   direction: 'up'
+			});
+
+	});
+</script>

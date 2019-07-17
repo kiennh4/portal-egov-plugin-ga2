@@ -11,81 +11,80 @@
 <%@include file="/html/init.jsp"%>
 
 <%
-	String queryValue = ParamUtil.getString(request, "queryValue", queryValuesArray[0]);
-	List<AssetEntryCache> assetCacheList = ArticlePublisherUtil.getAssetsById(request, 1, queryValue);
+	List<AssetEntryCache> assetCacheList = ArticlePublisherUtil.
+	getAssetList(request,0);
 %>
-
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
-		
-		<div class="article-publisher-display-style-6" style = "  border: 1px solid #ccc;background: #eee;">
+		<div class="article-publisher-display-style-8">
+			<%
+				AssetEntryCache topAssetCache = assetCacheList.get(0);
+				
+				String topAssetTitle = StringUtil.shorten(topAssetCache.getTitle(),70);
+				
+				String topAssetSumary = ArticlePublisherUtil.getContentSummary(request, 
+						topAssetCache.getClassPK(), 80);
+				
+				String topAssetViewUrlContent = ArticlePublisherUtil.getViewContentURL(request,
+						topAssetCache);
+				
+				String topImagePath = ArticlePublisherUtil.getSmallImagePath(request, topAssetCache.getClassPK());
+				
+			%>
+			<aui:column columnWidth="100">
+				<div class="top-asset-image">
+					<a href="<%=topAssetViewUrlContent%>" title="<%=topAssetCache.getTitle() %>">
+						<img alt="<%=topAssetCache.getTitle() %>" src="<%=topImagePath%>"/>
+					</a>
+				</div>
+				<div class="top-asset-title">
+					<a href="<%=topAssetViewUrlContent%>" title="<%=topAssetCache.getTitle()%>">
+						<%=topAssetTitle%>
+					</a>
+				</div>
+				<div class="top-asset-sumary">
+					<span> <%= topAssetSumary%></span>
+				</div>
+			</aui:column>
 			<aui:layout>
-				<aui:column columnWidth="70" >
-				<%
-					AssetEntryCache topAsset = assetCacheList.get(0);
-				
-					String topAssetTitle = topAsset.getTitle();
+			<%
+				for(int i=1; i < assetCacheList.size(); i++){
+					AssetEntryCache entryCache = assetCacheList.get(i);
+					String entryTitle = StringUtil.shorten(entryCache.getTitle(),70);
 					
-					String topAssetViewContentURL = ArticlePublisherUtil.getViewContentURL(request, topAsset);
+					String entrySumary = ArticlePublisherUtil.getContentSummary(request, 
+							entryCache.getClassPK(), 50);
 					
-					String topAssetSummaryContent = StringUtil.shorten(topAsset.getSummary(), 290);
+					String entryViewContentUrl = ArticlePublisherUtil.getViewContentURL(request,
+							entryCache);
 					
-					String topAssetSmallImagePath = topAsset.getSmallImagePath();
-					
-					
-				%>
-					<div class="top-asset">
-						<span class="top-asset-img">
-							<a href="<%=topAssetViewContentURL%>">
-								<img class="small-img" align="left" src="<%= topAssetSmallImagePath %>" title="<%=topAssetTitle%>"
-										onerror="this.src='/article-publisher-portlet/images/default-asset-image.jpg'"
-								/>
-							</a>
-						</span>
-						
-						<span class="top-asset-title">
-						     <a href="<%=topAssetViewContentURL%>"><%= topAssetTitle %></a>
-						</span>
-						
-						<c:if test='<%=Validator.isNotNull(topAssetSummaryContent) %>'>
-							<span class="top-asset-summary"><%= topAssetSummaryContent%></span>  
-						</c:if>
-					</div>
-				</aui:column>
-				
-				<aui:column columnWidth="30" >
-					<div class="older-asset">
-						<div class="older-asset-tittle">
-							<a href="<%=ArticlePublisherUtil.getOlderAssetsURL(request)%>" title='<liferay-ui:message key="view-more"/>'>
-								<liferay-ui:message key="older-assets"/>
+					String entryImagePath = ArticlePublisherUtil.getSmallImagePath(request,
+							entryCache.getClassPK());
+			%>
+				<aui:column columnWidth="100">
+					<aui:column columnWidth="30">
+						<a href="<%=entryViewContentUrl%>"
+							title="<%=entryCache.getTitle()%>" class="asset-thumbnail"> <img
+							alt="<%=entryCache.getTitle()%>" width="100%"
+							src="<%=entryImagePath%>"
+							onerror="this.src='/article-publisher-portlet/images/default-asset-image.jpg'">
+						</a>
+					</aui:column>
+					<aui:column columnWidth="70">
+						<div class="asset-title">
+							<a href="<%=entryViewContentUrl%>"
+								title="<%=entryCache.getTitle()%>"> <%=entryTitle%>
 							</a>
 						</div>
-						<ul>
-						<%
-						
-						for(int i = 1;i < assetCacheList.size(); i ++ ){
-								
-							AssetEntryCache olderAsset = assetCacheList.get(i);
-							
-							String olderAssetTitle = StringUtil.shorten(olderAsset.getTitle(), 60);
-							
-							String olderAssetViewContentURL = ArticlePublisherUtil.getViewContentURL(request, olderAsset);
-							
-							String publishDate = dateFormat.format(olderAsset.getPublishDate());
-						%>
-								<li>						
-									<a href="<%=olderAssetViewContentURL%>" title="<%= olderAsset.getTitle() %>"><%= olderAssetTitle %></a>
-									
-									<c:if test="<%=showPublishDate%>">
-										<span class="publish-date">(<%=publishDate%>)</span>
-									</c:if> 
-								</li>
-						<%
-						}
-						%>
-						</ul>
-					</div>
+						<div class="asset-sumary">
+							<span> <%=entrySumary%></span>
+						</div>
+					</aui:column>
 				</aui:column>
+
+				<%
+				}
+			%>
 			</aui:layout>
 		</div>
 	</c:when>

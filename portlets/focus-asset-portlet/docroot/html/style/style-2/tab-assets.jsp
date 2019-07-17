@@ -24,7 +24,7 @@
 				
 				long assetEntryId = focusAsset.getEntryId();
 				String fullAssetTitle = focusAsset.getTitle().trim();
-				String focusAssetTitle = StringUtil.shorten(focusAsset.getTitle(), 60);
+				String focusAssetTitle = StringUtil.shorten(focusAsset.getTitle(), 70);
 				
 				String fullFocusAssetTitle = focusAsset.getTitle();
 				
@@ -43,7 +43,7 @@
 							<%=focusAssetTitle %>
 						</span>
 						
-						<span class="focus-asset-title-mobile"><%=fullAssetTitle%></span>
+						<%-- <span class="focus-asset-title-mobile"><%=fullAssetTitle%></span> --%>
 					</a>
 				</li>
 		<%

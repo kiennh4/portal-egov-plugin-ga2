@@ -4,6 +4,13 @@
 		color: #434343;
 	}
 	
+	.touris-search-container{
+		margin: 10px 10px;
+		input{
+			width: 207px;
+		}
+	}
+	
 	.tourism_map_admin .lfr-header-row{
 		margin-bottom: 20px;
 		border-radius: 4px;
@@ -99,7 +106,7 @@
 	}	
 			
 	.tourism_map_wrapper_panel .map_container{
-		height: 600px;
+		height: 1000px;
 		width: 100%;
 	}
 		

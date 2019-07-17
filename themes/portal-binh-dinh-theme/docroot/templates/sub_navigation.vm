@@ -5,7 +5,7 @@
 	</div>
 	
 	<div class="top_notify">
-		<marquee direction="left" scrollamount="1" scrolldelay="40" width="480px">
+		<marquee direction="left" scrollamount="6" scrolldelay="40" width="480px">
 			<span>$sloganContent</span>
 		</marquee>
 	</div>

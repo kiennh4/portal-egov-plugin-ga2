@@ -26,6 +26,7 @@ import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.SystemProperties;
@@ -481,6 +482,62 @@ public class FocusAssetUtil {
 		}
 
 		return smallImagePath;
+	}
+	
+	public static String getOlderAssetsURL(HttpServletRequest request, String tabPrefix) {
+
+		String oldAssetURL = "";
+
+		try {
+
+			ThemeDisplay themeDisplay = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
+
+			PortletPreferences preferences = PortalUtil.getPreferences(request);
+
+			String portletResource = ParamUtil.getString(request, "portletResource");
+
+			if (Validator.isNotNull(portletResource)) {
+				preferences = PortletPreferencesFactoryUtil.getPortletSetup(request, portletResource);
+			}
+			
+			String queryName = preferences.getValue(tabPrefix + "TabQueryName", "assetTags");
+
+			String[] queryValues = preferences.getValues(tabPrefix + "TabQueryValues", new String[0]);
+
+
+			if (Validator.equals(queryName, "assetTags")) {
+
+				String tagName = queryValues[0];
+
+				PortletURL portletURL =
+					PortletURLFactoryUtil.create(request, "101", themeDisplay.getPlid(), PortletRequest.RENDER_PHASE);
+
+				portletURL.setParameter("tag", tagName);
+
+				oldAssetURL = portletURL.toString();
+
+			}
+			else {
+
+				long categoryId = GetterUtil.getLong(queryValues[0]);
+
+				long pageLayoutId =
+					GetterUtil.getLong(getCategoryPropertyValue(
+						categoryId, _PAGE_LAYOUT_ID_CATEGORY_PROPERTY_KEY, String.valueOf(themeDisplay.getPlid())));
+
+				PortletURL portletURL =
+					PortletURLFactoryUtil.create(request, "101", pageLayoutId, PortletRequest.RENDER_PHASE);
+
+				portletURL.setParameter("categoryId", String.valueOf(categoryId));
+
+				oldAssetURL = portletURL.toString();
+			}
+
+		}
+		catch (Exception e) {
+			_log.error(e);
+		}
+		return oldAssetURL;
 	}
 
 	public static String getContentSummary(HttpServletRequest request, long classPK, int abstractLength) {

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="$javascript_folder/responsivevoice.js" charset="utf-8"></script>
+	$theme.include($top_head_include)
+</head>
+
+<body class="$css_class" >
+
+	$theme.include($body_top_include)
+	
+	#if ($is_signed_in)
+		#dockbar()
+	#end
+	
+	<div class="body-wrapper">
+						
+		#if ($theme_display.isShowPageSettingsIcon())
+			<span class="lfr-meta-actions">
+				<a class="taglib-icon quickEditLayoutSet" href="$editBannerURL" data-width="700" id="quickEditBanner">
+					<img class="icon" src="$themeDisplay.getPathThemeImages()/common/edit.png" alt="#language("edit-banner")" title="#language("edit-banner")">
+				</a>
+			</span>
+		#end
+		
+		<div class="flash-banner-wrapper">
+			<div class="flash-banner">
+				#set($flashBannerUrl="$themeDisplay.getPathThemeImages()/banner/bannerBD.swf")
+				#set($staticBannerUrl="$themeDisplay.getPathThemeImages()/banner/banner.jpg")
+				<input type="hidden" name="imgUrl" id="imgUrl" value="$staticBannerUrl">
+				<img src="$staticBannerUrl" width="100%" height="150px"/>
+				<div style="clear:both"></div>
+			</div>
+		</div>
+		
+		#if ($has_navigation || $is_signed_in)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
+		
+		<div class="content-wrapper">
+			#parse ("$full_templates_path/sub_navigation.vm")
+			<div id="content">
+				#if ($selectable)
+					$theme.include($content_include)
+				#else
+					$portletDisplay.recycle()
+		
+					$portletDisplay.setTitle($the_title)
+		
+					$theme.wrapPortlet("portlet.vm", $content_include)
+				#end
+			</div>
+		</div>
+		$theme.include($body_bottom_include)
+				
+		<a href="#" class="scroll-up-btn">
+			<span class="btn-arrow"></span>
+			<span class="btn-text">#language("back-to-top")</span>
+		</a>
+		<div class="chatbot-container display" id="chatbotContainer">
+			<div class="header">
+				<a id="closeChatBot">X</a>
+				<h4>ChatBot</h4>
+			</div>
+			<hr>
+			<div class="chat-body" id="chatBotBody">
+				<div class="container bot" id="botTemplate">
+					<div class="content">
+						Hi, I'm a Virtual Assistant. Tell me how can help!
+					</div>
+				</div>
+			</div>
+			<div class="chat-form">
+				<input type="text" name="contentChat" id="chatContent" placeholder = "Nhập nôi dung chat">
+				<a role="button" class="btn btn-send" id="sendMessage">
+					<img src="$themeDisplay.getPathThemeImages()/custom_icon/send_messenger.png" />
+				</a>
+			</div>
+		</div>
+		<div class="arcontactus-message-button">
+			<div class="static">
+				<svg width="20" height="20" viewBox="0 0 20 20" 
+				version="1.1" xmlns="http://www.w3.org/2000/svg"
+				 xmlns:xlink="http://www.w3.org/1999/xlink">
+				 <g id="Canvas" transform="translate(-825 -308)">
+				 <g id="Vector"><use xlink:href="#path0_fill0123"
+				transform="translate(825 308)" fill="#FFFFFF"></use></g>
+				</g><defs><path id="path0_fill0123" d="M 19 4L 17 4L 17 13L 4 13L 4 15C 4 15.55 4.45 16 5 16L 16 16L 20 20L 20 5C 20 4.45 19.55 4 19 4ZM 15 10L 15 1C 15 0.45 14.55 0 14 0L 1 0C 0.45 0 0 0.45 0 1L 0 15L 4 11L 14 11C 14.55 11 15 10.55 15 10Z"></path></defs>
+				</svg>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	  $(document).ready(function () {
+	      $(window).scroll(function () {
+	          if ($(this).scrollTop() > 100) {
+	              $('.scroll-up-btn').fadeIn();
+	          } else {
+	              $('.scroll-up-btn').fadeOut();
+	          }
+	      });
+	      $('.scroll-up-btn').click(function () {
+	          $("html, body").animate({
+	              scrollTop: 0
+	          }, 600);
+	          return false;
+	      });
+	 	});
+	</script>
+	
+	<script type="text/javascript">
+		AUI().ready('aui-dialog', function(A) {
+			A.all('a.quickEditLayoutSet').each(
+				function(node){
+					node.on('click', function(event) {
+						event.preventDefault();
+						var item = event.currentTarget;
+						var width = item.attr('data-width');
+						if(!width){
+							width = 500;
+						}
+						window.myDialog = new A.Dialog(
+							{
+								id: item.attr('id'),
+								align: Liferay.Util.Window.ALIGN_CENTER,
+								title: item.attr('title'),
+								width: width,
+								modal:true,
+								close: false,
+								buttons: [{
+									label: Liferay.Language.get('close'),
+									handler: function() {
+										this.close();
+									}
+								}]
+							}
+						).plug(
+							A.Plugin.IO,
+							{
+								uri: item.attr('href')
+							}
+						).render();
+					});
+				}
+			);
+		});
+</script>
+</body>
+
+$theme.include($bottom_include)
+
+</html>

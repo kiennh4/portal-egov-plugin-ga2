@@ -22,8 +22,9 @@
 				for (AssetEntryCache assetCache : assetCacheList) {
 
 							String assetTitle = StringUtil.shorten(
-									assetCache.getTitle(), 90);
-							String assetSumary = ArticlePublisherUtil.getContentSummary(request, assetCache.getClassPK(), 120);
+									assetCache.getTitle(), 120);
+							String assetSumary = ArticlePublisherUtil.getContentSummary(request, 
+									assetCache.getClassPK(), 130);
 
 							String assetLink = ArticlePublisherUtil
 									.getViewContentURL(request, assetCache);
@@ -36,7 +37,8 @@
 						<div class="style-asset">
 							<div class="asset-img">
 								<a href="<%=assetLink%>" class="">
-									<img alt="<%=assetTitle%>" src="<%=assetImage%>" onerror="this.src='/focus-asset-portlet/images/default-asset-image.jpg'">
+									<img alt="<%=assetTitle%>" src="<%=assetImage%>"
+									 onerror="this.src='/article-publisher-portlet/images/default-asset-image.jpg'">
 								</a>
 							</div>
 							<div class="asset-content">

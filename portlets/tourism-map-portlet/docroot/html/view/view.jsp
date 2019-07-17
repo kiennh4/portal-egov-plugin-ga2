@@ -19,6 +19,10 @@
 			<div id="map_container" class="map_container"></div>
 		</aui:column>
 		<aui:column columnWidth="30" cssClass="map_menu">
+			<div class="touris-search-container">
+				<label for="searchKeyword"><liferay-ui:message key="search"/></label>
+				<input type="text" onkeyup="updateResult(this.value)" id="searchKeyword" class="searchKeyWord" placeholder="Search.....">
+			</div>
 			<div id="menu_container" class="menu_container"></div>
 			<div id="marker_list_container" class="marker_list_container"></div>
 		</aui:column>
@@ -38,3 +42,25 @@
 		}
 	);
 </aui:script>
+<script type="text/javascript">
+	function updateResult(query){
+		if(query === ''){
+			$(".maker-list li").show();
+			return;
+		}
+		
+		$(".maker-list li").each(function(){
+			var name = $(this).attr('name');
+			
+			if(name.toLowerCase().indexOf(query.toLowerCase()) >= 0){
+				$(this).show();
+			}else{
+				$(this).hide();
+			}
+		});
+		
+		var makerList = document.querySelector(".maker-list");
+		var list = makerList.getElementsByTagName("li");
+		
+	}
+</script>

@@ -36,7 +36,7 @@
 	<c:when test="<%=displayBanner != null %>">
 		<div class='<%="display-banner" + bannerId %> banner-image-wrapper'>
 			<a href="<%=bannerLink%>" target="<%=(linkToNewTab) ? "_blank" : StringPool.BLANK %>">
-				<img class='<%="banner-image" + bannerId %>' src="<%=bannerImageSrcPath%>"/>
+				<img class='<%="banner-image" + bannerId %>' style="width: 100%;" src="<%=bannerImageSrcPath%>"/>
 			</a>
 		</div>
 	</c:when>
@@ -58,7 +58,6 @@
 		if(bannerImage){
 			bannerImage.setStyles({
 			    height:  <%=bannerImageHeight %>,
-			    width:   <%=bannerImageWidth %>,
 			    display: 'block'
 			});
 		}

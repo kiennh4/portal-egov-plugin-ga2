@@ -12,6 +12,7 @@
 <%
 	List<AssetEntryCache> assetCacheList = ArticlePublisherUtil.getAssetList(request,numbersOfEntriesDisplay);
 %>
+
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
 		<div class="article-publisher-display-style-5">
@@ -25,7 +26,7 @@
 				<%
 				for(AssetEntryCache assetCache : assetCacheList){
 					
-					String assetTitle = StringUtil.shorten(assetCache.getTitle(),50);
+					String assetTitle = StringUtil.shorten(assetCache.getTitle(), 40);
 					
 					String assetLink = ArticlePublisherUtil.getViewContentURL(request, assetCache);
 					
@@ -62,7 +63,7 @@
 			jQuery(document).ready(function() {
 			    jQuery('#<portlet:namespace/>jcarousel').jcarousel({        
 			    	scroll: 1,
-			    	auto: 10,
+			    	auto: 5,
 			    	wrap: 'both'
 			    });
 			});

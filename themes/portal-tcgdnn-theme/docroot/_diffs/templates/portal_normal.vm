@@ -6,9 +6,9 @@
 
 <head>
 	<title>$the_title - $company_name</title>
-	<meta name="description" content="Cổng thông tin điện tử Tỉnh Ủy Bình , tin tức về Đảng Cộng Sản Bình Định">
-    <meta name="keywords" content="Phú Yên, Cổng thông tin điện tử , Đảng Cộng Sản Bình Định">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="$javascript_folder/responsivevoice.js" charset="utf-8"></script>
 	$theme.include($top_head_include)
 </head>
 
@@ -62,18 +62,70 @@
 		<footer id="footer" role="contentinfo">
 			#parse ("$full_templates_path/footer.vm")
 		</footer>
-		
+		<script>
+  			window.fbAsyncInit = function() {
+    			FB.init({
+      				xfbml            : true,
+      				version          : 'v3.3'
+    			});
+  			};
+
+  			(function(d, s, id) {
+  			var js, fjs = d.getElementsByTagName(s)[0];
+ 		    if (d.getElementById(id)) return;
+		    js = d.createElement(s); js.id = id;
+		    js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+		    fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));</script>
+
+		<!-- Your customer chat code -->
+		<div class="fb-customerchat"
+		  attribution=setup_tool
+		  page_id="1409196605887939"
+		  logged_in_greeting="Chào bạn! Chúng tôi có thể giúp gì cho bạn?"
+		  logged_out_greeting="Chào bạn! Chúng tôi có thể giúp gì cho bạn?">
+		</div>
 		$theme.include($body_bottom_include)
 				
 		<a href="#" class="scroll-up-btn">
 			<span class="btn-arrow"></span>
 			<span class="btn-text">#language("back-to-top")</span>
 		</a>
+		<div class="chatbot-container display" id="chatbotContainer">
+			<div class="header">
+				<a id="closeChatBot">X</a>
+				<h4>ChatBot</h4>
+			</div>
+			<hr>
+			<div class="chat-body" id="chatBotBody">
+				<div class="container bot" id="botTemplate">
+					<div class="content">
+						Hi, I'm a Virtual Assistant. Tell me how can help!
+					</div>
+				</div>
+			</div>
+			<div class="chat-form">
+				<input type="text" name="contentChat" id="chatContent" placeholder = "Nhập nôi dung chat">
+				<a role="button" class="btn btn-send" id="sendMessage">
+					<img src="$themeDisplay.getPathThemeImages()/custom_icon/send_messenger.png" />
+				</a>
+			</div>
+		</div>
+		<div class="arcontactus-message-button">
+			<div class="static">
+				<svg width="20" height="20" viewBox="0 0 20 20" 
+				version="1.1" xmlns="http://www.w3.org/2000/svg"
+				 xmlns:xlink="http://www.w3.org/1999/xlink">
+				 <g id="Canvas" transform="translate(-825 -308)">
+				 <g id="Vector"><use xlink:href="#path0_fill0123"
+				transform="translate(825 308)" fill="#FFFFFF"></use></g>
+				</g><defs><path id="path0_fill0123" d="M 19 4L 17 4L 17 13L 4 13L 4 15C 4 15.55 4.45 16 5 16L 16 16L 20 20L 20 5C 20 4.45 19.55 4 19 4ZM 15 10L 15 1C 15 0.45 14.55 0 14 0L 1 0C 0.45 0 0 0.45 0 1L 0 15L 4 11L 14 11C 14.55 11 15 10.55 15 10Z"></path></defs>
+				</svg>
+			</div>
+		</div>
 	</div>
-	
 	<script type="text/javascript">
 	  $(document).ready(function () {
-	
 	      $(window).scroll(function () {
 	          if ($(this).scrollTop() > 100) {
 	              $('.scroll-up-btn').fadeIn();
@@ -81,55 +133,13 @@
 	              $('.scroll-up-btn').fadeOut();
 	          }
 	      });
-	
 	      $('.scroll-up-btn').click(function () {
 	          $("html, body").animate({
 	              scrollTop: 0
 	          }, 600);
 	          return false;
 	      });
-	      setupBanner();
 	 	});
-	 	
-	 	function setupBanner() { 
-	 		var flashBanner = $(".flash-banner");
-	 		var imgUrl = $("#imgUrl").val();
-	 		var imgStatic = "<img src='" + imgUrl + "' width='" + "100%" + "' height='" + "150" + "'/>"
-     		if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 )
-     		{
-        		console.log('Opera');
-        		flashBanner.find(".test").remove();
-        		flashBanner.append(imgStatic);
-    		}
-		    else if(navigator.userAgent.indexOf("Chrome") != -1 )
-		    {
-		    	console.log('Chrome');
-		    }
-		    else if(navigator.userAgent.indexOf("Safari") != -1)
-		    {
-		        console.log('Safari');
-		        flashBanner.find(".test").remove();
-        		flashBanner.append(imgStatic);
-		    }
-		    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
-		    {
-		        console.log('Firefox');
-		        flashBanner.find(".test").remove();
-        		flashBanner.append(imgStatic);
-		    }
-		    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
-		    {
-		      	console.log('IE'); 
-		      	flashBanner.find(".test").remove();
-        		flashBanner.append(imgStatic);
-		    }  
-		    else
-		    {
-		        console.log('unknown');
-		        flashBanner.find(".test").remove();
-        		flashBanner.append(imgStatic);
-		    }
-		}
 	</script>
 	
 	<script type="text/javascript">

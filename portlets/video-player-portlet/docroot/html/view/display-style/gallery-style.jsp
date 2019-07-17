@@ -294,7 +294,9 @@
 						<c:choose>
 							<c:when test='<%=Validator.equals(topVideo.getVideoType(), VideoConstants.EXTERNAL_VIDEO_TYPE) %>'>
 								<div class="external-video-frame">
-									<%=topVideoURL %>
+									<iframe src="<%=topVideoURL %>" 
+									width="100%" height="<%=videoFrameHeight%>" allowfullscreen style="border: 0;">
+									</iframe>
 								</div>
 							</c:when>
 							

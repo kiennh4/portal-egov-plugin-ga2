@@ -3,7 +3,12 @@ package com.bkav.portal.portlet.video.util;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.portlet.PortletMode;
 import javax.portlet.PortletPreferences;
+import javax.portlet.PortletRequest;
+import javax.portlet.PortletURL;
+import javax.portlet.WindowState;
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -23,56 +28,70 @@ import com.liferay.portal.kernel.util.StringBundler;
 import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Validator;
+import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.portal.service.LayoutLocalServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
+import com.liferay.portlet.PortletURLFactoryUtil;
 import com.liferay.portlet.documentlibrary.service.DLAppServiceUtil;
 
 public class VideoFileUtil {
-	
-	public static String getEmbedYoutubeVideoURL(String videoId){
+
+	public static String getEmbedYoutubeVideoURL(String videoId) {
 		return "http://youtube.com/embed/" + videoId;
 	}
-	
-	public static String getVideoIdFromYoutubeURL(String url){
-		
+
+	public static String getVideoIdFromYoutubeURL(String url) {
+
 		String pattern = "(?<=v=|/videos/|embed\\/)[^#\\&\\?\"]*";
 
-		Pattern compiledPattern = Pattern.compile(pattern, Pattern.CASE_INSENSITIVE);
+		Pattern compiledPattern = Pattern.compile(pattern,
+				Pattern.CASE_INSENSITIVE);
 		Matcher matcher = compiledPattern.matcher(url);
-		
-		if(matcher.find()){
+
+		if (matcher.find()) {
 			return matcher.group();
-		}else{
+		} else {
 			return StringPool.BLANK;
 		}
 	}
-	public static String getViewVideoURL(ThemeDisplay themeDisplay,VideoEntry videoEntry) throws PortalException, SystemException{
+
+	public static String getViewVideoURL(ThemeDisplay themeDisplay,
+			VideoEntry videoEntry) throws PortalException, SystemException {
 		String viewVideoURL = "";
-		if(Validator.equals(videoEntry.getVideoType(), VideoConstants.EXTERNAL_VIDEO_TYPE)){
-			
-			String externalVideoId = VideoFileUtil.getVideoIdFromYoutubeURL(videoEntry.getVideoUrl());
-			
-			viewVideoURL = VideoFileUtil.getEmbedYoutubeVideoURL(externalVideoId);
-			
-		}else{
-		
-			if(videoEntry.getVideoFileId() > 0){
-				
-				FileEntry videoFileEntry = DLAppServiceUtil.getFileEntry(videoEntry.getVideoFileId());
-				
-				if(videoFileEntry != null){
-					
-					viewVideoURL = VideoFileUtil.getVideoPreviewURL(themeDisplay, videoFileEntry);
+		if (Validator.equals(videoEntry.getVideoType(),
+				VideoConstants.EXTERNAL_VIDEO_TYPE)) {
+
+			String externalVideoId = VideoFileUtil
+					.getVideoIdFromYoutubeURL(videoEntry.getVideoUrl());
+
+			viewVideoURL = VideoFileUtil
+					.getEmbedYoutubeVideoURL(externalVideoId);
+
+		} else {
+
+			if (videoEntry.getVideoFileId() > 0) {
+
+				FileEntry videoFileEntry = DLAppServiceUtil
+						.getFileEntry(videoEntry.getVideoFileId());
+
+				if (videoFileEntry != null) {
+
+					viewVideoURL = VideoFileUtil.getVideoPreviewURL(
+							themeDisplay, videoFileEntry);
 				}
 			}
 		}
-		
+
 		return viewVideoURL;
 	}
-	public static String getVideoPreviewURL(ThemeDisplay themeDisplay,FileEntry videoEntry){
-		
-		if(videoEntry != null){
-			
+
+
+	public static String getVideoPreviewURL(ThemeDisplay themeDisplay,
+			FileEntry videoEntry) {
+
+		if (videoEntry != null) {
+
 			StringBundler stringBundler = new StringBundler();
 
 			stringBundler.append(themeDisplay.getPortalURL());
@@ -82,27 +101,29 @@ public class VideoFileUtil {
 			stringBundler.append(StringPool.SLASH);
 			stringBundler.append(videoEntry.getFolderId());
 			stringBundler.append(StringPool.SLASH);
-			stringBundler.append(HttpUtil.encodeURL(HtmlUtil.unescape(videoEntry.getTitle()), true));
-			
+			stringBundler.append(HttpUtil.encodeURL(
+					HtmlUtil.unescape(videoEntry.getTitle()), true));
+
 			String videoPreviewURL = stringBundler.toString();
 
 			if (themeDisplay.isAddSessionIdToURL()) {
-				return PortalUtil.getURLWithSessionId(
-					videoPreviewURL, themeDisplay.getSessionId());
+				return PortalUtil.getURLWithSessionId(videoPreviewURL,
+						themeDisplay.getSessionId());
 			}
 
 			return videoPreviewURL;
-			
-		}else{
-			
+
+		} else {
+
 			return StringPool.BLANK;
 		}
 	}
-	
-	public static String getVideoThumbnailURL(ThemeDisplay themeDisplay,FileEntry thumbnailEntry){
-		
-		if(thumbnailEntry != null){
-			
+
+	public static String getVideoThumbnailURL(ThemeDisplay themeDisplay,
+			FileEntry thumbnailEntry) {
+
+		if (thumbnailEntry != null) {
+
 			StringBundler stringBundler = new StringBundler();
 
 			stringBundler.append(themeDisplay.getPortalURL());
@@ -112,116 +133,126 @@ public class VideoFileUtil {
 			stringBundler.append(StringPool.SLASH);
 			stringBundler.append(thumbnailEntry.getFolderId());
 			stringBundler.append(StringPool.SLASH);
-			stringBundler.append(HttpUtil.encodeURL(HtmlUtil.unescape(thumbnailEntry.getTitle()), true));
-			
+			stringBundler.append(HttpUtil.encodeURL(
+					HtmlUtil.unescape(thumbnailEntry.getTitle()), true));
+
 			String videoPreviewURL = stringBundler.toString();
 
 			if (themeDisplay.isAddSessionIdToURL()) {
-				return PortalUtil.getURLWithSessionId(
-					videoPreviewURL, themeDisplay.getSessionId());
+				return PortalUtil.getURLWithSessionId(videoPreviewURL,
+						themeDisplay.getSessionId());
 			}
 
 			return videoPreviewURL;
-			
-		}else{
-			
+
+		} else {
+
 			return StringPool.BLANK;
 		}
 	}
-	
-	public static boolean validateImageThumbnail(String imageFileName,long imageFileSize,
-			PortletPreferences preferences)throws ThumbnailImageFileTypeException, ThumbnailImageFileSizeException{
-		
+
+	public static boolean validateImageThumbnail(String imageFileName,
+			long imageFileSize, PortletPreferences preferences)
+			throws ThumbnailImageFileTypeException,
+			ThumbnailImageFileSizeException {
+
 		boolean flag = false;
-		
-		String[] validImageExtensions = preferences.getValues("imageThumbnailExtensions",
+
+		String[] validImageExtensions = preferences.getValues(
+				"imageThumbnailExtensions",
 				VideoConstants.DEFAULT_IMAGE_THUMBNAIL_EXTENSIONS);
-		
-		//Validate upload file extension
-		for (int i = 0; i < validImageExtensions.length; i++){
-			
+
+		// Validate upload file extension
+		for (int i = 0; i < validImageExtensions.length; i++) {
+
 			String validExtension = validImageExtensions[i].toLowerCase();
-			
-			if(!Validator.equals(validExtension, StringPool.STAR) 
-					&& StringUtil.endsWith(imageFileName, validExtension)){
-				
+
+			if (!Validator.equals(validExtension, StringPool.STAR)
+					&& StringUtil.endsWith(imageFileName, validExtension)) {
+
 				flag = true;
 				break;
 			}
 		}
-		
-		if(!flag){
-			
+
+		if (!flag) {
+
 			throw new ThumbnailImageFileTypeException();
 		}
-		
-		long imageThumbnailMaxSize = GetterUtil.getLong(preferences.getValue("imageThumbnailMaxSize",
-				String.valueOf(VideoConstants.DEFAULT_IMAGE_THUMBNAIL_MAX_SIZE))) * VideoConstants.FILE_SIZE_COEFFICENT;
-		
-		//Validate upload file size
+
+		long imageThumbnailMaxSize = GetterUtil
+				.getLong(preferences.getValue(
+						"imageThumbnailMaxSize",
+						String.valueOf(VideoConstants.DEFAULT_IMAGE_THUMBNAIL_MAX_SIZE)))
+				* VideoConstants.FILE_SIZE_COEFFICENT;
+
+		// Validate upload file size
 		if ((imageThumbnailMaxSize > 0)
-			&& (imageFileSize > imageThumbnailMaxSize)) {
+				&& (imageFileSize > imageThumbnailMaxSize)) {
 
 			flag = false;
-			
+
 			throw new ThumbnailImageFileSizeException();
 		}
-		
+
 		return flag;
 	}
-	
-	public static boolean validateVideoFile(String videoFileName,long videoFileSize,
-			PortletPreferences preferences)throws VideoFileTypeException, VideoFileSizeException{
-		
+
+	public static boolean validateVideoFile(String videoFileName,
+			long videoFileSize, PortletPreferences preferences)
+			throws VideoFileTypeException, VideoFileSizeException {
+
 		boolean flag = false;
-		
-		String[] validVideoFileExtensions = preferences.getValues("videoExtensions", VideoConstants.DEFAULT_VIDEO_EXTENSIONS);
-		
-		//Validate upload file extension
-		for (int i = 0; i < validVideoFileExtensions.length; i++){
-			
+
+		String[] validVideoFileExtensions = preferences.getValues(
+				"videoExtensions", VideoConstants.DEFAULT_VIDEO_EXTENSIONS);
+
+		// Validate upload file extension
+		for (int i = 0; i < validVideoFileExtensions.length; i++) {
+
 			String validExtension = validVideoFileExtensions[i].toLowerCase();
-			
-			if(!Validator.equals(validExtension, StringPool.STAR) 
-					&& StringUtil.endsWith(videoFileName, validExtension)){
-				
+
+			if (!Validator.equals(validExtension, StringPool.STAR)
+					&& StringUtil.endsWith(videoFileName, validExtension)) {
+
 				flag = true;
 				break;
 			}
 		}
-		
-		if(!flag){
-			
+
+		if (!flag) {
+
 			throw new VideoFileTypeException();
 		}
-		
-		long bannerImageMaxSize = GetterUtil.getLong(preferences.getValue("videoMaxSize",
-				String.valueOf(VideoConstants.DEFAULT_VIDEO_MAX_SIZE))) * VideoConstants.FILE_SIZE_COEFFICENT;
-		
-		//Validate upload file size
-		if ((bannerImageMaxSize > 0)
-			&& (videoFileSize > bannerImageMaxSize)) {
-			
+
+		long bannerImageMaxSize = GetterUtil.getLong(preferences.getValue(
+				"videoMaxSize",
+				String.valueOf(VideoConstants.DEFAULT_VIDEO_MAX_SIZE)))
+				* VideoConstants.FILE_SIZE_COEFFICENT;
+
+		// Validate upload file size
+		if ((bannerImageMaxSize > 0) && (videoFileSize > bannerImageMaxSize)) {
+
 			flag = false;
-			
+
 			throw new VideoFileSizeException();
 		}
-		
+
 		return flag;
 	}
-	
-	public static String getFriendlyFileName(String fileName){
-		
+
+	public static String getFriendlyFileName(String fileName) {
+
 		String formatedFileName = fileName.toLowerCase().trim();
-		
+
 		formatedFileName = replaceMsWordCharacters(formatedFileName);
 
 		char[] formatedCharArray = formatedFileName.toCharArray();
 
 		for (int i = 0; i < formatedCharArray.length; i++) {
-			
+
 			char oldChar = formatedCharArray[i];
-			
+
 			char newChar = oldChar;
 
 			if (contains(SPECIAL_CHARS, oldChar)) {
@@ -245,17 +276,19 @@ public class VideoFileUtil {
 			}
 
 			if (formatedFileName.startsWith("-")) {
-				formatedFileName = formatedFileName.substring(1, formatedFileName.length());
+				formatedFileName = formatedFileName.substring(1,
+						formatedFileName.length());
 			}
 
 			if (formatedFileName.endsWith("-")) {
-				formatedFileName = formatedFileName.substring(0, formatedFileName.length() - 1);
+				formatedFileName = formatedFileName.substring(0,
+						formatedFileName.length() - 1);
 			}
 		}
-		
+
 		return formatedFileName;
 	}
-	
+
 	private static boolean contains(char[] charArray, char character) {
 		if ((charArray == null) || (charArray.length == 0)) {
 			return false;
@@ -265,16 +298,16 @@ public class VideoFileUtil {
 					return true;
 				}
 			}
-			
+
 			return false;
 		}
 	}
-	
-	private static String replaceMsWordCharacters(String content){
-		
+
+	private static String replaceMsWordCharacters(String content) {
+
 		return replace(content, _MS_WORD_UNICODE, _MS_WORD_HTML);
 	}
-	
+
 	private static String replace(String s, String[] oldSubs, String[] newSubs) {
 		if ((s == null) || (oldSubs == null) || (newSubs == null)) {
 			return null;
@@ -294,7 +327,7 @@ public class VideoFileUtil {
 	private static String replace(String s, String oldSub, String newSub) {
 		return replace(s, oldSub, newSub, 0);
 	}
-	
+
 	private static String replace(String s, String oldSub, String newSub,
 			int fromIndex) {
 
@@ -309,7 +342,8 @@ public class VideoFileUtil {
 			// The number 5 is arbitrary and is used as extra padding to reduce
 			// buffer expansion
 
-			StringBuilder sb = new StringBuilder(s.length() + 5 * newSub.length());
+			StringBuilder sb = new StringBuilder(s.length() + 5
+					* newSub.length());
 
 			int length = oldSub.length();
 			int x = 0;
@@ -331,20 +365,19 @@ public class VideoFileUtil {
 	}
 
 	private static final String UTF_8_STR = "ýỳỵỷỹáảàãạăắẳằẵặâấẩầẫậéẻèẽẹêếểềễệíỉìĩịóỏòõọôốổồỗộơớởờỡợúủùũụưứửừữựđ";
-	
+
 	private static final String UTF_8_REPLACE_STR = "yyyyyaaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuud";
-	
+
 	private static final char[] SPECIAL_CHARS = new char[] { ' ', ',', '\\',
 			'\'', '\"', '(', ')', ':', '/', '^', '|', '{', '}', '?', '#', '@',
-			'+', '*', '&', '<', '>', '=', '~', ';', '$', '%', '.','!', '[', ']', '!', '`'};
+			'+', '*', '&', '<', '>', '=', '~', ';', '$', '%', '.', '!', '[',
+			']', '!', '`' };
 
-	private static final String[] _MS_WORD_UNICODE = new String[] {
-		"\u00ae", "\u2019", "\u201c", "\u201d"
-	};
+	private static final String[] _MS_WORD_UNICODE = new String[] { "\u00ae",
+			"\u2019", "\u201c", "\u201d" };
 
-	private static final String[] _MS_WORD_HTML = new String[] {
-		"&reg;", StringPool.APOSTROPHE, StringPool.QUOTE, StringPool.QUOTE
-	};
-	
-	private static Log _log = LogFactory.getLog(VideoFileUtil.class);
+	private static final String[] _MS_WORD_HTML = new String[] { "&reg;",
+			StringPool.APOSTROPHE, StringPool.QUOTE, StringPool.QUOTE };
+
+	private static String portletName = "videoplayer_WAR_videoplayerportlet";
 }
