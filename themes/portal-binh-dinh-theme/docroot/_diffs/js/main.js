@@ -128,6 +128,7 @@ $(document).on("ready",function(){
         bc = current - parseInt(1); 
         $(".journal-content-article").css({"font-size" : bc});
 	});
+	
 });
 $("#btnSpeak").on("click",function(){
 	console.log("Start speaking article content......");
@@ -138,3 +139,54 @@ $("#btnSpeak").on("click",function(){
 	content = content.trim();
 	responsiveVoice.speak(content,'Vietnamese Female');
 });
+// status 1 mo 0 dong
+$("#show-menu").on("click", function() {
+	var status = $(this).attr("data-status");
+	status = parseInt(status);
+	if(status == 0){
+		$(".sf-navbar").slideDown();
+		$(this).attr("data-status",1);
+	} else{
+		$(".sf-navbar").slideUp();
+		$(this).attr("data-status",0);
+	}
+});
+$(".toggle").on("click", function() {
+	var id = $(this).attr("id");
+	var status = $(this).attr("data-status");
+	status = parseInt(status);
+	var dropElement = $("#drop-" + id);
+	if(status == 0){
+		dropElement.slideDown();
+		$(this).attr("data-status", 1);
+	} else {
+		dropElement.slideUp();
+		$(this).attr("data-status", 0);
+	}
+});
+jQuery(document).ready(function(){
+	var block1 = $("#column-1");
+	var block2 = $("#column-2");
+    if (jQuery(window).width() < 900) {
+    	customResponse();
+    	block2.find(".vbpq-lastest-entry-portlet").remove();
+    	block1.find(".vbpq-lastest-entry-portlet").css("display","block");
+    }
+    else{
+    	block1.find(".vbpq-lastest-entry-portlet").css("display","none");
+    }
+});
+function customResponse() {
+	var append = $("#articlePublisherStyle5");
+	var parrentAppend = append.closest(".article-publisher-portlet");
+	var parrentId = parrentAppend.attr("id");
+	var blockParrent = $("#column-2");
+	blockParrent.find('[id^="articlePubliserStyle"]').each(function() {
+		var parrent = $(this).closest(".article-publisher-portlet");
+		var portletId = parrent.attr("id");
+		if(portletId != parrentId){
+			$("#" + portletId).remove();
+			parrentAppend.after(parrent);
+		}
+	});
+}

@@ -43,7 +43,7 @@
 							<%=focusAssetTitle %>
 						</span>
 						
-						<%-- <span class="focus-asset-title-mobile"><%=fullAssetTitle%></span> --%>
+						<span class="focus-asset-title-mobile"><%=fullAssetTitle%></span>
 					</a>
 				</li>
 		<%

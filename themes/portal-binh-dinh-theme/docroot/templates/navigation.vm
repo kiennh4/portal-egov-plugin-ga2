@@ -1,6 +1,8 @@
 <div class="navigation">
-	<ul id="navigation-menu" class="sf-navbar">
+	<a class="menu-mobile">Danh Mục</a>
+	<ul id="navigation-menu" class="sf-navbar">	
 		#set ($counter=0)
+		#set ($drop = 0)
 		#foreach ($nav_item in $nav_items)
 			#set ($counter = $counter + 1)
 			#if($counter==1)
@@ -17,11 +19,16 @@
 				#end
 			#end
 				#if ($nav_item.hasChildren())
-					<a href="javascript:;">
+					<a href="javascript:;" class="toggle" id="$drop" data-status="0">
 						$nav_item.icon() $nav_item.getName()
-						<img src="$themeDisplay.getPathThemeImages()/common/arrow-down.png" class="down-arrow">
+						<i class="fa fa-caret-down" aria-hidden="true"></i>
 					</a>
-					<ul class="sub-menu">
+					<a href="javascript:;" class="parrent-menu">
+						$nav_item.icon() $nav_item.getName()
+						<i class="fa fa-caret-down" aria-hidden="true"></i>
+					</a>
+					<ul class="sub-menu" id="drop-$drop">
+						#set ($drop = $drop + 1)
 						#foreach ($nav_child in $nav_item.getChildren())
 							#if ($nav_child.isSelected())
 								<li class="selected">
@@ -29,11 +36,16 @@
 								<li>
 							#end
 								#if($nav_child.hasChildren())
-									<a href="javascript:;">
+									<a href="javascript:;" class="toggle" id="$drop" data-status="0">
 										$nav_child.getName()
-										<img src="$themeDisplay.getPathThemeImages()/common/arrow-right.png" class="right-arrow">
+										<i class="fa fa-caret-down" aria-hidden="true"></i>
 									</a>
-									<ul class="child-menu">
+									<a href="javascript:;" class="parrent-menu">
+										$nav_child.getName()
+										<i class="fa fa-caret-down" aria-hidden="true"></i>
+									</a>
+									<ul class="child-menu" id="drop-$drop">
+										#set ($drop = $drop + 1)
 										#foreach ($nav_child_ele in $nav_child.getChildren())
 											#if ($nav_child_ele.isSelected())
 												<li class="selected">
@@ -58,4 +70,5 @@
 			</li>
 		#end
 	</ul>
+	<a id="show-menu" href="javascript:;" data-status="0"><i class="fa fa-tasks"></i></a>
 </div>

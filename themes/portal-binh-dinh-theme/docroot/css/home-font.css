@@ -1,12 +1,4 @@
 @font-face {
-    font-family: 'NotoSerif-Regular';
-    src: url(../fonts/NotoSerif-Regular.ttf);
-}
-@font-face {
-    font-family: 'NotoSerif-Bold';
-    src: url(../fonts/NotoSerif-Bold.ttf);
-}
-@font-face {
     font-family: 'Helvetica_Regular';
     src: url(../fonts/Helvetica.ttf);
 }
@@ -23,30 +15,22 @@
     src: url(../fonts/Arial-Bold.ttf);
 }
 @font-face {
-    font-family: 'OpenSans-Italic';
-    src: url(../fonts/OpenSans-Italic.ttf);
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
 }
 @font-face {
-    font-family: 'MyriadPro-Regular';
-    src: url(../fonts/MyriadPro-Regular.ttf);
+    font-family: 'Roboto-Light';
+    src: url(../fonts/Roboto/Roboto-Light.ttf);
 }
 @font-face {
-    font-family: 'Opensans-Semibold';
-    src: url(../fonts/Opensans-Semibold.ttf);
+    font-family: 'Roboto-Medium';
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
 }
 @font-face {
-    font-family: 'OpenSans-Bold';
-    src: url(../fonts/OpenSans-Bold.ttf);
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
 }
 @font-face {
-    font-family: 'SF-UI-Display-Heavy';
-    src: url(../fonts/SF-UI-Display-Heavy.otf);
-}
-@font-face {
-    font-family: 'OpenSans-Regular';
-    src: url(../fonts/OpenSans-Regular.ttf);
-}
-@font-face {
-    font-family: 'Verdana-Regular';
-    src: url(../fonts/Verdana-Regular.ttf);
+    font-family: 'Roboto-Thin';
+    src: url(../fonts/Roboto/Roboto-Thin.ttf);
 }

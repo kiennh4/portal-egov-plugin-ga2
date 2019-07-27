@@ -17,7 +17,7 @@
 <script src="/article-publisher-portlet/js/jquery.vticker-min.js"></script>
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
-		<div class="article-publisher-display-style-3">
+		<div class="article-publisher-display-style-3" id="articlePublisherStyle3">
 			<div class="article-publisher-style-3">
 					<ul>
 					<%

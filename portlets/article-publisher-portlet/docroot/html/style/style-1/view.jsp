@@ -16,7 +16,7 @@
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
 		
-		<div class="article-publisher-display-style-1">
+		<div class="article-publisher-display-style-1" id="articlePubliserStyle1">
 		
 		<%
 		String topAssetSummary = "";
@@ -61,14 +61,19 @@
 									</a>
 								</span>
 							</c:if>
-							
+							<div class="asset-title-mobile">
+								<a href="<%=assetLink%>" title="<%=assetCache.getTitle()%>">
+									<%=assetTitle %>
+								</a>
+								<c:if test="<%=showPublishDate %>">
+									<span class="publish-date"><%=publishDate %></span>
+								</c:if>
+							</div>
 							<span class="summary-content"><%=topAssetSummary %></span>
 						</div>
 						
 						<div style="clear: both;"></div>
 					</div>
-					
-					<div class="separator"></div>	
 				</c:when>
 				
 				<c:otherwise>

@@ -2,7 +2,6 @@
 <!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_1_0.dtd">
 
 <liferay-portlet-app>
-	
 	<portlet>
 		<portlet-name>vbpq</portlet-name>
 		<icon>/html/images/icon/vbpq_portlet_icon.png</icon>
@@ -46,25 +45,13 @@
 		<configuration-action-class>com.portal_egov.portlet.vbpq.action.VBPQCategoryConfiguration</configuration-action-class>
 		<instanceable>true</instanceable>
 		<header-portlet-css>/css/main.css</header-portlet-css>
-		<header-portlet-javascript>/js/jquery.js</header-portlet-javascript>
 		<footer-portlet-javascript>
 			/js/main.js
 		</footer-portlet-javascript>
 		<css-class-wrapper>vbpq-categories-portlet</css-class-wrapper>
 		<add-default-resource>true</add-default-resource>
 	</portlet>
-	
-	<portlet>
-		<portlet-name>vbpq_lastest_entry</portlet-name>
-		<icon>/html/images/icon/vbpq_portlet_icon.png</icon>
-		<configuration-action-class>com.portal_egov.portlet.vbpq.action.VBPQLastestEntryConfiguration</configuration-action-class>
-		<instanceable>true</instanceable>
-		<header-portlet-css>/css/main.css</header-portlet-css>
-		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
-		<css-class-wrapper>vbpq-lastest-entries-portlet</css-class-wrapper>
-		<add-default-resource>true</add-default-resource>
-	</portlet>
-	
+
 	<portlet>
 		<portlet-name>vbpq_dynamic_menu</portlet-name>
 		<icon>/html/images/icon/vbpq_category_portlet_icon.png</icon>
@@ -77,6 +64,19 @@
 		<css-class-wrapper>vbpq-menu-portlet</css-class-wrapper>
 	</portlet>
 	
+	<portlet>
+		<portlet-name>vbpq-lastest-entry</portlet-name>
+		<icon>/html/images/icon/vbpq_portlet_icon.png</icon>
+		<configuration-action-class>com.portal_egov.portlet.vbpq.action.VBPQLastestEntryConfiguration</configuration-action-class>
+		<instanceable>true</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>
+			vbpq-lastest-entry-portlet
+		</css-class-wrapper>
+	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>
 		<role-link>Administrator</role-link>

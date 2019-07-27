@@ -175,7 +175,60 @@ public class SiteDisplaySettingsPortlet extends MVCPortlet {
 			SessionErrors.add(actionRequest, e.getClass().getName());
 		}
 	}
+	public void updateSiteInfo(ActionRequest actionRequest, ActionResponse actionResponse){
+		try {
+			ExpandoBridge expandoBridge = null;
+			
+			String headline = ParamUtil.getString(actionRequest, "headline");
+			
+			String image_url = ParamUtil.getString(actionRequest, "siteImage");
+			
+			String url = ParamUtil.getString(actionRequest, "url");
+			
+			String description  = ParamUtil.getString(actionRequest, "description");
+			
+			String type = ParamUtil.getString(actionRequest, "type");
+			
+			String keywords = ParamUtil.getString(actionRequest, "keywords");
+			
+			long groupId = PortalUtil.getScopeGroupId(actionRequest);
+			
+			LayoutSet layoutSet = LayoutSetLocalServiceUtil.getLayoutSet(groupId,false);
+			
+			long companyId = PortalUtil.getCompanyId(actionRequest);
+			
+			if(layoutSet != null){
+				expandoBridge = layoutSet.getExpandoBridge();
+				ExpandoUtil.updateColumnValue(companyId,
+						expandoBridge, SiteSettingConstants.HEADLINE,
+						ExpandoColumnConstants.STRING, headline);
+				ExpandoUtil.updateColumnValue(companyId,
+						expandoBridge, SiteSettingConstants.URL,
+						ExpandoColumnConstants.STRING, url);
+				ExpandoUtil.updateColumnValue(companyId,
+						expandoBridge, SiteSettingConstants.KEYWORDS,
+						ExpandoColumnConstants.STRING, keywords);
+				ExpandoUtil.updateColumnValue(companyId,
+						expandoBridge, SiteSettingConstants.TYPE,
+						ExpandoColumnConstants.STRING, type);
+				ExpandoUtil.updateColumnValue(companyId,
+						expandoBridge, SiteSettingConstants.IMAGE_URL,
+						ExpandoColumnConstants.STRING, image_url);
+				ExpandoUtil.updateColumnValue(companyId,
+						expandoBridge, SiteSettingConstants.DESCRIPTION,
+						ExpandoColumnConstants.STRING, description);
+			}
+			String redirectURL = ParamUtil.getString(actionRequest,
+					"redirectURL");
 
+			if (Validator.isNotNull(redirectURL)) {
+				actionResponse.sendRedirect(redirectURL);
+			}
+		} catch (Exception e) {
+			_log.error(e.getClass());
+			SessionErrors.add(actionRequest, e.getClass().getName());
+		}
+	}
 	public void updateFooterContent(ActionRequest actionRequest,
 			ActionResponse actionResponse) {
 

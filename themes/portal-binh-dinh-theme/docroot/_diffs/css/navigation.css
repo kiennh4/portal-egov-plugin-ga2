@@ -7,7 +7,9 @@
 	border-radius: 0px;
 	font-size: 15.5px;
 }
-
+.navigation .menu-mobile{
+	display: none;
+}
 .sf-navbar {
 	position: relative;
 	background: #d63031;
@@ -28,7 +30,12 @@ li{
 	float: left;
 	cursor: pointer;
 }
-
+.navigation #show-menu{
+	display: none;
+}
+.navigation .toggle{
+	display: none;
+}
 .sf-navbar li a {
 	color: #fff;
 	font-weight: bold;
@@ -55,7 +62,6 @@ li{
 	}
 }
 .sf-navbar img.right-arrow{
-	position: absolute;
 	right: 1px;
 	top: 14px;
 }

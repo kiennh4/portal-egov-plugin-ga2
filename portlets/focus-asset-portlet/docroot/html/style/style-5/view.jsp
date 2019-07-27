@@ -76,7 +76,11 @@
 											</a>
 										</span>
 									</c:if>
-									
+									<span class="asset-title-mobile">
+										<a href="<%=assetLink%>" title="<%=assetCache.getTitle()%>">
+											<%=assetTitle %>
+										</a>
+									</span>
 									<span class="summary-content"><%=topAssetSummary %></span>
 								</div>
 								

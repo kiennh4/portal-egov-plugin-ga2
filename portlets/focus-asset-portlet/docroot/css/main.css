@@ -664,6 +664,9 @@
 							color: #b10700;
 						}
 					}
+					.asset-title-mobile{
+						display: none;
+					}
 					.small-img{
 						float: left;
 						width: 45%;

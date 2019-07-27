@@ -68,6 +68,15 @@
 							<liferay-ui:message key="slogan"/>
 						</a>
 					</li>
+					<li>
+						<liferay-portlet:resourceURL copyCurrentRenderParameters="<%=true %>" varImpl="updateSiteInfoURL">
+							<portlet:param name="jspPage" value="/html/view/sections/siteinfo.jsp"/>
+						</liferay-portlet:resourceURL>
+				
+						<a href='<%=updateSiteInfoURL%>' class="setting-menu-item" id="<portlet:namespace/>updateSiteInfo">
+							<liferay-ui:message key="site-info"/>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</aui:column>

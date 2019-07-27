@@ -15,7 +15,7 @@
 
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
-		<div class="article-publisher-display-style-7">
+		<div class="article-publisher-display-style-7" id="articlePubliserStyle7">
 			<ul id="<portlet:namespace/>jcarousel" class="jcarousel-skin-tango">
 			<%
 			int assetIndex = 0;

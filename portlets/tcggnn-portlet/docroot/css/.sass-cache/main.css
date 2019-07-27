@@ -1,0 +1,77 @@
+.public-service-registry-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px; }
+  .public-service-registry-container input[type=text], .public-service-registry-container select, .public-service-registry-container textarea, .public-service-registry-container input[type=email] {
+    width: 100%;
+    padding: 12px !important;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; }
+  .public-service-registry-container label {
+    color: #000; }
+  .public-service-registry-container .warning {
+    font-size: 10px;
+    color: #f00; }
+  .public-service-registry-container .btn {
+    position: relative;
+    vertical-align: top;
+    height: 40px;
+    padding: 0 5px;
+    color: white;
+    text-align: center;
+    border: 0;
+    text-shadow: none;
+    cursor: pointer; }
+  .public-service-registry-container .btn-submit {
+    background: #e67e22;
+    box-shadow: inset 0 -2px #e67e22; }
+  .public-service-registry-container .btn-reset {
+    background: #3498db;
+    box-shadow: inset 0 -2px #16a085; }
+  .public-service-registry-container .btn-submit:hover {
+    top: 1px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #d35400; }
+  .public-service-registry-container .error {
+    color: #f00; }
+
+.search-public-service-portlet .search-container {
+  width: 100%;
+  margin: 0 auto; }
+.search-public-service-portlet input[type=text], .search-public-service-portlet select, .search-public-service-portlet textarea, .search-public-service-portlet input[type=email] {
+  width: 80%;
+  padding: 8px !important;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; }
+.search-public-service-portlet .input-group-addon {
+  padding: 7px;
+  background: #48b9dd;
+  color: #fff;
+  font-weight: bold;
+  top: -4px;
+  position: relative;
+  cursor: pointer; }
+.search-public-service-portlet .input-group-addon:HOVER {
+  background: #1fb2e0; }
+.search-public-service-portlet .header-title {
+  font-size: 15px;
+  font-weight: bold; }
+.search-public-service-portlet table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%; }
+.search-public-service-portlet td, .search-public-service-portlet th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px; }
+

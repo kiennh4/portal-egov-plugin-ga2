@@ -116,9 +116,9 @@
 
 <div class="vbpq_search_form_wrapper">
 	
-	<div class="vbpq_search_form_left_content">
-		<div class="title"><liferay-ui:message key="VBPQ"/></div>
-	</div>
+<!-- 	<div class="vbpq_search_form_left_content"> -->
+<%-- 		<div class="title"><liferay-ui:message key="VBPQ"/></div> --%>
+<!-- 	</div> -->
 	
 	<div class="vbpq_search_form_center_content">
 		
@@ -250,7 +250,7 @@
 					%>
 					
 					<liferay-ui:search-container-column-text  title='<%=LanguageUtil.get(locale, "view") %>'  
-							name="#" value="<%=String.valueOf(vbpqIndex)%>" href="<%=rowHREF %>"/>
+							name="Stt" value="<%=String.valueOf(vbpqIndex)%>" href="<%=rowHREF %>"/>
 					
 					<liferay-ui:search-container-column-text title='<%=LanguageUtil.get(locale, "view") %>' 
 							name="vbpq-code" value="<%=vbpqEntry.getEntryCode()%>" href="<%=rowHREF %>"/>						
@@ -261,23 +261,23 @@
 					<c:if test='<%=Validator.isNotNull(vbpqEntry.getPublishDate()) %>'>
 						<liferay-ui:search-container-column-text name="vbpq-publish-date" value="<%=dateFormat.format(vbpqEntry.getPublishDate())%>"/>										 
 					</c:if>
-					<c:if test='<%=Validator.isNotNull(vbpqEntry.getExecuteDate()) %>'>
-						<liferay-ui:search-container-column-text name="vbpq-execute-date" value="<%=dateFormat.format(vbpqEntry.getExecuteDate())%>"/>										 
-					</c:if>
-					<c:choose>
-						<c:when test='<%=(vbpqEntry.isNeverExpired())%>'>
-							<liferay-ui:search-container-column-text name="vbpq-expired-date" >
-								<liferay-ui:message key="never-expired"/>
-							</liferay-ui:search-container-column-text>										 
-						</c:when>
-						<c:otherwise>
-							<c:if test="<%=Validator.isNotNull(vbpqEntry.getExpirationDate()) %>">
-								<liferay-ui:search-container-column-text name="vbpq-expired-date" >
-									<%=dateFormat.format(vbpqEntry.getExpirationDate()) %>
-								</liferay-ui:search-container-column-text>
-							</c:if>	
-						</c:otherwise>
-					</c:choose>
+<%-- 					<c:if test='<%=Validator.isNotNull(vbpqEntry.getExecuteDate()) %>'> --%>
+<%-- 						<liferay-ui:search-container-column-text name="vbpq-execute-date" value="<%=dateFormat.format(vbpqEntry.getExecuteDate())%>"/>										  --%>
+<%-- 					</c:if> --%>
+<%-- 					<c:choose> --%>
+<%-- 						<c:when test='<%=(vbpqEntry.isNeverExpired())%>'> --%>
+<%-- 							<liferay-ui:search-container-column-text name="vbpq-expired-date" > --%>
+<%-- 								<liferay-ui:message key="never-expired"/> --%>
+<%-- 							</liferay-ui:search-container-column-text>										  --%>
+<%-- 						</c:when> --%>
+<%-- 						<c:otherwise> --%>
+<%-- 							<c:if test="<%=Validator.isNotNull(vbpqEntry.getExpirationDate()) %>"> --%>
+<%-- 								<liferay-ui:search-container-column-text name="vbpq-expired-date" > --%>
+<%-- 									<%=dateFormat.format(vbpqEntry.getExpirationDate()) %> --%>
+<%-- 								</liferay-ui:search-container-column-text> --%>
+<%-- 							</c:if>	 --%>
+<%-- 						</c:otherwise> --%>
+<%-- 					</c:choose> --%>
 				</liferay-ui:search-container-row>	
 				<liferay-ui:search-iterator />
 			</liferay-ui:search-container>
@@ -361,7 +361,7 @@
 					node: '.vbpq_search_form_wrapper',
 					points: ['tl', 'tl']
 			};
-								   
+			
 			Liferay.Util.openWindow(
 				{
 					dialog: {

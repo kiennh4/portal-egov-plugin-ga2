@@ -66,7 +66,7 @@ public class VBPQLastestEntryConfiguration extends DefaultConfigurationAction{
 	public String render(PortletConfig portletConfig,
 			RenderRequest renderRequest, RenderResponse renderResponse)
 			throws Exception {
-		return "/html/vbpq_lastest_entry_portlet/configuration.jsp";
+		return "/html/vbpq_lastest_entry/configuration.jsp";
 	}
 	private static Log _log = LogFactory.getLog(VBPQLastestEntryConfiguration.class);
 }

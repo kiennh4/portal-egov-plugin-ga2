@@ -18,7 +18,7 @@
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
 		
-		<div class="article-publisher-display-style-6">
+		<div class="article-publisher-display-style-6" id="articlePubliserStyle5">
 			<aui:layout>
 				<aui:column columnWidth="70" >
 				<%

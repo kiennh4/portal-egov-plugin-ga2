@@ -155,18 +155,11 @@
 	
 	.asset_publisher_view_full_content{
 		font-size: 17px;
-		font-family: 'Helvetica_Regular', sans-serif;
 		text-align: justify;
 		.asset-abstract{
 			.assetdesc-text{
 				width:100%;
 			}
-		}
-		p{
-			font-family: 'Helvetica_Regular', sans-serif !important;
-		}
-		div span{
-			font-family:  'Helvetica_Regular', sans-serif;
 		}
 	}
 		
@@ -206,9 +199,7 @@
 	    text-decoration: none;
 	    color: #333;
 	}
-	.asset_publisher_view_full_content .journal-content-article div{
-		font-family: 'Helvetica_Regular', sans-serif !important;
-	}		
+	
 	.asset_publisher_view_full_content .social_icon .mail_icon{
 	   padding-left: 5px;
 	}

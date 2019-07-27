@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-
 #parse ($init)
-
 <html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id">
-
 <head>
 	<title>$the_title - $company_name</title>
-	<meta name="description" content="Cổng thông tin điện tử Tỉnh Ủy Bình , tin tức về Đảng Cộng Sản Bình Định">
-    <meta name="keywords" content="Bình Định, Trang thông tin điện tử Bình Định , Đảng Cộng Sản Bình Định, DCS Bình Định,Tỉnh ủy Bình Định">
-    <meta content="Tin nhanh VnExpress" property="og:site_name"/>
-	<meta property="og:url" itemprop="url" content="http://binhdinh.dcs.vn"/>
-	<meta property="og:image" itemprop="thumbnailUrl" content="http://binhdinh.dcs.vn/documents/19/47303/1-8.jpg/d342e944-7298-43c6-a300-0062058303bf?version=1.0&t=1551189388000&imagePreview=1"/>
-	<meta content="Đảng Cộng Sản Tỉnh Bình Định - Trang thông tin điện tử Tỉnh Ủy Bình Định " itemprop="headline" property="og:title"/>
+	<meta name="description" content="$description">
+    <meta name="keywords" content="$keywords" property="og:site_name"/>
+	<meta property="og:url" itemprop="url" content="$url"/>
+	<meta property="og:image" itemprop="thumbnailUrl" content="$imageUrl"/>
+	<meta content="$headline" itemprop="headline" property="og:title"/>
+	<meta property="og:type" content="$type" />
 	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	$theme.include($top_head_include)
 </head>
@@ -31,6 +27,7 @@
 			</span>
 		#end
 		<div class="banner-wrapper">
+			<img src="$themeDisplay.getPathThemeImages()/background/414.png" class="banner-logo"/>
 			<div clas="banner-content">
 				<img src="$themeDisplay.getPathThemeImages()/banner/co.gif" class="flag"/>
 			</div>

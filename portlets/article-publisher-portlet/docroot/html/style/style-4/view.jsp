@@ -15,7 +15,7 @@
 
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
-		<div class="article-publisher-display-style-4">
+		<div class="article-publisher-display-style-4" id="articlePubliserStyle4">
 			<ul>
 			<%
 			for(AssetEntryCache assetCache : assetCacheList){

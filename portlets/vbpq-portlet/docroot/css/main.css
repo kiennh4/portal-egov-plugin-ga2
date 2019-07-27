@@ -63,6 +63,18 @@
 		background: #D3E8F1;
 		border: 1px solid #D3E8F1;
 	}
+	.vbpq-admin-portlet .taglib-search-iterator {
+		font-size: 13px;
+	}
+	 
+	.vbpq-portlet .taglib-search-iterator .results-header{
+		background-color: #d63031;
+	}
+	
+	.vbpq-portlet .taglib-search-iterator .results-header th{
+		background: #d63031;
+		color: #fff;
+	}
 
 /* VBPQ Upload Settings */
 
@@ -311,7 +323,6 @@
 	.vbpq_search_form .vbpq_search_form_help_content{
 		font-weight: normal;
 		color: #454545;
-		padding-top: 10px;
 		padding-bottom: 10px;
 		display: block;
 	}	
@@ -487,7 +498,7 @@
     	padding: 0;
 	}	
 	
-	.vbpq-lastest-entries ul li{
+	.vbpq-lastest-entries ul li div{
     	background: url("/vbpq-portlet/html/images/bullet/li_red_bullet.jpg") no-repeat scroll 0 12px transparent;   	
     	padding-left: 10px;
     	padding-top: 6px;
@@ -496,6 +507,7 @@
 	.vbpq-lastest-entries  ul a{
 	 	clear: both;
 	    text-align: justify;
+	    color: #030d56;
 	    text-decoration: none;
 	}
 					
@@ -510,7 +522,8 @@
 	.vbpq-preview-content{
 		font-size: 12px;
 		padding: 10px;
-		background: url("/vbpq-portlet/html/images/qhvn_bg.png") no-repeat center transparent;
+		background-size: contain;
+		background: url("/vbpq-portlet/html/images/CoDangCS.png") no-repeat center transparent;
 	}
 	
 	.vbpq-preview-content .vbpq-title{

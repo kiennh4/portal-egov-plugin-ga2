@@ -15,7 +15,7 @@
 
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
-		<div class="article-publisher-display-style-5">
+		<div class="article-publisher-display-style-5" id="articlePublisherStyle5">
 		
 			<div class="style-title">
 				<span><%=styleTitle %></span>

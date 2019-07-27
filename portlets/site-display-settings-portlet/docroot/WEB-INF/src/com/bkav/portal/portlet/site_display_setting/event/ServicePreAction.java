@@ -4,6 +4,7 @@ package com.bkav.portal.portlet.site_display_setting.event;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.bkav.portal.portlet.site_display_setting.util.SiteSettingConstants;
 import com.bkav.portal.portlet.site_display_setting.util.SiteSettingUtil;
 import com.liferay.portal.kernel.events.Action;
 import com.liferay.portal.kernel.log.Log;
@@ -15,6 +16,7 @@ import com.liferay.portal.service.LayoutSetLocalServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
 import com.liferay.portlet.PortletURLFactoryUtil;
+
 import javax.portlet.ActionRequest;
 import javax.portlet.PortletURL;
 import javax.servlet.http.HttpServletRequest;
@@ -66,8 +68,23 @@ public class ServicePreAction extends Action
 			vars.put("footerContent", footerContent);
 			
 			String sloganContent = SiteSettingUtil.getSloganContent(layoutSet.getLayoutSetId());
-			
 			vars.put("sloganContent", sloganContent);
+			
+			Map<String, String> siteInfo = SiteSettingUtil.getSiteInfo(layoutSet.getLayoutSetId());
+			
+			if(!siteInfo.isEmpty()){
+				vars.put(SiteSettingConstants.HEADLINE, (String)siteInfo.get(SiteSettingConstants.HEADLINE));
+				
+				vars.put(SiteSettingConstants.DESCRIPTION, (String)siteInfo.get(SiteSettingConstants.DESCRIPTION));
+				
+				vars.put(SiteSettingConstants.IMAGE_URL, (String)siteInfo.get(SiteSettingConstants.IMAGE_URL));
+				
+				vars.put(SiteSettingConstants.KEYWORDS, (String)siteInfo.get(SiteSettingConstants.KEYWORDS));
+				
+				vars.put(SiteSettingConstants.TYPE, (String)siteInfo.get(SiteSettingConstants.TYPE));
+				
+				vars.put(SiteSettingConstants.URL, (String)siteInfo.get(SiteSettingConstants.URL));
+			}
 			// Link edit banner, footer,slogan
 			
 			ThemeDisplay themeDisplay = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);

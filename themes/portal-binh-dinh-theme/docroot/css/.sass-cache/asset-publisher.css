@@ -101,14 +101,9 @@
     width: 100%; }
   .portlet-asset-publisher .asset_publisher_view_full_content {
     font-size: 17px;
-    font-family: 'Helvetica_Regular', sans-serif;
     text-align: justify; }
     .portlet-asset-publisher .asset_publisher_view_full_content .asset-abstract .assetdesc-text {
       width: 100%; }
-    .portlet-asset-publisher .asset_publisher_view_full_content p {
-      font-family: 'Helvetica_Regular', sans-serif !important; }
-    .portlet-asset-publisher .asset_publisher_view_full_content div span {
-      font-family: 'Helvetica_Regular', sans-serif; }
   .portlet-asset-publisher .asset_publisher_view_full_content .asset_title {
     text-align: left;
     font-weight: bold;
@@ -137,8 +132,6 @@
   .portlet-asset-publisher .asset_publisher_view_full_content .social_icon a {
     text-decoration: none;
     color: #333; }
-  .portlet-asset-publisher .asset_publisher_view_full_content .journal-content-article div {
-    font-family: 'Helvetica_Regular', sans-serif !important; }
   .portlet-asset-publisher .asset_publisher_view_full_content .social_icon .mail_icon {
     padding-left: 5px; }
   .portlet-asset-publisher .asset_publisher_view_full_content .asset-metadata {

@@ -1,7 +1,7 @@
 .site-display-settings-portlet{
 	
 	.setting-container{
-		
+		font-size: 14px;
 		.setting-menu{
 			width: 30%;
 						
@@ -24,5 +24,12 @@
 		.setting-content{
 			width: 65%;
 		}
+	}
+	input[type="text"]{
+		width: 100%;
+		padding: 8px 0px;
+	}
+	.aui-field-content, .aui-button-holder{
+		padding-top: 10px;
 	}
 }

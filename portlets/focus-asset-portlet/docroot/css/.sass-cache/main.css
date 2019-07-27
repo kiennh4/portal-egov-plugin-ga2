@@ -453,6 +453,8 @@
       font-weight: bold; }
       .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .list-news .top-asset .asset-title a {
         color: #b10700; }
+    .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .list-news .top-asset .asset-title-mobile {
+      display: none; }
     .focus-asset-portlet .focus-asset-display-style-5 .article-slidebar .list-news .top-asset .small-img {
       float: left;
       width: 45%;
