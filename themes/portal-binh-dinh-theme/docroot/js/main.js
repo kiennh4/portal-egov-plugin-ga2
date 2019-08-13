@@ -128,7 +128,8 @@ $(document).on("ready",function(){
         bc = current - parseInt(1); 
         $(".journal-content-article").css({"font-size" : bc});
 	});
-	
+	$('input[name=_3_keywords]').attr("placeholder", "Tìm kiếm");
+	$(".asset-category-name").hide();
 });
 $("#btnSpeak").on("click",function(){
 	console.log("Start speaking article content......");
@@ -165,8 +166,8 @@ $(".toggle").on("click", function() {
 	}
 });
 jQuery(document).ready(function(){
-	var block1 = $("#column-1");
-	var block2 = $("#column-2");
+	var block1 = $(".col-1");
+	var block2 = $(".col-2");
     if (jQuery(window).width() < 900) {
     	customResponse();
     	block2.find(".vbpq-lastest-entry-portlet").remove();
@@ -177,16 +178,19 @@ jQuery(document).ready(function(){
     }
 });
 function customResponse() {
+	var block1 = $("#column-1");
 	var append = $("#articlePublisherStyle5");
 	var parrentAppend = append.closest(".article-publisher-portlet");
 	var parrentId = parrentAppend.attr("id");
 	var blockParrent = $("#column-2");
-	blockParrent.find('[id^="articlePubliserStyle"]').each(function() {
-		var parrent = $(this).closest(".article-publisher-portlet");
-		var portletId = parrent.attr("id");
-		if(portletId != parrentId){
-			$("#" + portletId).remove();
-			parrentAppend.after(parrent);
-		}
-	});
+	if(block1.find("#articlePublisherStyle5").length > 0){
+		blockParrent.find('[id^="articlePubliserStyle"]').each(function() {
+			var parrent = $(this).closest(".article-publisher-portlet");
+			var portletId = parrent.attr("id");
+			if(portletId != parrentId){
+				$("#" + portletId).remove();
+				parrentAppend.after(parrent);
+			}
+		});
+	}
 }

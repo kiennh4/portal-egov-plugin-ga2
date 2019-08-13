@@ -1,0 +1,41 @@
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.container{
+		width: 1055px;
+	}
+	.external-video-frame {
+    	width: 100%!important;
+	}
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+ 	.navigation .sf-navbar li{
+		float: none;
+		display: block !important;
+	}
+	.navigation .sf-navbar li ul{
+		visibility: visible !important;
+		
+	}
+}
+
+@media screen and (max-width : 480px) {
+	.navigation .sf-navbar li{
+		float: none;
+		display: block !important;
+	}
+	.navigation .sf-navbar li ul{
+		visibility: visible !important;
+		
+	}
+}
+@media screen and (max-width : 320px) {
+	
+}

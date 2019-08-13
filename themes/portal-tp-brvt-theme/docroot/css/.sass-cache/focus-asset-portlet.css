@@ -1,0 +1,417 @@
+.focus-asset-portlet .portlet-config-form .config-title {
+  border-bottom: 1px solid #bfbfbf;
+  padding: 10px 0px;
+  font-size: 16px;
+  margin-bottom: 10px; }
+.focus-asset-portlet .portlet-config-form .lfr-form-row {
+  padding: 0px;
+  margin: 10px 0px; }
+.focus-asset-portlet .portlet-config-form .lfr-form-row:hover {
+  border: solid #ccc;
+  border-width: 0px 0px 1px 0px;
+  background: #fff; }
+.focus-asset-portlet .portlet-config-form .style-thumbnail img {
+  max-width: 750px;
+  max-height: 400px; }
+.focus-asset-portlet .portlet-config-form .aui-field-content {
+  margin-bottom: 10px; }
+.focus-asset-portlet .portlet-config-form .aui-field-label,
+.focus-asset-portlet .portlet-config-form .aui-choice-label {
+  font-weight: bold;
+  margin-bottom: 5px; }
+.focus-asset-portlet .focus-asset-display-style-1 {
+  width: 100%;
+  clear: both; }
+  .focus-asset-portlet .focus-asset-display-style-1 .asset-summary-panel {
+    width: 58%;
+    float: left;
+    position: relative; }
+    .focus-asset-portlet .focus-asset-display-style-1 .asset-summary-panel .asset-image img {
+      width: 400px;
+      height: 300px;
+      max-width: 400px;
+      max-height: 300px;
+      background: #fff;
+      box-shadow: 0 1px 3px 2px #d2d2d2;
+      padding: 4px; }
+    .focus-asset-portlet .focus-asset-display-style-1 .asset-summary-panel .asset-title {
+      width: 400px;
+      opacity: 0.7;
+      position: absolute;
+      background: #333333;
+      bottom: 4px;
+      padding: 12px 0px;
+      margin: 4px; }
+      .focus-asset-portlet .focus-asset-display-style-1 .asset-summary-panel .asset-title a {
+        color: white;
+        font-weight: bold;
+        padding-left: 10px;
+        display: block;
+        font-size: 14px; }
+  .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel {
+    width: 40%;
+    float: right;
+    box-shadow: 0 1px 3px 2px #d2d2d2; }
+    .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-header {
+      background: url("/focus-asset-portlet/images/focus-asset-panel-header-bg.jpg") repeat-x transparent;
+      height: 30px;
+      line-height: 30px;
+      margin: 2px;
+      border: 1px solid #e8e8e8;
+      border-bottom: none; }
+      .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-header .header-title {
+        background: url("/focus-asset-portlet/images/focus-icon.png") no-repeat 2px 2px transparent;
+        color: #ff0700;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: 1px 1px #ccc;
+        padding-left: 20px; }
+    .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content {
+      margin: 0px;
+      padding: 2px;
+      text-align: justify; }
+      .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li {
+          border-top: 1px dotted #E4E4E4;
+          padding: 5px;
+          padding-left: 5px;
+          height: 34px; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li:first-child {
+          border-top: none; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li:hover,
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li.selected {
+          background: #f0f0f0; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li:hover a,
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul li.selected a {
+          color: #ff0700;
+          text-shadow: 1px 1px #e8e8e8; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul a {
+          background: url("../images/custom_icon/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
+          color: #00528B;
+          text-decoration: none;
+          padding-left: 12px;
+          display: block;
+          margin-right: 5px; }
+        .focus-asset-portlet .focus-asset-display-style-1 .asset-list-panel .panel-content ul a:hover {
+          color: #ff0700; }
+.focus-asset-portlet .focus-asset-display-style-2 {
+  width: 100%;
+  clear: both;
+  margin-bottom: 8px; }
+  .focus-asset-portlet .focus-asset-display-style-2 .asset-summary-container {
+    margin: 0;
+    float: left;
+    width: 56.5%; }
+    .focus-asset-portlet .focus-asset-display-style-2 .asset-summary-container .asset-summary-content {
+      padding: 0;
+      margin: 0; }
+      .focus-asset-portlet .focus-asset-display-style-2 .asset-summary-container .asset-summary-content .asset-image img {
+        width: 390px;
+        height: 303px;
+        padding: 1px;
+        background: #fff;
+        border: 1px solid #d2d2d2; }
+      .focus-asset-portlet .focus-asset-display-style-2 .asset-summary-container .asset-summary-content .asset-title {
+        opacity: .7;
+        width: 390px;
+        background: black;
+        padding: 15px 0;
+        position: absolute;
+        bottom: 6px;
+        left: 2px; }
+        .focus-asset-portlet .focus-asset-display-style-2 .asset-summary-container .asset-summary-content .asset-title a {
+          font-weight: bold;
+          display: block;
+          color: #fff;
+          padding-left: 15px; }
+      .focus-asset-portlet .focus-asset-display-style-2 .asset-summary-container .asset-summary-content .asset-summary {
+        width: 300px; }
+  .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container {
+    margin: 0;
+    float: left;
+    width: 43%;
+    border: 1px solid #d2d2d2; }
+    .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-names-container {
+      width: 100%; }
+      .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-names-container ul {
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+        height: 32px;
+        line-height: 32px;
+        border-bottom: 1px solid #d2d2d2;
+        width: 100%;
+        display: table; }
+      .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-names-container ul li {
+        height: 32px;
+        line-height: 32px;
+        border-right: 1px solid #d2d2d2;
+        position: relative;
+        display: table-cell;
+        max-width: 100px;
+        white-space: nowrap; }
+      .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-names-container ul li:last-child {
+        border-right: none; }
+      .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-names-container ul li.active-tab {
+        border-bottom: 1px solid #fff;
+        margin-bottom: -2px; }
+      .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-names-container ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        padding: 0px 12px;
+        outline: none;
+        text-shadow: 1px 1px #d2d2d2;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis; }
+      .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-names-container ul li a:hover,
+      .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-names-container ul li.active-tab a {
+        color: #ff0700; }
+    .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container {
+      float: right;
+      margin: 0px;
+      padding: 2px;
+      text-align: justify; }
+      .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none; }
+        .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul li {
+          border-top: 1px dotted #E4E4E4;
+          padding: 5px;
+          padding-left: 5px;
+          height: 34px; }
+        .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul li:first-child {
+          border-top: none; }
+        .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul li.selected {
+          background: #f6f7f8; }
+        .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul li:hover a,
+        .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul li.selected a {
+          color: #ff0700;
+          text-shadow: 1px 1px #d2d2d2; }
+        .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul a {
+          background: url("../images/custom_icon/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
+          color: #00528B;
+          text-decoration: none;
+          padding-left: 12px;
+          display: block; }
+        .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container ul a:hover {
+          color: #ff0700; }
+.focus-asset-portlet .focus-asset-display-style-3 {
+  width: 100%;
+  clear: both;
+  margin-bottom: 8px; }
+  .focus-asset-portlet .focus-asset-display-style-3 .tab-names-container {
+    width: 100%; }
+    .focus-asset-portlet .focus-asset-display-style-3 .tab-names-container ul {
+      background: url("../images/background/portlet-title-bg.png") top right no-repeat scroll #0788d9;
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none;
+      height: 27px;
+      line-height: 27px;
+      border-bottom: 1px solid #d2d2d2;
+      width: 100%;
+      display: table; }
+    .focus-asset-portlet .focus-asset-display-style-3 .tab-names-container ul li {
+      height: 27px;
+      line-height: 27px;
+      position: relative;
+      float: left;
+      white-space: nowrap;
+      border-radius: 5px 5px 0px 0px; }
+    .focus-asset-portlet .focus-asset-display-style-3 .tab-names-container ul li.active-tab {
+      margin-bottom: -1px;
+      background: #467CDD; }
+    .focus-asset-portlet .focus-asset-display-style-3 .tab-names-container ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      padding: 0px 12px;
+      outline: none;
+      color: white;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis; }
+    .focus-asset-portlet .focus-asset-display-style-3 .tab-names-container ul li a:hover,
+    .focus-asset-portlet .focus-asset-display-style-3 .tab-names-container ul li.active-tab a {
+      color: #ffd900; }
+  .focus-asset-portlet .focus-asset-display-style-3 .asset-summary-container {
+    margin: 0;
+    float: left;
+    width: 58%; }
+    .focus-asset-portlet .focus-asset-display-style-3 .asset-summary-container .asset-summary-content {
+      padding: 0;
+      margin: 0; }
+      .focus-asset-portlet .focus-asset-display-style-3 .asset-summary-container .asset-summary-content .asset-image {
+        padding: 5px;
+        position: relative; }
+        .focus-asset-portlet .focus-asset-display-style-3 .asset-summary-container .asset-summary-content .asset-image img {
+          width: 272px;
+          height: 220px;
+          padding: 2px;
+          background: #fff;
+          border: 1px solid #d2d2d2; }
+      .focus-asset-portlet .focus-asset-display-style-3 .asset-summary-container .asset-summary-content .asset-title {
+        opacity: .6;
+        position: absolute;
+        width: 272px;
+        background: black;
+        bottom: 9px;
+        padding: 15px 0;
+        left: 8px; }
+        .focus-asset-portlet .focus-asset-display-style-3 .asset-summary-container .asset-summary-content .asset-title a {
+          font-weight: bold;
+          display: block;
+          color: #fff;
+          padding-left: 15px; }
+      .focus-asset-portlet .focus-asset-display-style-3 .asset-summary-container .asset-summary-content .asset-summary {
+        width: 100%; }
+  .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container {
+    margin: 0;
+    float: left;
+    width: 40%; }
+    .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container {
+      float: right;
+      margin: 0px;
+      padding: 2px;
+      text-align: justify; }
+      .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul {
+        margin: 0px;
+        padding: 2px;
+        list-style: none; }
+        .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul li {
+          border-top: 1px dotted #E4E4E4;
+          padding: 3px;
+          padding-left: 5px;
+          height: 34px; }
+        .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul li:first-child {
+          border-top: none; }
+        .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul li.selected {
+          background: #f6f7f8; }
+        .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul li:hover a,
+        .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul li.selected a {
+          color: #ff0700;
+          text-shadow: 1px 1px #d2d2d2; }
+        .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul a {
+          background: url("../images/custom_icon/li-red-icon.jpg") no-repeat scroll 0 6px transparent;
+          color: #00528B;
+          text-decoration: none;
+          padding-left: 12px;
+          display: block; }
+        .focus-asset-portlet .focus-asset-display-style-3 .tab-content-container .tab-assets-container ul a:hover {
+          color: #ff0700; }
+.focus-asset-portlet .focus-asset-display-style-4 {
+  width: 100%;
+  clear: both;
+  margin-bottom: 8px; }
+  .focus-asset-portlet .focus-asset-display-style-4 .tab-names-container {
+    width: 100%;
+    border: 1px solid #d2d2d2;
+    border-bottom: none; }
+    .focus-asset-portlet .focus-asset-display-style-4 .tab-names-container ul {
+      background: url("../images/background/tab_assets_bg.jpg") top left repeat-x;
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none;
+      height: 27px;
+      line-height: 27px;
+      width: 100%;
+      display: table; }
+    .focus-asset-portlet .focus-asset-display-style-4 .tab-names-container ul li {
+      line-height: 27px;
+      position: relative;
+      float: left;
+      white-space: nowrap;
+      display: block;
+      width: 110px;
+      text-indent: -3px;
+      text-align: center; }
+    .focus-asset-portlet .focus-asset-display-style-4 .tab-names-container ul li.active-tab {
+      background: url("../images/background/selected_asset_tab_bg.jpg") no-repeat 0 0;
+      border-bottom: none; }
+    .focus-asset-portlet .focus-asset-display-style-4 .tab-names-container ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      padding: 0px 12px;
+      outline: none;
+      color: #00528b;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis; }
+    .focus-asset-portlet .focus-asset-display-style-4 .tab-names-container ul li a:hover,
+    .focus-asset-portlet .focus-asset-display-style-4 .tab-names-container ul li.active-tab a {
+      color: red; }
+  .focus-asset-portlet .focus-asset-display-style-4 .asset-summary-container {
+    margin: 0;
+    float: left;
+    width: 56%;
+    height: 400px; }
+    .focus-asset-portlet .focus-asset-display-style-4 .asset-summary-container .asset-summary-content {
+      padding: 0;
+      margin: 0; }
+      .focus-asset-portlet .focus-asset-display-style-4 .asset-summary-container .asset-summary-content .asset-image {
+        padding: 5px;
+        position: relative;
+        margin-left: 5px; }
+        .focus-asset-portlet .focus-asset-display-style-4 .asset-summary-container .asset-summary-content .asset-image img {
+          width: 375px;
+          height: 245px;
+          padding: 5px;
+          background: #fff;
+          border: 1px solid #d2d2d2; }
+      .focus-asset-portlet .focus-asset-display-style-4 .asset-summary-container .asset-summary-content .asset-title {
+        opacity: .7;
+        position: absolute;
+        width: 375px;
+        background: black;
+        bottom: 13px;
+        padding: 15px 0;
+        left: 11px; }
+        .focus-asset-portlet .focus-asset-display-style-4 .asset-summary-container .asset-summary-content .asset-title a {
+          font-weight: bold;
+          display: block;
+          color: #fff;
+          padding-left: 5px; }
+      .focus-asset-portlet .focus-asset-display-style-4 .asset-summary-container .asset-summary-content .asset-summary {
+        width: 100%; }
+  .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container {
+    margin: 0;
+    float: left;
+    width: 44%; }
+    .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container {
+      float: left;
+      margin: 0px;
+      padding: 2px;
+      text-align: justify; }
+      .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul {
+        margin: 0px;
+        padding: 2px;
+        list-style: none; }
+        .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul li {
+          border-top: 1px dotted #E4E4E4;
+          padding: 3px;
+          padding-left: 5px;
+          height: 55px; }
+        .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul li:first-child {
+          border-top: none; }
+        .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul li.selected {
+          background: #f6f7f8; }
+        .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul li:hover a,
+        .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul li.selected a {
+          color: #ff0700;
+          text-shadow: 1px 1px #d2d2d2; }
+        .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul a {
+          color: #00528B;
+          text-decoration: none;
+          padding-left: 12px;
+          display: block; }
+        .focus-asset-portlet .focus-asset-display-style-4 .tab-content-container .tab-assets-container ul a:hover {
+          color: #ff0700; }
+

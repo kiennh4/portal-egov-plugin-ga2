@@ -1,5 +1,7 @@
 <div class="navigation">
-	<a class="menu-mobile">Danh Mục</a>
+	<div class="search-wrapper">
+		$theme.search()
+	</div>
 	<ul id="navigation-menu" class="sf-navbar">	
 		#set ($counter=0)
 		#set ($drop = 0)
@@ -19,14 +21,15 @@
 				#end
 			#end
 				#if ($nav_item.hasChildren())
-					<a href="javascript:;" class="toggle" id="$drop" data-status="0">
+					<a href="$nav_item.getURL()" class="drop-addon">
+						$nav_item.icon() $nav_item.getName()
+					</a>
+					<a href="javascript:;" class="toggle" id="$drop" data-status="0"><i class="fa fa-caret-down" aria-hidden="true"></i></i></a>	
+					<a href="$nav_item.getURL()" class="parrent-menu">
 						$nav_item.icon() $nav_item.getName()
 						<i class="fa fa-caret-down" aria-hidden="true"></i>
 					</a>
-					<a href="javascript:;" class="parrent-menu">
-						$nav_item.icon() $nav_item.getName()
-						<i class="fa fa-caret-down" aria-hidden="true"></i>
-					</a>
+					<div style="clear:both;"></div>
 					<ul class="sub-menu" id="drop-$drop">
 						#set ($drop = $drop + 1)
 						#foreach ($nav_child in $nav_item.getChildren())
@@ -36,11 +39,11 @@
 								<li>
 							#end
 								#if($nav_child.hasChildren())
-									<a href="javascript:;" class="toggle" id="$drop" data-status="0">
+									<a href="$nav_child.getURL()" class="drop-addon">
 										$nav_child.getName()
-										<i class="fa fa-caret-down" aria-hidden="true"></i>
 									</a>
-									<a href="javascript:;" class="parrent-menu">
+									<a href="javascript:;" class="toggle" id="$drop" data-status="0"><i class="fa fa-caret-down" aria-hidden="true"></i></i></a>
+									<a href="$nav_child.getURL()" class="parrent-menu">
 										$nav_child.getName()
 										<i class="fa fa-caret-down" aria-hidden="true"></i>
 									</a>

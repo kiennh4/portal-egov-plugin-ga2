@@ -1,0 +1,29 @@
+/* open-sans-regular - vietnamese_latin-ext_latin */
+@font-face {
+    font-family: 'Helvetica_Regular';
+    src: url(../fonts/Helvetica.ttf);
+}
+@font-face {
+    font-family: 'Helvetica_Bold';
+    src: url(../fonts/Helvetica-Bold.ttf);
+}
+@font-face {
+    font-family: 'Arial_Regular';
+    src: url(../fonts/Arial_Regular.ttf);
+}
+@font-face {
+    font-family: 'Arial_Bold';
+    src: url(../fonts/Arial-Bold.ttf);
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}

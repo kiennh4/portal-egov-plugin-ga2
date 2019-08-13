@@ -1,0 +1,47 @@
+<div class="footer-menu">
+	<div class="footer-menu-wrapper">
+		<ul>
+			<li class="$nav_item_class">
+				<a href="/trang-chu"><span>Trang chủ</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/gioi-thieu"><span>Giới thiệu</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/so-do-cong-thong-tin"><span>Sơ đồ cổng thông tin</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/thu-vien-anh"><span>Thư viện ảnh</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/thu-vien-video"><span>Thư viện video</span></a>
+			</li>
+			<li class="$nav_item_class">
+				<a href="/lien-he"><span>Liên hệ</span></a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="copyright">	
+	#if ($theme_display.isShowPageSettingsIcon())
+		<span class="lfr-meta-actions" >
+				<a class="taglib-icon quickEditLayoutSet" href="$editFooterURL" data-width="700" id="quickEditFooter">
+					<img class="icon" src="$themeDisplay.getPathThemeImages()/common/edit.png" alt="#language("edit-footer")" title="#language("edit-footer")">
+				</a>
+		</span>
+	#end
+	#if($footerContent == "")
+		<div class="copy-right-content">
+			<b>Bản quyền © 2012 Tỉnh Ủy Phú Yên</b><br/>
+			Địa chỉ:02 Đường Nguyễn Hữu Thọ , TP Tuy Hòa</br>
+			Điện thoại: 84573826648 - Fax: 84573826648<br/>
+			Email: tuphuyentb1@tuphuyen, BBTWebsite@phuyendcs.vn
+		</div>
+		<div class="bottom-right-content">
+			Tổng biên tập: Nguyễn Hữu Hiệp UVBTTU</br>
+			Phó tổng biên tập: Lê Tấn Hổ TUV, Chánh VPTU
+		</div>
+	#else
+		$footerContent
+	#end
+</div>

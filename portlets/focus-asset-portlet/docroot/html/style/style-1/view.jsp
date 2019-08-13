@@ -33,8 +33,7 @@
 					<a href="<%=viewTopAssetContentURL%>">
 						<img id="<portlet:namespace/>focus-asset-img" 
 						 	src="<%=topAssetImgPath %>"
-						 	onerror="this.src='/focus-asset-portlet/images/default-asset-image.jpg'"
-						 />
+						 	onerror="this.src='/thumbnail/default-image.jpg'"/>
 					 </a>
 				</div>
 				

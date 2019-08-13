@@ -1,3 +1,7 @@
+<%@page import="com.liferay.portal.kernel.util.TextFormatter"%>
+<%@page import="com.portal_egov.portlet.vbpq.util.FileAttachmentUtil"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.liferay.portlet.documentlibrary.model.DLFileEntry"%>
 <%@page import="com.liferay.portal.kernel.language.LanguageUtil"%>
 <%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
 <%@page import="com.liferay.portal.kernel.util.StringBundler"%>
@@ -247,6 +251,23 @@
 						sb.append("')");
 	
 						String	rowHREF = sb.toString();
+						
+						List<DLFileEntry> fileAttachmentList = FileAttachmentUtil.getVBPQFileAttachment(vbpqEntry.getEntryId());
+						
+						String fileAttachmentDownloadLink = "";
+						String fileName = "";
+						if(fileAttachmentList.size() > 0){
+							DLFileEntry fileAttachment = fileAttachmentList.get(0);
+							
+							fileAttachmentDownloadLink = FileAttachmentUtil.createAttachmentDownloadLink(fileAttachment, themeDisplay);
+							
+							fileName = fileAttachment.getTitle(); 
+							
+						}
+						if(fileAttachmentDownloadLink.equals("")){
+							fileAttachmentDownloadLink = vbpqEntry.getFileAttachmentURL();
+						}
+						
 					%>
 					
 					<liferay-ui:search-container-column-text  title='<%=LanguageUtil.get(locale, "view") %>'  
@@ -261,6 +282,8 @@
 					<c:if test='<%=Validator.isNotNull(vbpqEntry.getPublishDate()) %>'>
 						<liferay-ui:search-container-column-text name="vbpq-publish-date" value="<%=dateFormat.format(vbpqEntry.getPublishDate())%>"/>										 
 					</c:if>
+					<liferay-ui:search-container-column-text title="<%=fileName%>"  
+							name="download" value="<%=fileName%>" href="<%=fileAttachmentDownloadLink %>"/>
 <%-- 					<c:if test='<%=Validator.isNotNull(vbpqEntry.getExecuteDate()) %>'> --%>
 <%-- 						<liferay-ui:search-container-column-text name="vbpq-execute-date" value="<%=dateFormat.format(vbpqEntry.getExecuteDate())%>"/>										  --%>
 <%-- 					</c:if> --%>

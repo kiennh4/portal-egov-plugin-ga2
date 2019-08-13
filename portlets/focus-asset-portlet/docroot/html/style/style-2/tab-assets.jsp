@@ -24,8 +24,8 @@
 				
 				long assetEntryId = focusAsset.getEntryId();
 				String fullAssetTitle = focusAsset.getTitle().trim();
-				String focusAssetTitle = StringUtil.shorten(focusAsset.getTitle(), 70);
-				
+				//String focusAssetTitle = StringUtil.shorten(focusAsset.getTitle(), 70);
+				String focusAssetTitle = focusAsset.getTitle();
 				String fullFocusAssetTitle = focusAsset.getTitle();
 				
 				String viewAssetContentURL = FocusAssetUtil.getViewContentURL(request, focusAsset);

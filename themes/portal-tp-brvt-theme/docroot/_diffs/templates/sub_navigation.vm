@@ -1,0 +1,65 @@
+<div class="main-contact">
+    <div class="contact-info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="617" height="28" viewbox="0 0 617 28">
+            <g id="Group_18" data-name="Group 18" transform="translate(-662 -563)">
+                <text
+                    id="Đường_dây_nóng"
+                    data-name="Đường dây nóng"
+                    transform="translate(663 585)"
+                    fill="#282b3b"
+                    font-size="16"
+                    font-family="Arial-BoldMT, Arial"
+                    font-weight="700">
+                    <tspan x="0" y="0">Đường dây nóng</tspan>
+                </text>
+                <text
+                    id="Công_dân:_088_8800_247_Doanh_nghiệp:_088.8801.247"
+                    data-name="Công dân: 088 8800 247    Doanh nghiệp: 088.8801.247"
+                    transform="translate(819 586)"
+                    fill="#282b3b"
+                    font-size="16"
+                    font-family="ArialMT, Arial">
+                    <tspan x="0" y="0">Công dân:</tspan>
+                    <tspan y="0" fill="#f83030" font-family="Arial-BoldMT, Arial" font-weight="700"></tspan>
+                    <tspan y="0" fill="#f83030" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700">088 8800 247</tspan>
+                    <tspan
+                        y="0"
+                        xml:space="preserve"
+                        fill="#f83030"
+                        font-size="25"
+                        font-family="Arial-BoldMT, Arial"
+                        font-weight="700"></tspan>
+                    <tspan y="0">Doanh nghiệp:</tspan>
+                    <tspan y="0" fill="#f83030"></tspan>
+                    <tspan y="0" fill="#f83030" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700">088.8801.247</tspan>
+                </text>
+            </g>
+        </svg>
+    </div>
+    <div class="sub-navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="20" viewbox="0 0 46 20">
+            <text
+                id="_04:56"
+                data-name="04:56"
+                transform="translate(0 16)"
+                fill="#bebebe"
+                font-size="18"
+                font-family="ArialMT, Arial">
+                <tspan x="0" y="0">04:56</tspan>
+            </text>
+        </svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="926" height="21" viewbox="0 0 926 21">
+    <text
+        id="Xây_dựng_tổ_chức_Công_đoàn_vững_mạnh_là_chỗ_dựa_tin_cậy_của_đoàn_viên_người_lao_động_tại_thành_phố_Vũng_Tàu"
+        data-name="Xây dựng tổ chức Công đoàn vững mạnh, là chỗ dựa tin cậy của đoàn viên, người lao động tại thành phố Vũng Tàu"
+        transform="translate(0 17)"
+        fill="#f7e220"
+        font-size="18"
+        font-family="ArialMT, Arial">
+        <tspan x="0" y="0">Xây dựng tổ chức Công đoàn vững mạnh, là chỗ dựa tin cậy của đoàn viên, người lao
+            động tại thành phố Vũng Tàu</tspan>
+    </text>
+</svg>
+        <div style="clear:both;"></div>
+    </div>
+</div>

@@ -38,7 +38,7 @@
 						<span class="top-asset-img">
 							<a href="<%=topAssetViewContentURL%>">
 								<img class="small-img" align="left" src="<%= topAssetSmallImagePath %>" title="<%=topAssetTitle%>"
-										onerror="this.src='/article-publisher-portlet/images/default-asset-image.jpg'"
+										onerror="this.src='/thumbnail/default-image.jpg'"
 								/>
 							</a>
 						</span>

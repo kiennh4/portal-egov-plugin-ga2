@@ -21,7 +21,9 @@
 .sf-navbar a {
 	text-decoration: none;
 }
-
+.sf-navbar .drop-addon{
+	display: none;
+}
 li{
 	list-style: none;
 }
@@ -157,4 +159,7 @@ li{
 
 .sub-navigation .top_notify p {
 	margin: 0 !important;
+}
+.navigation .search-wrapper{
+	display: none;	
 }

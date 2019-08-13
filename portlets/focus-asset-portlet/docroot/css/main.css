@@ -173,17 +173,14 @@
 				}
 				
 				.asset-title{
-					opacity: .7;
 					width: 100%;
-					background: black;
-					padding: 15px 0;
-					position: absolute;
-    				bottom: 6px;
+					min-height: 50px;
+					padding-left: 5px;
 					a{
-						font-weight: bold;
+						font-weight: 600;
 						display: block;
-						color: #fff;
-						padding: 0px 10px;
+						color: #c72017;
+						font-size: 16px;
 					}
 					a:HOVER {
 						color: #ff0700;
@@ -201,7 +198,6 @@
 			float: right;
 			height: 350px;
 			width: 40%;
-			border: 1px solid #d2d2d2;
 			
 			.tab-names-container{
 				width: 100%;
@@ -220,6 +216,7 @@
 				ul li{
 					height: 32px;
 					line-height: 32px;
+					width: 50%;
 					border-right: 1px solid #d2d2d2;
 					position: relative;
 					display: table-cell;
@@ -233,8 +230,10 @@
 				}
 					
 				ul li.active-tab{
-					border-bottom: 1px solid #fff;
-					margin-bottom: -2px;
+					background: #d63031;
+					a {
+						color: #FFF !important;
+					}
 				}
 				
 				ul li a{
@@ -267,7 +266,7 @@
 					li{
 						border-top: 1px dotted #E4E4E4;
 						padding: 5px;
-						height:34px;
+						min-height: 42px;
 					}
 										
 					li:first-child{
@@ -633,6 +632,7 @@
 				    position: relative;
 				    height: 25px;
 				    color: #ffff00;
+				    font-weight: bold;
 				    text-transform: uppercase;
 				    padding-right: 60px;
 				    background: url(../images/background/h3-kieu1.png) no-repeat bottom right;
@@ -662,6 +662,7 @@
 						font-weight: bold;
 						a {
 							color: #b10700;
+							font-size: 16px;
 						}
 					}
 					.asset-title-mobile{
@@ -669,8 +670,8 @@
 					}
 					.small-img{
 						float: left;
-						width: 45%;
-						height: 120px;
+						width: 199px;
+						height: 139px;
 						padding: 4px;
 						line-height: 25px;
 					}
@@ -678,6 +679,9 @@
 						text-align: justify;
 						font-size: 14px;
 					}
+				}
+				.asset-summary{
+					text-align: justify;
 				}
 				.older-asset{
 					background: url(../images/custom_icon/li-red-icon.jpg) no-repeat scroll left center;
@@ -687,6 +691,7 @@
 				    .asset-title{
 				    	a{
 				    		font-weight:500;
+				    		color: #030d56;
 				    	}
 				    }
 				}

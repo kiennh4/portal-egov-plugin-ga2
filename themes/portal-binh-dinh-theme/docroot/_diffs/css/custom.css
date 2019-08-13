@@ -120,7 +120,7 @@ input[type="text"]:focus{
 }
 
 a {
-	color: #333;
+	color: #030d56;
 	text-decoration: none;
 }
 
@@ -365,7 +365,7 @@ hr, .separator {
 	margin: 0 !important;
 }
 #footer .copyright p span{
-	font-family: 'Helvetica_Regular' !important;
+	font-family: 'Roboto', sans-serif !important;
 }
 .copy-right-content{
 	padding-top: 10px;
@@ -622,4 +622,10 @@ hr, .separator {
 }
 #navigation_content .list_title_style ul li a{
 	font-size: 13px !important;
+}
+.video-player-portlet .video-player-frame .jwplayer{
+	width: 100% !important;
+}
+.taglib-search-iterator footer{
+	display: none !important;
 }

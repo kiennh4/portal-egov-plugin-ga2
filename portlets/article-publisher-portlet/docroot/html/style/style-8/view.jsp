@@ -34,7 +34,9 @@
 			<aui:column columnWidth="100">
 				<div class="top-asset-image">
 					<a href="<%=topAssetViewUrlContent%>" title="<%=topAssetCache.getTitle() %>">
-						<img alt="<%=topAssetCache.getTitle() %>" src="<%=topImagePath%>"/>
+						<img alt="<%=topAssetCache.getTitle() %>" src="<%=topImagePath%>"
+						onerror="this.src='/thumbnail/default-image.jpg'"
+						/>
 					</a>
 				</div>
 				<div class="top-asset-title">

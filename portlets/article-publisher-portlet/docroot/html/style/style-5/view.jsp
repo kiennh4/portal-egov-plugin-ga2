@@ -26,7 +26,7 @@
 				<%
 				for(AssetEntryCache assetCache : assetCacheList){
 					
-					String assetTitle = StringUtil.shorten(assetCache.getTitle(), 40);
+					String assetTitle = assetCache.getTitle();
 					
 					String assetLink = ArticlePublisherUtil.getViewContentURL(request, assetCache);
 					
@@ -38,7 +38,7 @@
 								<img class="small-img" align="left" 
 									src="<%= assetImagePath %>" 
 									title="<%=assetCache.getTitle()%>"
-									onerror="this.src='/article-publisher-portlet/images/default-asset-image.jpg'"	
+									onerror="this.src='/thumbnail/default-image.jpg'"	
 								/>
 							</a>
 						</div>

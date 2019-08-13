@@ -48,7 +48,7 @@
 						</a>
 						<a href="<%=assetLink %>" title="<%=assetTitle%>" class="asset-thumb">
 							<img alt="<%=assetTitle %>" src="<%=assetImage%>" 
-							onerror="this.src='/article-publisher-portlet/images/default-asset-image.jpg'">
+							onerror="this.src='/thumbnail/default-image.jpg'">
 						</a>
 						<h6>
 							<%=assetSumary %>

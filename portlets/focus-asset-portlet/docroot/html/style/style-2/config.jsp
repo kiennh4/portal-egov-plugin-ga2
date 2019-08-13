@@ -15,7 +15,7 @@
 	
 	<liferay-util:include page="/html/style/style-2/tab-config/tab2.jsp" servletContext="<%=this.getServletContext() %>"/>
 	
-	<liferay-util:include page="/html/style/style-2/tab-config/tab3.jsp" servletContext="<%=this.getServletContext() %>"/>
+	<%--<liferay-util:include page="/html/style/style-2/tab-config/tab3.jsp" servletContext="<%=this.getServletContext() %>"/> --%>
 
 </liferay-ui:panel-container>
 

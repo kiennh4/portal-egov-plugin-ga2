@@ -23,6 +23,7 @@
 				padding-bottom: 10px;
 				a {
 					color: #b10700;
+					font-size: 16px;
 				}
 			}
 						
@@ -35,8 +36,8 @@
 					.small-img{
 						padding: 1px;
 						background: #fff;
-						width: 160px;
-						height: 90px;
+						width: 199px;
+						height: 139px;
 					}
 				}
 				.asset-title-mobile{
@@ -157,9 +158,8 @@
 			padding-right: 5px;
 			img{
 				width:80px;
-				height: 50px;
+				height: 70px;
 				padding: 1px;
-				border: 1px solid #d2d2d2;
 			}
 		}
 				
@@ -382,6 +382,7 @@
 				    font-weight: bold;
 				    text-decoration: none;
 				    color: #b10700;
+				    font-size: 16px;
 				}
 			}
 						
@@ -392,8 +393,8 @@
 			    margin-top: 2px;     
 				    				
 				.small-img{
-				    height: 100px;	
-				    width: 145px;	         
+				    height: 139px;	
+				    width: 199px;	         
 				}
 			}
 						

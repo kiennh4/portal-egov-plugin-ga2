@@ -12,19 +12,11 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <style type="text/css">
-	.vbpq-lastest-entries .jcarousel-container-vertical{
-		height: 260px;
-	}
-		
-	.vbpq-lastest-entries .jcarousel-clip{
-		overflow: hidden;
-	}
-	
-	.vbpq-lastest-entries .jcarousel-clip-vertical{
-		height: 260px;
+	.vbpq-lastest-entries{
+		height: 250px;
 	}
 </style>
-<script src="/vbpq-portlet/js/jquery.vticker-min.js"></script>
+<script src="/vbpq-portlet/js/jquery.marquee.js"></script>
 <%@include file="/html/vbpq_lastest_entry/init.jsp"%>
 
 <%
@@ -32,7 +24,7 @@
 %>
 
 <div class="vbpq-lastest-entries">
-	<ul id="vbpqjcarousel" class="jcarousel-skin-tango">
+	<ul id="documentList" class="jcarousel-skin-tango">
 		<%
 			for(int i = 0; i < vbpqLastestEntryList.size(); i++)
 			{
@@ -78,17 +70,7 @@
 	</ul>
 </div>
 <script>
-	$(document).on("ready", function(){
-		$('.vbpq-lastest-entries').vTicker({
-			   speed: 500,
-			   pause: 3000,
-			   showItems: <%=numbersOfEntriesDisplay%>,
-			   animation: 'fade',
-			   mousePause: true,
-			   height: 0,
-			   direction: 'up'
-			});
-	});
+	$('#documentList').marquee();  
 </script>
 <script type="text/javascript">
 	

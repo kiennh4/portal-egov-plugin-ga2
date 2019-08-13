@@ -293,9 +293,9 @@
 					<div class="video-player-frame" >
 						<c:choose>
 							<c:when test='<%=Validator.equals(topVideo.getVideoType(), VideoConstants.EXTERNAL_VIDEO_TYPE) %>'>
-								<div class="external-video-frame">
+								<div class="external-video-frame" style="height: <%=videoFrameHeight%>px">
 									<iframe src="<%=topVideoURL %>" 
-									width="100%" height="<%=videoFrameHeight%>" allowfullscreen style="border: 0;">
+									width="100%"  allowfullscreen style="border: 0;">
 									</iframe>
 								</div>
 							</c:when>
@@ -464,7 +464,6 @@
 				<liferay-ui:message key="no-video-found"/>
 			</c:otherwise>
 		</c:choose>
-		
 	</c:otherwise>	
 </c:choose>
 

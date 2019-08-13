@@ -410,7 +410,9 @@
 		margin-top: 5px;
 		float: left;
 	}
-	
+	.vbpq_search_results .taglib-search-iterator .col-download a{
+		color: #00528B;
+	}
 	.vbpq_search_results{
 		font-weight: normal;
 		color: #434343;

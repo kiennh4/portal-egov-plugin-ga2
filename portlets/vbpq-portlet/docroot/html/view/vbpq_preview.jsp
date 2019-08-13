@@ -177,7 +177,6 @@
 </c:if>
 
 <script type="text/javascript">
-
 	Liferay.provide(
 		window,
 		'showVBPQPreviewDialog',
@@ -186,14 +185,14 @@
 			var A = AUI();
 			
 			A.DialogManager.hideAll();
-								
+			
 			var vbpqPreviewRenderURL = Liferay.PortletURL.createRenderURL();
 			
 			if(vbpqPreviewRenderURL){
 				
 				vbpqPreviewRenderURL.setPortletId('<%=portletId %>');
 				vbpqPreviewRenderURL.setWindowState('<%=LiferayWindowState.POP_UP.toString() %>');
-				vbpqPreviewRenderURL.setParameter('jspPage', '/html/view/vbpq_preview.jsp');
+				vbpqPreviewRenderURL.setParameter('jspPage', '/html/view/vbpq_relate_preview.jsp');
 				vbpqPreviewRenderURL.setParameter('vbpqEntryId', vbpqEntryId);
 				vbpqPreviewRenderURL.setDoAsGroupId('<%=groupId %>');
 			}
@@ -209,12 +208,12 @@
 						align: dialogAlignConfig,
 						constrain: true
 					},
-					id: '<portlet:namespace/>vbpqPreviewDialog',
+					id: '<portlet:namespace/>vbpqRelatePreviewDialog',
 					title: '<%= UnicodeLanguageUtil.get(pageContext, "vbpq-preview-content") %>',
 					uri: vbpqPreviewRenderURL
 				}
 			);
 		},
-		['liferay-portlet-url','aui-dialog','aui-dialog-iframe']
+		['liferay-portlet-url','aui-dialog','aui-dialog-iframe','aui-base']
 	);
 </script>

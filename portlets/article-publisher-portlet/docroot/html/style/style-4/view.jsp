@@ -34,7 +34,7 @@
 							<img class="small-img" align="left" 
 								src="<%= assetImagePath %>" 
 								title="<%=assetCache.getTitle()%>"
-								onerror="this.src='/article-publisher-portlet/images/default-asset-image.jpg'"	
+								onerror="this.src='/thumbnail/default-image.jpg'"	
 							/>
 						</a>
 					</div>
