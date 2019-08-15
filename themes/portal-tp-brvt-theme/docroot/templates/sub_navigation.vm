@@ -37,29 +37,18 @@
         </svg>
     </div>
     <div class="sub-navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="20" viewbox="0 0 46 20">
-            <text
-                id="_04:56"
-                data-name="04:56"
-                transform="translate(0 16)"
-                fill="#bebebe"
-                font-size="18"
-                font-family="ArialMT, Arial">
-                <tspan x="0" y="0">04:56</tspan>
-            </text>
-        </svg>
-		<svg xmlns="http://www.w3.org/2000/svg" width="926" height="21" viewbox="0 0 926 21">
-    <text
-        id="Xây_dựng_tổ_chức_Công_đoàn_vững_mạnh_là_chỗ_dựa_tin_cậy_của_đoàn_viên_người_lao_động_tại_thành_phố_Vũng_Tàu"
-        data-name="Xây dựng tổ chức Công đoàn vững mạnh, là chỗ dựa tin cậy của đoàn viên, người lao động tại thành phố Vũng Tàu"
-        transform="translate(0 17)"
-        fill="#f7e220"
-        font-size="18"
-        font-family="ArialMT, Arial">
-        <tspan x="0" y="0">Xây dựng tổ chức Công đoàn vững mạnh, là chỗ dựa tin cậy của đoàn viên, người lao
-            động tại thành phố Vũng Tàu</tspan>
-    </text>
-</svg>
-        <div style="clear:both;"></div>
+    	<div class="top-notify">
+    		<div class="datetime">
+    			<span id="portal_egov_clock"></span>
+    		</div>
+    		<div class="main-slogan">
+    			<div class="slogan-content">
+	    			<marquee width="100%" direction="left" height="100%">
+	    				$sloganContent
+	    			</marquee>
+    			</div>
+    		</div>
+    	<div style="clear:both;"></div>
+    	</div>
     </div>
 </div>

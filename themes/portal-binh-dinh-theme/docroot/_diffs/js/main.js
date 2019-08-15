@@ -130,6 +130,14 @@ $(document).on("ready",function(){
 	});
 	$('input[name=_3_keywords]').attr("placeholder", "Tìm kiếm");
 	$(".asset-category-name").hide();
+	var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    
+    if (isSafari && iOS) {
+    	$(".top_notify").empty();
+    } else if(isSafari) {
+    	$(".top_notify").empty();
+    }
 });
 $("#btnSpeak").on("click",function(){
 	console.log("Start speaking article content......");

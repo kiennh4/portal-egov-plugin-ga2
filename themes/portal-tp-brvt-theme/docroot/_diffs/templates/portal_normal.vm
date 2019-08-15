@@ -135,6 +135,8 @@
 			);
 		});
 </script>
+<script type="text/javascript" src="$javascript_folder/responsivevoice.js" charset="utf-8"></script>
+<script src="$javascript_folder/owl.carousel.min.js"></script>
 </body>
 
 $theme.include($bottom_include)

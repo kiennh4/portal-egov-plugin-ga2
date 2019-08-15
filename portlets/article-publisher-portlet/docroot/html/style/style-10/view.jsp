@@ -34,25 +34,7 @@
 							String publishDate = dateFormat.format(assetCache
 									.getPublishDate());
 			%>
-						<div class="style-asset">
-							<div class="asset-img">
-								<a href="<%=assetLink%>" class="">
-									<img alt="<%=assetTitle%>" src="<%=assetImage%>"
-									 onerror="this.src='/article-publisher-portlet/images/default-asset-image.jpg'">
-								</a>
-							</div>
-							<div class="asset-content">
-								<div class="asset-title">
-									<a href="<%=assetLink %>">
-										<h6><%=assetTitle %></h6>
-									</a>
-								</div>
-								<div class="asset-sumary">
-									<p><%=assetSumary %></p>
-								</div>
-							</div>
-							<div class="border-footer"></div>
-						</div>
+					
 			<%
 				}
 			%>

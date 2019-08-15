@@ -61,6 +61,9 @@ ol {
 ul {
   list-style: disc outside; }
 
+ul ul {
+  list-style-type: circle; }
+
 ol ol {
   list-style-type: upper-roman; }
 
@@ -172,9 +175,6 @@ code, pre {
 
 .portal-add-content a {
   text-decoration: none; }
-
-#lfr-search-container {
-  font-size: 13px; }
 
 /* ---------- Loading animation ---------- */
 .loading-animation {

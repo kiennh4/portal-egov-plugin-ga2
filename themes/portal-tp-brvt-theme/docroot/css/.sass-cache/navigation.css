@@ -1,141 +1,67 @@
-/* ---------- Main navigation ---------- */
-.main-navigation {
-  width: 100%;
-  height: 41px;
-  background-color: #E9E9E9;
+/* ---------- Add/remove page ---------- */
+.modify-pages li {
   position: relative; }
-
-.navigation {
-  width: 1170px;
-  height: 41px;
-  margin: 0 auto;
-  position: relative;
-  line-height: 41px;
-  border-radius: 0px;
-  color: #000;
-  font-size: 13px; }
-
-.navigation .global-search-wrapper {
-  position: absolute;
-  right: 23px; }
-
-.navigation .global-search-wrapper select {
-  display: none; }
-
-.sf-navbar {
-  position: relative;
-  background: #da0f05;
-  width: 100%;
-  margin: 0;
-  padding: 0; }
-
-.sf-navbar a {
-  text-decoration: none; }
-
-li {
-  list-style: none; }
-
-.sf-navbar li {
-  position: relative;
-  float: left;
-  cursor: pointer; }
-
-.sf-navbar li a {
-  color: #000;
-  font-size: 16px;
+.modify-pages .delete-tab {
+  background: #333333 url(../images/portlet/close_borderless.png) no-repeat 50%;
+  cursor: pointer;
   display: block;
-  padding: 0px 10px;
-  white-space: nowrap;
-  text-align: justify;
-  zoom: 1; }
-
-.sf-navbar .sub-menu .child-menu {
-  top: 0;
-  left: 100%; }
-
-/* Simple clearfix */
-.sf-navbar ul:before,
-.sf-navbar ul:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-.sf-navbar ul:after {
-  clear: both; }
-
-.sf-navbar img.right-arrow {
+  height: 8px;
+  margin-top: -7px;
+  padding: 3px;
   position: absolute;
   right: 1px;
-  top: 14px; }
+  text-indent: -9999em;
+  top: 50%;
+  width: 8px; }
 
-.sf-navbar ul {
-  background: #0593d9;
-  list-style: none;
-  padding: 0;
-  left: 0;
-  margin: 0;
-  position: absolute;
-  opacity: 1;
-  display: none;
-  z-index: 99; }
-
-.sf-navbar li:hover {
-  -webkit-transition: none;
-  transition: none; }
-
-.sf-navbar li:hover > ul {
-  display: block;
-  position: absolute; }
-
-.navigation li:HOVER li {
-  float: none; }
-
-.navigation li a:HOVER {
-  color: red;
-  font-weight: 700; }
-
-.sf-navbar li.selected a {
-  color: red; }
-
-.sf-navbar li.selected ul li a {
-  color: #fff; }
-
-.sf-navbar > li > ul > li {
-  float: unset;
-  display: block;
-  border-bottom: 1px solid #fff; }
-
-.sf-navbar > li > ul > li > ul > li {
-  border-bottom: 1px solid #fff;
-  display: block; }
-
-.sf-navbar ul li a:hover {
-  color: #fff !important; }
-
-.main-contact {
-  width: 100%;
-  position: relative; }
-  .main-contact .contact-info {
-    width: 100%;
-    height: 38px;
-    text-align: center;
-    background: #E9E9E9; }
-
-/* ---------- Sub Navigations ----------*/
-.sub-navigation {
-  background-color: #3F4254;
-  clear: both;
-  position: relative;
-  height: 58px;
-  line-height: 60px;
-  color: yellow;
-  text-align: center; }
-
-.sub-navigation .top_notify {
-  width: 1170px;
-  margin: 0 auto;
-  height: 100%; }
-
-.sub-navigation a {
+/*------ Navigation portlet ------*/
+.nav-menu ul {
+  padding-left: 10px; }
+.nav-menu li a.ancestor {
+  font-weight: bold; }
+.nav-menu li a.selected {
+  color: #000;
+  font-weight: bold;
   text-decoration: none; }
+
+/* ---------- Page template selector ---------- */
+.aui-form-options {
+  border: 1px solid #AAA;
+  display: inline-block;
+  vertical-align: middle; }
+  .aui-form-options input {
+    border-width: 0;
+    display: inline;
+    float: left; }
+
+.aui-form-triggers {
+  float: left; }
+
+.aui-form-trigger {
+  background: #c4c4c4 url(../images/application/button_bg.png) repeat-x 0 0;
+  border-left: 1px solid #BBB;
+  display: inline-block;
+  float: left; }
+  .aui-form-trigger img {
+    background: url() no-repeat 50% 40%;
+    height: 25px;
+    padding: 0 3px;
+    vertical-align: middle;
+    width: 16px; }
+  .aui-form-trigger:hover, .aui-form-trigger:focus {
+    background-color: #83B0CA;
+    background-image: url(../images/application/button_bg_over.png); }
+
+.aui-trigger-selected {
+  background-color: #EBEBEB;
+  background-image: url(../images/application/button_bg_selected.png); }
+  .aui-trigger-selected:hover, .aui-trigger-selected:focus {
+    background-color: #B7DEF4;
+    background-image: url(../images/application/button_bg_selected_over.png); }
+
+.aui-options-trigger img {
+  background-image: url(../images/common/configuration.png); }
+
+.aui-save-trigger img {
+  background-image: url(../images/dock/my_place_current.png); }
 

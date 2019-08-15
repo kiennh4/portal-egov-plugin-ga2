@@ -10,82 +10,50 @@
 <%@include file="/html/init.jsp"%>
 
 <%
-	List<AssetEntryCache> assetCacheList = ArticlePublisherUtil.getAssetList(request,0);
+	List<AssetEntryCache> assetCacheList = ArticlePublisherUtil.getAssetList(request,numbersOfEntriesDisplay);
 %>
-
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
-		<div class="article-publisher-display-style-7" id="articlePubliserStyle7">
-			<ul id="<portlet:namespace/>jcarousel" class="jcarousel-skin-tango">
-			<%
-			int assetIndex = 0;
+		<div class="article-publisher-display-style-7" id="articlePublisher7">
+		
+			<div class="style-title">
+				<span><%=styleTitle %></span>
+			</div>
 			
-			for(AssetEntryCache asset : assetCacheList){
-				
-				assetIndex ++;
-				
-				String assetTitle = StringUtil.shorten(asset.getTitle(), 50);
-
-
-				String assetLink =  ArticlePublisherUtil.getViewContentURL(request, asset);
-
-				
-				String publishDate = dateFormat.format(asset.getPublishDate());
-			%>
-				<li class="asset-entry">
-
+			<div class="list-news">
+				<%
+				for(AssetEntryCache assetCache : assetCacheList){
 					
-						<table>
-							<tr>
-								<td>
-									<span class="asset-index"><%=assetIndex %></span>
-								</td>
-								<td>
-									<a href="<%=assetLink%>" title="<%=asset.getTitle()%>">
-										<span class="asset-title"><%=assetTitle %></span>
-									</a>
-								</td>
-							</tr>
-						</table>
-
-<%-- 					<a href="<%=assetLink%>" title="<%=asset.getTitle()%>"> --%>
-<%-- 						<span class="asset-index"><%=assetIndex %></span> --%>
-<%-- 						<span class="asset-title"><%=assetTitle %></span> --%>
-<!-- 						<span style="clear: both;"></span> -->
-<!-- 					</a> -->
-
-				</li>
-			<%
-			}
-			%>
-			</ul>
+					String assetTitle = StringUtil.shorten(assetCache.getTitle(), 60);
+					
+					String assetLink = ArticlePublisherUtil.getViewContentURL(request, assetCache);
+					
+					String assetImagePath = assetCache.getSmallImagePath();
+				%>
+					<div class="asset-entry">
+						<div class="asset-image">
+							<a href="<%=assetLink%>" title="<%=assetCache.getTitle()%>">
+								<img class="small-img" align="left" 
+									src="<%= assetImagePath %>" 
+									title="<%=assetCache.getTitle()%>"
+									onerror="this.src='/thumbnail/default-image.jpg'"	
+								/>
+							</a>
+						</div>
+						
+						<div class="asset-title">
+							<a href="<%=assetLink%>" title="<%=assetCache.getTitle()%>">
+								<%= assetTitle %>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				<%
+				}
+				%>
+			</div>
 		</div>
-		
-		<script type="text/javascript">
-		
-			jQuery(document).ready(function() {
-			    jQuery('#<portlet:namespace/>jcarousel').jcarousel({        
-			    	vertical:true,
-			    	scroll:1,
-			    	auto:5,
-			    	rtl: false,
-			    	wrap:"circular",
-			    	animation:1000,
-			    	easing: 'linear',
-			    	initCallback : initCallbackFx
-			    });
-			});
-			//Init callback
-			function initCallbackFx(carousel, obejctli,liindex,listate){
-			    $("#<portlet:namespace/>jcarousel li").mouseenter(function(){
-			        carousel.stopAuto();
-			    }).mouseleave(function(){
-			        carousel.startAuto();
-			    });
-			}
-		</script>
 	</c:when>
-	
 	<c:otherwise>
 		<%
 		renderRequest.setAttribute(WebKeys.PORTLET_CONFIGURATOR_VISIBILITY, Boolean.TRUE);

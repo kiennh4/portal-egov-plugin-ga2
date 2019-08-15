@@ -222,7 +222,7 @@
       float: none;
       width: 100%; }
     .portlet-boundary_focus_asset_WAR_focusassetportlet_ .focus-asset-display-style-2 img {
-      height: 86vw !important;
+      height: 66vw !important;
       padding: 0 !important; }
 
   .portlet-boundary_focus_asset_WAR_focusassetportlet_ .portlet-topper {
@@ -488,7 +488,10 @@
     overflow: hidden; }
 
   .inquiry-portlet textarea, .inquiry-portlet input[type="text"], .inquiry_admin-portlet textarea, .inquiry_admin-portlet input[type="text"] {
-    width: auto !important; } }
+    width: auto !important; }
+
+  .portlet-image-gallery-display .image-thumbnail {
+    width: 100% !important; } }
 @media (min-width: 320px) and (max-width : 559px) {
   /* Navigation  */
   .navigation {
@@ -744,7 +747,7 @@
       float: none;
       width: 100%; }
     .portlet-boundary_focus_asset_WAR_focusassetportlet_ .focus-asset-display-style-2 img {
-      height: 86vw !important;
+      height: 66vw !important;
       padding: 0 !important; }
 
   .portlet-boundary_focus_asset_WAR_focusassetportlet_ .portlet-topper {
@@ -955,5 +958,8 @@
   .search-layout-content {
     padding: 0px !important; }
     .search-layout-content .aui-column-first {
-      margin: 0px !important; } }
+      margin: 0px !important; }
+
+  .portlet-image-gallery-display .image-thumbnail {
+    width: 100% !important; } }
 
