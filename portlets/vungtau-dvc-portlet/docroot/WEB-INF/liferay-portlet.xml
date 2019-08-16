@@ -3,16 +3,14 @@
 
 <liferay-portlet-app>
 	<portlet>
-		<portlet-name>vung-tau-dich-vu-cong</portlet-name>
+		<portlet-name>vung-tau-dvc</portlet-name>
 		<icon>/icon.png</icon>
-		<configuration-action-class>com.bkav.portal.portlet.vungtau_dichvucong.action.ConfigurationActionImpl.java</configuration-action-class>
+		<configuration-action-class>com.bkav.portal.portlet.vungtau.action.ConfigurationActionImpl</configuration-action-class>
 		<header-portlet-css>/css/main.css</header-portlet-css>
 		<footer-portlet-javascript>
 			/js/main.js
 		</footer-portlet-javascript>
-		<css-class-wrapper>
-			vung-tau-dich-vu-cong-portlet
-		</css-class-wrapper>
+		<css-class-wrapper>vung-tau-dvc-portlet</css-class-wrapper>
 	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>

@@ -568,6 +568,9 @@
 		width: 100% !important;
 		
 	}
+	#footer{
+		height: auto !important;
+	}
 }
 
 @media (min-width: 320px) and (max-width : 559px) {
@@ -934,17 +937,18 @@
 		}
 		.assetdesc{
 			.assetdesc-img{
-				width: 33%;
+				width: 30%;
 				margin: 0;
+				height: 90px;
 				img {
 					width: 100%;
-					height: 110px;
+					height: 100%;
 					border-radius: 5px;
 					padding: 0;
 				}
 			}
 			.assetdesc-content{
-				width: 64%;
+				width: 65%;
 				margin-left: 10px;
 				.asset-info{
 					font-size: 13px;
@@ -1111,5 +1115,8 @@
 	.portlet-image-gallery-display .image-thumbnail{
 		width: 100% !important;
 		
+	}
+	#footer{
+		height: auto !important;
 	}
 }

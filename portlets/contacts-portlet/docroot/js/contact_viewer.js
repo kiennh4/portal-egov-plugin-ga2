@@ -545,7 +545,7 @@ AUI.add(
 										}
 										
 										if(department.departmentWebsite.length > 0){
-											departmentInfo += ' ,';
+											departmentInfo += ', ';
 											departmentInfo += '<span>';
 											departmentInfo += 		Liferay.Language.get('department-website') + ': ';
 											departmentInfo += 		department.departmentWebsite;
@@ -553,7 +553,7 @@ AUI.add(
 										}
 										
 										if(department.departmentEmail.length > 0){
-											departmentInfo += ' ,';
+											departmentInfo += ', ';
 											departmentInfo += '<span>';
 											departmentInfo += 		Liferay.Language.get('department-email') + ': ';
 											departmentInfo += 		department.departmentEmail;

@@ -134,9 +134,9 @@ $(document).on("ready",function(){
     var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     
     if (isSafari && iOS) {
-    	$(".top_notify").empty();
+    	$(".sub-navigation").css("display","none");
     } else if(isSafari) {
-    	$(".top_notify").empty();
+    	$(".sub-navigation").css("display","none");
     }
 });
 $("#btnSpeak").on("click",function(){

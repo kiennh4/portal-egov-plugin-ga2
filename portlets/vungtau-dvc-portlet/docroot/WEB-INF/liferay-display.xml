@@ -3,6 +3,6 @@
 
 <display>
 	<category name="category.sample">
-		<portlet id="vung-tau-dich-vu-cong"></portlet>
+		<portlet id="vung-tau-dvc"></portlet>
 	</category>
 </display>

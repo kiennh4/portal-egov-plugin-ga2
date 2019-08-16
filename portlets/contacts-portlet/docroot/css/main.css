@@ -483,3 +483,18 @@
 	.contact-viewer .contact-viewer-content .contact-viewer-container table tr.contact-viewer-header-row td{
 		border: 1px solid #d2d2d2;
 	}
+	@media (min-width: 600px) and (max-width : 991px){
+		
+	}
+	@media (min-width: 320px) and (max-width : 559px) {
+		.contact-viewer-content .aui-w25{
+			width: 100% !important;
+			float: none;
+			display: block;
+		}
+		.contact-viewer-content .aui-w75{
+			width: 100%;
+			float: none;
+			display: block;
+		}
+	}

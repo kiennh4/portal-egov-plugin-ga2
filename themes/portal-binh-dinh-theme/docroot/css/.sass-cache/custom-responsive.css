@@ -491,7 +491,10 @@
     width: auto !important; }
 
   .portlet-image-gallery-display .image-thumbnail {
-    width: 100% !important; } }
+    width: 100% !important; }
+
+  #footer {
+    height: auto !important; } }
 @media (min-width: 320px) and (max-width : 559px) {
   /* Navigation  */
   .navigation {
@@ -824,15 +827,16 @@
   .portlet-boundary_101_ .asset-abstract .asset-content {
     padding: 5px; }
   .portlet-boundary_101_ .asset-abstract .assetdesc .assetdesc-img {
-    width: 33%;
-    margin: 0; }
+    width: 30%;
+    margin: 0;
+    height: 90px; }
     .portlet-boundary_101_ .asset-abstract .assetdesc .assetdesc-img img {
       width: 100%;
-      height: 110px;
+      height: 100%;
       border-radius: 5px;
       padding: 0; }
   .portlet-boundary_101_ .asset-abstract .assetdesc .assetdesc-content {
-    width: 64%;
+    width: 65%;
     margin-left: 10px; }
     .portlet-boundary_101_ .asset-abstract .assetdesc .assetdesc-content .asset-info {
       font-size: 13px; }
@@ -961,5 +965,8 @@
       margin: 0px !important; }
 
   .portlet-image-gallery-display .image-thumbnail {
-    width: 100% !important; } }
+    width: 100% !important; }
+
+  #footer {
+    height: auto !important; } }
 

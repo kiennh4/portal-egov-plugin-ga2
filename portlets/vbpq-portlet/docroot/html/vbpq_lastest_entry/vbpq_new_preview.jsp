@@ -119,7 +119,7 @@
 							
 							String fileAttachmentSize = TextFormatter.formatKB(fileAttachment.getSize(), locale) + " KB";
 						%>
-							<a href="<%=fileAttachmentDownloadLink%>" title='<liferay-ui:message key="download"/>'>
+							<a href="<%=fileAttachmentDownloadLink%>" title='<liferay-ui:message key="download"/>' target="_blank">
 								<%= fileAttachment.getTitle() + "(" + fileAttachmentSize + ")" %>
 							</a> <br/>
 						<%

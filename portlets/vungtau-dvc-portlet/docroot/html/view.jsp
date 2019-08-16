@@ -2,4 +2,4 @@
 
 <portlet:defineObjects />
 
-This is the <b>Vung Tau Dich Vu Cong</b> portlet in Config mode.
+This is the <b>Vung Tau Dvc</b> portlet in View mode.
