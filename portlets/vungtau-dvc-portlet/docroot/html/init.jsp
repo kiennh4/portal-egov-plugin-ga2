@@ -50,7 +50,7 @@
 	//default config param
 	String tthcCateNameFirst = preferences.getValue("tthcCateNameFist", "");
 	
-	String tthcCateUrlFist = preferences.getValue("tthcCateNameFirst", "");
+	String tthcCateUrlFist = preferences.getValue("tthcCateUrlFirst", "");
 	
 	String tthcCateNameSecond = preferences.getValue("tthcCateNameSecond", "");
 	
@@ -60,7 +60,19 @@
 	
 	String tthcCateUrlThird = preferences.getValue("tthcCateUrlThird", "");
 	
-	String tthcReadMore = preferences.getValue("tthcCateUrlThird", "");
+	String tthcReadMore = preferences.getValue("tthcReadMore", "");
+	
+	String dvcNameFirst = preferences.getValue("dvcNameFirst", "");
+	
+	String dvcNameSecond = preferences.getValue("dvcNameSecond", "");
+	
+	String dvcUrlFirst = preferences.getValue("dvcUrlFirst", "");
+	
+	String dvcUrlSecond = preferences.getValue("dvcUrlSecond", "");
+	
+	String trcName = preferences.getValue("trcUrlName", "");
+	
+	String trcUrl = preferences.getValue("trcUrl", "");
 %>
 
 

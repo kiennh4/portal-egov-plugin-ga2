@@ -1,0 +1,16 @@
+.vungtau-dvc-portlet-config-form .lfr-form-row{
+	width: 100%;
+}
+.vungtau-dvc-portlet-config-form .lfr-form-row .form-detail{
+	width: 100%;
+}
+.vungtau-dvc-portlet-config-form .lfr-form-row .form-detail .form-row{
+	width: 100%;
+	float: left;
+	.aui-field{	
+		width: 50%;
+	}
+	.aui-field-input-text{
+		width: 80%;
+	}
+}

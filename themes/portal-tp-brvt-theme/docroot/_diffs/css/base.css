@@ -269,3 +269,7 @@ hr, .separator {
 	font-weight: bold;
 	margin: 0 1px;
 }
+.aui-dialog-hd{
+	background: none !important;
+	border: none !important;
+}
