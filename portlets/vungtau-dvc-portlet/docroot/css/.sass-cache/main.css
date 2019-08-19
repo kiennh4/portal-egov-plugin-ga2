@@ -12,3 +12,27 @@
   .vungtau-dvc-portlet-config-form .lfr-form-row .form-detail .form-row .aui-field-input-text {
     width: 80%; }
 
+.dvc-tp-brvt-container {
+  width: 100%;
+  height: 398px; }
+  .dvc-tp-brvt-container .dvc-tp-brvt-col {
+    width: 370px;
+    height: 398px;
+    float: left; }
+    .dvc-tp-brvt-container .dvc-tp-brvt-col .icon-description {
+      text-align: center;
+      height: 146px; }
+    .dvc-tp-brvt-container .dvc-tp-brvt-col .content {
+      padding-left: 14.5px; }
+      .dvc-tp-brvt-container .dvc-tp-brvt-col .content .title-description {
+        color: #D20000;
+        text-transform: uppercase;
+        font-size: 18px; }
+      .dvc-tp-brvt-container .dvc-tp-brvt-col .content p {
+        font-size: 16px; }
+  .dvc-tp-brvt-container .dvc-tp-brvt-col:nth-child(2) {
+    margin: 0px 14.5px;
+    padding: 0px 14.5px;
+    border-left: 1px solid red;
+    border-right: 1px solid red; }
+

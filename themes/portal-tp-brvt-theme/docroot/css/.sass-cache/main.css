@@ -199,6 +199,10 @@ hr, .separator {
   font-weight: bold;
   margin: 0 1px; }
 
+.aui-dialog-hd {
+  background: none !important;
+  border: none !important; }
+
 /* ---------- Main ---------- */
 .aui-state-default {
   background: #d4d4d4 url(../images/portlet/header_bg.png) repeat-x 0 0;
@@ -2135,7 +2139,7 @@ body > .lfr-menu-list, body > .lfr-menu-list ul, .lfr-actions, .aui-dialog-conte
 body {
   /* background: url("../images/background/body-bg.png"); */
   font-size: 13px;
-  font-family: "Arial",sans-serif;
+  font-family: "Roboto",sans-serif;
   color: #434343;
   position: relative; }
 
@@ -2144,8 +2148,7 @@ body {
   margin-bottom: 30px;
   background: #fff;
   width: 1170px;
-  margin: 0 auto;
-  box-shadow: 0px 1px 3px 2px #ccc; }
+  margin: 0 auto; }
 
 .body-content {
   height: auto;
@@ -2159,7 +2162,6 @@ body {
   width: 100%;
   position: relative;
   min-height: 1000px;
-  padding: 0 5px;
   margin-top: 10px; }
 
 .main-banner {

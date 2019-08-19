@@ -2835,7 +2835,7 @@ hr, .separator {
   /*article publisher portlet*/
   .article-publisher-portlet .article-publisher-display-style-5 .style-content
   .jcarousel-skin-tango .jcarousel-clip-horizontal {
-    width: 668px; }
+    width: 530px; }
 
   .focus-asset-portlet .focus-asset-display-style-2 .tab-content-container .tab-assets-container span.focus-asset-title-mobile {
     display: block !important; }
@@ -3314,8 +3314,8 @@ hr, .separator {
 
   /*Banner portlet*/
   .banner-portlet .banner-image-wrapper img[class^="banner-"] {
-    min-height: 100% !important;
-    height: 100% !important; }
+    height: auto !important;
+    width: 100%; }
 
   /*article publisher portlet*/
   .article-publisher-portlet .article-publisher-display-style-5 .style-content
