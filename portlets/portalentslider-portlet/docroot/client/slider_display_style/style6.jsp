@@ -9,7 +9,7 @@ Fluid width carousel with images
 <%@ include file="/init.jsp" %>
 
 <%
-	String customCss = "width:100%; height:" + sliderHeight + "px";
+	String customCss = "width:" + sliderWidth + "px; height:" + sliderHeight + "px";
 	int count = 0; 
 	StringBuffer imgThumbnails = new StringBuffer();
 	
@@ -30,9 +30,7 @@ Fluid width carousel with images
 		display: block;
 		float: left;
 	}
-	#carousel {
-		width: 100% !important;
-	}
+	 
 	#pager {
 		text-align: right;
 		padding: 20px 0 20px 0;
@@ -101,7 +99,7 @@ Fluid width carousel with images
 						imgThumbnails.append(midiumImageHeight + "\"");
 						imgThumbnails.append(" alt = \"image" + (i + 1) + "\"/>");
 						%>
-							<img alt="" src="<%=imageURL%>" width="100%" height="<%=sliderHeight%>"/>
+							<img alt="" src="<%=imageURL%>" width="<%=sliderWidth%>" height="<%=sliderHeight%>"/>
 						<%
 					}
 				}
@@ -158,13 +156,13 @@ Fluid width carousel with images
 			}
 		});
 	 
-		/* $('#pager').hover(function() {
+		$('#pager').hover(function() {
 			var current = $('#carousel').triggerHandler( 'currentPosition' );
 			thumbs.trigger( 'slideTo', [ current, 0, true, { fx: 'none' } ] );
 			$('#thumbs').stop().fadeTo(300, 1);
 		}, function() {
 			$('#thumbs').stop().fadeTo(300, 0);
-		}); */
+		});
 	 
 		$('#pager a').mouseenter(function() {
 			var index = $('#pager a').index( $(this) );

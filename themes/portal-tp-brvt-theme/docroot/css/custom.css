@@ -1,5 +1,4 @@
 /* ---------- Base styles ---------- */
-
 .vbpq_category-portlet .portlet,
 .vbpq_dynamic_menu-portlet .portlet{
 	background: #F5F8FB !important;
@@ -31,6 +30,10 @@
 	margin: 0;
 	padding: 0;
 }
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
 body {
 	/* background: url("../images/background/body-bg.png"); */
 	font-size: 13px;
@@ -52,14 +55,16 @@ body {
 	margin: auto;
 	margin-bottom: 50px;
 }
+.main-content{
+	width: 1170px;
+	margin: 0px auto;
+}
 .content-wrapper {
 	background: none;
 	margin: 0 auto;
-	width: 100%;
 	position: relative;
 	min-height: 1000px;
-	width: 1170px;
-	margin-top: 10px;
+	width: 100%;
 }
 .main-banner{
 	width: 100%;
@@ -788,5 +793,6 @@ hr, .separator {
 		border: 1px solid #d3e8f1;
 	}
 } 
-
-
+body.portal-popup{
+	padding: 0px !important;
+}

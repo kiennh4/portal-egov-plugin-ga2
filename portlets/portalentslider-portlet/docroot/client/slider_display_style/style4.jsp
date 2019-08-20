@@ -9,7 +9,7 @@ Fluid width carousel with images
 <%@ include file="/init.jsp" %>
 
 <%
-	String customCss = "width:100%; height:" + sliderHeight + "px";
+	String customCss = "width:" + sliderWidth + "px; height:" + sliderHeight + "px";
 	int count = 0; 
 
 %>
@@ -17,7 +17,7 @@ Fluid width carousel with images
 
 <style>
 	#slider-content {
-		width: 101% !important;
+		width: 100%;
 		height: 100%;
 		overflow: hidden;
 		position: relative;
@@ -31,32 +31,33 @@ Fluid width carousel with images
 
 <div id="slider-content" style="<%=customCss%>">
 	<div id="carousel" >
-		<div id="slides">
-		<%
-			if(Validator.isNotNull(sliderItems)){
+	<div id="slides">
+	<%
+		if(Validator.isNotNull(sliderItems)){
+			
+			try{
+				JSONArray array = JSONFactoryUtil.createJSONArray(sliderItems);
 				
-				try{
-					JSONArray array = JSONFactoryUtil.createJSONArray(sliderItems);
+				if(array != null){
+					count = array.length();
 					
-					if(array != null){
-						count = array.length();
-						
-						for(int i = 0; i < array.length(); i++){
-							JSONObject object = array.getJSONObject(i);
-							long imagesId = object.getLong("imageId");
-							String url = object.getString("url");
-							String imageURL = SliderUtil.getImageURL(imagesId, themeDisplay, SliderUtil.imageViewType.LARGE.toString(), true);			
-							%>
-								<img class="imgSlider" alt="" src="<%=imageURL%>" width="100%" height="<%=sliderHeight%>"/>
-							<%
-						}
+					for(int i = 0; i < array.length(); i++){
+						JSONObject object = array.getJSONObject(i);
+						long imagesId = object.getLong("imageId");
+						String url = object.getString("url");
+						String imageURL = SliderUtil.getImageURL(imagesId, themeDisplay, SliderUtil.imageViewType.LARGE.toString(), true);
+										
+						%>
+							<img alt="" src="<%=imageURL%>" width="<%=sliderWidth%>" height="<%=sliderHeight%>"/>
+						<%
 					}
-				}catch(Exception e){
-					
 				}
+			}catch(Exception e){
+				
 			}
-		%>
-		</div>
+		}
+	%>
+	</div>
 	</div>
 	<div id="billboard"></div>
 	
@@ -69,13 +70,13 @@ Fluid width carousel with images
 	var contentHeight = $('#slider-content').height();
 
 	$(function() {
-		$(".imgSlider").css("width", contentWidth);
+		 
 		//	you can change this number!
-		var curtains = 15;
+		var curtains = 10;
 	 
 		//	but not this one!
 		var totalWidth = contentWidth;
-	 	var total = 100
+	 
 		//	set the width for the wrapper
 		$('#slides').css({
 			'width'		: totalWidth / curtains,
@@ -91,7 +92,7 @@ Fluid width carousel with images
 			//	set the css for the div and image
 			$div.css({
 				'box-shadow': '0 0 5px rgba(0, 0, 0, 0.5)',
-				'width'		: totalWidth / (curtains),
+				'width'		: totalWidth / (curtains-1),
 				'height'	: contentHeight,
 				'overflow'	: 'hidden',
 				'float'		: 'left',

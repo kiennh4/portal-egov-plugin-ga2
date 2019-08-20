@@ -25,6 +25,10 @@
   margin: 0;
   padding: 0; }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden; }
+
 body {
   /* background: url("../images/background/body-bg.png"); */
   font-size: 13px;
@@ -33,10 +37,9 @@ body {
   position: relative; }
 
 .body-wrapper {
-  width: 100%;
+  width: 1170px;
   margin-bottom: 30px;
   background: #fff;
-  width: 1170px;
   margin: 0 auto; }
 
 .body-content {
@@ -48,9 +51,9 @@ body {
 .content-wrapper {
   background: none;
   margin: 0 auto;
-  width: 100%;
   position: relative;
   min-height: 1000px;
+  width: 100%;
   margin-top: 10px; }
 
 .main-banner {
@@ -665,4 +668,7 @@ hr, .separator {
 .lfr-search-container table tr:hover td {
   background: #d3e8f1;
   border: 1px solid #d3e8f1; }
+
+body.portal-popup {
+  padding: 0px !important; }
 

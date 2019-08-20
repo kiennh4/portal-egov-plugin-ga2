@@ -63,7 +63,7 @@ public class ConfigurationAction extends DefaultConfigurationAction{
 		/*boolean auto = ParamUtil.getBoolean(actionRequest, "auto", true);*/
 		
 		int duration = ParamUtil.getInteger(actionRequest, "duration", 1000);
-		String styleTitle = ParamUtil .getString(actionRequest, "styleTitle");
+		
 		int durationTimeout = ParamUtil.getInteger(actionRequest, "durationTimeout", 1000);
 		
 		JSONArray jsonArray = JSONFactoryUtil.createJSONArray();
@@ -115,7 +115,7 @@ public class ConfigurationAction extends DefaultConfigurationAction{
 			preferences.setValue("duration", String.valueOf(duration));
 			
 			preferences.setValue("durationTimeout", String.valueOf(durationTimeout));
-			preferences.setValue("styleTitle", styleTitle);
+
 			preferences.store();
 			
 			SessionMessages.add(actionRequest,portletConfig.getPortletName() +SessionMessages.KEY_SUFFIX_REFRESH_PORTLET,portletResource);

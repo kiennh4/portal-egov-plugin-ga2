@@ -62,19 +62,6 @@
 							}
 						%>
 					</aui:select>
-					<h3 class="config-title">
-						<liferay-ui:message key="asset-query-rules" />
-					</h3>
-			
-					<div class="lfr-form-row">
-						<div class="row-fields">
-			
-							<div class="aui-field-row query-row">
-								<aui:input label="style-title" cssClass="tab-name-input"
-									name="styleTitle" value="<%=styleTitle%>" />
-							</div>
-						</div>
-					</div>
 					<aui:input name="sliderWidth" label="slider-width" type="text" value="<%=sliderWidth %>">
 						<aui:validator name="digits" />
 			

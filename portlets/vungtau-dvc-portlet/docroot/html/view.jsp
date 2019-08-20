@@ -24,14 +24,14 @@
   <line id="Line_8" data-name="Line 8" y2="220.833" transform="translate(385.5 176.5)" fill="none" stroke="#b7b7b7" stroke-width="1"/>
   <line id="Line_9" data-name="Line 9" y2="220.833" transform="translate(785.5 177.5)" fill="none" stroke="#b7b7b7" stroke-width="1"/>
   <g id="Group_1396" data-name="Group 1396" transform="translate(-374 -946)">
-    <text id="life" transform="translate(375 1162)" font-size="16" font-family="ArialMT, Arial"><tspan x="0" y="14">Để tìm hiểu thông tin chi tiết về thủ tục hành chính. </tspan><tspan x="0" y="32">Quý khách vui lòng chọn lĩnh vực tra cứu:</tspan></text>
+    <text id="life" transform="translate(375 1162)" font-size="16"><tspan x="0" y="14">Để tìm hiểu thông tin chi tiết về thủ tục hành chính. </tspan><tspan x="0" y="32">Quý khách vui lòng chọn lĩnh vực tra cứu:</tspan></text>
     <text id="Xem_thêm" data-name="Xem thêm" transform="translate(623 1331)" fill="#d20000" font-size="14" font-family="SegoeUI-SemiboldItalic, Segoe UI" font-weight="600" font-style="italic" text-decoration="underline"><tspan x="0" y="0">Xem thêm</tspan></text>
     <text id="Thủ_tục_hành_chính" data-name="Thủ tục hành chính" transform="translate(375 1138)" fill="#d20000" font-size="18" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">Thủ tục hành chính</tspan></text>
     <rect id="Service" width="137" height="137" transform="translate(489 946)" fill="url(#pattern)"/>
     <rect id="Rectangle_48" data-name="Rectangle 48" width="170" height="42" rx="10" transform="translate(375 1247)" fill="#46afff"/>
     <rect id="Rectangle_50" data-name="Rectangle 50" width="170" height="42" rx="10" transform="translate(375 1302)" fill="#3365ec"/>
     <rect id="Rectangle_49" data-name="Rectangle 49" width="170" height="42" rx="10" transform="translate(575 1247)" fill="#46afff"/>
-    <a href="<%=tthcCateUrlFist%>"><text id="<%=tthcCateNameFirst %>" data-name="<%=tthcCateNameFirst %>" transform="translate(431 1275)" fill="#fff" font-size="18" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0"><%=tthcCateNameFirst %></tspan></text></a>
+    <a href="<%=tthcCateUrlFist%>"><text id="<%=tthcCateNameFirst %>" data-name="<%=tthcCateNameFirst %>" transform="translate(431 1275)" fill="#fff" font-size="18" font-weight="600"><tspan x="0" y="0"><%=tthcCateNameFirst %></tspan></text></a>
     <text id="Tư_pháp" data-name="Tư pháp" transform="translate(626 1275)" fill="#fff" font-size="18" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">Tư pháp</tspan></text>
     <text id="Quản_lý_đô_thị" data-name="Quản lý đô thị" transform="translate(402 1330)" fill="#fff" font-size="18" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">Quản lý đô thị</tspan></text>
   </g>

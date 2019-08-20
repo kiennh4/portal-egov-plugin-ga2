@@ -9,16 +9,12 @@
 		<configuration-action-class>com.bkav.portalentslider.action.ConfigurationAction</configuration-action-class>
 		<instanceable>true</instanceable>
 		<header-portlet-css>/css/main.css</header-portlet-css>
-		
 		<!-- <header-portlet-javascript>/product-slider/js/jquery.carouFredSel-6.2.0-packed.js</header-portlet-javascript> -->
 		<footer-portlet-javascript>
 			/js/main.js
 		</footer-portlet-javascript>
 		<footer-portlet-javascript>
 			/js/jquery.carouFredSel-6.2.0-packed.js
-		</footer-portlet-javascript>
-		<footer-portlet-javascript>
-			/js/jssor.slider-27.5.0.min.js
 		</footer-portlet-javascript>
 		<footer-portlet-javascript>
 			/js/fileuploader.js

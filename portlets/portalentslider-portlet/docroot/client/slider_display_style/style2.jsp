@@ -1,107 +1,219 @@
+<%--
+/**
+Fluid width carousel with images
+--%>
+
 <%@ page import="com.liferay.portal.kernel.json.JSONObject"%>
 <%@ page import="com.liferay.portal.kernel.json.JSONFactoryUtil"%>
 <%@ page import="com.liferay.portal.kernel.json.JSONArray"%>
-<%@ include file="/init.jsp"%>
- <style>
-	/*jssor slider loading skin spin css*/
-    .jssorl-009-spin img {
-     	animation-name: jssorl-009-spin;
-        animation-duration: 1.6s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
+<%@ include file="/init.jsp" %>
 
-    @keyframes jssorl-009-spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
-    </style>
-<div class="banner-slider-style-2">
-	<c:if test="<%=Validator.isNotNull(styleTitle)%>">
-		<div class="style-title">
-			<h3><%=styleTitle%></h3>
-			<div class="sperator"></div>
-		</div>
-	</c:if>
-	<div id="jssor_2" 
-		style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1024px; height: <%=sliderHeight %>px; overflow: hidden; visibility: hidden;">
-		<!-- Loading Screen -->
-		<div data-u="loading" class="jssorl-009-spin"
-			style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.7);">
-		</div>
-		<div data-u="slides"
-			style="cursor: default; position: relative; top: 0px; left: 0px; width: 1024px; height: <%=sliderHeight %>px; overflow: hidden;">
-			<%
-				if (Validator.isNotNull(sliderItems)) {
+<%
+	String customCss = "width:" + sliderWidth + "px; height:" + sliderHeight + "px";
+	int count = 0; 
+%>
 
-					try {
-						JSONArray array = JSONFactoryUtil
-								.createJSONArray(sliderItems);
+<style>
+	#slider-content {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	
+	#carousel img {
+		display: block;
+		float: left;
+	}
+			
+	#prev, #next {
+		display: block;
+		min-width:50px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+	}
+	
+	#prev:hover img, #next:hover img {
+		display: block;
+	}
+	#prev {
+		left: 20px;
+	}
+	#next {
+		right: 20px;
+	}
+	#prev img {
+		background-position: 0 -230px;
+		padding-left: 25px;
+		left: 0;
+	}
+	#next img {
+		background-position: 0 -115px;
+		padding-right: 25px;
+		right: 0;
+	}
+	#wrapper:hover #prev, #wrapper:hover #next {
+		display: block !important;
+	}
+	#navi {
+		background-color: #FFFFFF;
+	    bottom: 0;
+	    height: 40px;
+	    opacity: 0.7;
+		filter:alpha(opacity=70); 
+	    position: absolute;
+	    width: 100%;
+	}
+	#pagenumber, #title, #pager {
+		margin: 0;
+		padding: 0;
+	}
+	#pagenumber {
+		display: none;
+	    float: left;
+	    margin: 10px;
+	    width: 200px;
+	}
+	#title {
+		font-size: 18px;
+		text-align: center;
+		width: 260px;
+		float: left;
+	}
+	#pager {
+		float: left;
+	    margin: 10px;
+	    position: relative;
+	    text-align: right;
+	}
+	#pager a {
+		text-decoration: none;
+		text-align: center;
+		line-height: 20px;
+		display: inline-block;
+		width: 18px;
+		height: 20px;
+		position: relative;
+	}
+	#pager a.selected {
+		background-color: #666;
+		color: #fff;
+	}
+	
+	#pager a:hover img {
+		display: block;
+	}
+</style>
 
-						if (array != null) {
-							for (int i = 0; i < 10; i++) {
-								JSONObject object = array.getJSONObject(i);
-								long imagesId = object.getLong("imageId");
-								String url = object.getString("url");
-								String imageURL = SliderUtil.getImageURL(imagesId,
-										themeDisplay,
-										SliderUtil.imageViewType.MIDIUM.toString(),
-										true);
-			%>
-			<div>
-				<a href="<%=url%>">
-					<img data-u="image" src="<%=imageURL%>" onclick="location.href = <%=url%>"/>
-				</a>
-			</div>
-			<%
-				}
-						}
-					} catch (Exception e) {
-
+<div id="slider-content" style="<%=customCss%>">
+	<div id="carousel" >
+	<%
+		if(Validator.isNotNull(sliderItems)){
+			
+			try{
+				JSONArray array = JSONFactoryUtil.createJSONArray(sliderItems);
+				
+				if(array != null){
+					count = array.length();
+					for(int i = 0; i < array.length(); i++){
+						JSONObject object = array.getJSONObject(i);
+						long imagesId = object.getLong("imageId");
+						String url = object.getString("url");
+						String imageURL = SliderUtil.getImageURL(imagesId, themeDisplay, SliderUtil.imageViewType.LARGE.toString(), true);
+						%>
+						<img alt="" src="<%=imageURL%>" width="<%=sliderWidth%>" height="<%=sliderHeight%>">
+						<%
 					}
 				}
-			%>
-		</div>
+			}catch(Exception e){
+				
+			}
+		}
+	%>
+	</div>
+	
+	<a href="#" title="Go to the previous image." id="prev"></a>
+	<a href="#" title="Go to the next image." id="next"></a>
+	<div id="navi">
+		<p id="pagenumber">Now showing image <span></span> of <%=count%>.</p> 
+		<p id="title"></p> 
+		<p id="pager">Go to image <span></span></p>
 	</div>
 </div>
 <div style="clear: both;"></div>
+
 <script type="text/javascript">
-	$(document).ready(function ($) {
-	    var jssor_2_options = {
-	      $AutoPlay: 1,
-	      $Idle: 0,
-	      $SlideDuration: <%=durationTimeout%>,
-	      $SlideEasing: $Jease$.$Linear,
-	      $PauseOnHover: 4,
-	      $SlideWidth: <%=sliderWidth%>,
-	      $Align: 0
-	    };
+var contentWidth = $('#slider-content').width();
+var contentHeight = $('#slider-content').height();
+function setNavi( $c, $i ) {
+	var title = $i.attr( 'alt' );
+	$('#title').text( title );
+	var nextWidth = contentWidth/2 + "px";
+	var prevWidth = nextWidth;
+	var current = $c.triggerHandler( 'currentPosition' );
+	$('#pagenumber span').text( current+1 );
+ 
+	var $prev = ($i.is(':first-child')) ? $c.children().last() : $i.prev();
+	var small = $prev.attr('src').split('?imageThumbnail=4').join('?imageThumbnail=3');
+	var prevImage = '<img src="'+small+'" />';
 	
-	    var jssor_2_slider = new $JssorSlider$("jssor_2", jssor_2_options);
+	$('#prev').html(prevImage);
+	var prevImageHeight = $('#prev').find('img').first().height();
+	var prevImageTopPos = (contentHeight - prevImageHeight)/2 + "px";
+	$('#prev').find('img').first().css("top", prevImageTopPos);
+	$('#prev').css({"width":prevWidth});
 	
-	    /*#region responsive code begin*/
-	    var MAX_WIDTH = 1024;
+	var $next = $i.next();
+	var small = $next.attr('src').split('?imageThumbnail=4').join('?imageThumbnail=3');
+	var nextImage = '<img src="'+small+'" />';
+	$('#next').html(nextImage);
+	var nextImageHeight = $('#next').find('img').first().height();
+	var nextImageTopPos = (contentHeight - nextImageHeight)/2 + "px";
+	$('#next').find('img').first().css("top", nextImageTopPos);
+	$('#next').css({"width":nextWidth});
+}
+$(function() {
 	
-	    function ScaleSlider() {
-	        var containerElement = jssor_2_slider.$Elmt.parentNode;
-	        var containerWidth = containerElement.clientWidth;
 	
-	        if (containerWidth) {
+	var carouselHeight = '<%=sliderHeight + "px"%>';
+	var carouselWidth = '<%=sliderWidth + "px"%>';
 	
-	            var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-	
-	            jssor_2_slider.$ScaleWidth(expectedWidth);
-	        }
-	        else {
-	            window.setTimeout(ScaleSlider, 30);
-	        }
-	    }
-	
-	    ScaleSlider();
-	
-	    $(window).bind("load", ScaleSlider);
-	    $(window).bind("resize", ScaleSlider);
-	    $(window).bind("orientationchange", ScaleSlider);
-	    /*#endregion responsive code end*/
+	$("#carousel").carouFredSel({
+		auto: true,
+		width: carouselWidth,
+		height: carouselHeight,
+		items: {
+			width: contentWidth,
+			height: contentHeight,
+			visible: 1,
+			start: -1
+		},
+		
+		prev: '#prev',
+		next: '#next',
+		pagination: {
+			container: '#pager span',
+			anchorBuilder: function( nr ) {
+				
+				var small = $(this).attr('src').split('?imageThumbnail=4').join('?imageThumbnail=3');
+				
+				return '<a href="#" title="Go to image '+nr+'.">'+nr+'<img src="'+small+'" /></a>';
+			}
+		},
+		scroll: {
+			items: 1,
+			duration: parseInt('<%=duration%>'),
+			timeoutDuration: parseInt('<%=durationTimeout%>'),
+			onBefore: function( data ) {
+				setNavi( $(this), data.items.visible );
+			}
+		},
+		onCreate: function( data ) {
+			setNavi( $(this), data.items );
+		}
 	});
+});
+
 </script>
+

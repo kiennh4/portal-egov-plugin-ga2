@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="$javascript_folder/responsivevoice.js" charset="utf-8"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+	<link href="$css_folder/flexslider.css" rel="stylesheet">
 	$theme.include($top_head_include)
 </head>
 
@@ -19,9 +20,32 @@
 	#if ($is_signed_in)
 		#dockbar()
 	#end
-	
-	<div class="body-wrapper">
-						
+	<div class="top-header">
+		<div class="header-content">
+			<div class="main-logo">
+			</div>
+			<div class="portal-info">
+				<h6 class="portal-name">Cổng thông tin điện tử</h6>
+				<h1 class="city-name">THÀNH PHỐ VŨNG TÀU </h1>
+			</div>
+			<div class="portal-language">
+				<ul class="list-language">
+					<li>
+						<a href="javascript:;"><img src="$themeDisplay.getPathThemeImages()/custom_icon/vi.png" title="Tiếng việt"/></a>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="$themeDisplay.getPathThemeImages()/custom_icon/en.png" title="English"/></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main-navigation">
+		#if ($has_navigation || $is_signed_in)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
+	</div>
+	<div class="body-wrapper">			
 		#if ($theme_display.isShowPageSettingsIcon())
 			<span class="lfr-meta-actions">
 				<a class="taglib-icon quickEditLayoutSet" href="$editBannerURL" data-width="700" id="quickEditBanner">
@@ -29,35 +53,6 @@
 				</a>
 			</span>
 		#end
-		
-		<div class="top-header">
-			<div class="header-content">
-				<div class="main-logo">
-				</div>
-				<div class="portal-info">
-					<h6 class="portal-name">Cổng thông tin điện tử</h6>
-					<h1 class="city-name">THÀNH PHỐ VŨNG TÀU </h1>
-				</div>
-				<div class="portal-language">
-					<ul class="list-language">
-						<li>
-							<a href="javascript:;"><img src="$themeDisplay.getPathThemeImages()/custom_icon/vi.png" title="Tiếng việt"/></a>
-						</li>
-						<li>
-							<a href="javascript:;"><img src="$themeDisplay.getPathThemeImages()/custom_icon/en.png" title="English"/></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="main-navigation">
-			#if ($has_navigation || $is_signed_in)
-				#parse ("$full_templates_path/navigation.vm")
-			#end
-		</div>
-		<div class="main-banner">
-		</div>
-		#parse ("$full_templates_path/sub_navigation.vm")
 		<div class="content-wrapper">
 			<div id="content">
 				#if ($selectable)
@@ -99,6 +94,7 @@
 	 	});
 	</script>
 	
+	
 	<script type="text/javascript">
 		AUI().ready('aui-dialog', function(A) {
 			A.all('a.quickEditLayoutSet').each(
@@ -137,6 +133,9 @@
 		});
 </script>
 <script type="text/javascript" src="$javascript_folder/responsivevoice.js" charset="utf-8"></script>
+<script type="text/javascript" src="$javascript_folder/jquery.flexslider.js" charset="utf-8"></script>
+<script type="text/javascript" src="$javascript_folder/jquery.easing.js" charset="utf-8"></script>
+<script type="text/javascript" src="$javascript_folder/jquery.mousewheel.js" charset="utf-8"></script>
 </body>
 
 $theme.include($bottom_include)
