@@ -1,1 +1,16 @@
+.vungtau-citizen-portlet-config-form .lfr-form-row {
+  width: 100%; }
+
+.vungtau-citizen-portlet-config-form .lfr-form-row {
+  width: 100%; }
+
+.vungtau-citizen-portlet-config-form .lfr-form-row .form-row {
+  width: 100%;
+  float: left; }
+  .vungtau-citizen-portlet-config-form .lfr-form-row .form-row .aui-field {
+    width: 50%; }
+  .vungtau-citizen-portlet-config-form .lfr-form-row .form-row .aui-field-input-text {
+    width: 80%; }
+  .vungtau-citizen-portlet-config-form .lfr-form-row .form-row .row-legend {
+    margin: 10px 0; }
 

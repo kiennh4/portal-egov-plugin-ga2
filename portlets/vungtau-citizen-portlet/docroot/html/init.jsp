@@ -48,9 +48,28 @@
 	long plid = themeDisplay.getPlid();
 	
 	//default config param
-	String citizenPhone = preferences.getValue("citizenPhone", "");
+	String onlineChatDesc = preferences.getValue("onlineChatDesc", "");
 	
-	String enterprisePhone = preferences.getValue("enterprisePhone", "");
+	String reflectRequestDesc = preferences.getValue("reflectRequestDesc", "");
+	
+	String reflectFristUrl = preferences.getValue("reflectFristUrl", "");
+	
+	String reflectFirstName = preferences.getValue("reflectFirstName", "");
+	
+	String reflectSecondUrl = preferences.getValue("reflectSecondUrl", "");
+	
+	String reflectSecondName = preferences.getValue("reflectSecondName", "");
+	
+	String legalFaqDesc = preferences.getValue("legalFaqDesc", "");
+	
+	String legalFaqFirstUrl = preferences.getValue("legalFaqFirstUrl", "");
+	
+	String legalFaqFirstName =  preferences.getValue("legalFaqFirstName", "");
+	
+	String legalFaqSecondUrl = preferences.getValue("legalFaqSecondUrl", "");
+	
+	String legalFaqSecondName =  preferences.getValue("legalFaqSecondName", "");
+	
 	
 %>
 

@@ -9,10 +9,12 @@
 }
 @font-face {
     font-family: 'Arial';
+    font-weight: 400;
     src: url(../fonts/Arial_Regular.ttf);
 }
 @font-face {
-    font-family: 'Arial_Bold';
+    font-family: 'Arial';
+    font-weight: 700;
     src: url(../fonts/Arial-Bold.ttf);
 }
 @font-face {

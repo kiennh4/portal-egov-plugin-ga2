@@ -30,9 +30,8 @@ html, body {
   overflow-x: hidden; }
 
 body {
-  /* background: url("../images/background/body-bg.png"); */
   font-size: 13px;
-  font-family: "Arial",sans-serif;
+  font-family: 'Arial',sans-serif;
   color: #434343;
   position: relative; }
 

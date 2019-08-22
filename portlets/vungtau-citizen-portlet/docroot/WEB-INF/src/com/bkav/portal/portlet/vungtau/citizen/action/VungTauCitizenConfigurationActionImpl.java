@@ -27,14 +27,39 @@ public class VungTauCitizenConfigurationActionImpl extends DefaultConfigurationA
 
 			PortletPreferences preferences = PortletPreferencesFactoryUtil.getPortletSetup(actionRequest, portletResource);
 			
-			String citizenPhone = ParamUtil.getString(actionRequest, "citizenPhone");
+			String onlineChatDesc = ParamUtil.getString(actionRequest, "onlineChatDesc");
 			
-			String enterprisePhone = ParamUtil.getString(actionRequest, "enterprisePhone");
+			String reflectRequestDesc = ParamUtil.getString(actionRequest, "reflectRequestDesc");
 			
-			preferences.setValue("citizenPhone", citizenPhone);
-			preferences.setValue("enterprisePhone", enterprisePhone);
-			System.out.println(citizenPhone);
-			System.out.println(enterprisePhone);
+			String reflectFristUrl = ParamUtil.getString(actionRequest, "reflectFristUrl");
+			
+			String reflectFirstName = ParamUtil.getString(actionRequest, "reflectFirstName");
+			
+			String reflectSecondUrl = ParamUtil.getString(actionRequest, "reflectSecondUrl");
+			
+			String reflectSecondName = ParamUtil.getString(actionRequest, "reflectSecondName");
+			
+			String legalFaqDesc = ParamUtil.getString(actionRequest, "legalFaqDesc");
+			
+			String legalFaqFirstUrl = ParamUtil.getString(actionRequest, "legalFaqFirstUrl");
+			
+			String legalFaqFirstName = ParamUtil.getString(actionRequest, "legalFaqFirstName");
+			
+			String legalFaqSecondUrl = ParamUtil.getString(actionRequest, "legalFaqSecondUrl");
+			
+			String legalFaqSecondName = ParamUtil.getString(actionRequest, "legalFaqSecondName");
+			
+			preferences.setValue("onlineChatDesc", onlineChatDesc);
+			preferences.setValue("reflectRequestDesc", reflectRequestDesc);
+			preferences.setValue("reflectFristUrl", reflectFristUrl);
+			preferences.setValue("reflectFirstName", reflectFirstName);
+			preferences.setValue("reflectSecondUrl", reflectSecondUrl);
+			preferences.setValue("reflectSecondName", reflectSecondName);
+			preferences.setValue("legalFaqDesc", legalFaqDesc);
+			preferences.setValue("legalFaqFirstUrl", legalFaqFirstUrl);
+			preferences.setValue("legalFaqFirstName", legalFaqFirstName);
+			preferences.setValue("legalFaqSecondUrl", legalFaqSecondUrl);
+			preferences.setValue("legalFaqSecondName", legalFaqSecondName);
 			if(SessionErrors.isEmpty(actionRequest)){
 				
 				preferences.store();
