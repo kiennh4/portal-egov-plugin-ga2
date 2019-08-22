@@ -36,6 +36,8 @@
 								selected='<%=Validator.equals(displayStyle, "gallery-style") %>'/>
 					<aui:option label="slider-style" value="slider-style" 
 								selected='<%=Validator.equals(displayStyle, "slider-style") %>'/>
+					<aui:option label="abstract-style" value="abstract-style" 
+								selected='<%=Validator.equals(displayStyle, "abstract-style") %>'/>
 				</aui:select>
 				
 				<aui:input name="styleTitle" value="<%=styleTitle %>"/>

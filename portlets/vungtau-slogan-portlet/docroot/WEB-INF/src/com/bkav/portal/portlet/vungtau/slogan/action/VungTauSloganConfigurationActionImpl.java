@@ -30,7 +30,7 @@ public class VungTauSloganConfigurationActionImpl extends DefaultConfigurationAc
 			
 			String slogan = ParamUtil.getString(actionRequest, "slogan");
 		
-			preferences.setValue("solgan", slogan);
+			preferences.setValue("slogan", slogan);
 	
 			if(SessionErrors.isEmpty(actionRequest)){
 				

@@ -27,23 +27,30 @@
 			</div>
 			<div class="form-detail">
 				<div class="form-row">
-					<div><h4 class="row-legend"><liferay-ui:message key="category-1"/></h4></div>
-					
+					<div class="row-legend">
+						<h4><liferay-ui:message key="category-1"/></h4>
+					</div>
 					<aui:input name="tthcCategoryFirst" type="text" label="category-title" value="<%=tthcCateNameFirst %>" />
 					<aui:input name="tthcCateUrlFirst" type="text" label="category-url-title" value="<%=tthcCateUrlFist %>" />
 				</div>
 				<div class="form-row">
-					<div><h4 class="row-legend"><liferay-ui:message key="category-2"/></h4></div>
+					<div class="row-legend">
+						<h4><liferay-ui:message key="category-2"/></h4>
+					</div>
 					<aui:input name="tthcCategorySecond" type="text" label="category-title" value="<%=tthcCateNameSecond %>" />
 					<aui:input name="tthcCateUrlSecond" type="text" label="category-url-title" value="<%=tthcCateUrlSecond %>" />
 				</div>
 				<div class="form-row">
-					<div><h4 class="row-legend"><liferay-ui:message key="category-3"/></h4></div>
+					<div class="row-legend">
+						<h4><liferay-ui:message key="category-3"/></h4>
+					</div>
 					<aui:input name="tthcCategoryThird" type="text" label="category-title" value="<%=tthcCateNameThird %>" />
 					<aui:input name="tthcCateUrlThird" type="text" label="category-url-title" value="<%=tthcCateUrlThird %>" />
 				</div>
 				<div class="form-row">
-					<div><h4 class="row-legend"><liferay-ui:message key="category-4"/></h4></div>
+					<div class="row-legend">
+						<h4><liferay-ui:message key="category-4"/></h4>
+					</div>
 					<aui:input name="tthcReadMore" type="text" label="category-url-title" value="<%=tthcReadMore %>" />
 				</div>
 			</div>
@@ -54,15 +61,15 @@
 			</div>
 			<div class="form-detail">
 				<div class="form-row">
-					<div>
-						<h4 class="row-legend"><liferay-ui:message key="category-2"/></h4>
+					<div class="row-legend">
+						<h4><liferay-ui:message key="category-5"/></h4>
 					</div>
 					<aui:input name="dvcNameFirst" type="text" label="dvc-cate-title" value="<%=dvcNameFirst %>" />
 					<aui:input name="dvcUrlFirst" type="text" label="dvc-url" value="<%=dvcUrlFirst %>" />
 				</div>
 				<div class="form-row">
-					<div>
-						<h4 class="row-legend"><liferay-ui:message key="category-2"/></h4>
+					<div class="row-legend">
+						<h4><liferay-ui:message key="category-6"/></h4>
 					</div>
 					<aui:input name="dvcNameSecond" type="text" label="dvc-cate-title" value="<%=dvcNameSecond %>" />
 					<aui:input name="dvcUrlSecond" type="text" label="dvc-url" value="<%=dvcUrlSecond %>" />
@@ -77,7 +84,7 @@
 			<div class="form-detail">
 				<div class="form-row">
 					<aui:input name="tcrName" type="text" label="category-title" value="<%= trcName%>" />
-					<aui:input name="trcUrl" type="text" label="category-title" value="<%=trcUrl %>" />
+					<aui:input name="trcUrl" type="text" label="dvc-url" value="<%=trcUrl %>" />
 				</div>
 			</div>
 		</div>

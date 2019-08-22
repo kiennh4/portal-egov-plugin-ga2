@@ -8,7 +8,6 @@
 	<title>$the_title - $company_name</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="$javascript_folder/responsivevoice.js" charset="utf-8"></script>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 	<link href="$css_folder/flexslider.css" rel="stylesheet">
 	$theme.include($top_head_include)
 </head>
@@ -19,6 +18,13 @@
 	
 	#if ($is_signed_in)
 		#dockbar()
+	#end
+	#if ($theme_display.isShowPageSettingsIcon())
+		<span class="lfr-meta-actions">
+			<a class="taglib-icon quickEditLayoutSet" href="$editBannerURL" data-width="700" id="quickEditBanner">
+				<img class="icon" src="$themeDisplay.getPathThemeImages()/common/edit.png" alt="#language("edit-banner")" title="#language("edit-banner")">
+			</a>
+		</span>
 	#end
 	<div class="top-header">
 		<div class="header-content">
@@ -46,13 +52,6 @@
 		#end
 	</div>
 	<div class="body-wrapper">			
-		#if ($theme_display.isShowPageSettingsIcon())
-			<span class="lfr-meta-actions">
-				<a class="taglib-icon quickEditLayoutSet" href="$editBannerURL" data-width="700" id="quickEditBanner">
-					<img class="icon" src="$themeDisplay.getPathThemeImages()/common/edit.png" alt="#language("edit-banner")" title="#language("edit-banner")">
-				</a>
-			</span>
-		#end
 		<div class="content-wrapper">
 			<div id="content">
 				#if ($selectable)

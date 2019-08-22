@@ -1,5 +1,5 @@
 $(document).on("click", ".viewVideo", function() {
-	var videoTitle = $(this).attr("title");
+	var videoTitle = $(this).find("span").text();
 	var mediaUrl = $(this).attr("mediaUrl");
 	var topVideo = $("#topVideo");
 	var videoType = $(this).attr("data-type");

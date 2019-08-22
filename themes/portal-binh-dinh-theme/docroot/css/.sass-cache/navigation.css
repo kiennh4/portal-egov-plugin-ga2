@@ -1,151 +1,67 @@
-/* ---------- Main navigation ---------- */
-.navigation {
-  width: 100%;
-  height: 35px;
-  line-height: 35px;
-  background-color: #d63031;
-  border-radius: 0px;
-  font-size: 15.5px; }
-
-.navigation .menu-mobile {
-  display: none; }
-
-.sf-navbar {
-  position: relative;
-  background: #d63031;
-  width: 1110px;
-  margin: 0 auto;
-  padding: 0; }
-
-.sf-navbar a {
-  text-decoration: none; }
-
-.sf-navbar .drop-addon {
-  display: none; }
-
-li {
-  list-style: none; }
-
-.sf-navbar li {
-  position: relative;
-  float: left;
-  cursor: pointer; }
-
-.navigation #show-menu {
-  display: none; }
-
-.navigation .toggle {
-  display: none; }
-
-.sf-navbar li a {
-  color: #fff;
-  font-weight: bold;
+/* ---------- Add/remove page ---------- */
+.modify-pages li {
+  position: relative; }
+.modify-pages .delete-tab {
+  background: #333333 url(../images/portlet/close_borderless.png) no-repeat 50%;
+  cursor: pointer;
   display: block;
-  padding: 0px 10px;
-  white-space: nowrap;
-  text-transform: uppercase;
-  text-align: justify;
-  zoom: 1; }
-
-.sf-navbar .sub-menu .child-menu {
-  top: 0;
-  left: 100%; }
-
-/* Simple clearfix */
-.sf-navbar ul:before,
-.sf-navbar ul:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-.sf-navbar ul:after {
-  clear: both; }
-
-.sf-navbar img.right-arrow {
-  right: 1px;
-  top: 14px; }
-
-.sf-navbar ul {
-  background: #d63031;
-  list-style: none;
-  padding: 0;
-  left: 0;
-  margin: 0;
+  height: 8px;
+  margin-top: -7px;
+  padding: 3px;
   position: absolute;
-  display: none;
-  z-index: 99; }
+  right: 1px;
+  text-indent: -9999em;
+  top: 50%;
+  width: 8px; }
 
-.sf-navbar li:hover {
-  background: #ea0000; }
-
-.sf-navbar li:hover > ul {
-  display: block;
-  position: absolute; }
-
-.navigation li:HOVER li {
-  float: none; }
-
-.navigation li:HOVER a {
-  background: #ea0000; }
-
-.sf-navbar li.selected {
-  background-color: #f02d1e; }
-
-.sf-navbar li.selected a {
-  color: #ffff00; }
-
-.sf-navbar li.selected ul li a {
-  color: #fff; }
-
-.sf-navbar > li > ul > li {
-  display: block;
-  border-bottom: 1px solid #fff;
-  -webkit-transition: height 200ms ease-in;
-  -moz-transition: height 200ms ease-in; }
-
-.sf-navbar > li > ul > li > ul > li {
-  border-bottom: 1px solid #fff;
-  display: block; }
-
-.sf-navbar ul li a:hover {
-  color: #ffff00 !important; }
-
-/* ---------- Sub Navigations ----------*/
-.sub-navigation {
-  clear: both;
-  padding: 5px 0px;
-  font-size: 13px;
-  color: #00528B;
-  text-align: right;
-  text-shadow: 1px 1px white; }
-
-.sub-navigation .date_time {
-  background: url("../images/custom_icon/clock.png") no-repeat scroll left center transparent;
-  color: #bc0000;
-  float: left;
-  padding: 2px 0px 2px 20px;
-  height: 16px;
-  font-size: 13px;
-  white-space: nowrap; }
-
-.sub-navigation .top_notify {
-  color: #bc0000;
-  float: left;
-  margin-left: 40px; }
-
-.sub-navigation .global-search-wrapper {
-  float: right;
-  height: 22px; }
-
-.sub-navigation .global-search-wrapper select {
-  display: none; }
-
-.sub-navigation a {
+/*------ Navigation portlet ------*/
+.nav-menu ul {
+  padding-left: 10px; }
+.nav-menu li a.ancestor {
+  font-weight: bold; }
+.nav-menu li a.selected {
+  color: #000;
+  font-weight: bold;
   text-decoration: none; }
 
-.sub-navigation .top_notify p {
-  margin: 0 !important; }
+/* ---------- Page template selector ---------- */
+.aui-form-options {
+  border: 1px solid #AAA;
+  display: inline-block;
+  vertical-align: middle; }
+  .aui-form-options input {
+    border-width: 0;
+    display: inline;
+    float: left; }
 
-.navigation .search-wrapper {
-  display: none; }
+.aui-form-triggers {
+  float: left; }
+
+.aui-form-trigger {
+  background: #c4c4c4 url(../images/application/button_bg.png) repeat-x 0 0;
+  border-left: 1px solid #BBB;
+  display: inline-block;
+  float: left; }
+  .aui-form-trigger img {
+    background: url() no-repeat 50% 40%;
+    height: 25px;
+    padding: 0 3px;
+    vertical-align: middle;
+    width: 16px; }
+  .aui-form-trigger:hover, .aui-form-trigger:focus {
+    background-color: #83B0CA;
+    background-image: url(../images/application/button_bg_over.png); }
+
+.aui-trigger-selected {
+  background-color: #EBEBEB;
+  background-image: url(../images/application/button_bg_selected.png); }
+  .aui-trigger-selected:hover, .aui-trigger-selected:focus {
+    background-color: #B7DEF4;
+    background-image: url(../images/application/button_bg_selected_over.png); }
+
+.aui-options-trigger img {
+  background-image: url(../images/common/configuration.png); }
+
+.aui-save-trigger img {
+  background-image: url(../images/dock/my_place_current.png); }
 

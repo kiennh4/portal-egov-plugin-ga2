@@ -51,6 +51,8 @@
 		videoPlaylist = ListUtil.subList(videoList, 0, videoList.size());
 	}
 	Collections.sort(videoPlaylist);
+	
+	
 %>
 <c:choose>
 	<c:when test="<%=!videoList.isEmpty()%>">
@@ -72,6 +74,7 @@
 			String topVideoURL = VideoFileUtil.getViewVideoURL(themeDisplay, topVideo);
 			
 			String topVideoThumbnailURL = "/video-player-portlet/images/default-video-thumbnail.jpg";
+			
 			
 			if(topVideo.getThumbnailImage() && topVideo.getThumbnailImageId() > 0){
 				
@@ -134,24 +137,6 @@
 						        ])
 	    					</aui:script>
 						
-						<%-- <div class="video-player" style="<%=style%>" id="<portlet:namespace />videoPlayer">
-						</div>		
-						<aui:script>
-							AUI().ready(function(A){
-								jwplayer("<portlet:namespace />videoPlayer").setup({
-						            flashplayer: '/video-player-portlet/jwplayer/jwplayer.flash.swf',
-						            file: '<%=topVideoURL%>',
-						            image: '<%=topVideoThumbnailURL %>',
-				    		        height: <%=videoFrameHeight%>,
-						            width: <%=videoFrameWidth%>,
-						            autostart: <%=autoPlay %>
-						        });
-						        jwplayer("<portlet:namespace />videoPlayer").onReady (function (){
-						        	 A.one('#<portlet:namespace />videoPlayer_logo').setStyle ('display','none');
-						        });
-						        
-							});
-						</aui:script> --%>
 					</c:otherwise>
 				</c:choose>
 				</div>

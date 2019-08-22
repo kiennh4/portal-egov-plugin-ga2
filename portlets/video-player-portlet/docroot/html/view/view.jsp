@@ -22,6 +22,9 @@
 		<c:if test='<%=Validator.equals(displayStyle, "slider-style") %>'>
 			<liferay-util:include page="/html/view/display-style/slider-style.jsp" servletContext="<%=getServletContext() %>"/>
 		</c:if>
+		<c:if test='<%=Validator.equals(displayStyle, "abstract-style") %>'>
+			<liferay-util:include page="/html/view/display-style/abstract-style.jsp" servletContext="<%=getServletContext() %>"/>
+		</c:if>
 	</c:when>
 	
 	<c:otherwise>

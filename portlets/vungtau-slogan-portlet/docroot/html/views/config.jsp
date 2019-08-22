@@ -12,19 +12,11 @@
 
 <%@include file="/html/init.jsp"%>
 
-<%
-	
-	String taglibOnSubmit = "event.preventDefault(); _vungtauslogan_WAR_vungtausloganportlet_submitSloganSettingForm();";
-	
-	String redirectURL = ParamUtil.getString(request, "redirectURL");
-%>
-
-
 <liferay-portlet:actionURL portletConfiguration="true" var="portletConfigActionURL" >
 	<liferay-portlet:param  name="portletResource" value="<%=portletResource%>"/>
 </liferay-portlet:actionURL>
 
-<div class="vungtau-contact-portlet-config-form">
+<div class="vungtau-slogan-portlet-config-form">
 	<aui:form name="portletConfigForm" method="post" action="<%=portletConfigActionURL%>">
 		
 		<h3 class="config-title"><liferay-ui:message key="display-setting"/></h3>
@@ -43,22 +35,4 @@
 	function <portlet:namespace />initSloganContentEditor() {
 		return "<%= UnicodeFormatter.toString(slogan)%>";
 	}
-</aui:script>
-
-<aui:script>
-	Liferay.provide(
-		window,
-		'<portlet:namespace />submitSloganSettingForm',
-		function() {
-			var A = AUI();
-			
-			var sloganContent = window.<portlet:namespace />slogan.getHTML();
-			
-			console.log(sloganContent);
-			
-	
-			
-			document.<portlet:namespace />fm.submit();
-		}
-	);
 </aui:script>

@@ -667,5 +667,72 @@
 			height: 75px;
 		}
 	}
+	.video-player-abstract-style{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		.video-player-frame{
+			width : 770px;
+			height: 100%;
+			float: left;
+			iframe{
+				width: 100% !important;
+				height: 100% !important;
+			}
+			.video-player{
+				width: 100%;
+				height: 433px;
+				position: relative;
+			}
+			.external-video-frame{
+				width: 100%;
+				height: 100%;
+			}
+			.top-video-title{
+				margin-top: 10px;
+				width: 100%;
+				text-align: left;
+				a{
+					color: #FFF;
+					font-size: 16px;
+					font-weight: bold;
+				}
+			}
+			.date-publisher{
+				margin-top: 10px;
+				a{
+					color: #AAAAAA;
+					font-size: 16px;
+				}
+			}
+		}
+		.video-playlist{
+			width: 370px;
+			float: right;
+			.videos{
+				margin : 0 !important;
+				list-style: none;
+				padding-right: 30px;
+				.video-item{
+					border-bottom: 1px solid #CCCCCC;
+					padding-bottom: 48.5px;
+					padding-top: 27.5px;
+					text-align: justify;
+					a {
+						color: #FFF;
+						font-size: 16px;
+						font-weight: bold;
+						cursor: pointer;
+					}
+				}
+			}
+			.videos .video-item:last-child{
+				border-bottom: none;
+			}
+			.videos .video-item:first-child{
+				padding-top: 0px !important;
+			}
+		}
+	}
 }
 

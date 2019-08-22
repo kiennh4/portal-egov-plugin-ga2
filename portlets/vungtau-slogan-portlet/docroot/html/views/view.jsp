@@ -11,5 +11,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
 <%@include file="/html/init.jsp"%>
-This is the <b>Vung Tau Slogan</b> portlet in View mode.
-<h1><%= slogan%></h1>
+<div class="sub-navigation">
+	<div class="top-notify main-content">
+	    <div class="datetime">
+	    	<span id="portal_egov_clock"></span>
+	    </div>
+	    <div class="main-slogan">
+	    	<div class="slogan-content">
+		    	<marquee width="100%" direction="left" height="100%">
+		    		<%=slogan %>
+		    	</marquee>
+	    	</div>
+	    </div>
+	    <div style="clear:both;"></div>
+	 </div>
+</div>
