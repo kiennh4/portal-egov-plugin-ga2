@@ -1233,7 +1233,7 @@ li {
   font-weight: 700; }
 
 .sf-navbar li.selected a {
-  color: red; }
+  color: #ff0700; }
 
 .sf-navbar li.selected ul li a {
   color: #fff; }
@@ -2134,7 +2134,7 @@ html, body {
 body {
   font-size: 13px;
   font-family: 'Arial',sans-serif;
-  color: #434343;
+  color: #000000;
   position: relative; }
 
 .body-wrapper {
@@ -2472,7 +2472,8 @@ hr, .separator {
   border-right: none; }
 
 .footer-menu a:hover {
-  color: #ffd900 !important; }
+  color: #ff0700 !important;
+  font-weight: bold; }
 
 .copyright {
   margin: 0 auto;

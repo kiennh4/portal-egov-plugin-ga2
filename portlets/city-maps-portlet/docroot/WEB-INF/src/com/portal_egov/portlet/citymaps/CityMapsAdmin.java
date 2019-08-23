@@ -142,6 +142,9 @@ public class CityMapsAdmin extends MVCPortlet {
 			
 			String mapDesc = ParamUtil.getString(uploadRequest, "mapDesc");
 			
+			String mapSumary = ParamUtil.getString(uploadRequest, "mapSumary");
+			System.out.println(mapSumary.length());
+			
 			long mapImageId = ParamUtil.getLong(uploadRequest, "mapImageId");
 			
 			InputStream mapImageStream = uploadRequest.getFileAsStream("mapImageFile");
@@ -158,7 +161,7 @@ public class CityMapsAdmin extends MVCPortlet {
 			
 			if(mapId > 0){
 				
-				CityMapLocalServiceUtil.updateMap(companyId, groupId, userId, userName, mapId, mapTypeId, mapImageId, mapName, mapDesc);
+				CityMapLocalServiceUtil.updateMap(companyId, groupId, userId, userName, mapId, mapTypeId, mapImageId, mapName, mapDesc,mapSumary);
 			
 			}else{
 				
@@ -167,7 +170,7 @@ public class CityMapsAdmin extends MVCPortlet {
 				serviceContext.setGroupPermissions(new String[] {CityMapPermission.VIEW});
 				serviceContext.setGuestPermissions(new String[] {CityMapPermission.VIEW});
 				
-				CityMapLocalServiceUtil.addMap(companyId, groupId, userId, userName, mapTypeId, mapImageId, mapName, mapDesc, serviceContext);
+				CityMapLocalServiceUtil.addMap(companyId, groupId, userId, userName, mapTypeId, mapImageId, mapName, mapDesc, mapSumary, serviceContext);
 			}
 			
 			String redirectURL = ParamUtil.getString(actionRequest, "redirectURL");

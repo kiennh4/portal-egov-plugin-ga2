@@ -288,7 +288,7 @@ public interface CityMapLocalService extends BaseLocalService,
 	public com.portal_egov.portlet.citymaps.model.CityMap addMap(
 		long companyId, long groupId, long userId, java.lang.String userName,
 		long mapTypeId, long mapImageId, java.lang.String mapName,
-		java.lang.String mapDesc,
+		java.lang.String mapDesc, java.lang.String mapSumary,
 		com.liferay.portal.service.ServiceContext serviceContext)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
@@ -296,7 +296,7 @@ public interface CityMapLocalService extends BaseLocalService,
 	public com.portal_egov.portlet.citymaps.model.CityMap updateMap(
 		long companyId, long groupId, long userId, java.lang.String userName,
 		long mapId, long mapTypeId, long mapImageId, java.lang.String mapName,
-		java.lang.String mapDesc)
+		java.lang.String mapDesc, java.lang.String mapSumary)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 

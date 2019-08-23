@@ -163,7 +163,7 @@ public class CityMapLocalServiceClp implements CityMapLocalService {
 
 		_methodParameterTypes30 = new String[] {
 				"long", "long", "long", "java.lang.String", "long", "long",
-				"java.lang.String", "java.lang.String",
+				"java.lang.String", "java.lang.String", "java.lang.String",
 				"com.liferay.portal.service.ServiceContext"
 			};
 
@@ -171,7 +171,8 @@ public class CityMapLocalServiceClp implements CityMapLocalService {
 
 		_methodParameterTypes31 = new String[] {
 				"long", "long", "long", "java.lang.String", "long", "long",
-				"long", "java.lang.String", "java.lang.String"
+				"long", "java.lang.String", "java.lang.String",
+				"java.lang.String"
 			};
 
 		_methodName32 = "deleteMap";
@@ -1025,7 +1026,7 @@ public class CityMapLocalServiceClp implements CityMapLocalService {
 	public com.portal_egov.portlet.citymaps.model.CityMap addMap(
 		long companyId, long groupId, long userId, java.lang.String userName,
 		long mapTypeId, long mapImageId, java.lang.String mapName,
-		java.lang.String mapDesc,
+		java.lang.String mapDesc, java.lang.String mapSumary,
 		com.liferay.portal.service.ServiceContext serviceContext)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
@@ -1050,6 +1051,8 @@ public class CityMapLocalServiceClp implements CityMapLocalService {
 					ClpSerializer.translateInput(mapName),
 						
 					ClpSerializer.translateInput(mapDesc),
+						
+					ClpSerializer.translateInput(mapSumary),
 						
 					ClpSerializer.translateInput(serviceContext)
 					});
@@ -1080,7 +1083,7 @@ public class CityMapLocalServiceClp implements CityMapLocalService {
 	public com.portal_egov.portlet.citymaps.model.CityMap updateMap(
 		long companyId, long groupId, long userId, java.lang.String userName,
 		long mapId, long mapTypeId, long mapImageId, java.lang.String mapName,
-		java.lang.String mapDesc)
+		java.lang.String mapDesc, java.lang.String mapSumary)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
@@ -1105,7 +1108,9 @@ public class CityMapLocalServiceClp implements CityMapLocalService {
 						
 					ClpSerializer.translateInput(mapName),
 						
-					ClpSerializer.translateInput(mapDesc)
+					ClpSerializer.translateInput(mapDesc),
+						
+					ClpSerializer.translateInput(mapSumary)
 					});
 		}
 		catch (Throwable t) {

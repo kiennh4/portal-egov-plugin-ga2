@@ -9,7 +9,8 @@ create table CityMap (
 	mapTypeId LONG,
 	mapImageId LONG,
 	mapName VARCHAR(300) null,
-	mapDesc VARCHAR(1000) null
+	mapDesc VARCHAR(1000) null,
+	mapSumary VARCHAR(75) null
 );
 
 create table CityMapType (

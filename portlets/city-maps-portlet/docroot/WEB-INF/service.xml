@@ -76,7 +76,7 @@
 		<column name="mapName" type="String" />
 		<!-- Thông tin bản đồ.VD: Cơ quan ban hành,tỷ lệ,chú thích bản đồ,... -->
 		<column name="mapDesc" type="String" />
-
+		<column name="mapSumary" type="String"></column>
 		<!-- Order -->
 
 		<order by="asc">

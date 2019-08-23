@@ -97,7 +97,7 @@ public class CityMapLocalServiceImpl extends CityMapLocalServiceBaseImpl {
 	
 	
 	public CityMap addMap(long companyId,long groupId,long userId,String userName,long mapTypeId,long mapImageId,String mapName,
-		String mapDesc,ServiceContext serviceContext) throws SystemException, PortalException{
+		String mapDesc, String mapSumary,ServiceContext serviceContext) throws SystemException, PortalException{
 		
 		Date now = new Date();
 		
@@ -115,6 +115,7 @@ public class CityMapLocalServiceImpl extends CityMapLocalServiceBaseImpl {
 		cityMap.setMapDesc(mapDesc);
 		cityMap.setCreateDate(now);
 		cityMap.setModifiedDate(now);
+		cityMap.setMapSumary(mapSumary);
 		
 		cityMapPersistence.update(cityMap, false);
 		
@@ -130,7 +131,7 @@ public class CityMapLocalServiceImpl extends CityMapLocalServiceBaseImpl {
 	}
 	
 	public CityMap updateMap(long companyId,long groupId,long userId,String userName,long mapId,long mapTypeId,long mapImageId,
-		String mapName,String mapDesc) throws SystemException, PortalException{
+		String mapName,String mapDesc, String mapSumary) throws SystemException, PortalException{
 		
 		Date now = new Date();
 		
@@ -144,6 +145,7 @@ public class CityMapLocalServiceImpl extends CityMapLocalServiceBaseImpl {
 		cityMap.setMapImageId(mapImageId);
 		cityMap.setMapName(mapName);
 		cityMap.setMapDesc(mapDesc);
+		cityMap.setMapSumary(mapSumary);
 		cityMap.setModifiedDate(now);
 		
 		cityMapPersistence.update(cityMap, false);

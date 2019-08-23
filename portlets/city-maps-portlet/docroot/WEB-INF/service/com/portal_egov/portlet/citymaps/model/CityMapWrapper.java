@@ -56,6 +56,7 @@ public class CityMapWrapper implements CityMap, ModelWrapper<CityMap> {
 		attributes.put("mapImageId", getMapImageId());
 		attributes.put("mapName", getMapName());
 		attributes.put("mapDesc", getMapDesc());
+		attributes.put("mapSumary", getMapSumary());
 
 		return attributes;
 	}
@@ -125,6 +126,12 @@ public class CityMapWrapper implements CityMap, ModelWrapper<CityMap> {
 
 		if (mapDesc != null) {
 			setMapDesc(mapDesc);
+		}
+
+		String mapSumary = (String)attributes.get("mapSumary");
+
+		if (mapSumary != null) {
+			setMapSumary(mapSumary);
 		}
 	}
 
@@ -362,6 +369,24 @@ public class CityMapWrapper implements CityMap, ModelWrapper<CityMap> {
 	*/
 	public void setMapDesc(java.lang.String mapDesc) {
 		_cityMap.setMapDesc(mapDesc);
+	}
+
+	/**
+	* Returns the map sumary of this city map.
+	*
+	* @return the map sumary of this city map
+	*/
+	public java.lang.String getMapSumary() {
+		return _cityMap.getMapSumary();
+	}
+
+	/**
+	* Sets the map sumary of this city map.
+	*
+	* @param mapSumary the map sumary of this city map
+	*/
+	public void setMapSumary(java.lang.String mapSumary) {
+		_cityMap.setMapSumary(mapSumary);
 	}
 
 	public boolean isNew() {

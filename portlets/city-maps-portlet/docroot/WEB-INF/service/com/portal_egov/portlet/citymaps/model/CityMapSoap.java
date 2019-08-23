@@ -42,6 +42,7 @@ public class CityMapSoap implements Serializable {
 		soapModel.setMapImageId(model.getMapImageId());
 		soapModel.setMapName(model.getMapName());
 		soapModel.setMapDesc(model.getMapDesc());
+		soapModel.setMapSumary(model.getMapSumary());
 
 		return soapModel;
 	}
@@ -182,6 +183,14 @@ public class CityMapSoap implements Serializable {
 		_mapDesc = mapDesc;
 	}
 
+	public String getMapSumary() {
+		return _mapSumary;
+	}
+
+	public void setMapSumary(String mapSumary) {
+		_mapSumary = mapSumary;
+	}
+
 	private long _mapId;
 	private long _companyId;
 	private long _groupId;
@@ -193,4 +202,5 @@ public class CityMapSoap implements Serializable {
 	private long _mapImageId;
 	private String _mapName;
 	private String _mapDesc;
+	private String _mapSumary;
 }

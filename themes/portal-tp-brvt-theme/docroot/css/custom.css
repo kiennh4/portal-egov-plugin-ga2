@@ -37,7 +37,7 @@ html, body {
 body {
 	font-size: 13px;
 	font-family: 'Arial',sans-serif;
-	color: #434343;
+	color: #000000;
 	position: relative;
 }
 
@@ -424,7 +424,8 @@ hr, .separator {
 }
 
 .footer-menu a:hover {
-	color: #ffd900 !important;	
+	color: #ff0700 !important;
+	font-weight: bold;
 }
 
 .copyright{

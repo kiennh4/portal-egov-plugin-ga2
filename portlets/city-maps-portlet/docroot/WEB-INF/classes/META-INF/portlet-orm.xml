@@ -24,6 +24,7 @@
 			<basic name="mapImageId" />
 			<basic name="mapName" />
 			<basic name="mapDesc" />
+			<basic name="mapSumary" />
 			<transient name="modelAttributes" />
 			<transient name="primaryKey" />
 			<transient name="primaryKeyObj" />

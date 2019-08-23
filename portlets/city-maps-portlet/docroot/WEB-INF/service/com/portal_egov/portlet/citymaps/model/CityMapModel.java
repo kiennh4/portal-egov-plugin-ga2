@@ -233,6 +233,21 @@ public interface CityMapModel extends BaseModel<CityMap>, GroupedModel {
 	 */
 	public void setMapDesc(String mapDesc);
 
+	/**
+	 * Returns the map sumary of this city map.
+	 *
+	 * @return the map sumary of this city map
+	 */
+	@AutoEscape
+	public String getMapSumary();
+
+	/**
+	 * Sets the map sumary of this city map.
+	 *
+	 * @param mapSumary the map sumary of this city map
+	 */
+	public void setMapSumary(String mapSumary);
+
 	public boolean isNew();
 
 	public void setNew(boolean n);

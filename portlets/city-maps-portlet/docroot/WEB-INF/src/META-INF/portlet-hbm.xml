@@ -19,6 +19,7 @@
 		<property name="mapImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 		<property name="mapName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="mapDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mapSumary" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
 	<class name="com.portal_egov.portlet.citymaps.model.impl.CityMapTypeImpl" table="CityMapType">
 		<cache usage="read-write" />

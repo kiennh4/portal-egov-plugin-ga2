@@ -34,7 +34,7 @@ import java.util.Date;
 public class CityMapCacheModel implements CacheModel<CityMap>, Serializable {
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(23);
+		StringBundler sb = new StringBundler(25);
 
 		sb.append("{mapId=");
 		sb.append(mapId);
@@ -58,6 +58,8 @@ public class CityMapCacheModel implements CacheModel<CityMap>, Serializable {
 		sb.append(mapName);
 		sb.append(", mapDesc=");
 		sb.append(mapDesc);
+		sb.append(", mapSumary=");
+		sb.append(mapSumary);
 		sb.append("}");
 
 		return sb.toString();
@@ -109,6 +111,13 @@ public class CityMapCacheModel implements CacheModel<CityMap>, Serializable {
 			cityMapImpl.setMapDesc(mapDesc);
 		}
 
+		if (mapSumary == null) {
+			cityMapImpl.setMapSumary(StringPool.BLANK);
+		}
+		else {
+			cityMapImpl.setMapSumary(mapSumary);
+		}
+
 		cityMapImpl.resetOriginalValues();
 
 		return cityMapImpl;
@@ -125,4 +134,5 @@ public class CityMapCacheModel implements CacheModel<CityMap>, Serializable {
 	public long mapImageId;
 	public String mapName;
 	public String mapDesc;
+	public String mapSumary;
 }

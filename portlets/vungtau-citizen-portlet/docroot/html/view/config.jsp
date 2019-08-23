@@ -34,10 +34,10 @@
 				<h3 class="relect-legend"><liferay-ui:message key="reflect-title"/></h3>
 			</div>
 			<div class="form-row">
-				<liferay-ui:input-editor name="reflectRequestDesc" height="400" initMethod="initReflectContentEditor"/>
 				<div class="row-legend">
 					<h4><liferay-ui:message key="reflect-desc-1"/></h4>
 				</div>
+				<liferay-ui:input-editor name="reflectRequestDesc" height="400" initMethod="initReflectContentEditor"/>
 				<aui:input name="reflectFirstName" type="text" label="category-title" value="<%=reflectFirstName %>" />
 				<aui:input name="reflectFristUrl" type="text" label="category-url-title" value="<%=reflectFristUrl %>" />
 			</div>
@@ -50,10 +50,10 @@
 			</div>
 		</div>
 		<div class="lfr-form-row">
-			<liferay-ui:input-editor name="legalFaqDesc" height="400" initMethod="initLegalFaqContentEditor"/>
 			<div class="legend-title">
 				<h3 class="legal-legend"><liferay-ui:message key="legal-faq-title"/></h3>
 			</div>
+			<liferay-ui:input-editor name="legalFaqDesc" height="400" initMethod="initLegalFaqContentEditor"/>
 			<div class="form-row">
 				<div class="row-legend">
 					<h4><liferay-ui:message key="legalFaq-desc-1"/></h4>

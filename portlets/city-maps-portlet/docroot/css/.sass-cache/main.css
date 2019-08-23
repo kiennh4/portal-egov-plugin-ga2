@@ -112,6 +112,13 @@
   border-radius: 2px;
   width: 302px; }
 
+.city_map_admin_form img {
+  height: 50%;
+  width: 50%; }
+
+.city_map_admin_form .map-image {
+  text-align: center; }
+
 .citymap_admin .city_map_admin_form select,
 .citymap_admin .city_map_admin_form textarea,
 .citymap_admin .city_map_admin_form input[type="text"],
@@ -244,7 +251,7 @@
   background: none repeat scroll 0 0 #AEB9BE; }
 
 .maptype-list .maptype-item-content-wrapper .maptype-name a {
-  background: url("/city_maps-portlet/images/map_type_icon.png") no-repeat scroll 0 5px transparent;
+  background: url("/city-maps-portlet/images/map_type_icon.png") no-repeat scroll 0 5px transparent;
   color: #00528B;
   display: block;
   padding: 5px 8px 5px 20px;
@@ -252,7 +259,7 @@
   font-weight: bold; }
 
 .citymap-list .city-map-content-wrapper .city-map-name a {
-  background: url("/city_maps-portlet/images/city_maps_icon.png") no-repeat scroll 0 5px transparent;
+  background: url("/city-maps-portlet/images/city_maps_icon.png") no-repeat scroll 0 5px transparent;
   color: #00528B;
   display: block;
   padding: 5px 8px 5px 20px;
@@ -294,7 +301,6 @@
 
 .citi-map-preview .city-map-image img {
   padding: 2px;
-  border: 1px solid #E4E4E4;
   max-width: 600px; }
 
 .citi-map-preview .view-map-image-url {
@@ -317,7 +323,7 @@
   list-style: none; }
 
 .city-map-types-list ul li {
-  background: url("/city_maps-portlet/images/li_red_icon.jpg") no-repeat scroll 0 12px transparent;
+  background: url("/city-maps-portlet/images/li_red_icon.jpg") no-repeat scroll 0 12px transparent;
   padding-left: 10px;
   padding-top: 6px; }
 
@@ -327,7 +333,7 @@
   list-style: none; }
 
 .city-map-list ul li {
-  background: url("/city_maps-portlet/images/li_red_arrow.png") no-repeat scroll 0 12px transparent;
+  background: url("/city-maps-portlet/images/li_red_arrow.png") no-repeat scroll 0 12px transparent;
   padding-left: 10px;
   padding-top: 6px; }
 

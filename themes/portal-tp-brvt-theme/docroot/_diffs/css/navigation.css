@@ -104,7 +104,7 @@ li{
 .sf-navbar li.selected{
 }
 .sf-navbar li.selected a{
-	color: red;
+	color: #ff0700;
 }
 .sf-navbar li.selected ul li a{
 	color: #fff;

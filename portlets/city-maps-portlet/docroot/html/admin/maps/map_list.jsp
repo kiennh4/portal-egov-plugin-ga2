@@ -170,7 +170,7 @@
 					dialog: {
 						align: dialogAlignConfig,
 						constrain: true,
-						width:365,
+						width: 800,
 						destroyOnClose:true
 					},
 					id: '<portlet:namespace/>cityMapDialog',

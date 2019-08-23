@@ -163,7 +163,7 @@ public class CityMapLocalServiceClpInvoker {
 
 		_methodParameterTypes63 = new String[] {
 				"long", "long", "long", "java.lang.String", "long", "long",
-				"java.lang.String", "java.lang.String",
+				"java.lang.String", "java.lang.String", "java.lang.String",
 				"com.liferay.portal.service.ServiceContext"
 			};
 
@@ -171,7 +171,8 @@ public class CityMapLocalServiceClpInvoker {
 
 		_methodParameterTypes64 = new String[] {
 				"long", "long", "long", "java.lang.String", "long", "long",
-				"long", "java.lang.String", "java.lang.String"
+				"long", "java.lang.String", "java.lang.String",
+				"java.lang.String"
 			};
 
 		_methodName65 = "deleteMap";
@@ -353,7 +354,8 @@ public class CityMapLocalServiceClpInvoker {
 				((Long)arguments[4]).longValue(),
 				((Long)arguments[5]).longValue(),
 				(java.lang.String)arguments[6], (java.lang.String)arguments[7],
-				(com.liferay.portal.service.ServiceContext)arguments[8]);
+				(java.lang.String)arguments[8],
+				(com.liferay.portal.service.ServiceContext)arguments[9]);
 		}
 
 		if (_methodName64.equals(name) &&
@@ -365,7 +367,8 @@ public class CityMapLocalServiceClpInvoker {
 				((Long)arguments[4]).longValue(),
 				((Long)arguments[5]).longValue(),
 				((Long)arguments[6]).longValue(),
-				(java.lang.String)arguments[7], (java.lang.String)arguments[8]);
+				(java.lang.String)arguments[7], (java.lang.String)arguments[8],
+				(java.lang.String)arguments[9]);
 		}
 
 		if (_methodName65.equals(name) &&

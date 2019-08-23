@@ -17,6 +17,7 @@
 		<field name="mapDesc" type="String">
 			<hint name="max-length">1000</hint>
 		</field>
+		<field name="mapSumary" type="String" />
 	</model>
 	<model name="com.portal_egov.portlet.citymaps.model.CityMapType">
 		<field name="typeId" type="long" />

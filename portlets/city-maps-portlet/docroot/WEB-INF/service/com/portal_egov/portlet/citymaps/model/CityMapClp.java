@@ -77,6 +77,7 @@ public class CityMapClp extends BaseModelImpl<CityMap> implements CityMap {
 		attributes.put("mapImageId", getMapImageId());
 		attributes.put("mapName", getMapName());
 		attributes.put("mapDesc", getMapDesc());
+		attributes.put("mapSumary", getMapSumary());
 
 		return attributes;
 	}
@@ -147,6 +148,12 @@ public class CityMapClp extends BaseModelImpl<CityMap> implements CityMap {
 
 		if (mapDesc != null) {
 			setMapDesc(mapDesc);
+		}
+
+		String mapSumary = (String)attributes.get("mapSumary");
+
+		if (mapSumary != null) {
+			setMapSumary(mapSumary);
 		}
 	}
 
@@ -246,6 +253,14 @@ public class CityMapClp extends BaseModelImpl<CityMap> implements CityMap {
 		_mapDesc = mapDesc;
 	}
 
+	public String getMapSumary() {
+		return _mapSumary;
+	}
+
+	public void setMapSumary(String mapSumary) {
+		_mapSumary = mapSumary;
+	}
+
 	public BaseModel<?> getCityMapRemoteModel() {
 		return _cityMapRemoteModel;
 	}
@@ -284,6 +299,7 @@ public class CityMapClp extends BaseModelImpl<CityMap> implements CityMap {
 		clone.setMapImageId(getMapImageId());
 		clone.setMapName(getMapName());
 		clone.setMapDesc(getMapDesc());
+		clone.setMapSumary(getMapSumary());
 
 		return clone;
 	}
@@ -346,7 +362,7 @@ public class CityMapClp extends BaseModelImpl<CityMap> implements CityMap {
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(23);
+		StringBundler sb = new StringBundler(25);
 
 		sb.append("{mapId=");
 		sb.append(getMapId());
@@ -370,13 +386,15 @@ public class CityMapClp extends BaseModelImpl<CityMap> implements CityMap {
 		sb.append(getMapName());
 		sb.append(", mapDesc=");
 		sb.append(getMapDesc());
+		sb.append(", mapSumary=");
+		sb.append(getMapSumary());
 		sb.append("}");
 
 		return sb.toString();
 	}
 
 	public String toXmlString() {
-		StringBundler sb = new StringBundler(37);
+		StringBundler sb = new StringBundler(40);
 
 		sb.append("<model><model-name>");
 		sb.append("com.portal_egov.portlet.citymaps.model.CityMap");
@@ -426,6 +444,10 @@ public class CityMapClp extends BaseModelImpl<CityMap> implements CityMap {
 			"<column><column-name>mapDesc</column-name><column-value><![CDATA[");
 		sb.append(getMapDesc());
 		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>mapSumary</column-name><column-value><![CDATA[");
+		sb.append(getMapSumary());
+		sb.append("]]></column-value></column>");
 
 		sb.append("</model>");
 
@@ -444,5 +466,6 @@ public class CityMapClp extends BaseModelImpl<CityMap> implements CityMap {
 	private long _mapImageId;
 	private String _mapName;
 	private String _mapDesc;
+	private String _mapSumary;
 	private BaseModel<?> _cityMapRemoteModel;
 }

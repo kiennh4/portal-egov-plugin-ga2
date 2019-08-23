@@ -50,6 +50,9 @@
 			<div class="city-map-name">
 				<span><%=mapName %></span>
 			</div>
+			<div class="map-desc">
+				<%= cityMap.getMapDesc()%>
+			</div>
 			<div class="city-map-image">
 				<img alt="" src="<%=mapImagePath%>">
 			</div>
@@ -58,6 +61,9 @@
 				<a target="_blank" href="<%=viewMapImageFullSizeURL%>">
 					<liferay-ui:message key="this-map-image-was-resize-click-here-to-view-full-size-image"/>
 				</a>
+			</div>
+			<div class="map-sumary">
+				<%= cityMap.getMapSumary() %>
 			</div>
 		</div>
 		

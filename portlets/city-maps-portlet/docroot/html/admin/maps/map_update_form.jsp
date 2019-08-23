@@ -1,3 +1,4 @@
+<%@page import="com.liferay.portal.kernel.util.UnicodeFormatter"%>
 <%@page import="com.liferay.portal.webserver.WebServerServletTokenUtil"%>
 <%@page import="java.util.List"%>
 <%@page import="com.portal_egov.portlet.citymaps.service.CityMapLocalServiceUtil"%>
@@ -73,15 +74,24 @@
 			<aui:input type="textarea" name="mapName" value='<%=(cityMap != null) ? cityMap.getMapName() : "" %>'>
 				<aui:validator name="required" />
 			</aui:input>
-					
-			<c:if test='<%=Validator.isNotNull(mapImagePath) %>'>
-				<liferay-ui:message key="map-image"/>
-				<img alt="" src="<%=mapImagePath%>" width="310" style="border: 1px solid #E4E4E4;">
-			</c:if>
+			<div class="map-desc">
+				<h4><liferay-ui:message key="map-desc"/></h4>
+				<liferay-ui:input-editor name="mapDesc" height="400"  initMethod="initmapDescEditor"/>
+			</div>
 			
+			<div class="map-image">
+				<c:if test='<%=Validator.isNotNull(mapImagePath) %>'>
+					<h4><liferay-ui:message key="map-image"/></h4>
+					<img alt="" src="<%=mapImagePath%>">
+				</c:if>
+			</div>
 			<aui:input type="file" name="mapImageFile" label="choose-map-image-file"/>
 			
 			<aui:input type="hidden" name="mapImageId" value='<%=(cityMap != null) ? cityMap.getMapImageId() : "0" %>'/>
+			<div class="map-sumary">
+				<h4><liferay-ui:message key="map-sumary"/></h4>
+				<liferay-ui:input-editor name="mapSumary" resizable="true" height="600" initMethod="initmapSumaryEditor"/>
+			</div>
 			
 			<aui:button type="submit" value="save"/>
 			<aui:button name="closeUpdateFormBtn" value="cancel"/>
@@ -121,5 +131,10 @@
 	        }
 	    });
 	});
-
+	function <portlet:namespace />initmapDescEditor() {
+		return "<%= UnicodeFormatter.toString(cityMap.getMapDesc())%>";
+	}
+	function <portlet:namespace />initmapSumaryEditor() {
+		return "<%= UnicodeFormatter.toString(cityMap.getMapSumary())%>";
+	}
 </script>

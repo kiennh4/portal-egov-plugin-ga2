@@ -13,7 +13,7 @@
     			citymap.mapImageId,
     			citymap.mapName,
     			citymap.mapDesc,
-    			
+    			cityMap.mapSumary,
     			citymap.createDate,
     			citymap.modifiedDate
     	

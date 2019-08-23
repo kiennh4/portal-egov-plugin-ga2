@@ -76,9 +76,10 @@ public class CityMapModelImpl extends BaseModelImpl<CityMap>
 			{ "mapTypeId", Types.BIGINT },
 			{ "mapImageId", Types.BIGINT },
 			{ "mapName", Types.VARCHAR },
-			{ "mapDesc", Types.VARCHAR }
+			{ "mapDesc", Types.VARCHAR },
+			{ "mapSumary", Types.VARCHAR }
 		};
-	public static final String TABLE_SQL_CREATE = "create table CityMap (mapId LONG not null primary key,companyId LONG,groupId LONG,userId LONG,userName VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,mapTypeId LONG,mapImageId LONG,mapName VARCHAR(300) null,mapDesc VARCHAR(1000) null)";
+	public static final String TABLE_SQL_CREATE = "create table CityMap (mapId LONG not null primary key,companyId LONG,groupId LONG,userId LONG,userName VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,mapTypeId LONG,mapImageId LONG,mapName VARCHAR(300) null,mapDesc VARCHAR(1000) null,mapSumary VARCHAR(75) null)";
 	public static final String TABLE_SQL_DROP = "drop table CityMap";
 	public static final String ORDER_BY_JPQL = " ORDER BY cityMap.mapTypeId ASC, cityMap.mapName ASC";
 	public static final String ORDER_BY_SQL = " ORDER BY CityMap.mapTypeId ASC, CityMap.mapName ASC";
@@ -122,6 +123,7 @@ public class CityMapModelImpl extends BaseModelImpl<CityMap>
 		model.setMapImageId(soapModel.getMapImageId());
 		model.setMapName(soapModel.getMapName());
 		model.setMapDesc(soapModel.getMapDesc());
+		model.setMapSumary(soapModel.getMapSumary());
 
 		return model;
 	}
@@ -191,6 +193,7 @@ public class CityMapModelImpl extends BaseModelImpl<CityMap>
 		attributes.put("mapImageId", getMapImageId());
 		attributes.put("mapName", getMapName());
 		attributes.put("mapDesc", getMapDesc());
+		attributes.put("mapSumary", getMapSumary());
 
 		return attributes;
 	}
@@ -261,6 +264,12 @@ public class CityMapModelImpl extends BaseModelImpl<CityMap>
 
 		if (mapDesc != null) {
 			setMapDesc(mapDesc);
+		}
+
+		String mapSumary = (String)attributes.get("mapSumary");
+
+		if (mapSumary != null) {
+			setMapSumary(mapSumary);
 		}
 	}
 
@@ -424,6 +433,20 @@ public class CityMapModelImpl extends BaseModelImpl<CityMap>
 		_mapDesc = mapDesc;
 	}
 
+	@JSON
+	public String getMapSumary() {
+		if (_mapSumary == null) {
+			return StringPool.BLANK;
+		}
+		else {
+			return _mapSumary;
+		}
+	}
+
+	public void setMapSumary(String mapSumary) {
+		_mapSumary = mapSumary;
+	}
+
 	public long getColumnBitmask() {
 		return _columnBitmask;
 	}
@@ -467,6 +490,7 @@ public class CityMapModelImpl extends BaseModelImpl<CityMap>
 		cityMapImpl.setMapImageId(getMapImageId());
 		cityMapImpl.setMapName(getMapName());
 		cityMapImpl.setMapDesc(getMapDesc());
+		cityMapImpl.setMapSumary(getMapSumary());
 
 		cityMapImpl.resetOriginalValues();
 
@@ -606,12 +630,20 @@ public class CityMapModelImpl extends BaseModelImpl<CityMap>
 			cityMapCacheModel.mapDesc = null;
 		}
 
+		cityMapCacheModel.mapSumary = getMapSumary();
+
+		String mapSumary = cityMapCacheModel.mapSumary;
+
+		if ((mapSumary != null) && (mapSumary.length() == 0)) {
+			cityMapCacheModel.mapSumary = null;
+		}
+
 		return cityMapCacheModel;
 	}
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(23);
+		StringBundler sb = new StringBundler(25);
 
 		sb.append("{mapId=");
 		sb.append(getMapId());
@@ -635,13 +667,15 @@ public class CityMapModelImpl extends BaseModelImpl<CityMap>
 		sb.append(getMapName());
 		sb.append(", mapDesc=");
 		sb.append(getMapDesc());
+		sb.append(", mapSumary=");
+		sb.append(getMapSumary());
 		sb.append("}");
 
 		return sb.toString();
 	}
 
 	public String toXmlString() {
-		StringBundler sb = new StringBundler(37);
+		StringBundler sb = new StringBundler(40);
 
 		sb.append("<model><model-name>");
 		sb.append("com.portal_egov.portlet.citymaps.model.CityMap");
@@ -691,6 +725,10 @@ public class CityMapModelImpl extends BaseModelImpl<CityMap>
 			"<column><column-name>mapDesc</column-name><column-value><![CDATA[");
 		sb.append(getMapDesc());
 		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>mapSumary</column-name><column-value><![CDATA[");
+		sb.append(getMapSumary());
+		sb.append("]]></column-value></column>");
 
 		sb.append("</model>");
 
@@ -719,6 +757,7 @@ public class CityMapModelImpl extends BaseModelImpl<CityMap>
 	private long _mapImageId;
 	private String _mapName;
 	private String _mapDesc;
+	private String _mapSumary;
 	private long _columnBitmask;
 	private CityMap _escapedModelProxy;
 }

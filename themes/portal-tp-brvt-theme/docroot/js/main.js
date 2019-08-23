@@ -130,6 +130,7 @@ $(document).on("ready",function(event){
         $(".journal-content-article").css({"font-size" : bc});
 	});
 	$('input[name=_3_keywords]').attr("placeholder", "Tìm kiếm");
+	$(".columns-max").addClass("main-content");
 });
 $("#btnSpeak").on("click",function(){
 	console.log("Start speaking article content......");

@@ -428,6 +428,7 @@ public class CityMapPersistenceImpl extends BasePersistenceImpl<CityMap>
 		cityMapImpl.setMapImageId(cityMap.getMapImageId());
 		cityMapImpl.setMapName(cityMap.getMapName());
 		cityMapImpl.setMapDesc(cityMap.getMapDesc());
+		cityMapImpl.setMapSumary(cityMap.getMapSumary());
 
 		return cityMapImpl;
 	}
