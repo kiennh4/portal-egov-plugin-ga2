@@ -30,7 +30,7 @@ html, body {
   overflow-x: hidden; }
 
 body {
-  font-size: 13px;
+  font-size: 14px;
   font-family: 'Arial',sans-serif;
   color: #000000;
   position: relative; }
@@ -196,10 +196,6 @@ hr, .separator {
 
 .ie6 .content-wrapper {
   width: 90%; }
-
-#content {
-  font-family: inherit;
-  color: #434343; }
 
 .site-title .site-name {
   background: #555555 url(../images/common/site_icon.png) no-repeat 15px 50%;

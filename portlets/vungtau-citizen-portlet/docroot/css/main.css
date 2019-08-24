@@ -17,7 +17,10 @@
 		margin: 10px 0;
 	}
 }
-
+.vungtau-citizen-portlet  .portlet-content{
+	padding: 0px !important;
+	border: none !important;
+}
 .vungtau-citizen-container{
 	width: 100%;
 	padding-top: 10px;
@@ -93,6 +96,16 @@
 	}
 	.reflect-content .action-links{
 		padding-bottom: 35px;
-	} 
+	}
+	.portlet-custom-title{
+		margin-bottom: 42px;
+	}
+	.portlet-custom-title h3{
+		text-transform: uppercase;
+		color: #000;
+	}
+	.portlet-custom-title .portlet-description{
+		font-size: 14px;
+	}
 }
 	

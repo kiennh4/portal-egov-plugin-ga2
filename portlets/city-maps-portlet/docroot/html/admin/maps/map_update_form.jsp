@@ -49,7 +49,7 @@
 
 <div class="citymap_admin">
 	<liferay-portlet:renderURL var="redirectURL" windowState="<%=LiferayWindowState.MAXIMIZED.toString() %>">
-		<liferay-portlet:param name="jspPage" value="/html/admin/redirect.jsp"/>
+		<liferay-portlet:param name="jspPage" value="/html/admin/maps/map_list.jsp"/>
 	</liferay-portlet:renderURL>
 	
 	<liferay-portlet:actionURL name="updateCityMap" var="updateCityMapActionURL">
@@ -76,7 +76,7 @@
 			</aui:input>
 			<div class="map-desc">
 				<h4><liferay-ui:message key="map-desc"/></h4>
-				<liferay-ui:input-editor name="mapDesc" height="400"  initMethod="initmapDescEditor"/>
+				<liferay-ui:input-editor name="mapDesc" height="400"  initMethod="initmapDescEditor" toolbarSet="liferayArticle"/>
 			</div>
 			
 			<div class="map-image">
@@ -90,7 +90,7 @@
 			<aui:input type="hidden" name="mapImageId" value='<%=(cityMap != null) ? cityMap.getMapImageId() : "0" %>'/>
 			<div class="map-sumary">
 				<h4><liferay-ui:message key="map-sumary"/></h4>
-				<liferay-ui:input-editor name="mapSumary" resizable="true" height="600" initMethod="initmapSumaryEditor"/>
+				<liferay-ui:input-editor name="mapSumary" resizable="true" height="800" initMethod="initmapSumaryEditor" toolbarSet="liferayArticle"/>
 			</div>
 			
 			<aui:button type="submit" value="save"/>

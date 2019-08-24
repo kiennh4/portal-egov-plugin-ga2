@@ -25,10 +25,10 @@
 				<span><liferay-ui:message key="tthc-description"/></span>
 			</div>
 			<div class="action-links">
-				<button class="btn-link" onclick='location.href = "<%=tthcCateUrlFist %>"'><%=tthcCateNameFirst%></button>
-				<button class="btn-link" onclick='location.href = "<%=tthcCateUrlSecond %>"'><%=tthcCateNameSecond%></button>
-				<button class="btn-link" onclick='location.href = "<%=tthcCateUrlThird %>"'><%=tthcCateNameThird%></button>
-				<a class="tthc-link" href="<%= tthcReadMore%>" target="_blank"><liferay-ui:message key="read-more"/></a>
+				<button class="btn-link" title="<%= tthcCateNameFirst%>" onclick='location.href = "<%=tthcCateUrlFist %>"'><%=tthcCateNameFirst%></button>
+				<button class="btn-link" title="<%= tthcCateNameSecond%>" onclick='location.href = "<%=tthcCateUrlSecond %>"'><%=tthcCateNameSecond%></button>
+				<button class="btn-link" title="<%= tthcCateNameThird%>" onclick='location.href = "<%=tthcCateUrlThird %>"'><%=tthcCateNameThird%></button>
+				<a class="tthc-link" title='<liferay-ui:message key="read-more"/>' href="<%= tthcReadMore%>" target="_blank"><liferay-ui:message key="read-more"/></a>
 				<div style="clear: both;"></div>
 			</div>
 		</div>
@@ -46,8 +46,8 @@
 					<span><liferay-ui:message key="dvc-description"/></span>
 				</div>
 				<div class="action-links">
-					<button class="btn-link" onclick='location.href = "<%=dvcUrlFirst %>"'><%=dvcNameFirst%></button>
-					<button class="btn-link" onclick='location.href = "<%=dvcUrlSecond %>"'><%=dvcNameSecond%></button>
+					<button class="btn-link" title="<%= dvcNameFirst%>" onclick='location.href = "<%=dvcUrlFirst %>"'><%=dvcNameFirst%></button>
+					<button class="btn-link" title="<%= dvcNameSecond%>" onclick='location.href = "<%=dvcUrlSecond %>"'><%=dvcNameSecond%></button>
 					<div style="clear: both;"></div>
 				</div>
 			</div>
@@ -66,7 +66,7 @@
 				<span><liferay-ui:message key="tracuc-description"/></span>
 			</div>
 			<div class="action-links">
-				<button class="btn-link" onclick='location.href = "<%=trcUrl %>"'><%=trcName%></button>
+				<button class="btn-link" title="<%= trcName%>" onclick='location.href = "<%=trcUrl %>"'><%=trcName%></button>
 				<div style="clear: both;"></div>
 			</div>
 		</div>

@@ -289,6 +289,11 @@
   padding: 0px;
   margin: 0px; }
 
+.citi-map-preview .map-title {
+  margin: 0px;
+  padding: 0px;
+  color: #D20000; }
+
 .citi-map-preview .city-map-name {
   color: #00528b;
   font-weight: bold;

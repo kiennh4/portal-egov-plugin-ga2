@@ -58,22 +58,16 @@
 
 					String	mapPreviewURL = mapPreviewBundle.toString();
 					
-					StringBundler mapUpdateFormBundle = new StringBundler();
-
-					mapUpdateFormBundle.append("javascript:");
-					mapUpdateFormBundle.append("showMapUpdateForm");
-					mapUpdateFormBundle.append("('");
-					mapUpdateFormBundle.append(cityMapId);
-					mapUpdateFormBundle.append("','");
-					mapUpdateFormBundle.append(StringUtil.shorten(mapName, 60));
-					mapUpdateFormBundle.append("')");
-
-					String	mapUpdateFormURL = mapUpdateFormBundle.toString();
 				%>
 					<liferay-portlet:actionURL name="deleteCityMap" var="deleteCityMapActionURL">
 						<liferay-portlet:param name="mapId" value="<%=String.valueOf(cityMapId) %>"/>
 						<liferay-portlet:param name="redirectURL" value="<%=PortalUtil.getCurrentURL(request) %>"/>
 					</liferay-portlet:actionURL>
+					
+					<liferay-portlet:renderURL var="mapUpdateFormURL">
+						<liferay-portlet:param name="mapId" value="<%=String.valueOf(cityMapId) %>"/>
+						<liferay-portlet:param name="jspPage" value="/html/admin/maps/map_update_form.jsp"/>
+					</liferay-portlet:renderURL>
 
 					<li class='city-map <%= (cityMapId == mapId ? "selected" : "") %>' >
 						<div class="city-map-content-wrapper">

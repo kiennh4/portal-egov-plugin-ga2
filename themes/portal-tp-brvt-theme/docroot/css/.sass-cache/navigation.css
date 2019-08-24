@@ -68,7 +68,7 @@ li {
   top: 14px; }
 
 .sf-navbar ul {
-  background: #0593d9;
+  background: #0984e3;
   list-style: none;
   padding: 0;
   left: 0;
@@ -90,8 +90,8 @@ li {
   float: none; }
 
 .navigation li a:HOVER {
-  color: red;
-  font-weight: 700; }
+  color: #ff0700;
+  font-weight: 600; }
 
 .sf-navbar li.selected a {
   color: #ff0700; }
@@ -102,14 +102,19 @@ li {
 .sf-navbar > li > ul > li {
   float: unset;
   display: block;
-  border-bottom: 1px solid #fff; }
+  border-bottom: 1px dotted #fff; }
 
-.sf-navbar > li > ul > li > ul > li {
-  border-bottom: 1px solid #fff;
-  display: block; }
+.sf-navbar > li > ul > li a:hover {
+  font-weight: 400 !important; }
+
+.sf-navbar > li > ul > li:last-child {
+  border-bottom: none !important; }
 
 .sf-navbar ul li a:hover {
-  color: #fff !important; }
+  color: yellow !important; }
+
+.sf-navbar > li > ul > li a {
+  color: #fff; }
 
 .main-contact {
   width: 100%;

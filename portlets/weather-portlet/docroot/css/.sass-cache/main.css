@@ -1,85 +1,19 @@
-/* Config page		 */
-.weather_portlet_config_page {
-  border: 1px solid #E4E4E4;
-  border-radius: 4px;
-  padding: 5px;
-  font-size: 12px;
-  color: #00528B; }
+li {
+  list-style: none; }
 
-.weather_portlet_config_page table tr {
-  height: 30px; }
-
-.weather_portlet_config_page table tr td {
-  padding-right: 10px;
-  padding-left: 15px; }
-
-.weather_portlet_config_page input[type="submit"], input[type="button"], input[type="reset"], button {
-  border-color: #C8C9CA #9E9E9E #9E9E9E #C8C9CA !important; }
-
-.weather_portlet_config_page input[type="text"] {
-  background: none repeat scroll 0 0 #FFFFFF;
-  border: 1px solid #A1A2A4;
-  border-radius: 3px;
-  box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
-  padding: 5px;
-  text-shadow: none;
-  width: 250px;
-  color: #454545; }
-
-.weather_portlet_config_page input.focus {
-  background: none repeat scroll 0 0 #F2F8F8 !important;
-  border: 1px solid #8DD4AE !important; }
-
-.weather_portlet_config_page select {
-  width: 260px;
-  background-image: none;
-  border-radius: 3px;
-  box-shadow: 0 1px 0 white, 0 1px 2px #CCCCCC inset;
-  padding: 3px;
-  border: 1px solid #A1A2A4;
-  color: #454545;
-  text-shadow: none; }
-
-.current-weather-status {
+.bigTemp {
+  color: #8383fc;
+  font-size: 40pt;
   margin: 0px;
-  width: auto;
-  text-align: right;
-  padding-right: 10px; }
+  margin-left: 20px; }
 
-.current-weather-status .current-temperature {
-  color: white;
-  font-size: 35px;
-  position: relative;
-  text-shadow: 1px 2px 1px #4D4D4D;
-  padding-bottom: 10px; }
+.smallTemp {
+  color: #8383fc;
+  font-size: 13pt; }
 
-.current-weather-status .current-temperature .temperature-unit {
-  display: inline;
-  font-size: 24px;
-  position: relative;
-  top: -7px; }
-
-.current-weather-status .current-temperature .temperature-range {
-  color: #FFD231;
-  font-size: 15px;
-  font-weight: bold;
-  margin-top: 15px;
-  text-shadow: 1px 2px 1px #4D4D4D; }
-
-.current-weather-status .current-temperature .temperature-range .highest-temperature {
-  padding-left: 4px; }
-
-.current-weather-status .weather-status {
-  color: white;
+.weatherInfo {
+  color: #8383fc;
   font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding-bottom: 10px; }
-
-.current-weather-status .city-name {
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  text-shadow: 1px 2px 1px #4D4D4D;
-  padding-top: 10px; }
+  margin: 0px;
+  margin-left: 5px; }
 

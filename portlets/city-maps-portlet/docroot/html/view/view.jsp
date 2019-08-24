@@ -64,22 +64,19 @@
 				<liferay-portlet:param name="cityMapImagePath" value="<%=cityMapImagePath %>"/>
 			</liferay-portlet:renderURL>
 			
-			<div class="citi-map-preview" align="center">
+			<div class="citi-map-preview">
 				<div class="map-title">
 					<h3><%=cityMap.getMapName() %></h3>
 				</div>
 				<div class="map-desc">
 					<%=cityMap.getMapDesc() %>
 				</div>
-				<div class="city-map-image">
-					<img alt="" src="<%=cityMapImagePath%>">
-					<div class="view-map-image-url">
-						<a target="_blank" href="<%=viewMapImageFullSizeURL%>">
-							<liferay-ui:message key="this-map-image-was-resize-click-here-to-view-full-size-image"/>
-						</a>
-					</div>
+				<div class="city-map-image" align="center">
+					<a target="_blank" href="<%=viewMapImageFullSizeURL%>">
+						<img alt="" src="<%=cityMapImagePath%>">
+					</a>
 				</div>
-				<div class="map-sumary">
+				<div class="map-sumary" align="center">
 					<%=cityMap.getMapSumary() %>
 				</div>
 				

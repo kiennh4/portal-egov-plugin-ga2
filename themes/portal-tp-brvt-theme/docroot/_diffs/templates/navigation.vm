@@ -16,7 +16,11 @@
 					<li>
 				#end
 			#end
+				
 				#if ($nav_item.hasChildren())
+					<a href="$nav_item.getURL()" class="drop-addon">
+						$nav_item.icon() $nav_item.getName()
+					</a>
 					<ul class="sub-menu">
 						#foreach ($nav_child in $nav_item.getChildren())
 							#if ($nav_child.isSelected())

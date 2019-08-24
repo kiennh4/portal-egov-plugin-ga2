@@ -14,6 +14,10 @@
   .vungtau-dvc-portlet-config-form .lfr-form-row .form-detail .form-row .row-legend {
     margin: 10px 0; }
 
+.vung-tau-dvc-portlet .portlet-content {
+  padding: 0 !important;
+  border: none !important; }
+
 .vungtau-dvc-container {
   width: 100%;
   padding-top: 10px; }
@@ -44,7 +48,7 @@
     text-transform: uppercase;
     color: #D20000; }
   .vungtau-dvc-container .desc-content {
-    font-size: 16px;
+    font-size: 15px;
     color: #000000;
     text-align: justify; }
   .vungtau-dvc-container .dvc-content {

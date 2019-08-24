@@ -14,6 +14,10 @@
   .vungtau-citizen-portlet-config-form .lfr-form-row .form-row .row-legend {
     margin: 10px 0; }
 
+.vungtau-citizen-portlet .portlet-content {
+  padding: 0px !important;
+  border: none !important; }
+
 .vungtau-citizen-container {
   width: 100%;
   padding-top: 10px; }
@@ -72,4 +76,11 @@
     font-size: 15px; }
   .vungtau-citizen-container .reflect-content .action-links {
     padding-bottom: 35px; }
+  .vungtau-citizen-container .portlet-custom-title {
+    margin-bottom: 42px; }
+  .vungtau-citizen-container .portlet-custom-title h3 {
+    text-transform: uppercase;
+    color: #000; }
+  .vungtau-citizen-container .portlet-custom-title .portlet-description {
+    font-size: 14px; }
 

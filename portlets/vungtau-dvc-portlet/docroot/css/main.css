@@ -17,7 +17,10 @@
 		margin: 10px 0;
 	}
 }
-
+.vung-tau-dvc-portlet .portlet-content{
+	padding:0 !important;
+	border: none !important;
+}
 .vungtau-dvc-container{
 	width: 100%;
 	padding-top: 10px;

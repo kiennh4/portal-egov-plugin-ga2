@@ -2,10 +2,9 @@
 <!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_1_0.dtd">
 
 <liferay-portlet-app>
-	
 	<portlet>
 		<portlet-name>weather</portlet-name>
-		<icon>/images/portlet_icon/weather_portlet_icon.png</icon>
+		<icon>/html/icon/weather.png</icon>
 		<configuration-action-class>com.portal_egov.portlet.weather.action.WeatherConfigurationImpl</configuration-action-class>
 		<instanceable>true</instanceable>
 		<header-portlet-css>/css/main.css</header-portlet-css>

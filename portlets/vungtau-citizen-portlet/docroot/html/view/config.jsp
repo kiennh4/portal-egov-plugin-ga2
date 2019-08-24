@@ -26,7 +26,7 @@
 				<div class="row-legend">
 					<h4><liferay-ui:message key="online-chat-desc"/></h4>
 				</div>
-				<liferay-ui:input-editor name="onlineChatDesc" height="400" initMethod="initOnlineChatContentEditor"/>
+				<liferay-ui:input-editor name="onlineChatDesc" height="400" toolbarSet="liferayArticle" initMethod="initOnlineChatContentEditor"/>
 			</div>
 		</div>
 		<div class="lfr-form-row">
@@ -37,7 +37,7 @@
 				<div class="row-legend">
 					<h4><liferay-ui:message key="reflect-desc-1"/></h4>
 				</div>
-				<liferay-ui:input-editor name="reflectRequestDesc" height="400" initMethod="initReflectContentEditor"/>
+				<liferay-ui:input-editor name="reflectRequestDesc" height="400" toolbarSet="liferayArticle" initMethod="initReflectContentEditor"/>
 				<aui:input name="reflectFirstName" type="text" label="category-title" value="<%=reflectFirstName %>" />
 				<aui:input name="reflectFristUrl" type="text" label="category-url-title" value="<%=reflectFristUrl %>" />
 			</div>
@@ -53,7 +53,7 @@
 			<div class="legend-title">
 				<h3 class="legal-legend"><liferay-ui:message key="legal-faq-title"/></h3>
 			</div>
-			<liferay-ui:input-editor name="legalFaqDesc" height="400" initMethod="initLegalFaqContentEditor"/>
+			<liferay-ui:input-editor name="legalFaqDesc" height="400" toolbarSet="liferayArticle" initMethod="initLegalFaqContentEditor"/>
 			<div class="form-row">
 				<div class="row-legend">
 					<h4><liferay-ui:message key="legalFaq-desc-1"/></h4>
