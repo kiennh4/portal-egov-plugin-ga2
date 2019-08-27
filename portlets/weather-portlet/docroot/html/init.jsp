@@ -10,8 +10,6 @@
 <%@page import="com.liferay.portal.kernel.util.Validator"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
 <%@page import="javax.portlet.PortletPreferences"%>
-
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui" %>
 <%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
@@ -30,11 +28,11 @@
 	
 	//Kieu hien thi mac dinh, hien thi thoi tiet Ha Noi
 	String defaultCity = "Ha noi";
-	
-	String[] arrayCity = new String[]{"Ha noi", "Ho chi minh", "An giang", "Vung tau"
+	String [] currencyType = new String[]{"AUD","EUR","GBP","JPY","RUB","USD"};
+	String[] arrayCity = new String[]{"Ha noi", "Ho chi minh", "An giang", "Vung Tau"
 			 						  ,"Bac lieu", "Bac giang", "Bac kan"
 			 						  ,"Bac ninh", "Ben tre", "Binh duong"
-			 						  ,"Binh dinh", "Binh phuoc", "Binh thuan"
+			 						  ,"Quy Nhon", "Binh phuoc", "Binh thuan"
 			 						  ,"Cao bang", "Ca mau", "Can tho"
 			 						  ,"Hai phong", "Da nang", "Gia lai"
 			 						  ,"Hoa binh", "Ha giang", "Ha nam"
@@ -51,10 +49,10 @@
 			 						  ,"Thanh hoa", "Thai binh", "Thai nguyen"
 			 						  ,"Hue", "Tien giang", "Tra vinh"
 			 						  ,"Tuyen quang", "Tay ninh", "Vinh long"
-			 						  ,"Vinh phuc", "Yen bai"
+			 						  ,"Vinh Yen", "Yen bai"
 			 							};
 	 
-	String[] arrayCityVi = new String[]{"Hà Nội", "Hồ Chí Minh", "An Giang", "Bà Rịa - Vũng Tàu"
+	String[] arrayCityVi = new String[]{"Hà Nội", "Hồ Chí Minh", "An Giang", "Vũng Tàu"
 			  ,"Bạc Liêu", "Bắc Giang", "Bắc Kạn"
 			  ,"Bắc Ninh", "Bến Tre", "Bình Dương"
 			  ,"Bình Định", "Bình Phước", "Bình Thuận"
@@ -78,6 +76,8 @@
 				};
 	
 	String displayCity = preferences.getValue("displayCity", defaultCity);
+	
+	String displayCurrency = preferences.getValue("displayCurrency", "USD");
 	
 	String arrayCityViStr = "Hà Nội,Hồ Chí Minh,An Giang,Bà Rịa - Vũng Tàu"
 			  +",Bạc Liêu,Bắc Giang,Bắc Kạn"

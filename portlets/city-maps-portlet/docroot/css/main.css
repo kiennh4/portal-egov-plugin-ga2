@@ -347,7 +347,9 @@
 		font-size: 16px;
 		text-transform: uppercase;
 	}
-		
+	.citi-map-preview .map-sumary{
+		margin-top: 10px;
+	}
 	.citi-map-preview .city-map-image{
 		margin: 0px;
 		padding: 0px;

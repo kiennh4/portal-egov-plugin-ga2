@@ -30,7 +30,7 @@ html, body {
   overflow-x: hidden; }
 
 body {
-  font-size: 14px;
+  font-size: 15px;
   font-family: 'Arial',sans-serif;
   color: #000000;
   position: relative; }
@@ -58,6 +58,9 @@ body {
   min-height: 1000px;
   width: 100%; }
 
+.portal-page {
+  margin-top: 10px; }
+
 .main-banner {
   width: 100%;
   height: 394px;
@@ -66,7 +69,8 @@ body {
 .top-header {
   width: 100%;
   height: 124px;
-  background: #3954AB; }
+  background: #3954AB;
+  display: none; }
 
 .two-banner {
   margin-top: 34px; }
@@ -102,6 +106,14 @@ body {
   width: 770px;
   display: inline-block;
   float: left; }
+
+.portal-page .aui-w70 {
+  width: 770px;
+  float: left; }
+
+.portal-page .aui-w30 {
+  width: 370px;
+  float: right; }
 
 .main-block #column-7 {
   width: 370px;

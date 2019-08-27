@@ -124,7 +124,7 @@
 				<liferay-portlet:param name="jspPage" value="/html/legal_faq_view/give_ask_form.jsp" />
 			</liferay-portlet:renderURL>
 	
-			<aui:button type="button"  value="give-ask" href="<%=giveAskURL %>"/>
+			<aui:button type="button" cssClass="btn-primary"  value="give-ask" href="<%=giveAskURL %>"/>
 			<aui:button type="button"  value="show-all-faqs" href="<%=FAQHomePageURL %>"/>
 		</div>
 	</div>

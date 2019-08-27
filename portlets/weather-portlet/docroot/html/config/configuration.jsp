@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui" %>
 <%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
@@ -24,8 +23,17 @@
 				}
 			%>
 		</aui:select>
-		
-		
+		<br/>
+		<aui:select name="displayCurrency" label="Chọn loại tỷ giá:">
+			<%
+				for (int i = 0;i<currencyType.length;i++)
+				{
+			%>
+				<aui:option label="<%=currencyType[i] %>" value="<%=currencyType[i] %>" selected='<%=Validator.equals(displayCurrency, currencyType[i]) %>'/>
+			<%
+				}
+			%>
+		</aui:select>
 	</div>
 	<br/>
 	<aui:button type="submit" value="save"/>

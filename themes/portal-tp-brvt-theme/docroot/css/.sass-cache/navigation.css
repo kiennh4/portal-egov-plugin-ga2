@@ -2,7 +2,8 @@
 .main-navigation {
   width: 100%;
   height: 41px;
-  position: relative; }
+  position: relative;
+  background: #E9E9E9; }
 
 .navigation {
   width: 1170px;
@@ -21,12 +22,22 @@
 .navigation .global-search-wrapper select {
   display: none; }
 
+.navigation .global-search-wrapper input[name=_3_keywords] {
+  font-size: 16px; }
+
 .sf-navbar {
   position: relative;
   background: #da0f05;
   width: 100%;
   margin: 0;
   padding: 0; }
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; }
 
 .sf-navbar a {
   text-decoration: none; }

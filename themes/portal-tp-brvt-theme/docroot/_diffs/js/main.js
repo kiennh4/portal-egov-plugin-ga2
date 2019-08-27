@@ -131,6 +131,20 @@ $(document).on("ready",function(event){
 	});
 	$('input[name=_3_keywords]').attr("placeholder", "Tìm kiếm");
 	$(".columns-max").addClass("main-content");
+	
+	var pageContent = $("#content");
+	var isHomePage = pageContent.find(".PortalBRVT");
+	if(isHomePage.length == 0){
+		pageContent.addClass("main-content");
+		pageContent.addClass("portal-page");
+	}
+	var mainNavigation = $(".main-navigation");
+	
+	var portalSlider7 = $(".banner-slider-style-7");
+	
+	var parrentBlock = portalSlider7.closest(".slider-portlet");
+	console.log(parrentBlock);
+	$(parrentBlock).after(mainNavigation);
 });
 $("#btnSpeak").on("click",function(){
 	console.log("Start speaking article content......");
@@ -142,4 +156,13 @@ $("#btnSpeak").on("click",function(){
 	console.log(content);
 	responsiveVoice.speak(content,'Vietnamese Female');
 	
+});
+
+$(window).scroll(function(){
+    if ($(window).scrollTop() >= 370) {
+        $('.main-navigation').addClass('fixed-header');
+    }
+    else {
+        $('.main-navigation').removeClass('fixed-header');
+    }
 });

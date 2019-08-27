@@ -27,7 +27,10 @@ Fluid width carousel with images
 									String imageURL = SliderUtil.getImageURL(imagesId, themeDisplay, SliderUtil.imageViewType.LARGE.toString(), true);
 									%>
 										<li>
-											<img alt="" src="<%=imageURL%>" style = "cursor:pointer" onclick = "javascript:location.href='<%=url %>'" >
+											<img alt="" src="<%=imageURL%>" style = "cursor:pointer">
+											<div class="meta">
+												<h1><%=url%></h1>
+											</div>
 										</li>
 									<%
 								}

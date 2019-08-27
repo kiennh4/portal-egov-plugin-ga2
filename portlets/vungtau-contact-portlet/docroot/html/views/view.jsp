@@ -13,6 +13,10 @@
 <%@include file="/html/init.jsp"%>
 
 <div class="contact-vungtau-container">
+	<ul class="group-contact">
+		<li></li>
+		<li></li>
+	</ul>
 	 <svg xmlns="http://www.w3.org/2000/svg" width="617" height="28" viewbox="0 0 617 28">
             <g id="Group_18" data-name="Group 18" transform="translate(-662 -563)">
                 <text

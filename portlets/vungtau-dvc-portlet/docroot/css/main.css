@@ -106,7 +106,7 @@
 	}
 	.dvc-content .action-links{
 		display: table-caption;
-		padding-top: 20px !important;
+		padding-top: 42px !important;
 	}
 	.dvc-content .action-links button.btn-link:nth-child(1){
 		background: #46AFFF;

@@ -4,11 +4,12 @@
 <liferay-portlet-app>
 	<portlet>
 		<portlet-name>weather</portlet-name>
-		<icon>/html/icon/weather.png</icon>
-		<configuration-action-class>com.portal_egov.portlet.weather.action.WeatherConfigurationImpl</configuration-action-class>
-		<instanceable>true</instanceable>
+		<icon>/icon.png</icon>
+		<configuration-action-class>com.bkav.portal.portlet.weather.action.WeatherConfigurationImpl</configuration-action-class>
 		<header-portlet-css>/css/main.css</header-portlet-css>
-		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
 		<css-class-wrapper>weather-portlet</css-class-wrapper>
 	</portlet>
 	<role-mapper>

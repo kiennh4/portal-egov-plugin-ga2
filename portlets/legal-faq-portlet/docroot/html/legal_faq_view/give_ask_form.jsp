@@ -45,7 +45,7 @@
 	</liferay-portlet:actionURL>
 	
 	<div class="form-title" align="center">
-		<liferay-ui:message key="please-enter-valid-information-into-this-application-form"/>
+		<liferay-ui:message key="receiving-feedback"/>
 	</div>
 	<div class="form-content">
 		

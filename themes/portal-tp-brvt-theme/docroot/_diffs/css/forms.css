@@ -13,16 +13,28 @@
 }
 
 @mixin button-default {
-	background: #D4D4D4 url(../images/portlet/header_bg.png) repeat-x 0 0;
-	border: 1px solid;
-	border-color: #C8C9CA #9E9E9E #9E9E9E #C8C9CA;
-	color: #34404F;
-	cursor: pointer;
-	font-weight: bold;
-	overflow: visible;
-	padding: 5px;
-	text-shadow: 1px 1px #FFF;
-	width: auto;
+	display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
 }
 
 @mixin button-disabled {
@@ -33,7 +45,7 @@
 }
 
 @mixin button-hover {
-	color: #369;
+	background: #ccc;
 }
 
 @mixin button-focus {
@@ -44,7 +56,6 @@ fieldset {
 	border: 1px solid #BFBFBF;
 	padding: 8px;
 }
-
 .aui-fieldset {
 	border-width: 0;
 	padding: 0;

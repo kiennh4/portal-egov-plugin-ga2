@@ -1,4 +1,4 @@
-<div class="navigation">
+<nav class="navigation">
 	<ul id="navigation-menu" class="sf-menu sf-navbar">
 		#set ($counter=0)
 		#foreach ($nav_item in $nav_items)
@@ -43,5 +43,5 @@
 	<div class="global-search-wrapper">
 		$theme.search()
 	</div>
-</div>
+</nav>
 <div style="clear:both;"></div>

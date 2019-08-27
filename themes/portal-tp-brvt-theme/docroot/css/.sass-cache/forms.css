@@ -68,18 +68,30 @@ input[type="image"] {
   padding: 0; }
 
 input[type="submit"], input[type="button"], input[type="reset"], button {
-  background: #d4d4d4 url(../images/portlet/header_bg.png) repeat-x 0 0;
-  border: 1px solid;
-  border-color: #C8C9CA #9E9E9E #9E9E9E #C8C9CA;
-  color: #34404F;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
   cursor: pointer;
-  font-weight: bold;
-  overflow: visible;
-  padding: 5px;
-  text-shadow: 1px 1px #FFF;
-  width: auto; }
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc; }
   input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover {
-    color: #369; }
+    background: #ccc; }
   input[type="submit"]:focus, input[type="button"]:focus, input[type="reset"]:focus, button:focus {
     border-color: #555; }
 
@@ -88,16 +100,28 @@ input.focus, textarea.focus {
   border: 1px solid #FC0; }
 
 .lfr-actions.lfr-extended, .lfr-actions.lfr-extended ul {
-  background: #d4d4d4 url(../images/portlet/header_bg.png) repeat-x 0 0;
-  border: 1px solid;
-  border-color: #C8C9CA #9E9E9E #9E9E9E #C8C9CA;
-  color: #34404F;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
   cursor: pointer;
-  font-weight: bold;
-  overflow: visible;
-  padding: 5px;
-  text-shadow: 1px 1px #FFF;
-  width: auto;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
   padding: 0; }
 .lfr-actions.lfr-extended:focus, .lfr-actions.lfr-extended:focus ul {
   border-color: #555; }
@@ -107,7 +131,7 @@ input.focus, textarea.focus {
   color: #555;
   opacity: 0.5; }
 .lfr-actions.lfr-extended:hover, .lfr-actions.lfr-extended:hover ul {
-  color: #369; }
+  background: #ccc; }
 
 .lfr-actions.disabled .taglib-text {
   color: #A9A9A9; }
@@ -146,16 +170,28 @@ input.aui-form-validator-error, textarea.aui-form-validator-error, select.aui-fo
   font: 1em Arial, Helvetica, Verdana, sans-serif;
   padding: 5px 1px; }
 .ie6 input.submit, .ie6 input.button, .ie6 button, .ie6 .aui-button-disabled input.submit, .ie6 .aui-button-disabled input.button, .ie6 .aui-button-disabled button {
-  background: #d4d4d4 url(../images/portlet/header_bg.png) repeat-x 0 0;
-  border: 1px solid;
-  border-color: #C8C9CA #9E9E9E #9E9E9E #C8C9CA;
-  color: #34404F;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
   cursor: pointer;
-  font-weight: bold;
-  overflow: visible;
-  padding: 5px;
-  text-shadow: 1px 1px #FFF;
-  width: auto; }
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc; }
 .ie6 .aui-button-disabled input.submit, .ie6 .aui-button-disabled input.button, .ie6 .aui-button-disabled button {
   color: #555; }
 .ie6 input.focus, .ie6 textarea.focus {

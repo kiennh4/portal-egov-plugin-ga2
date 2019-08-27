@@ -1,22 +1,56 @@
-li {
-	list-style:none;
+.complex-portlet{
+	margin: 0 auto;
+	width: 570px;
+	height: 106px;
+	background: url("/weather-portlet/images/blur.png") center no-repeat;
 }
-
-.bigTemp {
-	color:rgb(131, 131, 252);
-	font-size:40pt;
-	margin: 0px;
-	margin-left:20px;
+.complex-portlet .weather-container{
+	width:170px;
+	height: 79px;
+	float: left;
+	padding-top: 20px;
+	color: #fff;
 }
-
-.smallTemp {
-	color:rgb(131, 131, 252);
-	font-size:13pt;
+.weather-container .weatherInfo{
+	font-size: 16px;
 }
-
-.weatherInfo {
-	color:rgb(131, 131, 252);
-	font-size:12px;
-	margin: 0px;
-	margin-left: 5px;
+.weather-container select{
+	border: none;
+    box-shadow: none !important;
+    outline: none !important;
+   	width: 100%;
+   	color: #000;
+   	background:none !important
+}
+.weather-container table{
+	padding-top: 10px;
+}
+.weather-container select:FOCUS {
+	border: none !important;
+	color: #000;
+	background: none !important;
+    -webkit-appearance: none;
+}
+.temperature-detail .tbl-info p{
+	margin: 0 !important;
+}
+.temperature-detail .tbl-info td{
+	vertical-align: middle;
+}
+.temperature-detail .tbl-info td .bigTemp{
+	font-size: 35px;
+	padding-left: 5px;
+}
+.temperature-detail .tbl-info tbody tr td:FIRST-CHILD {
+	padding:10px 0px;
+}
+.complex-portlet .currency-rate{
+	float: right;
+	width: 400px;
+}
+.weather-container .row{
+	padding-left: 15px;
+}
+.currency-rate .currency-rate-table{
+	padding-left: 15px;
 }

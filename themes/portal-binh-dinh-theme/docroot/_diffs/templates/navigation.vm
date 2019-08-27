@@ -24,7 +24,8 @@
 					<a href="$nav_item.getURL()" class="drop-addon">
 						$nav_item.icon() $nav_item.getName()
 					</a>
-					<a href="javascript:;" class="toggle" id="$drop" data-status="0"><i class="fa fa-caret-down" aria-hidden="true"></i></i></a>	
+					<a href="javascript:;" class="toggle" id="$drop" data-status="0"><i class="fa fa-caret-down" aria-hidden="true"></i></i></a>
+					<div style="clear:both"></div>	
 					<a href="$nav_item.getURL()" class="parrent-menu">
 						$nav_item.icon() $nav_item.getName()
 						<i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -43,6 +44,7 @@
 										$nav_child.getName()
 									</a>
 									<a href="javascript:;" class="toggle" id="$drop" data-status="0"><i class="fa fa-caret-down" aria-hidden="true"></i></i></a>
+									<div style="clear:both"></div>
 									<a href="$nav_child.getURL()" class="parrent-menu">
 										$nav_child.getName()
 										<i class="fa fa-caret-down" aria-hidden="true"></i>

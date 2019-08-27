@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <portlet:defineObjects />
 
@@ -8,7 +9,7 @@
 	<liferay-portlet:param name="jspPage" value="/html/view/weather-detail.jsp"/>
 </liferay-portlet:renderURL>
 
-<aui:script use="aui-dialog">
+<%-- <aui:script use="aui-dialog">
     Liferay.provide(
 		window,
 		'<portlet:namespace/>showWeatherDetail',
@@ -37,46 +38,61 @@
 	A.one('#weatherLeftForm').on('click',function(){
 		<portlet:namespace/>showWeatherDetail();
 	});
-</aui:script>
-<table>
-	<tr>
-		<td id = "weatherLeftForm" title = "Xem chi tiết" style = "width:100%;cursor:pointer;float: left;"  >
-			<center><img width = "80px" id = "<portlet:namespace/>imageWeather" alt src = "/weather-portlet/html/icon/loading.gif"/"></center>
-		</td>
-		<td style = "width: 100%;float: left;" class = "weatherTempForm" id = "<portlet:namespace/>weatherTempForm">
-		</td>
-
-		<td class = "weatherRightForm" id = "<portlet:namespace/>weatherRightForm"  style = "float: left;width: 100%;">
-			<table style = "height:132px;margin:5px;">
-				<tr>
-					<td class = "weatherInfoForm" id = "<portlet:namespace/>weatherInfoForm">
-						
-					</td>
-				</tr>
-				
-				<tr style = "height:40px;">
-					<td>
-						<div class = "chooseCityForm" id = "<portlet:namespace/>chooseCityForm" >
-						<aui:select name="displayCity" label="" class = "chooseCity" id = "<portlet:namespace/>chooseCity"  onchange = "cityChange();">
-							<%
-								for (int i = 0;i<arrayCity.length;i++)
-								{
-							%>
-								<aui:option label="<%=arrayCityVi[i] %>" value="<%=arrayCity[i] %>" selected='<%=Validator.equals(displayCity, arrayCity[i]) %>'/>
-							<%
-								}
-							%>
-						</aui:select>
-						</div>
-					</td>
-				</tr>
-				
-				
-			</table>
-		</td>
-	</tr>
-</table>
-
+</aui:script> --%>
+<div class="complex-portlet">
+	<div class="weather-container">
+		<div class="row">
+			<div id="<portlet:namespace/>choose-city">
+				<aui:select name="displayCity" label="" class = "chooseCity" id = "chooseCity"  onchange = "cityChange();">
+					<%
+						for (int i = 0;i<arrayCity.length;i++){
+					%>
+							<aui:option label="<%=arrayCityVi[i] %>" value="<%=arrayCity[i] %>" selected='<%=Validator.equals(displayCity, arrayCity[i]) %>'/>
+					<%
+						}
+					%>
+				</aui:select>
+			</div>
+			<div class="temperature-detail">
+				<table class="tbl-info">
+					<tr>
+						<td id="<portlet:namespace/>temperature-info" class="temperature-info"></td>
+						<td id="<portlet:namespace/>temperature-bigTemp" class="temperature-info"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="currency-rate">
+		<div class="row">
+			<table class="currency-rate-table">
+			<tr>
+				<td rowspan="2">
+					<span><liferay-ui:message key="currency-rate"/></span>
+				</td>
+				<td>
+					<aui:select name="displayCurrency" label="" class = "chooseCurrency" id = "chooseCurrency"  onchange = "currencyChange();">
+					<%
+						for (int i = 0;i<currencyType.length;i++){
+					%>
+						<aui:option label="<%=currencyType[i] %>" value="<%=currencyType[i] %>" selected='<%=Validator.equals(displayCurrency, currencyType[i]) %>'/>
+					<%
+						}
+					%>
+			</aui:select>
+				</td>
+				<td>Mua</td>
+				<td>Bán</td>
+			</tr>
+			<tr>
+				<td>USD</td>
+				<td>300</td>
+				<td>300</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+</div>
 <script type="text/javascript">
 var loadingImage = '/weather-portlet/html/icon/loading.gif';
 
@@ -111,19 +127,15 @@ var locale = 'vi';
 		};
 		
 		$.ajax ({
-			/*url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+city+'&units=metric&cnt=3&lang='+locale,*/
-			url:'/weather-portlet/html/view/get_weather_data.jsp',
-			data: {
-				url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+encodeURIComponent(city)+'&units=metric&cnt=3&lang='+locale+'&appid=936a9fc60a6809835a48b66a884f29b2'
-			},
-			dataType: 'text',
+			url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+city+'&units=metric&cnt=3&lang=vi&appid=936a9fc60a6809835a48b66a884f29b2',
 			error: function (a,b,c)
 			{
 				//alert(c);
 			},
 			success: function (dataText)
 			{	
-				var data = eval( "(" + dataText + ")" );
+				console.log(dataText);
+				var data = dataText;
 				$('#<portlet:namespace/>weatherInfoForm').html('');
 				$('#<portlet:namespace/>weatherTempForm').html('');
 				
@@ -180,28 +192,32 @@ var locale = 'vi';
 							+'°</p>';
 				
 				
-				infoHtml += '<p class = "weatherInfo weatherInfoDay"><strong>'
+			/* 	infoHtml += '<p class = "weatherInfo weatherInfoDay"><strong>'
 							+currentDay
-							+'</strong></p>';
-				infoHtml += '<p class = "weatherInfo weatherInfoDate">'
+							+'</strong></p>'; */
+// 				infoHtml += '<p class = "weatherInfo weatherInfoDate">'
 							
-							+currentDate.getDate() + '/' 
-							+(currentDate.getMonth()+1) + '/'
-							+currentDate.getFullYear()+'</p>';
-				infoHtml += '<p class = "weatherInfo weatherInfoDate"><strong>'
+// 							+currentDate.getDate() + '/' 
+// 							+(currentDate.getMonth()+1) + '/'
+// 							+currentDate.getFullYear()+'</p>';
+// 				infoHtml += '<p class = "weatherInfo weatherInfoDate"><strong>'
 								
-							+currentDate.getHours() + ':' 
-							+(currentDate.getMinutes()) +'</strong></p>';
+// 							+currentDate.getHours() + ':' 
+// 							+(currentDate.getMinutes()) +'</strong></p>';
 				
 				$('#<portlet:namespace/>weatherInfoForm').append(infoHtml);
-						
+				
+				$('#<portlet:namespace/>temperature-bigTemp').empty();
+				$('#<portlet:namespace/>temperature-bigTemp').append(tempHtml);
+				$('#<portlet:namespace/>temperature-info').empty();
+				$('#<portlet:namespace/>temperature-info').append(infoHtml);
 				$('#<portlet:namespace/>imageWeather').attr('src',imageWeather[imageWeather_]);
 			}
 		});
 	}
 	
 	function cityChange(){
-		var choosenCity = $('#<portlet:namespace/>chooseCityForm').find('select').first().val();
+		var choosenCity = $('#<portlet:namespace/>choose-city').find('select').first().val();
 		if ((choosenCity!="")&&(choosenCity!=null))
 			renderWeatherInfo(choosenCity);
 		else
