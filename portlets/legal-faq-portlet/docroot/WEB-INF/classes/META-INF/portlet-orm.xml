@@ -58,6 +58,7 @@
 			<basic name="publishDate">
 				<temporal>TIMESTAMP</temporal>
 			</basic>
+			<basic name="attachmentId" />
 			<basic name="viewCount" />
 			<basic name="publishStatus" />
 			<basic name="status" />

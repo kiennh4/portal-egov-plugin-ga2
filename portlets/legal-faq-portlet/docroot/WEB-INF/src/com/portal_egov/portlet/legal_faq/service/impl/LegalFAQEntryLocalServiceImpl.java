@@ -132,7 +132,7 @@ public class LegalFAQEntryLocalServiceImpl extends LegalFAQEntryLocalServiceBase
 		return legalFAQEntryPersistence.fetchByPrimaryKey(entryId);
 	}
 	
-	public LegalFAQEntry addFAQEntry(long companyId,long groupId,long userId,long categoryId,String citizenName,String citizenPhone,
+	public LegalFAQEntry addFAQEntry(long companyId,long groupId,long userId,long categoryId,String citizenName,String citizenPhone,long attachmentId,
 			String citizenEmail, String citizenAddress,Date askDate,String askTitle,String askContent,Date answerDate,String answerContent,
 			int publishStatus,int entryStatus,ServiceContext serviceContext) throws SystemException, PortalException{
 		
@@ -164,6 +164,7 @@ public class LegalFAQEntryLocalServiceImpl extends LegalFAQEntryLocalServiceBase
 		legalFAQEntry.setAskTitle(askTitle);
 		legalFAQEntry.setAskContent(askContent);
 		legalFAQEntry.setAnswerDate(answerDate);
+		legalFAQEntry.setAttachmentId(attachmentId);
 		legalFAQEntry.setAnswerContent(answerContent);
 		legalFAQEntry.setCreateDate(now);
 		legalFAQEntry.setModifiedDate(now);
@@ -193,7 +194,7 @@ public class LegalFAQEntryLocalServiceImpl extends LegalFAQEntryLocalServiceBase
 	}
 	
 	public LegalFAQEntry updateFAQEntry(long entryId,long companyId,long groupId,long userId,long categoryId,String citizenName,String citizenPhone,
-			String citizenEmail,Date askDate,String askTitle,String askContent,
+			String citizenEmail,Date askDate,String askTitle,String askContent,long attachmentId,
 			Date answerDate,String answerContent,int publishStatus,int entryStatus) throws SystemException, PortalException{
 		
 		Date now = new Date();
@@ -220,6 +221,7 @@ public class LegalFAQEntryLocalServiceImpl extends LegalFAQEntryLocalServiceBase
 		legalFAQEntry.setAskDate(askDate);
 		legalFAQEntry.setAskTitle(askTitle);
 		legalFAQEntry.setAskContent(askContent);
+		legalFAQEntry.setAttachmentId(attachmentId);
 		legalFAQEntry.setAnswerDate(answerDate);
 		legalFAQEntry.setAnswerContent(answerContent);
 		legalFAQEntry.setModifiedDate(now);

@@ -17,7 +17,7 @@
 }
 .navigation .global-search-wrapper{
 	position: absolute;
-	right: 23px;
+	right: 0px;
 }
 .navigation .global-search-wrapper select{
 	display: none;
@@ -82,7 +82,7 @@ li{
 	top: 14px;
 }
 .sf-navbar ul {
-	background: #0984e3;
+	background: #E9E9E9;
 	list-style: none;
 	padding: 0;
 	left: 0;
@@ -123,7 +123,7 @@ li{
 .sf-navbar > li > ul > li {
 	float: unset;
 	display: block;
-	border-bottom: 1px dotted #fff;
+	border-bottom: 1px solid #fff;
 }
 .sf-navbar > li > ul > li a:hover{
 	font-weight: 400 !important;
@@ -132,11 +132,11 @@ li{
 	border-bottom: none !important;
 }
 .sf-navbar ul li a:hover{
-	color: yellow !important;
+	
 }
 
 .sf-navbar > li > ul > li a{
-	color: #fff;
+	color: #333333;
 }
 .main-contact{
 	width: 100%;

@@ -45,12 +45,13 @@
 		<column name="modifiedDate" type="Date" />
 		<column name="publishDate" type="Date" />
 		
+		<column name="attachmentId" type="long"/>
+		
 		<!-- Luot xem -->
 		<column name="viewCount" type="int" />
 		<!-- Trang thai xuat ban -->
 		<column name="publishStatus" type="int" />
 		<column name="status" type="int" />
-		<column name="" type=""></column>
 		<!-- Order -->
 		<order by="desc">
 			<order-column name="publishDate" />

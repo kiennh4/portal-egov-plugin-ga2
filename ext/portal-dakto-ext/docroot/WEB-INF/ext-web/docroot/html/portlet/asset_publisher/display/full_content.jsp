@@ -131,7 +131,7 @@
 							  "Thứ Năm, ngày ", "Thứ Sáu, ngày ", "Thứ Bẩy, ngày "
 							};
 	
-	String assetPubLishDate = strDayOfWeek[dayOfWeek] + dateFormat.format(assetEntry.getPublishDate()) + " | GMT +7";
+	String assetPubLishDate = strDayOfWeek[dayOfWeek] + dateFormat.format(assetEntry.getPublishDate());
 	
 	List<AssetCategory> assetCategoryList = AssetCategoryLocalServiceUtil.getEntryCategories(assetEntry.getEntryId());
 	

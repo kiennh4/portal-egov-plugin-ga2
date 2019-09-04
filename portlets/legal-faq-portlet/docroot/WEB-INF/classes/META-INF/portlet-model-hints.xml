@@ -41,6 +41,7 @@
 		<field name="createDate" type="Date" />
 		<field name="modifiedDate" type="Date" />
 		<field name="publishDate" type="Date" />
+		<field name="attachmentId" type="long" />
 		<field name="viewCount" type="int" />
 		<field name="publishStatus" type="int" />
 		<field name="status" type="int" />

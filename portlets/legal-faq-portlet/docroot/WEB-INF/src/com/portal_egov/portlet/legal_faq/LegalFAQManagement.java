@@ -14,11 +14,13 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.util.CalendarFactoryUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.portal.security.permission.ActionKeys;
 import com.liferay.portal.service.LayoutLocalServiceUtil;
 import com.liferay.portal.service.ServiceContext;
 import com.liferay.portal.service.ServiceContextFactory;
@@ -26,6 +28,8 @@ import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
 import com.liferay.portlet.PortletPreferencesFactoryUtil;
 import com.liferay.portlet.PortletURLFactoryUtil;
+import com.liferay.portlet.documentlibrary.DuplicateFolderNameException;
+import com.liferay.portlet.documentlibrary.model.DLFolder;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 import com.portal_egov.portlet.legal_faq.email.FAQEmailUtil;
 import com.portal_egov.portlet.legal_faq.model.LegalFAQCategory;
@@ -34,13 +38,14 @@ import com.portal_egov.portlet.legal_faq.permission.LegalFAQCategoryPermission;
 import com.portal_egov.portlet.legal_faq.permission.LegalFAQEntryPermission;
 import com.portal_egov.portlet.legal_faq.service.LegalFAQCategoryLocalServiceUtil;
 import com.portal_egov.portlet.legal_faq.service.LegalFAQEntryLocalServiceUtil;
+import com.portal_egov.portlet.legal_faq.util.FileAttachmentUtil;
 import com.portal_egov.portlet.legal_faq.util.LegalFAQConstants;
 
 /**
  * Portlet implementation class legal_faq_management
  */
 public class LegalFAQManagement extends MVCPortlet {
- 
+	
 	public void updateFAQEntry(ActionRequest actionRequest,ActionResponse actionResponse){
 		
 		try {
@@ -87,10 +92,10 @@ public class LegalFAQManagement extends MVCPortlet {
 			}
 			LegalFAQEntry entry = null;
 			if(legalFAQEntryId > 0){
-				
+				long fileAttachmentId = FileAttachmentUtil.addFileAttachment(actionRequest, actionResponse);
 				//update FAQ Entry
 				entry = LegalFAQEntryLocalServiceUtil.updateFAQEntry(legalFAQEntryId, companyId, groupId, userId, categoryId,
-					citizenName, citizenPhone, citizenEmail, askDate, askTitle, askContent, answerDate, answerContent,
+					citizenName, citizenPhone, citizenEmail, askDate, askTitle, askContent,  fileAttachmentId, answerDate, answerContent,
 					faqEntryPublishStatus, faqEntryStatus);
 			}else{
 				
@@ -99,8 +104,9 @@ public class LegalFAQManagement extends MVCPortlet {
 				serviceContext.setGroupPermissions(new String[] {LegalFAQEntryPermission.VIEW});
 				serviceContext.setGuestPermissions(new String[] {LegalFAQEntryPermission.VIEW});
 				
+				long fileAttachmentId = FileAttachmentUtil.addFileAttachment(actionRequest, actionResponse);
 				entry = LegalFAQEntryLocalServiceUtil.addFAQEntry(companyId, groupId, userId, categoryId, citizenName,
-					citizenPhone, citizenEmail, citizenAddress, askDate, askTitle, askContent, answerDate, answerContent,
+					citizenPhone, fileAttachmentId, citizenEmail, citizenAddress, askDate, askTitle, askContent, answerDate, answerContent,
 					faqEntryPublishStatus, faqEntryStatus, serviceContext);
 				legalFAQEntryId = entry.getEntryId();
 			}
@@ -116,11 +122,11 @@ public class LegalFAQManagement extends MVCPortlet {
 						PortletRequest.RENDER_PHASE);
 				redirectURL.setParameter("legalFAQEntryId", String.valueOf(legalFAQEntryId));
 				redirectURL.setParameter("jspPage", jspPage);
-				String url = redirectURL.toString();
+				//String url = redirectURL.toString();
 				
-				String emailContent = FAQEmailUtil.buildAnswerEmailContent(entry, url);
+				//String emailContent = FAQEmailUtil.buildAnswerEmailContent(entry, url);
 				
-				FAQEmailUtil.sendAnswerMail(emailContent, entry.getCitizenEmail());
+				//FAQEmailUtil.sendAnswerMail(emailContent, entry.getCitizenEmail());
 			}
 		}
 		catch (Exception e) {

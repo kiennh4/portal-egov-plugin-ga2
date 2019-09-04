@@ -29,6 +29,7 @@ import com.portal_egov.portlet.legal_faq.email.FAQEmailUtil;
 import com.portal_egov.portlet.legal_faq.model.LegalFAQEntry;
 import com.portal_egov.portlet.legal_faq.permission.LegalFAQEntryPermission;
 import com.portal_egov.portlet.legal_faq.service.LegalFAQEntryLocalServiceUtil;
+import com.portal_egov.portlet.legal_faq.util.FileAttachmentUtil;
 import com.portal_egov.portlet.legal_faq.util.LegalFAQConstants;
 
 /**
@@ -49,7 +50,7 @@ public class LegalFAQ extends MVCPortlet {
 			long userId = PortalUtil.getUserId(actionRequest);
 			
 			String citizenName = HtmlUtil.stripHtml(ParamUtil.getString(actionRequest, "citizenName",StringPool.BLANK));
-			
+
 			String citizenPhone = HtmlUtil.stripHtml(ParamUtil.getString(actionRequest, "citizenPhone",StringPool.BLANK));
 			
 			String citizenAddress = HtmlUtil.stripHtml(ParamUtil.getString(actionRequest, "citizenAddress",StringPool.BLANK));
@@ -69,15 +70,15 @@ public class LegalFAQ extends MVCPortlet {
 			serviceContext.setGroupPermissions(new String[] {LegalFAQEntryPermission.VIEW});
 			serviceContext.setGuestPermissions(new String[] {LegalFAQEntryPermission.VIEW});
 			
-			if(checkCaptcha(actionRequest)){
+			if(true){
+				long attachmentId = FileAttachmentUtil.addFileAttachment(actionRequest, actionResponse);
+				/*LegalFAQEntry faqEntry =  LegalFAQEntryLocalServiceUtil.addFAQEntry(companyId, groupId, userId, categoryId, citizenName,
+					citizenPhone, attachmentId, citizenEmail, citizenAddress, now, askTitle, askContent, now, StringPool.BLANK, 
+					LegalFAQConstants.LEGAL_FAQ_ENTRY_PUBLISH_STATUS_VALUE, LegalFAQConstants.LEGAL_FAQ_ENTRY_DEFAULT_STATUS_VALUE, serviceContext);*/
 				
-				LegalFAQEntry faqEntry =  LegalFAQEntryLocalServiceUtil.addFAQEntry(companyId, groupId, userId, categoryId, citizenName,
-					citizenPhone, citizenEmail, citizenAddress, now, askTitle, askContent, now, StringPool.BLANK, 
-					LegalFAQConstants.LEGAL_FAQ_ENTRY_PUBLISH_STATUS_VALUE, LegalFAQConstants.LEGAL_FAQ_ENTRY_DEFAULT_STATUS_VALUE, serviceContext);
+				//String emailContent = FAQEmailUtil.buildFAQEmailContent(faqEntry);
 				
-				String emailContent = FAQEmailUtil.buildFAQEmailContent(faqEntry);
-				
-				FAQEmailUtil.sendMail(emailContent);
+				//FAQEmailUtil.sendMail(emailContent);
 				
 				SessionMessages.add(actionRequest, "give-ask-success");
 				

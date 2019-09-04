@@ -45,4 +45,10 @@ public class LegalFAQConstants {
 	
 	public static final String FAQ_ENTRY_PUBLISH_STATUS = "FAQ_ENTRY_PUBLISH_STATUS";
 	
+	public static final long DL_ROOT_FOLDER_ID = 0L;
+	
+	public static final String DOCUMENT_LIBRARY_FOLDER = "DOCUMENT_LIBRARY_FOLDER";
+	
+	public static final String DEFAULT_LEGAL_FAQ_FILE_ATTACHMENT_FOLDER_NAME = "LEGAL_FAQ_FILE_ATTACHMENT";
+	
 }

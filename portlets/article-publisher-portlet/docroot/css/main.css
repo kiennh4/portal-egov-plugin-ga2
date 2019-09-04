@@ -1,3 +1,5 @@
+@import url(responsive.css);
+
 .article-publisher-portlet{
 	
 	.portlet-topper{
@@ -15,7 +17,6 @@
 	
 	.article-publisher-display-style-1{
 		padding: 10px;
-	
 		.top-asset{
 			margin-bottom : 10px;
 			.asset-title{
@@ -440,14 +441,11 @@
 		margin: 0;
 		text-align: justify;
 		.list-news{
-			width: 100%;
-			height: 190px;
+			max-width: 1170px;
 			position: relative;
 			.asset-entry{
-				width: 270px;
-				height: 182px;
+				height: 192px;
 				position: relative;
-				float: left;
 				.asset-image{
 					width: 100%;
 					height: 100%;

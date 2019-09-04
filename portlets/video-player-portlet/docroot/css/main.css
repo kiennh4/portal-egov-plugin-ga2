@@ -1,6 +1,7 @@
 @CHARSET "UTF-8";
 @import url(video-js.css);
 @import url(videojs-resolution-switcher.css);
+@import url(responsive.css);
 .video-player-portlet{
 	.video-js{
 		width: 100% !important;
@@ -199,7 +200,10 @@
 			#_videoplayer_WAR_videoplayerportlet_videoPlayer{
 				width: 100% !important
 			}
-		}		
+			#videoFrame{
+				border: none !important; 
+			}
+		}	
 		.video-playlist{
 			padding-left: 5px;
 			max-height: 80px;

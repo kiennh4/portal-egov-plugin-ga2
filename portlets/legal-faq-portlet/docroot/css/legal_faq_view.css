@@ -203,14 +203,31 @@
 			
 	.legal-faq-give-ask-form .aui-field-label,
 	.legal-faq-give-ask-form .aui-field-label-inline-label{
-		width: 35%;
+		width: 25%;
 		float: left;
 		text-align: right;
 		padding-right: 30px;
 	}
 		
 	.legal-faq-give-ask-form .captcha-holder{
-		padding-left: 165px;
+		padding-left: 217px;
+		.captcha-container{
+			width: 100%;
+			.taglib-captcha{
+				margin : 0 !important;
+				width: 185px;
+				float: left;
+				.aui-field-label{
+					width: 100% !important;
+					text-align: left;
+				}
+			}
+			.captcha_reload{
+				width: 50%;
+				float: left;
+				font-size: 35px;
+			}
+		}
 	}
 			
 	.legal-faq-give-ask-form .captcha-holder .aui-field-label{
@@ -218,15 +235,15 @@
 	}
 			
 	.legal-faq-give-ask-form .aui-button-holder{
-		padding-left: 165px;
+		padding-left: 217px;
 	}
 	
 	.legal-faq-give-ask-form .form-title{
 		border-bottom: 1px solid #E4E4E4;
-		font-size: 18px;
+		font-size: 20px;
 		font-weight: bold;
 		padding: 5px;
-		color: #00528b;
+		color: #416781;
 		text-shadow: 1px 1px #E8E8E8;	
 		padding: 5px;
 	}
@@ -242,12 +259,15 @@
 			
 	.legal-faq-header-row .legal-faq-search-form input[type="text"],
 	.legal-faq-give-ask-form .form-content input[type="text"]{
-		width: 400px;
+		width: 500px;
+		height: 30px;
+		padding: 0 0px 0px 3px !important;
 	}
 				
 	.legal-faq-give-ask-form .form-content textarea{
-		width: 400px;
-		height: 120px;
+		padding: 2px !important;
+		width: 500px;
+		height: 130px;
 	}
 	
 	.legal-faq-give-ask-form .form-content select{
@@ -429,4 +449,46 @@
 	.related_entry  .publish_date{
 		color: #9C9C9C;
 		font-size: 10px;
+	}
+	/* legal-faq Upload Settings */
+
+	.legal-faq-settings-form {
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	.legal-faq-settings-form .aui-field-content{
+		padding-bottom: 10px;
+	}
+	
+	.legal-faq-settings-form input[type="text"],
+	.legal-faq-settings-form select{
+		border-radius: 2px;
+	}
+		
+	.legal-faq-settings-form input[type="text"]{
+		width: 300px;
+	}
+		
+	.legal-faq-settings-form select{
+		width: 312px;
+	}
+	
+	.legal-faq-settings-form .lfr-form-row{
+		border: none;
+		padding: 0px;
+		margin-bottom: 10px;
+		margin-top: 0px;
+	}
+	
+	.legal-faq-settings-form .lfr-form-row:hover{
+		background: none;
+	}
+	
+	.legal-faq-settings-form .lfr-form-row input[type="button"]{
+		margin-top: 30px;
+	}
+
+	.legal-faq-settings-form .creat-folder-panel{
+		padding-bottom: 10px;
 	}

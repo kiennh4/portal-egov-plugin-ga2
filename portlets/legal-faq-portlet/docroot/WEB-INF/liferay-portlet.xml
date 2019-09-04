@@ -6,7 +6,7 @@
 	<portlet>
 		<portlet-name>legalfaq</portlet-name>
 		<icon>/icon.png</icon>
-<!-- 		<configuration-action-class>com.portal_egov.portlet.legal_faq.action.LegalFAQViewConfigActionImpl</configuration-action-class> -->
+		<configuration-action-class>com.portal_egov.portlet.legal_faq.action.LegalFAQViewConfigActionImpl</configuration-action-class> 
 <!-- 		<indexer-class>com.portal_egov.portlet.legal_faq.util.LegalFAQIndexer</indexer-class> -->
 		<instanceable>false</instanceable>
 		<header-portlet-css>/css/legal_faq_view.css</header-portlet-css>

@@ -338,6 +338,20 @@ public interface LegalFAQEntryModel extends BaseModel<LegalFAQEntry>,
 	public void setPublishDate(Date publishDate);
 
 	/**
+	 * Returns the attachment ID of this legal f a q entry.
+	 *
+	 * @return the attachment ID of this legal f a q entry
+	 */
+	public long getAttachmentId();
+
+	/**
+	 * Sets the attachment ID of this legal f a q entry.
+	 *
+	 * @param attachmentId the attachment ID of this legal f a q entry
+	 */
+	public void setAttachmentId(long attachmentId);
+
+	/**
 	 * Returns the view count of this legal f a q entry.
 	 *
 	 * @return the view count of this legal f a q entry

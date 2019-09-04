@@ -4,6 +4,11 @@
 <head>
 	<title>$the_title - $company_name</title>
 	<meta name="description" content="$description">
+	
+	<!-- ROBOTS -->
+	<meta name="googlebot" content="noarchive" />
+	<meta name="robots" content="noarchive" />
+	
     <meta name="keywords" content="$keywords" property="og:keywords"/>
 	<meta property="og:url" itemprop="url" content="$url"/>
 	<meta property="og:image" itemprop="thumbnailUrl" content="$imageUrl"/>

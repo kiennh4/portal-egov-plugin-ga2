@@ -3,8 +3,20 @@
 
 .contact-vungtau-container {
   text-align: center;
-  height: 38px;
   width: 100%;
   background: #E9E9E9;
-  line-height: 53px; }
+  line-height: 30px; }
+
+.contact-vungtau-container ul {
+  list-style: none;
+  margin: 0 !important; }
+
+.contact-vungtau-container ul li:FIRST-CHILD {
+  font-size: 16px;
+  font-weight: bold; }
+
+.contact-vungtau-container ul li span:nth-child(2) {
+  color: red;
+  font-weight: bold;
+  font-size: 16px; }
 

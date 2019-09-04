@@ -58,6 +58,8 @@
 	<aui:input type="text" name="citizenAddress" label="address" value='<%= (legalFAQEntry != null) ? legalFAQEntry.getCitizenAddress() : ""%>'/>		
 		
 	<aui:input type="text" name="citizenEmail" label="email-address" value='<%= (legalFAQEntry != null) ? legalFAQEntry.getCitizenEmail() : ""%>'/>
+	
+	<aui:input type="text" name="citizenPhone" label="phone-number" value='<%= (legalFAQEntry != null) ? legalFAQEntry.getCitizenPhone() : ""%>'/>
 
 	<aui:select name="categoryId" label="category-name" >
 		<aui:option label="other" value="0"/>
@@ -99,7 +101,7 @@
 	
 	<span style="display: block;font-weight: bold;"><liferay-ui:message key="ask-content"/> (<liferay-ui:message key="required"/>)</span>
 	
-	<liferay-ui:input-editor name="askContentEditor" height="400" initMethod="initAskContentEditor"/>
+	<liferay-ui:input-editor name="askContentEditor" width="100%" height="400" initMethod="initAskContentEditor" toolbarSet="liferayArticle"/>
 	
 	<aui:input type="hidden" name="askContent" />
 	

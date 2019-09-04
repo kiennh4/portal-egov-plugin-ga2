@@ -22,7 +22,7 @@
 		<h3 class="config-title"><liferay-ui:message key="display-setting-viewport"/></h3>
 		
 		<div class="lfr-form-row">
-			<liferay-ui:input-editor name="viewport" height="400" initMethod="initSloganContentEditor"/>
+			<liferay-ui:input-editor name="viewport" height="400" width="500" initMethod="initSloganContentEditor" toolbarSet="liferayArticle"/>
 		</div>
 		
 		<aui:button-row>

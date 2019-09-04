@@ -49,17 +49,20 @@
 	</div>
 	<div class="form-content">
 		
-		<aui:form name="legal_faq_give_ask_form" method="post" action="<%=updateAskContentActionURL %>" onSubmit="<%=taglibOnSubmit %>">
+		<aui:form name="legal_faq_give_ask_form" method="post" action="<%=updateAskContentActionURL %>" onSubmit="<%=taglibOnSubmit %>" enctype="multipart/form-data">
 			
 			<div>
-				<aui:input type="text" name="citizenName" label="full-name" inlineLabel="left">
+				<aui:input type="text" name="citizenName" label="full-name" inlineLabel="left" placeholder="Nhập họ tên đầy đủ">
 					<aui:validator name="required"/>
 				</aui:input>
 				
-				<aui:input type="text" name="citizenAddress" label="address" inlineLabel="left"/>
+				<aui:input type="text" name="citizenEmail" label="email-address" inlineLabel="left" placeholder="Nhập địa chỉ thư điện tử"/>
+					
+				<aui:input type="text" name="citizenPhone" label="phone-number" inlineLabel="left" placeholder="Nhập số điện thoại liên hệ"/>
 				
-				<aui:input type="text" name="citizenEmail" label="email-address" inlineLabel="left"/>
-									
+				<div class="form-group">
+					<aui:input type="text" name="citizenAddress" label="address" inlineLabel="left" placeholder="Nhập địa liên hệ"/>
+				</div>
 				<aui:select name="categoryId" label="faq-category" >
 					<aui:option label="other-faq-category" value="0"/>
 					<%
@@ -71,25 +74,24 @@
 					%>
 				</aui:select>
 				
-				<aui:input type="text" name="askTitle" inlineLabel="left">
+				<aui:input type="text" name="askTitle" inlineLabel="left" placeholder="Nhập tiêu đề phản ánh kiến nghị">
 					<aui:validator name="required"/>
 				</aui:input>
 								
-				<aui:input type="textarea" name="askContent" inlineLabel="left">
+				<aui:input type="textarea" name="askContent" inlineLabel="left" placeholder="Nhập nội dung phản ánh kiến nghị">
 					<aui:validator name="required"/>
 				</aui:input>
+				
+				<aui:input type="file" name="legalFaqAttachment" inlineLabel="left"/>
 			</div>
-			<div class="captcha-holder">					
-				<aui:layout> 
-				  <aui:column>
-				    <liferay-ui:captcha url="<%=captchaURL %>"/>
-				  </aui:column>                            
-				  <aui:column>
-				    <span class="captcha_reload">
-				      <img src="/legal-faq-portlet/images/reload_captcha_button.jpg" alt="Reload-Capcha" title="reload-captcha"/>
-				    </span>
-				  </aui:column>
-				</aui:layout>
+			<div class="captcha-holder">
+				<div class="captcha-container">
+					<liferay-ui:captcha url="<%=captchaURL %>"/>
+					<div class="captcha_reload">
+						<i class="fa fa-refresh" aria-hidden="true"></i>
+					</div>   
+					<div style="clear: both;"></div>   
+				</div>					
 			</div>
 			
 			<div class="aui-button-holder">

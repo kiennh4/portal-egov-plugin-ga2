@@ -52,7 +52,6 @@
 <liferay-portlet:renderURL var="faqEntryUpdateFormURL">
 	<liferay-portlet:param name="jspPage" value="/html/legal_faq_management_portlet/faq_entry/faq_entry_update_form.jsp" />
 </liferay-portlet:renderURL>
-
 <div class="legal-faq-admin-toolbar">
 	<div class="lfr-header-row">
 		<div class="lfr-header-row-content">

@@ -36,8 +36,8 @@ html, body {
 }
 body {
 	font-size: 15px;
-	font-family: 'Arial',sans-serif;
-	color: #000000;
+	font-family: 'Roboto',sans-serif;
+	color: #333333;
 	position: relative;
 }
 
@@ -63,7 +63,6 @@ body {
 	margin: 0 auto;
 	position: relative;
 	min-height: 1000px;
-	width: 100%;
 }
 .portal-page{
 	margin-top: 10px;

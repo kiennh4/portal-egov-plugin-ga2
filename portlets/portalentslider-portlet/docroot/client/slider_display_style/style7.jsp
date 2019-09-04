@@ -54,5 +54,5 @@ Fluid width carousel with images
         }
       });
     });
-  </script>
+</script>
 

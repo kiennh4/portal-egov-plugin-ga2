@@ -12,30 +12,6 @@ Fluid width carousel with images
 	int count = 0; 
 %>
 <link rel="stylesheet" href="/portalentslider-portlet/css/lightslider.css"/>
-<style>
-	.style-2-container{	
-		margin: 0 auto;
-  		overflow: hidden;
-  		max-width: 1170px;
-	}
-	.style-2-container .light-slider {
-		list-style: none;
-  		margin: 0;
-  		padding: 0;
-  		width: 100%;
-	}
-	.style-2-container .light-slider li{
-		display: block;
-  		float: left;
-  		margin: 0;
-  		width: 100%;
-	}
-	.style-2-container img{
-		display: block;
-  		width: 100%;
-	}
-</style>
-	
 <div class="style-2-container">
   <ul id="light-slider" class="light-slider">
   	<%
@@ -73,11 +49,13 @@ $("#light-slider").lightSlider({
 	  loop: true,
 	  auto:true,
 	  pager: false,
+	  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
 	  pauseOnHover: true,
 	  responsive: [{
-	    breakpoint: 600,
+	    breakpoint: 800,
 	    settings: {
-	      item: 1
+	      item: 2,
+	      slideMove:1
 	    }
 	  }]
 	});

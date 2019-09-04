@@ -25,6 +25,8 @@
 	
 	long companyId = themeDisplay.getCompanyId();
 	
+	long groupId = themeDisplay.getScopeGroupId();
+	
 	long scopeGroupId = themeDisplay.getScopeGroupId();
 	
 	long userId = PortalUtil.getUserId(request);

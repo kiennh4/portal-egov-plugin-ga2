@@ -1343,6 +1343,31 @@ video::-webkit-media-text-track-display {
   text-transform: none;
   font-size: 1em; }
 
+@media (min-width: 320px) and (max-width : 559px) {
+  .video-player-abstract-style {
+    width: 100%; }
+    .video-player-abstract-style .video-player-frame {
+      width: 99% !important;
+      display: block;
+      float: none !important; }
+      .video-player-abstract-style .video-player-frame .video-info {
+        padding: 0px 5px; }
+        .video-player-abstract-style .video-player-frame .video-info .date-publisher a {
+          font-size: 15px !important; }
+      .video-player-abstract-style .video-player-frame .video-player {
+        height: 225px !important; }
+    .video-player-abstract-style .video-playlist {
+      width: 100% !important;
+      display: block;
+      float: none !important; }
+      .video-player-abstract-style .video-playlist .videos {
+        padding-right: 5px !important;
+        padding-left: 5px;
+        padding-top: 20px; }
+        .video-player-abstract-style .video-playlist .videos .video-item {
+          padding: 10px 0px !important; }
+          .video-player-abstract-style .video-playlist .videos .video-item a {
+            font-weight: 400 !important; } }
 .video-player-portlet .video-js {
   width: 100% !important;
   height: 100% !important; }
@@ -1470,6 +1495,8 @@ video::-webkit-media-text-track-display {
   width: 100% !important; }
   .video-player-portlet .video-player-default-style .external-video-frame #_videoplayer_WAR_videoplayerportlet_videoPlayer {
     width: 100% !important; }
+  .video-player-portlet .video-player-default-style .external-video-frame #videoFrame {
+    border: none !important; }
 .video-player-portlet .video-player-default-style .video-playlist {
   padding-left: 5px;
   max-height: 80px;
@@ -1792,7 +1819,8 @@ video::-webkit-media-text-track-display {
     float: left; }
     .video-player-portlet .video-player-abstract-style .video-player-frame iframe {
       width: 100% !important;
-      height: 100% !important; }
+      height: 100% !important;
+      border: none !important; }
     .video-player-portlet .video-player-abstract-style .video-player-frame .video-player {
       width: 100%;
       height: 433px;

@@ -49,6 +49,7 @@ public class LegalFAQEntrySoap implements Serializable {
 		soapModel.setCreateDate(model.getCreateDate());
 		soapModel.setModifiedDate(model.getModifiedDate());
 		soapModel.setPublishDate(model.getPublishDate());
+		soapModel.setAttachmentId(model.getAttachmentId());
 		soapModel.setViewCount(model.getViewCount());
 		soapModel.setPublishStatus(model.getPublishStatus());
 		soapModel.setStatus(model.getStatus());
@@ -248,6 +249,14 @@ public class LegalFAQEntrySoap implements Serializable {
 		_publishDate = publishDate;
 	}
 
+	public long getAttachmentId() {
+		return _attachmentId;
+	}
+
+	public void setAttachmentId(long attachmentId) {
+		_attachmentId = attachmentId;
+	}
+
 	public int getViewCount() {
 		return _viewCount;
 	}
@@ -290,6 +299,7 @@ public class LegalFAQEntrySoap implements Serializable {
 	private Date _createDate;
 	private Date _modifiedDate;
 	private Date _publishDate;
+	private long _attachmentId;
 	private int _viewCount;
 	private int _publishStatus;
 	private int _status;

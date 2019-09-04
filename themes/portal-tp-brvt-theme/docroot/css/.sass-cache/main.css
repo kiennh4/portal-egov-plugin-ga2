@@ -1156,7 +1156,7 @@ html > .lfr-dockbar-pinned {
 
 .navigation .global-search-wrapper {
   position: absolute;
-  right: 23px; }
+  right: 0px; }
 
 .navigation .global-search-wrapper select {
   display: none; }
@@ -2185,8 +2185,8 @@ html, body {
 
 body {
   font-size: 15px;
-  font-family: 'Arial',sans-serif;
-  color: #000000;
+  font-family: 'Roboto',sans-serif;
+  color: #333333;
   position: relative; }
 
 .body-wrapper {

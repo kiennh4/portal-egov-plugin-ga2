@@ -33,8 +33,6 @@ public class VungTauContactConfigurationActionImpl extends DefaultConfigurationA
 			
 			preferences.setValue("citizenPhone", citizenPhone);
 			preferences.setValue("enterprisePhone", enterprisePhone);
-			System.out.println(citizenPhone);
-			System.out.println(enterprisePhone);
 			if(SessionErrors.isEmpty(actionRequest)){
 				
 				preferences.store();

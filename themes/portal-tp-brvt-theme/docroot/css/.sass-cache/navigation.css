@@ -17,7 +17,7 @@
 
 .navigation .global-search-wrapper {
   position: absolute;
-  right: 23px; }
+  right: 0px; }
 
 .navigation .global-search-wrapper select {
   display: none; }

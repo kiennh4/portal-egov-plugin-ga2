@@ -38,7 +38,7 @@ import com.liferay.portlet.documentlibrary.service.DLAppServiceUtil;
 public class VideoFileUtil {
 
 	public static String getEmbedYoutubeVideoURL(String videoId) {
-		return "http://youtube.com/embed/" + videoId;
+		return "//youtube.com/embed/" + videoId;
 	}
 
 	public static String getVideoIdFromYoutubeURL(String url) {

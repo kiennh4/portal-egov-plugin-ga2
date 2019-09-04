@@ -59,7 +59,7 @@
 		
 	<span style="display: block;font-weight: bold;"><liferay-ui:message key="answer-content"/></span>
 	
-	<liferay-ui:input-editor name="answerContentEditor" height="400" initMethod="initAnswerContentEditor"/>
+	<liferay-ui:input-editor name="answerContentEditor" height="400" initMethod="initAnswerContentEditor" toolbarSet="liferayArticle"/>
 	
 	<aui:input type="hidden" name="answerContent" value=""/>
 	<br/>

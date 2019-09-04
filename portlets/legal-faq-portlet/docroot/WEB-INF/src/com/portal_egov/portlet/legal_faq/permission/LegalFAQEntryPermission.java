@@ -24,6 +24,7 @@ public class LegalFAQEntryPermission {
 	public static final String UPDATE = "UPDATE";
 	public static final String DELETE = "DELETE";
 	public static final String PERMISSIONS = "PERMISSIONS";
+	public static final String FILE_ATTACHMENT_CONFIG = "CONFIG";
 	
 	
 	public static void check(PermissionChecker permissionChecker, long entryId, String actionId)

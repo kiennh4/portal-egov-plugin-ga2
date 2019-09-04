@@ -69,12 +69,12 @@
 .results-row.alt.selected td, .results-row.alt.selected.hover td {
   background-color: #00A2EA; }
 .results-row.alt td {
-  background: #F5F8FB;
-  border-width: 1px 0; }
+  background: #F5F8FB; }
 .results-row.hover td {
   background: #D3E8F1;
-  border: 1px solid #D3E8F1;
-  border-bottom-color: #D7D7D7; }
+  border-bottom-color: #D7D7D7;
+  border-left-color: transparent;
+  border-right-color: transparent; }
 
 .taglib-search-iterator .results-row td.first, .taglib-search-iterator .results-row th.first {
   border-left-width: 0; }
@@ -193,6 +193,7 @@
 
 .tag-selected {
   color: #000;
+  font-weight: bold;
   text-decoration: none; }
 
 .tag-cloud {
@@ -348,7 +349,7 @@
 
 .aui-menu-content a, .lfr-menu-list li .taglib-icon, .aui-menu-content .disabled, .lfr-actions .lfr-trigger, .lfr-actions .lfr-trigger strong {
   font-weight: bold;
-  text-shadow: 1px 1px #FFF; }
+  text-shadow: 1px 1px 0 0 #FFF; }
 
 /* ---------- Toolbar ---------- */
 .aui-toolbar li {
@@ -516,4 +517,6 @@
   white-space: normal; }
   .ie6 .lfr-header-row .aui-buttonitem-content .aui-buttonitem-label, .ie7 .lfr-header-row .aui-buttonitem-content .aui-buttonitem-label {
     white-space: nowrap; }
+.ie6 .results-row.hover td, .ie7 .results-row.hover td {
+  border-color: #D3E8F1; }
 

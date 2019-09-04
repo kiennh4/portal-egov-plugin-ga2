@@ -11,7 +11,9 @@
 
 <%
 	List<AssetEntryCache> assetCacheList = ArticlePublisherUtil.getAssetList(request,numbersOfEntriesDisplay);
+	int counter = 0;
 %>
+<link rel="stylesheet" href="/portalentslider-portlet/css/lightslider.css"/>
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
 		<div class="article-publisher-display-style-7" id="articlePublisher7">
@@ -19,8 +21,8 @@
 			<div class="style-title">
 				<span><%=styleTitle %></span>
 			</div>
-			
 			<div class="list-news">
+  				<ul id="light-slider1" class="light-slider">
 				<%
 				for(AssetEntryCache assetCache : assetCacheList){
 					
@@ -29,8 +31,10 @@
 					String assetLink = ArticlePublisherUtil.getViewContentURL(request, assetCache);
 					
 					String assetImagePath = assetCache.getSmallImagePath();
-				%>
-					<div class="asset-entry">
+					
+					counter = counter + 1;
+				%><li>
+					<div class="asset-entry <%= counter == 1 ? "first" : ""%>">
 						<div class="asset-image">
 							<a href="<%=assetLink%>" title="<%=assetCache.getTitle()%>">
 								<img class="small-img" align="left" 
@@ -48,9 +52,11 @@
 						</div>
 						<div style="clear: both;"></div>
 					</div>
+					</li>
 				<%
 				}
 				%>
+				</ul>
 			</div>
 		</div>
 	</c:when>
@@ -65,3 +71,22 @@
 		</div>
 	</c:otherwise>
 </c:choose>
+<script src="/portalentslider-portlet/js/lightslider.js"></script>
+<script>
+$("#light-slider1").lightSlider({
+	  item: <%=numbersOfEntriesDisplay%>,
+	  loop: true,
+	  auto:true,
+	  slideMargin: 20,
+	  pager: false,
+	  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+	  pauseOnHover: true,
+	  responsive: [{
+	    breakpoint: 800,
+	    settings: {
+	      item: 1,
+	      slideMove:1
+	    }
+	  }]
+	});
+</script>

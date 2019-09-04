@@ -14,40 +14,12 @@
 
 <div class="contact-vungtau-container">
 	<ul class="group-contact">
-		<li></li>
-		<li></li>
+		<li class="contact-item"><liferay-ui:message key="hotline"/></li>
+		<li class="contact-item">
+			<span><liferay-ui:message key="enterprise-key"/></span>: <span><%=enterprisePhone %></span>
+		</li>
+		<li class="contact-item">
+			<span><liferay-ui:message key="citizen-key"/></span>: <span><%=citizenPhone %></span>
+		</li>
 	</ul>
-	 <svg xmlns="http://www.w3.org/2000/svg" width="617" height="28" viewbox="0 0 617 28">
-            <g id="Group_18" data-name="Group 18" transform="translate(-662 -563)">
-                <text
-                    id="Đường_dây_nóng"
-                    data-name="Đường dây nóng"
-                    transform="translate(663 585)"
-                    fill="#282b3b"
-                    font-size="16"
-                    font-weight="700">
-                    <tspan x="0" y="0">Đường dây nóng</tspan>
-                </text>
-                <text
-                    id="Công_dân:_088_8800_247_Doanh_nghiệp:_088.8801.247"
-                    data-name="Công dân: 088 8800 247    Doanh nghiệp: 088.8801.247"
-                    transform="translate(819 586)"
-                    fill="#282b3b"
-                    font-size="16">
-                    <tspan x="0" y="0">Công dân:</tspan>
-                    <tspan y="0" fill="#f83030"  font-weight="700"></tspan>
-                    <tspan y="0" fill="#f83030" font-size="20" font-weight="700"><%=citizenPhone %></tspan>
-                    <tspan
-                        y="0"
-                        xml:space="preserve"
-                        fill="#f83030"
-                        font-size="25"
-                   
-                        font-weight="700"></tspan>
-                    <tspan y="0">Doanh nghiệp:</tspan>
-                    <tspan y="0" fill="#f83030"></tspan>
-                    <tspan y="0" fill="#f83030" font-size="20" font-weight="700"><%=enterprisePhone %></tspan>
-                </text>
-            </g>
-        </svg>
 </div>

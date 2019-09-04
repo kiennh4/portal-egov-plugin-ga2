@@ -64,6 +64,7 @@ public class LegalFAQEntryWrapper implements LegalFAQEntry,
 		attributes.put("createDate", getCreateDate());
 		attributes.put("modifiedDate", getModifiedDate());
 		attributes.put("publishDate", getPublishDate());
+		attributes.put("attachmentId", getAttachmentId());
 		attributes.put("viewCount", getViewCount());
 		attributes.put("publishStatus", getPublishStatus());
 		attributes.put("status", getStatus());
@@ -178,6 +179,12 @@ public class LegalFAQEntryWrapper implements LegalFAQEntry,
 
 		if (publishDate != null) {
 			setPublishDate(publishDate);
+		}
+
+		Long attachmentId = (Long)attributes.get("attachmentId");
+
+		if (attachmentId != null) {
+			setAttachmentId(attachmentId);
 		}
 
 		Integer viewCount = (Integer)attributes.get("viewCount");
@@ -559,6 +566,24 @@ public class LegalFAQEntryWrapper implements LegalFAQEntry,
 	*/
 	public void setPublishDate(java.util.Date publishDate) {
 		_legalFAQEntry.setPublishDate(publishDate);
+	}
+
+	/**
+	* Returns the attachment ID of this legal f a q entry.
+	*
+	* @return the attachment ID of this legal f a q entry
+	*/
+	public long getAttachmentId() {
+		return _legalFAQEntry.getAttachmentId();
+	}
+
+	/**
+	* Sets the attachment ID of this legal f a q entry.
+	*
+	* @param attachmentId the attachment ID of this legal f a q entry
+	*/
+	public void setAttachmentId(long attachmentId) {
+		_legalFAQEntry.setAttachmentId(attachmentId);
 	}
 
 	/**

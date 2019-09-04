@@ -713,6 +713,7 @@ public class LegalFAQEntryPersistenceImpl extends BasePersistenceImpl<LegalFAQEn
 		legalFAQEntryImpl.setCreateDate(legalFAQEntry.getCreateDate());
 		legalFAQEntryImpl.setModifiedDate(legalFAQEntry.getModifiedDate());
 		legalFAQEntryImpl.setPublishDate(legalFAQEntry.getPublishDate());
+		legalFAQEntryImpl.setAttachmentId(legalFAQEntry.getAttachmentId());
 		legalFAQEntryImpl.setViewCount(legalFAQEntry.getViewCount());
 		legalFAQEntryImpl.setPublishStatus(legalFAQEntry.getPublishStatus());
 		legalFAQEntryImpl.setStatus(legalFAQEntry.getStatus());

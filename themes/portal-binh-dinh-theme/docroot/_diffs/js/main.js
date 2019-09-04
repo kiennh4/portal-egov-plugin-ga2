@@ -120,13 +120,19 @@ $(document).on("ready",function(){
 	$("#increaseText").on("click", function() {
        	current = parseInt($(".journal-content-article").css("font-size"));
         bc = current + parseInt(1); 
+        var currentDesc = parseInt($(".assetdesc-text").css("font-size"));
+        var fontSize = currentDesc + parseInt(1); 
         $(".journal-content-article").css({"font-size" : bc});
+        $(".assetdesc-text").css({"font-size": fontSize});
 	});
 
 	$("#decreaseText").on("click", function() {
         current = parseInt($(".journal-content-article").css("font-size"));
         bc = current - parseInt(1); 
+        var currentDesc = parseInt($(".assetdesc-text").css("font-size"));
+        var fontSize = currentDesc - parseInt(1); 
         $(".journal-content-article").css({"font-size" : bc});
+        $(".assetdesc-text").css({"font-size": fontSize});
 	});
 	$('input[name=_3_keywords]').attr("placeholder", "Tìm kiếm");
 	$(".asset-category-name").hide();
@@ -177,7 +183,7 @@ jQuery(document).ready(function(){
 	var block1 = $(".col-1");
 	var block2 = $(".col-2");
     if (jQuery(window).width() < 900) {
-    	customResponse();
+    	//customResponse();
     	block2.find(".vbpq-lastest-entry-portlet").remove();
     	block1.find(".vbpq-lastest-entry-portlet").css("display","block");
     }

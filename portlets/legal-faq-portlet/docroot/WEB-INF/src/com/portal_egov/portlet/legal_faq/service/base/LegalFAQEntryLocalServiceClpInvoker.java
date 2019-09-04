@@ -236,10 +236,10 @@ public class LegalFAQEntryLocalServiceClpInvoker {
 
 		_methodParameterTypes81 = new String[] {
 				"long", "long", "long", "long", "java.lang.String",
-				"java.lang.String", "java.lang.String", "java.lang.String",
-				"java.util.Date", "java.lang.String", "java.lang.String",
-				"java.util.Date", "java.lang.String", "int", "int",
-				"com.liferay.portal.service.ServiceContext"
+				"java.lang.String", "long", "java.lang.String",
+				"java.lang.String", "java.util.Date", "java.lang.String",
+				"java.lang.String", "java.util.Date", "java.lang.String", "int",
+				"int", "com.liferay.portal.service.ServiceContext"
 			};
 
 		_methodName82 = "updateFAQEntry";
@@ -247,7 +247,7 @@ public class LegalFAQEntryLocalServiceClpInvoker {
 		_methodParameterTypes82 = new String[] {
 				"long", "long", "long", "long", "long", "java.lang.String",
 				"java.lang.String", "java.lang.String", "java.util.Date",
-				"java.lang.String", "java.lang.String", "java.util.Date",
+				"java.lang.String", "java.lang.String", "long", "java.util.Date",
 				"java.lang.String", "int", "int"
 			};
 
@@ -569,13 +569,14 @@ public class LegalFAQEntryLocalServiceClpInvoker {
 				((Long)arguments[2]).longValue(),
 				((Long)arguments[3]).longValue(),
 				(java.lang.String)arguments[4], (java.lang.String)arguments[5],
-				(java.lang.String)arguments[6], (java.lang.String)arguments[7],
-				(java.util.Date)arguments[8], (java.lang.String)arguments[9],
-				(java.lang.String)arguments[10], (java.util.Date)arguments[11],
-				(java.lang.String)arguments[12],
-				((Integer)arguments[13]).intValue(),
+				((Long)arguments[6]).longValue(),
+				(java.lang.String)arguments[7], (java.lang.String)arguments[8],
+				(java.util.Date)arguments[9], (java.lang.String)arguments[10],
+				(java.lang.String)arguments[11], (java.util.Date)arguments[12],
+				(java.lang.String)arguments[13],
 				((Integer)arguments[14]).intValue(),
-				(com.liferay.portal.service.ServiceContext)arguments[15]);
+				((Integer)arguments[15]).intValue(),
+				(com.liferay.portal.service.ServiceContext)arguments[16]);
 		}
 
 		if (_methodName82.equals(name) &&
@@ -588,10 +589,11 @@ public class LegalFAQEntryLocalServiceClpInvoker {
 				(java.lang.String)arguments[5], (java.lang.String)arguments[6],
 				(java.lang.String)arguments[7], (java.util.Date)arguments[8],
 				(java.lang.String)arguments[9],
-				(java.lang.String)arguments[10], (java.util.Date)arguments[11],
-				(java.lang.String)arguments[12],
-				((Integer)arguments[13]).intValue(),
-				((Integer)arguments[14]).intValue());
+				(java.lang.String)arguments[10],
+				((Long)arguments[11]).longValue(),
+				(java.util.Date)arguments[12], (java.lang.String)arguments[13],
+				((Integer)arguments[14]).intValue(),
+				((Integer)arguments[15]).intValue());
 		}
 
 		if (_methodName83.equals(name) &&

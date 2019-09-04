@@ -167,11 +167,13 @@
 .flexslider .slides > li {
   display: none;
   -webkit-backface-visibility: hidden;
+  height: 370px;
   position: relative; }
 
 .flexslider .slides img {
   width: 100%;
-  display: block; }
+  display: block;
+  height: 100% !important; }
 
 .flexslider .slides:after {
   content: "\0020";
