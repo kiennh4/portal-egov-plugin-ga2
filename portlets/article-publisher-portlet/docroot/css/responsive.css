@@ -24,9 +24,8 @@
 				left: 0;
 			}
 			.list-news{
-				width: 100%;
 				height: auto !important;
-				max-width: 310px !important;
+				max-width: 365px !important; 
 				.asset-entry{
 					width: 100% !important;
 					height: 300px !important;

@@ -83,11 +83,6 @@
 		
 		<div style="clear: both;"></div>
 		
-		<div class="ask_metadata">
-			<liferay-ui:message key="send-by"/> :&nbsp; <%=legalFAQEntry.getCitizenName() %>
-			<br/>
-			<liferay-ui:message key="send-date"/> :&nbsp; <%=dateFormat.format(legalFAQEntry.getAskDate()) %>
-		</div>
 	</div>
 	
 	<div class = "legal_faq_answer_content">

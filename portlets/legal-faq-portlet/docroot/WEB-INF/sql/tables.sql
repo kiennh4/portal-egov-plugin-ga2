@@ -29,7 +29,6 @@ create table LegalFAQEntry (
 	createDate DATE null,
 	modifiedDate DATE null,
 	publishDate DATE null,
-	attachmentId LONG,
 	viewCount INTEGER,
 	publishStatus INTEGER,
 	status INTEGER

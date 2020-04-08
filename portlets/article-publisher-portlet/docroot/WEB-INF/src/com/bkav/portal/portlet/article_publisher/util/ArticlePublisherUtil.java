@@ -203,8 +203,8 @@ public class ArticlePublisherUtil {
 						StringBuilder stringBuilder = new StringBuilder();
 
 						stringBuilder.append(_THUMBNAIL_FILTER_PATH);
-						stringBuilder.append(_THUMBNAIL_DEFAULT_SIZE);
-						stringBuilder.append(StringPool.SLASH);
+						/*stringBuilder.append(_THUMBNAIL_DEFAULT_SIZE);
+						stringBuilder.append(StringPool.SLASH);*/
 
 						for (int i = 0; i < smallImageIdStrSplitedArr.length; i++) {
 

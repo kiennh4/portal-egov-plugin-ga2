@@ -25,15 +25,15 @@ boolean companySecurityStrangers = company.isStrangers();
 boolean companySecurityStrangersWithMx = company.isStrangersWithMx();
 boolean companySecurityStrangersVerify = company.isStrangersVerify();
 
-boolean casAuthEnabled = PrefsPropsUtil.getBoolean(company.getCompanyId(), PropsKeys.CAS_AUTH_ENABLED, PropsValues.CAS_AUTH_ENABLED);
+/* boolean casAuthEnabled = PrefsPropsUtil.getBoolean(company.getCompanyId(), PropsKeys.CAS_AUTH_ENABLED, PropsValues.CAS_AUTH_ENABLED);
 boolean casImportFromLdap = PrefsPropsUtil.getBoolean(company.getCompanyId(), PropsKeys.CAS_IMPORT_FROM_LDAP, PropsValues.CAS_IMPORT_FROM_LDAP);
 String casLoginURL = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.CAS_LOGIN_URL, PropsValues.CAS_LOGIN_URL);
 String casLogoutURL = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.CAS_LOGOUT_URL, PropsValues.CAS_LOGOUT_URL);
 String casServerName = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.CAS_SERVER_NAME, PropsValues.CAS_SERVER_NAME);
 String casServerURL = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.CAS_SERVER_URL, PropsValues.CAS_SERVER_URL);
 String casServiceURL = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.CAS_SERVICE_URL, PropsValues.CAS_SERVICE_URL);
-String casNoSuchUserRedirectURL = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.CAS_NO_SUCH_USER_REDIRECT_URL, PropsValues.CAS_NO_SUCH_USER_REDIRECT_URL);
-
+String casNoSuchUserRedirectURL = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.CAS_NO_SUCH_USER_REDIRECT_URL, PropsValues.CAS_NO_SUCH_USER_REDIRECT_URL); */
+/* 
 boolean facebookConnectAuthEnabled = FacebookConnectUtil.isEnabled(company.getCompanyId());
 boolean facebookConnectVerifiedAccountRequired = FacebookConnectUtil.isVerifiedAccountRequired(company.getCompanyId());
 String facebookConnectAppId = FacebookConnectUtil.getAppId(company.getCompanyId());
@@ -41,14 +41,14 @@ String facebookConnectAppSecret = FacebookConnectUtil.getAppSecret(company.getCo
 String facebookConnectGraphURL = FacebookConnectUtil.getGraphURL(company.getCompanyId());
 String facebookConnectOauthAuthURL = FacebookConnectUtil.getAuthURL(company.getCompanyId());
 String facebookConnectOauthTokenURL = FacebookConnectUtil.getAccessTokenURL(company.getCompanyId());
-String facebookConnectRedirectURL = FacebookConnectUtil.getRedirectURL(company.getCompanyId());
+String facebookConnectRedirectURL = FacebookConnectUtil.getRedirectURL(company.getCompanyId()); */
 
-boolean ntlmAuthEnabled = PrefsPropsUtil.getBoolean(company.getCompanyId(), PropsKeys.NTLM_AUTH_ENABLED, PropsValues.NTLM_AUTH_ENABLED);
+/* boolean ntlmAuthEnabled = PrefsPropsUtil.getBoolean(company.getCompanyId(), PropsKeys.NTLM_AUTH_ENABLED, PropsValues.NTLM_AUTH_ENABLED);
 String ntlmDomainController = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.NTLM_DOMAIN_CONTROLLER, PropsValues.NTLM_DOMAIN_CONTROLLER);
 String ntlmDomainControllerName = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.NTLM_DOMAIN_CONTROLLER_NAME, PropsValues.NTLM_DOMAIN_CONTROLLER_NAME);
 String ntlmDomain = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.NTLM_DOMAIN, PropsValues.NTLM_DOMAIN);
 String ntlmServiceAccount = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.NTLM_SERVICE_ACCOUNT, PropsValues.NTLM_SERVICE_ACCOUNT);
-String ntlmServicePassword = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.NTLM_SERVICE_PASSWORD, PropsValues.NTLM_SERVICE_PASSWORD);
+String ntlmServicePassword = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.NTLM_SERVICE_PASSWORD, PropsValues.NTLM_SERVICE_PASSWORD); */
 
 boolean openIdAuthEnabled = PrefsPropsUtil.getBoolean(company.getCompanyId(), PropsKeys.OPEN_ID_AUTH_ENABLED, PropsValues.OPEN_ID_AUTH_ENABLED);
 
@@ -72,7 +72,7 @@ String siteminderUserHeader = PrefsPropsUtil.getString(company.getCompanyId(), P
 <h3><liferay-ui:message key="authentication" /></h3>
 
 <liferay-ui:tabs
-	names="general,ldap,siteminder"
+	names="general,ldap,cas,facebook,ntlm,open-id,open-sso,siteminder"
 	refresh="<%= false %>"
 >
 	<liferay-ui:section>
@@ -99,7 +99,7 @@ String siteminderUserHeader = PrefsPropsUtil.getString(company.getCompanyId(), P
 	<liferay-ui:section>
 		<%@ include file="/html/portlet/portal_settings/authentication_ldap.jspf" %>
 	</liferay-ui:section>
-	<liferay-ui:section>
+	<%-- <liferay-ui:section>
 		<aui:fieldset>
 			<liferay-ui:error key="casServerNameInvalid" message="the-cas-server-name-is-invalid" />
 			<liferay-ui:error key="casServerURLInvalid" message="the-cas-server-url-is-invalid" />
@@ -135,8 +135,8 @@ String siteminderUserHeader = PrefsPropsUtil.getString(company.getCompanyId(), P
 				<aui:button onClick='<%= taglibOnClick %>' value="test-cas-configuration" />
 			</aui:button-row>
 		</aui:fieldset>
-	</liferay-ui:section>
-	<liferay-ui:section>
+	</liferay-ui:section> --%>
+	<%-- <liferay-ui:section>
 		<aui:fieldset>
 			<aui:input inlineLabel="left" label="enabled" name='<%= "settings--" + PropsKeys.NTLM_AUTH_ENABLED + "--" %>' type="checkbox" value="<%= ntlmAuthEnabled %>" />
 
@@ -150,7 +150,7 @@ String siteminderUserHeader = PrefsPropsUtil.getString(company.getCompanyId(), P
 
 			<aui:input cssClass="lfr-input-text-container" label="service-password" name='<%= "settings--" + PropsKeys.NTLM_SERVICE_PASSWORD + "--" %>' type="text" value="<%= ntlmServicePassword %>" />
 		</aui:fieldset>
-	</liferay-ui:section>
+	</liferay-ui:section> --%>
 	<liferay-ui:section>
 		<aui:fieldset>
 			<aui:input inlineLabel="left" label="enabled" name='<%= "settings--" + PropsKeys.OPEN_ID_AUTH_ENABLED + "--" %>' type="checkbox" value="<%= openIdAuthEnabled %>" />

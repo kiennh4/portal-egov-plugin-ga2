@@ -1,0 +1,19 @@
+@media ( min-width : 320px) and (max-width : 559px) {
+	.vungtau-citizen-container {
+		width: 100%;
+		position: relative;
+		.citizen-column{
+			width: 100% !important;
+			float: none !important;
+			margin: 0 auto !important;
+		}
+		.reflect-container{
+			.row{
+				border: none !important;
+				.reflect-content{
+					padding: 0 !important;
+				}
+			}
+		}
+	}
+}

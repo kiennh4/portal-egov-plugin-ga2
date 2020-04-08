@@ -137,6 +137,7 @@
 <script type="text/javascript" src="$javascript_folder/jquery.flexslider.js" charset="utf-8"></script>
 <script type="text/javascript" src="$javascript_folder/jquery.easing.js" charset="utf-8"></script>
 <script type="text/javascript" src="$javascript_folder/jquery.mousewheel.js" charset="utf-8"></script>
+<script type="text/javascript" src="$javascript_folder/lightslider.js" charset="utf-8"></script>
 </body>
 
 $theme.include($bottom_include)

@@ -39,7 +39,7 @@
 			<div style="clear: both;"></div>
 		</div>
 		<div class="video-tp-brvt">
-			<div class="main-content mod_web video_title">VIDEO/ HÌNH ẢNH</div>
+			<div class="main-content mod_web video_title"><span>VIDEO/ HÌNH ẢNH</span></div>
 			<div class="portlet-layout main-content video-container">
 				<div class=" aui-w100  portlet-column portlet-column-only" id="column-9">
 					$processor.processColumn("column-9", "portlet-column-content portlet-column-content-only")

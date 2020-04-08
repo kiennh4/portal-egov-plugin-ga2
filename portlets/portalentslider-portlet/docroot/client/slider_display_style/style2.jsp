@@ -1,8 +1,3 @@
-<%--
-/**
-Fluid width carousel with images
---%>
-
 <%@ page import="com.liferay.portal.kernel.json.JSONObject"%>
 <%@ page import="com.liferay.portal.kernel.json.JSONFactoryUtil"%>
 <%@ page import="com.liferay.portal.kernel.json.JSONArray"%>
@@ -11,8 +6,7 @@ Fluid width carousel with images
 <%
 	int count = 0; 
 %>
-<link rel="stylesheet" href="/portalentslider-portlet/css/lightslider.css"/>
-<div class="style-2-container">
+<div class="style-2-container main-content">
   <ul id="light-slider" class="light-slider">
   	<%
 		if(Validator.isNotNull(sliderItems)){
@@ -45,19 +39,19 @@ Fluid width carousel with images
 <script src="/portalentslider-portlet/js/lightslider.js"></script>
 <script type="text/javascript">
 $("#light-slider").lightSlider({
-	  item: 6,
-	  loop: true,
-	  auto:true,
-	  pager: false,
-	  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-	  pauseOnHover: true,
-	  responsive: [{
-	    breakpoint: 800,
-	    settings: {
-	      item: 2,
-	      slideMove:1
-	    }
-	  }]
-	});
+		  item: 6,
+		  loop: true,
+		  auto:true,
+		  pager: false,
+		  itemMargin: 0,
+		  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+		  pauseOnHover: true,
+		  responsive: [{
+		    breakpoint: 800,
+		    settings: {
+		      item: 1
+		    }
+		  }]
+		});
 </script>
 

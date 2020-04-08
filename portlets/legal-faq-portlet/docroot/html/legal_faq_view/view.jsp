@@ -169,6 +169,10 @@
 				</liferay-portlet:renderURL>
 				
 				<div class="faq-entry">
+					<div class="sender-name">
+						<span class="sender"><%=senderName %></span> - <i class="fa fa-clock-o" aria-hidden="true"></i>
+						<span class="ask-date"> <%=sendDate %></span>
+					</div>
 					<div class="ask-title">
 						<a href="<%=viewEntryURL%>"><%=askTitle %></a>
 					</div>
@@ -177,18 +181,9 @@
 					
 					<div class="ask-content">
 						<%=askContent %>
-						<span class="view-full-ask-content-url">
-							<a href="<%=viewEntryURL%>"><liferay-ui:message key="view-details"/></a>
-						</span>
 					</div>
 					
 					<div style="clear: both;"></div>
-					
-					<div class="ask-metadata">
-						<liferay-ui:message key="send-by"/> :&nbsp; <%=senderName %>
-						<br/>
-						<liferay-ui:message key="send-date"/> :&nbsp; <%=sendDate %>
-					</div>
 				</div>
 			</liferay-ui:search-container-row>
 		

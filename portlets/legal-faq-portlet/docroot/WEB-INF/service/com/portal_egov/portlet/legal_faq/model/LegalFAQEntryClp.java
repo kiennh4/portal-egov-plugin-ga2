@@ -86,7 +86,6 @@ public class LegalFAQEntryClp extends BaseModelImpl<LegalFAQEntry>
 		attributes.put("createDate", getCreateDate());
 		attributes.put("modifiedDate", getModifiedDate());
 		attributes.put("publishDate", getPublishDate());
-		attributes.put("attachmentId", getAttachmentId());
 		attributes.put("viewCount", getViewCount());
 		attributes.put("publishStatus", getPublishStatus());
 		attributes.put("status", getStatus());
@@ -202,12 +201,6 @@ public class LegalFAQEntryClp extends BaseModelImpl<LegalFAQEntry>
 
 		if (publishDate != null) {
 			setPublishDate(publishDate);
-		}
-
-		Long attachmentId = (Long)attributes.get("attachmentId");
-
-		if (attachmentId != null) {
-			setAttachmentId(attachmentId);
 		}
 
 		Integer viewCount = (Integer)attributes.get("viewCount");
@@ -381,14 +374,6 @@ public class LegalFAQEntryClp extends BaseModelImpl<LegalFAQEntry>
 		_publishDate = publishDate;
 	}
 
-	public long getAttachmentId() {
-		return _attachmentId;
-	}
-
-	public void setAttachmentId(long attachmentId) {
-		_attachmentId = attachmentId;
-	}
-
 	public int getViewCount() {
 		return _viewCount;
 	}
@@ -459,7 +444,6 @@ public class LegalFAQEntryClp extends BaseModelImpl<LegalFAQEntry>
 		clone.setCreateDate(getCreateDate());
 		clone.setModifiedDate(getModifiedDate());
 		clone.setPublishDate(getPublishDate());
-		clone.setAttachmentId(getAttachmentId());
 		clone.setViewCount(getViewCount());
 		clone.setPublishStatus(getPublishStatus());
 		clone.setStatus(getStatus());
@@ -514,7 +498,7 @@ public class LegalFAQEntryClp extends BaseModelImpl<LegalFAQEntry>
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(45);
+		StringBundler sb = new StringBundler(43);
 
 		sb.append("{entryId=");
 		sb.append(getEntryId());
@@ -552,8 +536,6 @@ public class LegalFAQEntryClp extends BaseModelImpl<LegalFAQEntry>
 		sb.append(getModifiedDate());
 		sb.append(", publishDate=");
 		sb.append(getPublishDate());
-		sb.append(", attachmentId=");
-		sb.append(getAttachmentId());
 		sb.append(", viewCount=");
 		sb.append(getViewCount());
 		sb.append(", publishStatus=");
@@ -566,7 +548,7 @@ public class LegalFAQEntryClp extends BaseModelImpl<LegalFAQEntry>
 	}
 
 	public String toXmlString() {
-		StringBundler sb = new StringBundler(70);
+		StringBundler sb = new StringBundler(67);
 
 		sb.append("<model><model-name>");
 		sb.append("com.portal_egov.portlet.legal_faq.model.LegalFAQEntry");
@@ -645,10 +627,6 @@ public class LegalFAQEntryClp extends BaseModelImpl<LegalFAQEntry>
 		sb.append(getPublishDate());
 		sb.append("]]></column-value></column>");
 		sb.append(
-			"<column><column-name>attachmentId</column-name><column-value><![CDATA[");
-		sb.append(getAttachmentId());
-		sb.append("]]></column-value></column>");
-		sb.append(
 			"<column><column-name>viewCount</column-name><column-value><![CDATA[");
 		sb.append(getViewCount());
 		sb.append("]]></column-value></column>");
@@ -685,7 +663,6 @@ public class LegalFAQEntryClp extends BaseModelImpl<LegalFAQEntry>
 	private Date _createDate;
 	private Date _modifiedDate;
 	private Date _publishDate;
-	private long _attachmentId;
 	private int _viewCount;
 	private int _publishStatus;
 	private int _status;

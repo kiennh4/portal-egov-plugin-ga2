@@ -13,7 +13,6 @@
 	List<AssetEntryCache> assetCacheList = ArticlePublisherUtil.getAssetList(request,numbersOfEntriesDisplay);
 	int counter = 0;
 %>
-<link rel="stylesheet" href="/portalentslider-portlet/css/lightslider.css"/>
 <c:choose>
 	<c:when test='<%=assetCacheList.size() > 0 %>'>
 		<div class="article-publisher-display-style-7" id="articlePublisher7">
@@ -71,22 +70,22 @@
 		</div>
 	</c:otherwise>
 </c:choose>
-<script src="/portalentslider-portlet/js/lightslider.js"></script>
+<script src="/article-publisher-portlet/js/lightslider.js"></script>
 <script>
 $("#light-slider1").lightSlider({
-	  item: <%=numbersOfEntriesDisplay%>,
-	  loop: true,
-	  auto:true,
-	  slideMargin: 20,
-	  pager: false,
-	  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-	  pauseOnHover: true,
-	  responsive: [{
-	    breakpoint: 800,
-	    settings: {
-	      item: 1,
-	      slideMove:1
-	    }
-	  }]
-	});
+    item: 4,
+    loop: true,
+    auto: true,
+    slideMargin: 20,
+    pager: false,
+    easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+    pauseOnHover: true,
+    responsive: [{
+        breakpoint: 800,
+        settings: {
+            item: 1,
+            slideMove: 1
+        }
+    }]
+});
 </script>

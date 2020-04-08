@@ -45,8 +45,6 @@
 		<column name="modifiedDate" type="Date" />
 		<column name="publishDate" type="Date" />
 		
-		<column name="attachmentId" type="long"/>
-		
 		<!-- Luot xem -->
 		<column name="viewCount" type="int" />
 		<!-- Trang thai xuat ban -->

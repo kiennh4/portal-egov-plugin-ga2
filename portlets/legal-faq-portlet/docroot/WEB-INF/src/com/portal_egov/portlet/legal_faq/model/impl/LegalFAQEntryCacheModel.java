@@ -35,7 +35,7 @@ public class LegalFAQEntryCacheModel implements CacheModel<LegalFAQEntry>,
 	Serializable {
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(45);
+		StringBundler sb = new StringBundler(43);
 
 		sb.append("{entryId=");
 		sb.append(entryId);
@@ -73,8 +73,6 @@ public class LegalFAQEntryCacheModel implements CacheModel<LegalFAQEntry>,
 		sb.append(modifiedDate);
 		sb.append(", publishDate=");
 		sb.append(publishDate);
-		sb.append(", attachmentId=");
-		sb.append(attachmentId);
 		sb.append(", viewCount=");
 		sb.append(viewCount);
 		sb.append(", publishStatus=");
@@ -187,7 +185,6 @@ public class LegalFAQEntryCacheModel implements CacheModel<LegalFAQEntry>,
 			legalFAQEntryImpl.setPublishDate(new Date(publishDate));
 		}
 
-		legalFAQEntryImpl.setAttachmentId(attachmentId);
 		legalFAQEntryImpl.setViewCount(viewCount);
 		legalFAQEntryImpl.setPublishStatus(publishStatus);
 		legalFAQEntryImpl.setStatus(status);
@@ -215,7 +212,6 @@ public class LegalFAQEntryCacheModel implements CacheModel<LegalFAQEntry>,
 	public long createDate;
 	public long modifiedDate;
 	public long publishDate;
-	public long attachmentId;
 	public int viewCount;
 	public int publishStatus;
 	public int status;

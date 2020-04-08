@@ -12,6 +12,7 @@ import java.util.Locale;
 import java.util.Map;
 
 import javax.mail.internet.InternetAddress;
+import javax.portlet.ActionRequest;
 import javax.portlet.PortletPreferences;
 
 import org.apache.commons.logging.Log;
@@ -19,8 +20,10 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 
+import com.liferay.mail.service.MailServiceUtil;
 import com.liferay.portal.kernel.io.unsync.UnsyncStringWriter;
 import com.liferay.portal.kernel.language.LanguageUtil;
+import com.liferay.portal.kernel.mail.MailMessage;
 import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.model.Layout;
@@ -68,39 +71,36 @@ public class FAQEmailUtil {
 			_log.error(e);
 		}
 	}
-	
-	public static void sendAnswerMail(String emailContent, String toEmailAddress){
+
+	public static void sendAnswerMail(String emailContent,
+			String toEmailAddress, ActionRequest actionRequest) {
 		try {
 
-			Layout controlPanel = LayoutLocalServiceUtil
-					.getLayout(CONTROL_PANEL_LAYOUT_ID);
-
 			PortletPreferences preferences = PortletPreferencesFactoryUtil
-					.getPortletSetup(controlPanel, FAQ_ADMIN_PORTLET_ID, null);
+					.getPortletSetup(actionRequest);
 
 			String fromEmailName = preferences.getValue("fromEmailName",
 					"Admin");
 
 			String fromEmailAddress = preferences.getValue("fromEmailAddress",
-					"chuvanquang96@gmail.com");
-
+					"admin@portal-egov.com");
+			System.out.println(fromEmailAddress);
 			String emailSubject = preferences.getValue("emailSubject",
 					"Portal-eGov");
 
 			if (Validator.isNotNull(toEmailAddress)) {
-
-				InternetAddress fromEmail = new InternetAddress(fromEmailName,
-						fromEmailAddress);
-
-				InternetAddress toEmail = new InternetAddress(toEmailAddress);
-
-				MailEngine.send(fromEmail, toEmail, emailSubject, emailContent,
-						true);
+				MailMessage mailMessage = new MailMessage();
+				mailMessage.setBody(emailContent);
+				mailMessage.setSubject(emailSubject);
+				mailMessage.setFrom(new InternetAddress(fromEmailAddress,fromEmailName));
+				mailMessage.setTo(new InternetAddress(toEmailAddress));
+				MailServiceUtil.sendEmail(mailMessage);
 			}
 		} catch (Exception e) {
 			_log.error(e);
 		}
 	}
+
 	public static String buildFAQEmailContent(LegalFAQEntry faqEntry) {
 
 		try {
@@ -167,12 +167,15 @@ public class FAQEmailUtil {
 		}
 	}
 
-	public static String buildAnswerEmailContent(LegalFAQEntry legalFAQEntry, String viewDetailLink) {
+	public static String buildAnswerEmailContent(LegalFAQEntry legalFAQEntry,
+			String viewDetailLink) {
 
 		try {
 
 			SimpleDateFormat dateFormat = new SimpleDateFormat(
 					" dd/MM/yyyy ' | ' hh:mm a");
+
+			String askDate = dateFormat.format(legalFAQEntry.getAskDate());
 
 			VelocityEngine velocityEngine = new VelocityEngine();
 
@@ -184,10 +187,9 @@ public class FAQEmailUtil {
 
 			templateVariables.put("notifyTitleAnswer",
 					LanguageUtil.get(LOCATE, "faq-notify-email-answer-title"));
-			templateVariables.put("askDate",
-					dateFormat.format(legalFAQEntry.getAskDate()));
-			templateVariables.put("faqLink",
-					viewDetailLink);
+			templateVariables.put("askDate", askDate);
+
+			templateVariables.put("faqLink", viewDetailLink);
 			Iterator<Map.Entry<String, String>> itr = templateVariables
 					.entrySet().iterator();
 
@@ -204,7 +206,8 @@ public class FAQEmailUtil {
 
 			UnsyncStringWriter unsyncStringWriter = new UnsyncStringWriter();
 
-			String emailTemplate = ContentUtil.get(ANSWER_EMAIL_TEMPLATE_FILE_PATH);
+			String emailTemplate = ContentUtil
+					.get(ANSWER_EMAIL_TEMPLATE_FILE_PATH);
 
 			velocityEngine.evaluate(velocityContext, unsyncStringWriter,
 					FAQEmailUtil.class.getName(), emailTemplate);
@@ -224,7 +227,7 @@ public class FAQEmailUtil {
 	private static final String FAQ_ADMIN_PORTLET_ID = "legal_faq_management_WAR_legal_fagportlet";
 
 	private static final String EMAIL_TEMPLATE_FILE_PATH = "com/portal_egov/portlet/legal_faq/email/email_template.vm";
-	
+
 	private static final String ANSWER_EMAIL_TEMPLATE_FILE_PATH = "com/portal_egov/portlet/legal_faq/email/email_answer_template.vm";
 
 	public static final Locale LOCATE = new Locale("vi", "VN");

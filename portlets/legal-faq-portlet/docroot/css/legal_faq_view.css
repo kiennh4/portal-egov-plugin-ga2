@@ -139,8 +139,25 @@
 		
 	.legal-faq-entries-list .faq-entry{
 		border-top: 1px solid #e8e8e8;
+		border-bottom: solid 1px #ccc;
+    	border-left: solid 1px #ccc;
+    	border-right: solid 1px #ccc;
+    	padding: 10px;
+    	margin: 20px 0px;
 	}
-			
+	.legal-faq-entries-list .faq-entry:FIRST-CHILD{
+		margin-top: 0px !important;
+	}	
+	.legal-faq-entries-list .faq-entry:last-child{
+		margin-bottom: 0px !important;
+	}	
+	.legal-faq-entries-list .faq-entry .sender-name .sender{
+		font-size: 14px;
+		color: #004b8bd6;
+	}
+	.legal-faq-entries-list .faq-entry .sender-name .ask-date{
+		font-size: 13px;
+	}
 	.legal-faq-entries-list .faq-entry .ask-title{
 		margin: 10px 0px;
 	}
@@ -152,7 +169,7 @@
 		background: url("/legal-faq-portlet/images/icon/faq_icon.png") no-repeat scroll 0px 0px transparent;
 		padding-left: 22px;
 		display: block;
-		font-size: 11px;
+		font-size: 16px;
 	}
 				
 	.legal-faq-entries-list .faq-entry .ask-title a:hover{
@@ -210,7 +227,7 @@
 	}
 		
 	.legal-faq-give-ask-form .captcha-holder{
-		padding-left: 217px;
+		padding-left: 28%;
 		.captcha-container{
 			width: 100%;
 			.taglib-captcha{
@@ -235,7 +252,7 @@
 	}
 			
 	.legal-faq-give-ask-form .aui-button-holder{
-		padding-left: 217px;
+		padding-left: 28%;
 	}
 	
 	.legal-faq-give-ask-form .form-title{
@@ -362,7 +379,7 @@
 		background: url("/legal-faq-portlet/images/icon/faq_icon.png") no-repeat scroll 0 0 transparent;
 		padding-left: 22px;
 		display: block;
-		font-size: 11px;
+		font-size: 16px;
 	}
 	
 	.legal_faq_ask_content .ask_content {

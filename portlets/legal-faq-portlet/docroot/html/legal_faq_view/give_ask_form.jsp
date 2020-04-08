@@ -49,7 +49,7 @@
 	</div>
 	<div class="form-content">
 		
-		<aui:form name="legal_faq_give_ask_form" method="post" action="<%=updateAskContentActionURL %>" onSubmit="<%=taglibOnSubmit %>" enctype="multipart/form-data">
+		<aui:form name="legal_faq_give_ask_form" method="post" action="<%=updateAskContentActionURL %>" onSubmit="<%=taglibOnSubmit %>">
 			
 			<div>
 				<aui:input type="text" name="citizenName" label="full-name" inlineLabel="left" placeholder="Nhập họ tên đầy đủ">
@@ -81,8 +81,6 @@
 				<aui:input type="textarea" name="askContent" inlineLabel="left" placeholder="Nhập nội dung phản ánh kiến nghị">
 					<aui:validator name="required"/>
 				</aui:input>
-				
-				<aui:input type="file" name="legalFaqAttachment" inlineLabel="left"/>
 			</div>
 			<div class="captcha-holder">
 				<div class="captcha-container">

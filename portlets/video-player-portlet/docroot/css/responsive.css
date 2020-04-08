@@ -1,8 +1,13 @@
 @media (min-width: 320px) and (max-width : 559px) {
+	.video-tp-brvt .mod_web {
+		padding-top: 10px !important; 
+		padding-bottom: 10px !important;
+		margin-left: 5px !important;
+	}
 	.video-player-abstract-style{
 		width: 100%;
 		.video-player-frame{
-			width: 99% !important;
+			width: 99.5% !important;
 			display: block;
 			float: none !important;
 			.video-info{

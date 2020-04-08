@@ -85,12 +85,11 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 			{ "createDate", Types.TIMESTAMP },
 			{ "modifiedDate", Types.TIMESTAMP },
 			{ "publishDate", Types.TIMESTAMP },
-			{ "attachmentId", Types.BIGINT },
 			{ "viewCount", Types.INTEGER },
 			{ "publishStatus", Types.INTEGER },
 			{ "status", Types.INTEGER }
 		};
-	public static final String TABLE_SQL_CREATE = "create table LegalFAQEntry (entryId LONG not null primary key,companyId LONG,groupId LONG,userId LONG,userName VARCHAR(75) null,categoryId LONG,citizenName VARCHAR(75) null,citizenPhone VARCHAR(75) null,citizenEmail VARCHAR(75) null,citizenAddress VARCHAR(75) null,askDate DATE null,askTitle VARCHAR(300) null,askContent STRING null,answerDate DATE null,answerContent STRING null,createDate DATE null,modifiedDate DATE null,publishDate DATE null,attachmentId LONG,viewCount INTEGER,publishStatus INTEGER,status INTEGER)";
+	public static final String TABLE_SQL_CREATE = "create table LegalFAQEntry (entryId LONG not null primary key,companyId LONG,groupId LONG,userId LONG,userName VARCHAR(75) null,categoryId LONG,citizenName VARCHAR(75) null,citizenPhone VARCHAR(75) null,citizenEmail VARCHAR(75) null,citizenAddress VARCHAR(75) null,askDate DATE null,askTitle VARCHAR(300) null,askContent STRING null,answerDate DATE null,answerContent STRING null,createDate DATE null,modifiedDate DATE null,publishDate DATE null,viewCount INTEGER,publishStatus INTEGER,status INTEGER)";
 	public static final String TABLE_SQL_DROP = "drop table LegalFAQEntry";
 	public static final String ORDER_BY_JPQL = " ORDER BY legalFAQEntry.publishDate DESC";
 	public static final String ORDER_BY_SQL = " ORDER BY LegalFAQEntry.publishDate DESC";
@@ -143,7 +142,6 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 		model.setCreateDate(soapModel.getCreateDate());
 		model.setModifiedDate(soapModel.getModifiedDate());
 		model.setPublishDate(soapModel.getPublishDate());
-		model.setAttachmentId(soapModel.getAttachmentId());
 		model.setViewCount(soapModel.getViewCount());
 		model.setPublishStatus(soapModel.getPublishStatus());
 		model.setStatus(soapModel.getStatus());
@@ -223,7 +221,6 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 		attributes.put("createDate", getCreateDate());
 		attributes.put("modifiedDate", getModifiedDate());
 		attributes.put("publishDate", getPublishDate());
-		attributes.put("attachmentId", getAttachmentId());
 		attributes.put("viewCount", getViewCount());
 		attributes.put("publishStatus", getPublishStatus());
 		attributes.put("status", getStatus());
@@ -339,12 +336,6 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 
 		if (publishDate != null) {
 			setPublishDate(publishDate);
-		}
-
-		Long attachmentId = (Long)attributes.get("attachmentId");
-
-		if (attachmentId != null) {
-			setAttachmentId(attachmentId);
 		}
 
 		Integer viewCount = (Integer)attributes.get("viewCount");
@@ -615,15 +606,6 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 	}
 
 	@JSON
-	public long getAttachmentId() {
-		return _attachmentId;
-	}
-
-	public void setAttachmentId(long attachmentId) {
-		_attachmentId = attachmentId;
-	}
-
-	@JSON
 	public int getViewCount() {
 		return _viewCount;
 	}
@@ -724,7 +706,6 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 		legalFAQEntryImpl.setCreateDate(getCreateDate());
 		legalFAQEntryImpl.setModifiedDate(getModifiedDate());
 		legalFAQEntryImpl.setPublishDate(getPublishDate());
-		legalFAQEntryImpl.setAttachmentId(getAttachmentId());
 		legalFAQEntryImpl.setViewCount(getViewCount());
 		legalFAQEntryImpl.setPublishStatus(getPublishStatus());
 		legalFAQEntryImpl.setStatus(getStatus());
@@ -929,8 +910,6 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 			legalFAQEntryCacheModel.publishDate = Long.MIN_VALUE;
 		}
 
-		legalFAQEntryCacheModel.attachmentId = getAttachmentId();
-
 		legalFAQEntryCacheModel.viewCount = getViewCount();
 
 		legalFAQEntryCacheModel.publishStatus = getPublishStatus();
@@ -942,7 +921,7 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(45);
+		StringBundler sb = new StringBundler(43);
 
 		sb.append("{entryId=");
 		sb.append(getEntryId());
@@ -980,8 +959,6 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 		sb.append(getModifiedDate());
 		sb.append(", publishDate=");
 		sb.append(getPublishDate());
-		sb.append(", attachmentId=");
-		sb.append(getAttachmentId());
 		sb.append(", viewCount=");
 		sb.append(getViewCount());
 		sb.append(", publishStatus=");
@@ -994,7 +971,7 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 	}
 
 	public String toXmlString() {
-		StringBundler sb = new StringBundler(70);
+		StringBundler sb = new StringBundler(67);
 
 		sb.append("<model><model-name>");
 		sb.append("com.portal_egov.portlet.legal_faq.model.LegalFAQEntry");
@@ -1073,10 +1050,6 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 		sb.append(getPublishDate());
 		sb.append("]]></column-value></column>");
 		sb.append(
-			"<column><column-name>attachmentId</column-name><column-value><![CDATA[");
-		sb.append(getAttachmentId());
-		sb.append("]]></column-value></column>");
-		sb.append(
 			"<column><column-name>viewCount</column-name><column-value><![CDATA[");
 		sb.append(getViewCount());
 		sb.append("]]></column-value></column>");
@@ -1123,7 +1096,6 @@ public class LegalFAQEntryModelImpl extends BaseModelImpl<LegalFAQEntry>
 	private Date _createDate;
 	private Date _modifiedDate;
 	private Date _publishDate;
-	private long _attachmentId;
 	private int _viewCount;
 	private int _publishStatus;
 	private int _originalPublishStatus;

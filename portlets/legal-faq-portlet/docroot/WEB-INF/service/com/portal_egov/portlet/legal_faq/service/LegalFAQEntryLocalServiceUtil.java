@@ -450,19 +450,18 @@ public class LegalFAQEntryLocalServiceUtil {
 	public static com.portal_egov.portlet.legal_faq.model.LegalFAQEntry addFAQEntry(
 		long companyId, long groupId, long userId, long categoryId,
 		java.lang.String citizenName, java.lang.String citizenPhone,
-		long attachmentId, java.lang.String citizenEmail,
-		java.lang.String citizenAddress, java.util.Date askDate,
-		java.lang.String askTitle, java.lang.String askContent,
-		java.util.Date answerDate, java.lang.String answerContent,
-		int publishStatus, int entryStatus,
+		java.lang.String citizenEmail, java.lang.String citizenAddress,
+		java.util.Date askDate, java.lang.String askTitle,
+		java.lang.String askContent, java.util.Date answerDate,
+		java.lang.String answerContent, int publishStatus, int entryStatus,
 		com.liferay.portal.service.ServiceContext serviceContext)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		return getService()
 				   .addFAQEntry(companyId, groupId, userId, categoryId,
-			citizenName, citizenPhone, attachmentId, citizenEmail,
-			citizenAddress, askDate, askTitle, askContent, answerDate,
-			answerContent, publishStatus, entryStatus, serviceContext);
+			citizenName, citizenPhone, citizenEmail, citizenAddress, askDate,
+			askTitle, askContent, answerDate, answerContent, publishStatus,
+			entryStatus, serviceContext);
 	}
 
 	public static com.portal_egov.portlet.legal_faq.model.LegalFAQEntry updateFAQEntry(
@@ -470,16 +469,15 @@ public class LegalFAQEntryLocalServiceUtil {
 		long categoryId, java.lang.String citizenName,
 		java.lang.String citizenPhone, java.lang.String citizenEmail,
 		java.util.Date askDate, java.lang.String askTitle,
-		java.lang.String askContent, long attachmentId,
-		java.util.Date answerDate, java.lang.String answerContent,
-		int publishStatus, int entryStatus)
+		java.lang.String askContent, java.util.Date answerDate,
+		java.lang.String answerContent, int publishStatus, int entryStatus)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		return getService()
 				   .updateFAQEntry(entryId, companyId, groupId, userId,
 			categoryId, citizenName, citizenPhone, citizenEmail, askDate,
-			askTitle, askContent, attachmentId, answerDate, answerContent,
-			publishStatus, entryStatus);
+			askTitle, askContent, answerDate, answerContent, publishStatus,
+			entryStatus);
 	}
 
 	/**

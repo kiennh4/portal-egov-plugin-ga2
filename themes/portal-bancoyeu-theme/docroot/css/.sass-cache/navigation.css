@@ -1,0 +1,152 @@
+/* ---------- Main navigation ---------- */
+.navigation {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  background-color: #4267b2;
+  border-radius: 0px;
+  font-size: 13px; }
+
+.sf-navbar {
+  position: relative;
+  background: #da0f05;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+.sf-navbar a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.sf-navbar li {
+  position: relative;
+  float: left;
+  cursor: pointer; }
+
+.sf-navbar li a {
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  padding: 0px 10px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-align: justify;
+  zoom: 1; }
+
+.sf-navbar .sub-menu .child-menu {
+  top: 0;
+  left: 100%; }
+
+/* Simple clearfix */
+.sf-navbar ul:before,
+.sf-navbar ul:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+.sf-navbar ul:after {
+  clear: both; }
+
+.sf-navbar img.right-arrow {
+  position: absolute;
+  right: 1px;
+  top: 14px; }
+
+.sf-navbar ul {
+  background: #0593d9;
+  list-style: none;
+  padding: 0;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  opacity: 1;
+  display: none;
+  z-index: 99; }
+
+.sf-navbar li:hover {
+  background: #0593d9;
+  /* only transition out, not in */
+  -webkit-transition: none;
+  transition: none; }
+
+.sf-navbar li:hover > ul {
+  display: block;
+  position: absolute; }
+
+.navigation li:HOVER li {
+  float: none; }
+
+.navigation li:HOVER a {
+  background: #1a8be0; }
+
+.navigation li a:HOVER {
+  color: #fff;
+  font-weight: 700; }
+
+.sf-navbar li.selected {
+  background-color: #1a8be0; }
+
+.sf-navbar li.selected a {
+  color: #fff; }
+
+.sf-navbar li.selected ul li a {
+  color: #fff; }
+
+.sf-navbar > li > ul > li {
+  float: unset;
+  display: block;
+  border-bottom: 1px solid #fff; }
+
+.sf-navbar > li > ul > li > ul > li {
+  border-bottom: 1px solid #fff;
+  display: block; }
+
+.sf-navbar ul li a:hover {
+  color: #fff !important; }
+
+/* ---------- Sub Navigations ----------*/
+.sub-navigation {
+  background-color: #F0F0F0;
+  border: 1px solid #C0C2C5;
+  clear: both;
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  color: #00528B;
+  text-align: right;
+  text-shadow: 1px 1px white;
+  margin-bottom: 5px; }
+
+.sub-navigation .date_time {
+  /* background: url("../images/custom_icon/clock.png") no-repeat scroll left
+  	center transparent; */
+  color: #00528B;
+  float: left;
+  padding: 12px 0px 10px 3px;
+  height: 16px;
+  font-size: 13px;
+  white-space: nowrap; }
+
+.sub-navigation .top_notify {
+  color: #00528B;
+  float: left;
+  margin-left: 40px; }
+
+.sub-navigation .global-search-wrapper {
+  float: right;
+  height: 22px;
+  position: absolute;
+  right: 0;
+  top: 7px; }
+
+.sub-navigation .global-search-wrapper select {
+  display: none; }
+
+.sub-navigation a {
+  text-decoration: none; }
+
+.sub-navigation .top_notify p {
+  margin: 0 !important; }
+

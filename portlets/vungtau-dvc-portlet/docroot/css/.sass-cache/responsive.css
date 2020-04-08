@@ -1,0 +1,14 @@
+@media (min-width: 320px) and (max-width : 559px) {
+  .vung-tau-dvc-portlet {
+    width: 100%;
+    position: relative; }
+    .vung-tau-dvc-portlet .dvc-column {
+      width: 100% !important;
+      display: block;
+      float: none !important;
+      margin: 0 !important; }
+    .vung-tau-dvc-portlet .dvc-container .row {
+      border: none !important; }
+      .vung-tau-dvc-portlet .dvc-container .row .dvc-content {
+        padding: 0px !important; } }
+

@@ -149,9 +149,9 @@ $(document).on("ready",function(event){
 $("#btnSpeak").on("click",function(){
 	console.log("Start speaking article content......");
 	var content = $(".journal-content-article").text();
-	content = content.replace(/\n|\r/g, "");
-	content = content.replace(/[^0-9a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ\s]/gi, ' ');
-	content = content.replace(/\s+/g, ' ');
+	//content = content.replace(/\n|\r/g, "");
+	//content = content.replace(/[^0-9a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ\s]/gi, ' ');
+	//content = content.replace(/\s+/g, ' ');
 	content = content.trim();
 	console.log(content);
 	responsiveVoice.speak(content,'Vietnamese Female');

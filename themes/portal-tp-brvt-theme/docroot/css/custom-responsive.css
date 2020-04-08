@@ -934,7 +934,7 @@
 	
 	html, body {
     	width: 100%;
-    	overflow-x: visible !important;
+    	overflow: unset !important;
 	}
 	.main-content{
 		width: 100% !important;
@@ -975,15 +975,15 @@
 	.PortalBRVT .main-block{
 		display: none !important;
 	}
-	
-	
 	#footer{
 		display: none !important; 
 	}
-	
+	.PortalBRVT .portlet-layout:last-child{
+		display: none !important; 
+	}
 	.PortalBRVT .vung-tau-dvc-portlet{
 	}
 	.PortalBRVT .vungtau-citizen-portlet{
-		display: none !important;
+		
 	}
 }

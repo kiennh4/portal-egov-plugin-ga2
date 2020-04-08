@@ -35,7 +35,7 @@ html, body {
     overflow-x: hidden;
 }
 body {
-	font-size: 15px;
+	font-size: 14px;
 	font-family: 'Roboto',sans-serif;
 	color: #333333;
 	position: relative;
@@ -113,13 +113,21 @@ body {
 	display: inline-block;
 	float: left;
 }
-.portal-page .aui-w70{
+.PortalBRVT .aui-w70{
 	width: 770px;
 	float: left;
 }
-.portal-page .aui-w30{
+.PortalBRVT .aui-w30{
 	width: 370px;
 	float: right;
+}
+.portal-page .aui-w30{
+	width: 25%;
+	float: right;
+}
+.portal-page .aui-w70{
+	width: 74%;
+	float: left;
 }
 .main-block #column-7{
 	width: 370px;

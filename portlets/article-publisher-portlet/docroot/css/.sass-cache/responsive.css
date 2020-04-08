@@ -22,9 +22,8 @@
         right: 0;
         left: 0; }
       .article-publisher-portlet .article-publisher-display-style-7 .list-news {
-        width: 100%;
         height: auto !important;
-        max-width: 300px !important; }
+        max-width: 365px !important; }
         .article-publisher-portlet .article-publisher-display-style-7 .list-news .asset-entry {
           width: 100% !important;
           height: 300px !important;

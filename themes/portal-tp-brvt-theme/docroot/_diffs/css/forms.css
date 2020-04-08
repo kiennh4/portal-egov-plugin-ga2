@@ -45,7 +45,7 @@
 }
 
 @mixin button-hover {
-	background: #ccc;
+	background: none;
 }
 
 @mixin button-focus {
